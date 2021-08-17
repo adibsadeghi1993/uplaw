@@ -7,9 +7,8 @@ import { useFormik } from "formik";
 import { initialValues } from "./InitialValues";
 import {validationSchema} from "./Validtaion"
 
-const BasicInfo = () => {
-
-    
+const BasicInfo = ({setProgress,progress,setStep,step}) => {
+ 
   const formik = useFormik({
     initialValues,
     validateOnMount: true,
@@ -18,10 +17,10 @@ const BasicInfo = () => {
   return (
     <div className="basicInfo">
       <section className="userprofile">
-        <UserProfile />
+        <UserProfile progress={progress} />
       </section>
       <section className="detailinfo">
-        <DetailInfo />
+        <DetailInfo formik={formik} step={step} progress={progress} setStep={setStep} setProgress={setProgress} />
       </section>
     </div>
   );

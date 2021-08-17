@@ -7,9 +7,10 @@ import Verfication from '../components/userInfo/userVerification/Verfication';
 
 const Dashbord = () => {
     const [step, setStep] = useState(1);
+    const [progress, setProgress] = useState(50)
     switch (step) {
         case 1:
-          return <BasicInfo  setStep={setStep} step={step}  />;
+          return <BasicInfo setProgress={setProgress} progress={progress} setStep={setStep} step={step}  />;
         case 2:
           return <JobIssues  setStep={setStep} step={step}  />;
         case 3:
