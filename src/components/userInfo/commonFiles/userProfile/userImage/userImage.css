@@ -1,11 +1,54 @@
-.userImage{
-    width: 40%;
-   height: 120px;
-   
-    
+.profile {
+  display: flex;
 }
-.userImage img{
-    width: 100%;
-   border-radius: 50%;
-    
+
+.image-cotainer {
+  width: 40%;
+  height: 120px;
+  position: relative;
+}
+.image {
+  width: 100%;
+  border-radius: 50%;
+}
+.editProfile {
+  background-color: blue;
+  width: 28px;
+  padding: 3px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.userName {
+  display: flex;
+  flex-direction: column;
+  margin-right: 33px;
+  margin-top: 40px;
+}
+.userName p {
+  font-weight: 800;
+  font-size: 1.12rem;
+}
+.icons {
+  display: flex;
+  margin-top: 10px;
+}
+.search {
+  margin-right: 15px;
+}
+.bill {
+  position: relative;
+}
+.empty {
+  position: absolute;
+  padding: 3px;
+  background-color: red;
+  bottom: 15px;
+  border-radius: 50%;
 }
