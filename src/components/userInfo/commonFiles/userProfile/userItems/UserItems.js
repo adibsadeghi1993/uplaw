@@ -1,5 +1,5 @@
 import React from "react";
-import "./UserItems";
+import "./userItems.css";
 import meetingImage from "../../../../../asstes/meeting.svg"
 import adjustImage from "../../../../../asstes/adjust.svg"
 import adviseImage from "../../../../../asstes/advise.svg"
@@ -39,6 +39,10 @@ const UserItems = () => {
         </div>
       </div>
     </section>
+    
+    <div className="creditbtn">اعتبار من</div>
+      <div className="supportbtn">پشتیبانی</div>
+      <div className="financialbtn">سوابق مالی</div>
     </div>
   );
 };
