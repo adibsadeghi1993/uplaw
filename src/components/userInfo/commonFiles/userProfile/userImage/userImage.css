@@ -52,3 +52,27 @@
   bottom: 15px;
   border-radius: 50%;
 }
+
+.progress-bar {
+    display: flex;
+    margin-top: 20px;
+    background: #ffffff;
+    
+    height: 1.8rem;
+    border-radius: 1.25rem;
+    box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+  }
+  
+  .progressPersentage {
+    height: 1.8rem;
+    background: linear-gradient(267.24deg, #ffffff -37.62%, #3770e2 67.93%);
+    box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.1);
+    border-radius: 26px;
+  }
+  .compoletedprogress {
+    font-weight: 400;
+    margin-top: 3px;
+    margin-left: 20px;
+    text-align: center;
+  }

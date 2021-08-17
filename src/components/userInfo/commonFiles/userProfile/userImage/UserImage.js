@@ -35,6 +35,13 @@ const UserImage = () => {
           </div>
         </div>
       </div>
+      <div className="progress-bar">
+       <div className="progressPersentage" style={{width:`50%`}}></div>
+
+     </div>
+     <p className="compoletedprogress">
+         50 درصد مونده به تکمیل پروفایل!
+      </p>
     </section>
   );
 };

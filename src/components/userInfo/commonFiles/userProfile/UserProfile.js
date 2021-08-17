@@ -1,16 +1,15 @@
-import React from 'react'
-import UserImage from './userImage/UserImage'
-import "./userProfile.css"
+import React from "react";
+import UserImage from "./userImage/UserImage";
+import UserItems from "./userItems/UserItems";
+import "./userProfile.css";
 
 const UserProfile = () => {
-    return (
-        <section className="userProfile">
-           <div>
-               <UserImage/>
-           </div>
-           
-        </section>
-    )
-}
+  return (
+    <section className="userProfile">
+      <UserImage />
+        <UserItems/>
+    </section>
+  );
+};
 
-export default UserProfile
+export default UserProfile;
