@@ -22,7 +22,7 @@ const Dashbord = () => {
       }
     return (
         <div>
-           <BasicInfo/>
+           {/* <BasicInfo/> */}
         </div>
     )
 }

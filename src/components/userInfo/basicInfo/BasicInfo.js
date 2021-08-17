@@ -6,8 +6,8 @@ import "./basicInfo.css"
 const BasicInfo = () => {
     return (
         <div className="basicInfo">
-         <UserProfile/>
-         <DetailInfo/>
+        <section className="userprofile"> <UserProfile/></section>
+         <section className="detailinfo"><DetailInfo/></section>
         </div>
     )
 }
