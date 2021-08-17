@@ -1,10 +1,15 @@
 import React from 'react'
+import UserImage from './userImage/UserImage'
+import "./userProfile.css"
 
 const UserProfile = () => {
     return (
-        <div>
-            userprofile
-        </div>
+        <section className="userProfile">
+           <div>
+               <UserImage/>
+           </div>
+           
+        </section>
     )
 }
 
