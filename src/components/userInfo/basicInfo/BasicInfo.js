@@ -19,7 +19,7 @@ const BasicInfo = ({ setProgress, progress, setStep, step }) => {
         <UserProfile progress={progress} />
       </section>
       <section className="detailinfo">
-        <div>
+      
         <DetailInfo
           formik={formik}
           step={step}
@@ -27,7 +27,7 @@ const BasicInfo = ({ setProgress, progress, setStep, step }) => {
           setStep={setStep}
           setProgress={setProgress}
         />
-        </div>
+   
       </section>
     </div>
   );
