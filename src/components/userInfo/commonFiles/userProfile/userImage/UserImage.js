@@ -1,11 +1,12 @@
 import React from "react";
+import "./userImage.css"
 import userImage from "../../../../../asstes/anonymous-user-circle-icon-vector-18958255.jpg";
 
 const UserImage = () => {
   return (
     <section>
-      <div>
-        <div>
+      <div className="profile">
+        <div className="userImage">
           <img src={userImage} alt="userImage" />
         </div>
         <div>
