@@ -3,7 +3,6 @@ export const initialValues = {
     lastName:"",
     phoneNumber: "",
     email: "",
-    birthday:"",
     password:"",
     confirmPassword:"",
     address:"",

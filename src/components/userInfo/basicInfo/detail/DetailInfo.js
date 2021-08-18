@@ -4,7 +4,7 @@ import "./detailInfo.css";
 import Input from "./Input";
 import uploadImage from "../../../../asstes/upload.svg";
 import { allInputs } from "./ConstantInputs";
-
+import DateImage from "../../../../asstes/Date.svg"
 
 import DatePicker from "../DtaePicker/DatePicker";
 
@@ -70,7 +70,12 @@ const DetailInfo = ({
         </div>
 
         <div className="birthday">
+
         <DatePicker setBirthday={setBirthday}/>
+        <label htmlFor="datePicker">
+        <img src={DateImage} alt="dateimage"/>
+        </label>
+        
         </div>
         <div className="label">
           <label htmlFor="image">بارگذاری عکس</label>
@@ -82,6 +87,7 @@ const DetailInfo = ({
             formik={formik}
             placeholder=" رمز عبور انتخابی خود را وارد کنید"
           />
+          <p className="passwordChracter">8 کاراکتر</p>
         </div>
 
         <div className="address">

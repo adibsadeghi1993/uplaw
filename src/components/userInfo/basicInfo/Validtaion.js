@@ -18,6 +18,16 @@ export const validationSchema = Yup.object({
       .required(" رمز عبور الزامی است"),
     confirmPassword: Yup
     .string()
-    .required()
-    .oneOf([Yup.ref("password"), null], "رمز عبور مطابقت ندارد")
+    .required("تکرار رمز عبور الزامی است")
+    .oneOf([Yup.ref("password"), null], "رمز عبور مطابقت ندارد"),
+    address: Yup
+    .string()
+    .required("ادرس الزامی است"),
+    postalCode: Yup
+    .string()
+    .required("کد پستی الزامی است").matches(new RegExp("[0-9]{10}"),"کد پستی 10 رقمی وارد کنید"),
+    nationalCode: Yup
+    .string()
+    .required("کد ملی الزامی است").matches(new RegExp("[0-9]{10}"),"کد پستی 10 رقمی وارد کنید"),
+   
   });

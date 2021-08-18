@@ -20,6 +20,7 @@ const BirthDay = ({ setBirthday }) => {
         calssName={classes.input}
         placeholder="تاریخ تولد خود را وارد کنید"
         timePicker={false}
+        id="datePicker"
         showTodayButton={false}
         isGregorian={false}
         // value={value}

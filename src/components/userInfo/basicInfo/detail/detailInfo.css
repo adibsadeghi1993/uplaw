@@ -112,6 +112,12 @@ border-radius: 5px;
 .birthday{
   grid-column: 2/3;
   grid-row: 3/4;
+  position: relative;
+}
+.birthday img{
+  position: absolute;
+  left: 10px;
+  top: 15px;
 }
 .label{
   grid-column: 3/4;
@@ -124,6 +130,12 @@ border-radius: 5px;
 .password{
   grid-column: 1/2;
   grid-row: 4/5;
+  position: relative;
+}
+.passwordChracter{
+  position: absolute;
+  top: 15px;
+  left: 10px;
 }
 .confirmPassword{
   grid-column: 2/4;
