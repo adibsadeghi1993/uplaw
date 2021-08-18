@@ -2,7 +2,7 @@ import React from "react";
 import UserStep from "../../commonFiles/userStep/UserStep";
 import "./detailInfo.css";
 
-const DetailInfo = ({ step, setStep, progress, setProgress }) => {
+const DetailInfo = ({ step, setStep, progress, setProgress ,formik}) => {
   return (
     <div className="detail">
       <UserStep
@@ -11,6 +11,7 @@ const DetailInfo = ({ step, setStep, progress, setProgress }) => {
         setProgress={setProgress}
         progress={progress}
       />
+      
     </div>
   );
 };
