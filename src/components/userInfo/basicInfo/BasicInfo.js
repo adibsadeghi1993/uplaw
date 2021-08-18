@@ -8,6 +8,7 @@ import { initialValues } from "./InitialValues";
 import { validationSchema } from "./Validtaion";
 
 const BasicInfo = ({ setProgress, progress, setStep, step }) => {
+  const [upLoadedImage, setUpLoadedImage] = useState(null);
   const formik = useFormik({
     initialValues,
     validateOnMount: true,
@@ -26,6 +27,7 @@ const BasicInfo = ({ setProgress, progress, setStep, step }) => {
           progress={progress}
           setStep={setStep}
           setProgress={setProgress}
+          setUpLoadedImage={setUpLoadedImage}
         />
    
       </section>

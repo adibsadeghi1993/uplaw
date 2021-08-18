@@ -3,7 +3,7 @@ import UserStep from "../../commonFiles/userStep/UserStep";
 import "./detailInfo.css";
 import Input from "./Input";
 
-const DetailInfo = ({ step, setStep, progress, setProgress ,formik}) => {
+const DetailInfo = ({ step, setStep, progress, setProgress,setUpLoadedImage ,formik}) => {
 
   const [userProfile, setUserProfile] = useState(Image);
   console.log(formik.errors);
