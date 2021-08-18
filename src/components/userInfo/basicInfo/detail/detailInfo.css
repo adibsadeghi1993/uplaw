@@ -154,3 +154,30 @@ border-radius: 5px;
   grid-column: 2/4;
   grid-row: 6/7;
 }
+
+.confirmInfo{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 30px;
+  align-items: center;
+ 
+}
+.confirmInfo p{
+  font-size: 0.85rem;
+  opacity: 0.5;
+}
+.confirmInfo img{
+  margin-right: 5px;
+}
+
+.nextstep{
+  background: #3770E2;
+  padding: 10px;
+  border: none;
+  color: white;
+  font-weight: 800;
+  font-family: "anjoman";
+  font-size: 0.88rem;
+  cursor: pointer;
+}

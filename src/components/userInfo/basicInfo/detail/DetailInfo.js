@@ -5,6 +5,7 @@ import Input from "./Input";
 import uploadImage from "../../../../asstes/upload.svg";
 import { allInputs } from "./ConstantInputs";
 import DateImage from "../../../../asstes/Date.svg"
+import whitearrowImage from "../../../../asstes/whitearrow.svg"
 
 import DatePicker from "../DtaePicker/DatePicker";
 
@@ -101,14 +102,13 @@ const DetailInfo = ({
           <div className="error">{formik.errors.address}</div>
         )}
         </div>
-        <div className="confirmInfo">
+      </section>
+      <div className="confirmInfo">
            <p>ورود همه اطلاعات ضروری است</p>
-           <button>
-             ثبت و مرحله بعد
+           <button className="nextstep">
+             ثبت و مرحله بعد<img src={whitearrowImage} alt="nextstepimage"/>
            </button>
         </div>
-      </section>
-
     
     </div>
   );
