@@ -1,4 +1,16 @@
 .detail {
   width: 71%;
   margin: 93px auto 50px;
+  background-color: chartreuse;
+  max-width: 707px;
+}
+
+input[ name="image-upload"]{
+  display: none;
+}
+
+.Inputs{
+  display: grid;
+  grid-template-columns:38% 38% 19.5% ;
+  grid-template-rows: repeat(6,60px);
 }

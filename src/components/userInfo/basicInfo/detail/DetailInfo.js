@@ -1,11 +1,12 @@
-import React from "react";
+import React,{useState} from "react";
 import UserStep from "../../commonFiles/userStep/UserStep";
 import "./detailInfo.css";
 import Input from "./Input";
+import uploadImage from "../../../../asstes/upload.svg"
 
 const DetailInfo = ({ step, setStep, progress, setProgress,setUpLoadedImage ,formik}) => {
 
-  const [userProfile, setUserProfile] = useState(Image);
+  const [userProfile, setUserProfile] = useState(uploadImage);
   console.log(formik.errors);
 
   const imageHandler = (e) => {
@@ -43,7 +44,7 @@ const DetailInfo = ({ step, setStep, progress, setProgress,setUpLoadedImage ,for
         <button>تایید موبایل</button>
       </div>
         <div className="uploadImage">
-          <img src={userProfile} alt="profileImage"  className="profileImage" />
+          <img src={uploadImage} alt="profileImage"  className="profileImage" />
           <input
             type="file"
             accept="image/*"
