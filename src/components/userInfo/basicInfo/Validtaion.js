@@ -1,8 +1,12 @@
 
 import * as Yup from "yup";
 export const validationSchema = Yup.object({
-    fullName: Yup.string()
-      .min(4, "is short")
+    firstName: Yup.string()
+      .min(2, "is short")
+      .max(15, "is long")
+      .required("نام و نام خانوادگی الزامی است"),
+      lastName: Yup.string()
+      .min(2, "is short")
       .max(15, "is long")
       .required("نام و نام خانوادگی الزامی است"),
     phoneNumber: Yup.string()

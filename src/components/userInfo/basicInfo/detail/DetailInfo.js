@@ -29,7 +29,7 @@ const DetailInfo = ({ step, setStep, progress, setProgress,setUpLoadedImage ,for
         progress={progress}
       />
 
-<section className="Input">
+<section className="Inputs">
      <div className="firstName">
         <Input type="text" name="firstName" formik={formik} placeholder="نام خود را وارد کنید"/>
       </div>
@@ -44,7 +44,7 @@ const DetailInfo = ({ step, setStep, progress, setProgress,setUpLoadedImage ,for
         <button>تایید موبایل</button>
       </div>
         <div className="uploadImage">
-          <img src={uploadImage} alt="profileImage"  className="profileImage" />
+          <img src={userProfile} alt="profileImage"  className="profileImage" />
           <input
             type="file"
             accept="image/*"

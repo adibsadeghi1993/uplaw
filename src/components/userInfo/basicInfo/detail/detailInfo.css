@@ -1,16 +1,144 @@
 .detail {
   width: 71%;
   margin: 93px auto 50px;
-  background-color: chartreuse;
   max-width: 707px;
-}
-
-input[ name="image-upload"]{
-  display: none;
 }
 
 .Inputs{
   display: grid;
   grid-template-columns:38% 38% 19.5% ;
   grid-template-rows: repeat(6,60px);
+  width: 100%;
+  margin-top: 45px;
+  grid-column-gap: 16px;
+  grid-row-gap: 10px;
+}
+
+input[ name="image-upload"]{
+  display: none;
+}
+.label label{
+  background-color:  #3770E2;
+  padding: 10px 7px;
+  color: white;
+  font-weight: 800;
+  font-size: 0.85rem;
+
+}
+.confirmMobile button{
+  background-color:  #3770E2;
+  border: none;
+  color: white;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 10px 14px 10px 12px;
+}
+
+textarea {
+  width: 100%;
+  height: 49px;
+  border-radius: 5px;
+  opacity: 0.5;
+  border: 0.3px solid #000000;
+  font-family: "anjoman";
+  padding-right: 10px;
+  vertical-align: middle;
+  padding-top: 10px;
+}
+
+textarea:active{
+  outline: none;
+  border: 0.3px solid #000000;
+}
+textarea:focus{
+  outline: none;
+  border: 0.3px solid #000000;
+}
+.error{
+  font-size: 0.7rem;
+  color: red;
+}
+.confirmMobile input{
+  width: 55%;
+  opacity: 0.5;
+}
+.confirmMobile button{
+  font-family: "anjoman";
+  padding: 10px 15px;
+  margin-right: 7px;
+}
+
+
+
+.firstName{
+  grid-column: 1/2;
+  grid-row: 1/2;
+ 
+}
+.lastName{
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.uploadImage{
+  grid-column: 3/4;
+  grid-row: 1/3;
+  border: 3px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+border: 0.3px solid #000000;
+border-radius: 5px;
+  
+}
+.profileImage{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.phoneNumber{
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.confirmMobile{
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.email{
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.birthday{
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.label{
+  grid-column: 3/4;
+  grid-row: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.password{
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+.confirmPassword{
+  grid-column: 2/4;
+  grid-row: 4/5;
+}
+.address{
+  grid-column: 1/4;
+  grid-row: 5/6;
+  
+}
+.postalcode{
+  grid-column: 1/2;
+  grid-row: 6/7;
+}
+.nationalCode{
+  grid-column: 2/4;
+  grid-row: 6/7;
 }

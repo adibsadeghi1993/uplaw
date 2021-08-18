@@ -1,0 +1,19 @@
+
+input{
+  width: 100%;
+  height: 49px;
+  border-radius: 5px;
+  opacity: 0.5;
+border: 0.3px solid #000000;
+font-family: "anjoman";
+padding-right: 10px;
+
+}
+input:focus{
+  border: 0.3px solid #000000;
+  outline: none;
+}
+input:active{
+  border: 0.3px solid #000000;
+  outline: none;
+}
