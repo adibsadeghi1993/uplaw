@@ -31,7 +31,7 @@ export const allInputs = [
   },
   {
     type: "text",
-    name: "postalcode",
+    name: "postalCode",
     placeholder: "کد پستی خود را وراد کنید",
   },
 ];

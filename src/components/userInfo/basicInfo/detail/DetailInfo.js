@@ -97,6 +97,15 @@ const DetailInfo = ({
             {...formik.getFieldProps("address")}
             placeholder="  ادرس خود را وارد کنید"
           />
+           {formik.errors.address && formik.touched.address && (
+          <div className="error">{formik.errors.address}</div>
+        )}
+        </div>
+        <div className="confirmInfo">
+           <p>ورود همه اطلاعات ضروری است</p>
+           <button>
+             ثبت و مرحله بعد
+           </button>
         </div>
       </section>
 
