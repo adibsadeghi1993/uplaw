@@ -2,7 +2,7 @@ export const steps = [
     {
       step: 1,
       stepTitle: "اطلاعات پایه",
-      defaultClass: "step firstStep",
+      defaultClass: "step stepOne",
       background: "defaltBackground",
     },
     {
@@ -20,7 +20,7 @@ export const steps = [
       {
         step: 4,
         stepTitle: "احراز هویت",
-        defaultClass: "step five",
+        defaultClass: "step stepFour",
         background: "defaltBackground",
       }
   ]

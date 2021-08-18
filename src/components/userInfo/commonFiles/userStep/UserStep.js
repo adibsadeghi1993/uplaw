@@ -5,7 +5,7 @@ import "./userStep.css";
 const UserStep = ({ step, setStep, progress, setProgress }) => {
   const [stage, setStage] = useState(steps);
 
-  
+
   useEffect(() => {
     const updatedStages = [...stage];
     const findedStep = updatedStages[step - 1];
@@ -21,7 +21,7 @@ const UserStep = ({ step, setStep, progress, setProgress }) => {
 }
   return (
     <div>
-      <p className="stepParagraf">تکمیل پروفایل</p>
+      <p className="stepParagraf">تکمیل پروفایل/اطلاعات پایه</p>
       <section className="steps">
         {stage.map((item) => {
           return (

@@ -3,9 +3,10 @@
 }
 
 .image-cotainer {
-  width: 40%;
+  /* width: 40%; */
   height: 120px;
   position: relative;
+  width: 120px;
 }
 .image {
   width: 100%;
@@ -23,6 +24,7 @@
   justify-content: center;
   align-items: center;
   border: none;
+  /* display: block; */
 }
 
 .userName {

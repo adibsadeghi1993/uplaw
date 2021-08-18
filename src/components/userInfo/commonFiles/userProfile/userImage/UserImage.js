@@ -14,13 +14,13 @@ const UserImage = () => {
       <div className="profile">
         <div className="image-cotainer">
           <img src={userImage} alt="userImage" className="image" />
-          <button className="editProfile" onClick={ProfileHandler}>
+          <div className="editProfile" onClick={ProfileHandler}>
             <IconContext.Provider value={{ color: "white", size: "1.5rem" }}>
               <div>
                 <RiEditBoxLine />
               </div>
             </IconContext.Provider>
-          </button>
+          </div>
         </div>
         <div className="userName">
           <p>ادیب صادقی</p>
