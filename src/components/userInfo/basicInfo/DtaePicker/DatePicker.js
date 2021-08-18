@@ -18,7 +18,7 @@ const BirthDay = ({ setBirthday }) => {
     <div className={classes.formControl}>
       <DatePicker
         calssName={classes.input}
-        placeholder="تاریخ تولد خود را واردکنید"
+        placeholder="تاریخ تولد خود را وارد کنید"
         timePicker={false}
         showTodayButton={false}
         isGregorian={false}
