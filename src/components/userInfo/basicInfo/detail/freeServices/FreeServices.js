@@ -1,17 +1,29 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "./freeservices.css";
 import signatureImage from "../../../../../asstes/signature.svg";
 import adjustImage from "../../../../../asstes/adjust.svg.svg";
 import registermeeting from "../../../../../asstes/registermeeting.svg";
 
 const FreeServices = () => {
+    const [width, setWidth]   = useState(window.innerWidth);
+const updateDimensions = () => {
+    setWidth(window.innerWidth);
+    
+}
+useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+}, []);
   return (
     <section className="freeservices">
       <div className="freeservices_info">
-        <p className="freeFacility">
+        {width <890 ?<p className="freeFacility">
+           با تکمیل فرم ثبت نام از امکانات زیر<br />
+          به صورت <span>رایگان</span> استفاده کنید.
+        </p>:<p className="freeFacility">
           با تکمیل ثبت نام از امکانات روبرو <br />
           به صورت <span>رایگان</span> استفاده کنید.
-        </p>
+        </p>}
         <p className="completedRegistration" >
           جلوتر از <span>544</span> نفر در تکمیل ثبت نام
         </p>

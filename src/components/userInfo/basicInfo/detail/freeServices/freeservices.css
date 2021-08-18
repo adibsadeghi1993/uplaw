@@ -37,6 +37,7 @@
   align-items: center;
   flex-direction: column;
   margin-right: 30px;
+  margin-left: 30px;
 }
 .signature p {
   text-align: center;
@@ -46,7 +47,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-right: 30px;
+ 
 }
 .register p {
   text-align: center;
@@ -80,15 +81,14 @@
 }
 
 @media(max-width:1280px){
-.register{
-    margin-right: 10px;
-}
+
 .signature{
-    margin-right: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 .freeFacility{
     font-weight: 800;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 .freeFacility span{
     font-size: 1.25rem;
@@ -102,4 +102,36 @@
     padding: 10px 15px;
     margin: 0 5px;
 }
+}
+@media(max-width:965px){
+    .freeFacility{
+        font-size: 1rem;
+    }
+}
+
+@media(max-width:890px){
+ .freeservices{
+     flex-direction: column;
+    align-items: center;
+
+ }
+ .freeservices_info{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     margin-bottom: 40px;
+ }
+ .completedRegistration{
+     margin-top: 0;
+ }
+ .freeservices_icons{
+     display: flex;
+     justify-content: center;
+     width: 100%;
+ }
+ .signature{
+     margin: 0 40px;
+ }
+
 }

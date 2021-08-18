@@ -57,8 +57,10 @@ const DetailInfo = ({
         })}
 
         <div className="confirmMobile">
+         
           <input type="text" placeholder="کد تایید" />
           <button>تایید موبایل</button>
+         
         </div>
         <div className="uploadImage">
           <img src={userProfile} alt="profileImage" className="profileImage" />
