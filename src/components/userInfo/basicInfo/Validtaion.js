@@ -13,4 +13,11 @@ export const validationSchema = Yup.object({
       .matches(new RegExp("[0-9]{11}"),"لطفا شماره تلفن11 رقمی وارد کنید")
       .required("شماره تلفن الزامی است"),
     email: Yup.string().email("email is invalid").required("ایمیل الزامی است"),
+    password: Yup.string()
+      .min(8, "حداقل 8 کارکتر")
+      .required(" رمز عبور الزامی است"),
+    confirmPassword: yup
+    .string()
+    .required()
+    .oneOf([yup.ref("password"), null], "رمز عبور مطابقت ندارد")
   });
