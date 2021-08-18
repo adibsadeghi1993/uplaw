@@ -8,6 +8,7 @@ import DateImage from "../../../../asstes/Date.svg"
 import whitearrowImage from "../../../../asstes/whitearrow.svg"
 
 import DatePicker from "../DtaePicker/DatePicker";
+import FreeServices from "./freeServices/FreeServices";
 
 const DetailInfo = ({
   step,
@@ -109,6 +110,7 @@ const DetailInfo = ({
              ثبت و مرحله بعد<img src={whitearrowImage} alt="nextstepimage"/>
            </button>
         </div>
+        <FreeServices/>
     
     </div>
   );
