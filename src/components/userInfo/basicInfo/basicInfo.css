@@ -2,14 +2,12 @@
     grid-template-columns: 30% 70%;
     display: grid;
 }
-.userprofile{
+.profilesection{
     grid-column: 1/2;
     background-color: #E5E5E5;
     border-left: 0.35px solid #00000028;
 }
 .detailinfo{
-    grid-column: 2/3;
-  
-   
+    grid-column: 2/3;  
 }
 

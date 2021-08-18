@@ -3,7 +3,9 @@
 }
 
 .image-cotainer {
-  /* width: 40%; */
+  display: flex;
+    justify-content: center;
+    align-items: center;
   height: 120px;
   position: relative;
   width: 120px;
@@ -30,8 +32,10 @@
 .userName {
   display: flex;
   flex-direction: column;
-  margin-right: 33px;
-  margin-top: 40px;
+  flex: 1;
+    justify-content: center;
+    align-items:flex-start;
+    margin-right: 30px;
 }
 .userName p {
   font-weight: 800;
@@ -77,4 +81,44 @@
     margin-top: 13px;
     margin-left: 20px;
     text-align: center;
+  }
+
+  @media(max-width:989px){
+    .image-cotainer{
+      width: 97px;
+    }
+    .editProfile{
+      bottom: 20px;
+    }
+  }
+  @media(max-width:900px){
+    .image-cotainer{
+      width: 97px;
+    }
+    .userName p{
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  }
+
+  @media(max-width:830px){
+    .image-cotainer{
+      width: 70px;
+    }
+    .editProfile{
+      bottom: 20px;
+      width: 21px;
+    height: 26px;
+     
+    }
+    .userName p{
+      font-size: 0.9rem;
+      font-weight: 500;
+    
+    }
+    .userName{
+      margin-top: 15px;
+      margin-right: 15px;
+    }
+   
   }

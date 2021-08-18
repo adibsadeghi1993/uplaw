@@ -18,7 +18,7 @@ const BasicInfo = ({ setProgress, progress, setStep, step }) => {
   });
   return (
     <div className="basicInfo">
-      <section className="userprofile">
+      <section className="profilesection">
         <UserProfile progress={progress} />
       </section>
       <section className="detailinfo">
