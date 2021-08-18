@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import UserProfile from "../commonFiles/userProfile/UserProfile";
 import DetailInfo from "./detail/DetailInfo";
 import "./basicInfo.css";
@@ -9,6 +9,8 @@ import { validationSchema } from "./Validtaion";
 
 const BasicInfo = ({ setProgress, progress, setStep, step }) => {
   const [upLoadedImage, setUpLoadedImage] = useState(null);
+  const [bithday, setBirthday] = useState("");
+
   const formik = useFormik({
     initialValues,
     validateOnMount: true,
@@ -20,7 +22,6 @@ const BasicInfo = ({ setProgress, progress, setStep, step }) => {
         <UserProfile progress={progress} />
       </section>
       <section className="detailinfo">
-      
         <DetailInfo
           formik={formik}
           step={step}
@@ -28,8 +29,8 @@ const BasicInfo = ({ setProgress, progress, setStep, step }) => {
           setStep={setStep}
           setProgress={setProgress}
           setUpLoadedImage={setUpLoadedImage}
+          setBirthday={setBirthday}
         />
-   
       </section>
     </div>
   );

@@ -16,8 +16,8 @@ export const validationSchema = Yup.object({
     password: Yup.string()
       .min(8, "حداقل 8 کارکتر")
       .required(" رمز عبور الزامی است"),
-    confirmPassword: yup
+    confirmPassword: Yup
     .string()
     .required()
-    .oneOf([yup.ref("password"), null], "رمز عبور مطابقت ندارد")
+    .oneOf([Yup.ref("password"), null], "رمز عبور مطابقت ندارد")
   });

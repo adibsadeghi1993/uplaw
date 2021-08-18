@@ -4,7 +4,9 @@ import "./detailInfo.css";
 import Input from "./Input";
 import uploadImage from "../../../../asstes/upload.svg";
 import { allInputs } from "./ConstantInputs";
-import { placeholder } from "@babel/types";
+
+
+import DatePicker from "../DtaePicker/DatePicker";
 
 const DetailInfo = ({
   step,
@@ -13,6 +15,7 @@ const DetailInfo = ({
   setProgress,
   setUpLoadedImage,
   formik,
+  setBirthday
 }) => {
   const [userProfile, setUserProfile] = useState(uploadImage);
   console.log(formik.errors);
@@ -67,12 +70,7 @@ const DetailInfo = ({
         </div>
 
         <div className="birthday">
-          <Input
-            type="text"
-            name="birthday"
-            formik={formik}
-            placeholder="تاریخ تولد خود را وارد کنید"
-          />
+        <DatePicker setBirthday={setBirthday}/>
         </div>
         <div className="label">
           <label htmlFor="image">بارگذاری عکس</label>
@@ -95,6 +93,8 @@ const DetailInfo = ({
           />
         </div>
       </section>
+
+    
     </div>
   );
 };
