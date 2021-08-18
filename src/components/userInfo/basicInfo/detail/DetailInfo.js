@@ -3,6 +3,8 @@ import UserStep from "../../commonFiles/userStep/UserStep";
 import "./detailInfo.css";
 import Input from "./Input";
 import uploadImage from "../../../../asstes/upload.svg"
+import { allInputs } from "./ConstantInputs";
+import { placeholder } from "@babel/types";
 
 const DetailInfo = ({ step, setStep, progress, setProgress,setUpLoadedImage ,formik}) => {
 
@@ -30,7 +32,14 @@ const DetailInfo = ({ step, setStep, progress, setProgress,setUpLoadedImage ,for
       />
 
 <section className="Inputs">
-     <div className="firstName">
+
+  {allInputs.map((item)=>{
+    return <div className={item.name}>
+      <Input type={item.type} name={item.name} formik={formik} placeholder={item.placeholder}/>
+
+    </div>
+  })}
+     {/* <div className="firstName">
         <Input type="text" name="firstName" formik={formik} placeholder="نام خود را وارد کنید"/>
       </div>
       <div className="lastName">
@@ -38,7 +47,7 @@ const DetailInfo = ({ step, setStep, progress, setProgress,setUpLoadedImage ,for
       </div>
       <div className="phoneNumber">
         <Input type="text" name="phoneNumber" formik={formik} placeholder=" شماره موبایل خود را وارد کنید"/>
-      </div>
+      </div> */}
       <div className="confirmMobile">
         <input type="text" placeholder="کد تایید"/>
         <button>تایید موبایل</button>
@@ -53,9 +62,9 @@ const DetailInfo = ({ step, setStep, progress, setProgress,setUpLoadedImage ,for
             onChange={imageHandler}
           />
         </div>
-        <div className="email">
+        {/* <div className="email">
         <Input type="text" name="email" formik={formik} placeholder="ایمیل خود را وارد کنید"/>
-      </div>
+      </div> */}
       <div className="birthday">
         <Input type="text" name="birthday" formik={formik} placeholder="تاریخ تولد خود را وارد کنید"/>
       </div>
@@ -65,18 +74,18 @@ const DetailInfo = ({ step, setStep, progress, setProgress,setUpLoadedImage ,for
       <div className="password">
         <Input type="password" name="password" formik={formik} placeholder=" رمز عبور انتخابی خود را وارد کنید"/>
       </div>
-      <div className="confirmPassword">
+      {/* <div className="confirmPassword">
         <Input type="password" name="confirmPassword" formik={formik} placeholder="رمز عبور انتخابی خود را مجددا وارد کنید"/>
-      </div>
+      </div> */}
       <div className="address">
         <textarea type="text" name="address"  {...formik.getFieldProps("address")} placeholder="  ادرس خود را وارد کنید"/>
       </div>
-      <div className="nationalCode">
+      {/* <div className="nationalCode">
         <Input type="text" name="nationalCode" formik={formik} placeholder="کد ملی خود را وارد کنید"/>
       </div>
       <div className="postalcode">
         <Input type="text" name="postalCode" formik={formik} placeholder="کد پستی خود را وارد کنید"/>
-      </div>
+      </div> */}
      </section>
 
     </div>
