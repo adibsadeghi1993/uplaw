@@ -11,3 +11,10 @@
     grid-column: 2/3;  
 }
 
+@media(max-width:768px){
+    .basicInfo{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
