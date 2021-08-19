@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import "./userItems.css";
 import meetingImage from "../../../../../asstes/meeting.svg"
 import adjustImage from "../../../../../asstes/adjust.svg"
@@ -7,6 +7,15 @@ import teamImage from "../../../../../asstes/team.svg"
 
 
 const UserItems = () => {
+  const [width, setWidth]   = useState(window.innerWidth);
+  const updateDimensions = () => {
+      setWidth(window.innerWidth);   
+  }
+  useEffect(() => {
+      window.addEventListener("resize", updateDimensions);
+      return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+  
   return (
     <div>
         <section className="userItems">
@@ -32,7 +41,7 @@ const UserItems = () => {
           <p>مشاوره</p>
         </div>
         <div className="userItems_item">
-          <div className="userItems_item_flex">
+          <div className="userItems_item_flex teamwork">
             <img src={teamImage} alt="teamwork" />
           </div>
           <p>تیم من</p>
