@@ -139,4 +139,28 @@
   }
 }
 
+@media(max-width:768px){
+  .userItems{
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    padding: 0 29px;
+  }
+  .userItems_item_container{
+width: 127px;
+height: 119px;
+  }
+  .adjust{
+    margin: 0 48px;
+  }
+  .consultant{
+    margin-left: 48px;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; 
+}
+
+}
+
 
