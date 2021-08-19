@@ -2,6 +2,7 @@
     width: 73%;
     margin: auto;
     margin-top: 64px;
+    max-width: 303px;
 }
 
 @media(max-width:1150px){

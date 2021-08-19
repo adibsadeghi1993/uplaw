@@ -34,7 +34,7 @@
   align-items: center;
   width: 43%;
   max-width: 127px;
-  /* opacity: 0.3; */
+  opacity: 0.3;
 }
 .userItems_item p {
   margin-top: 10px;
