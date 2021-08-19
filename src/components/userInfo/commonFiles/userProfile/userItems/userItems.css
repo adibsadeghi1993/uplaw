@@ -1,38 +1,44 @@
 .userItems {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  justify-content: center;
-  margin-top: 72px;
+ display: grid;
+ width: 100%;
+ grid-template-columns: 44% 44%;
+ grid-template-rows: repeat(2,1fr);
+ row-gap: 20px;
+ column-gap: 48px;
+ margin-top: 72px;
+ margin-bottom: 37px;
 }
 
-.section_one {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  width: 100%;
-  flex-wrap: wrap;
+.adjust{
+  grid-column: 1/2;
+  grid-row: 1/2;
+
 }
-.section_tow {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
-  align-items: center;
-  margin-bottom: 10px;
-  width: 100%;
-  flex-wrap: wrap;
+
+.meeting{
+  grid-column: 2/3;
+  grid-row: 1/2;
+ 
 }
+
+.consultant{
+  grid-column: 2/3;
+  grid-row: 2/3;
+
+}
+.myteam{
+  grid-column: 1/2;
+  grid-row: 2/3;
+
+}
+
 
 .userItems_item {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 43%;
+  width: 100%;
   max-width: 127px;
   opacity: 0.3;
 }
@@ -40,7 +46,8 @@
   margin-top: 10px;
 }
 
-.userItems_item_flex {
+
+.userItems_item_container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,9 +60,10 @@
     0px 6.6501px 5.32008px rgba(55, 112, 226, 0.0282725);
   border-radius: 26px;
 }
-.adjust {
-  background: #3770e2;
+.adjust-container {
+  background: #3770E2;
 }
+
 
 .creditbtn {
   background: linear-gradient(266.18deg, #3770e2 7.12%, #0938df 99.54%);
@@ -108,35 +116,26 @@
   margin-bottom: 63px;
 }
 
-@media (max-width: 900px) {
-  .section_one {
-    flex-direction: column-reverse;
-    margin-bottom: 0;
-  }
-  .userItems_item {
-    width: 57%;
-  }
-  .section_tow {
-    flex-direction: column-reverse;
-  }
-  .userItems_item {
-    margin-bottom: 15px;
+@media (max-width: 1100px) {
+  .userItems{
+    column-gap: 25px;
   }
 }
 
-@media (max-width: 790px) {
-  .section_one {
-    flex-direction: column-reverse;
-    margin-bottom: 0;
+
+@media (max-width: 910px) {
+  .userItems{
+    grid-template-columns:50% 50%;
+    column-gap: 10px;
+    margin-bottom: 60px;
+
   }
-  .userItems_item {
-    width: 67%;
+  .userItems_item_container{
+    height: 85px;
+    width: 80%;
   }
-  .section_tow {
-    flex-direction: column-reverse;
-  }
-  .userItems_item {
-    margin-bottom: 15px;
+  .userItems_item p{
+    font-size: 0.9rem;
   }
 }
 
