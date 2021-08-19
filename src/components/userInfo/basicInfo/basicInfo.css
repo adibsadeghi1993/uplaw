@@ -16,5 +16,8 @@
         display: flex;
         flex-direction: column;
     }
+    .profilesection{
+        background: #FFFFFF;
+    }
 }
 

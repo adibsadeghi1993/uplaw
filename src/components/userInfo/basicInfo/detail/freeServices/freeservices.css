@@ -80,6 +80,13 @@
   font-weight: 800;
 }
 
+.register p,.signature p ,.adjustagreement p{
+  margin-top: 12px;
+  font-weight: 800;
+  font-size: .81rem;
+  line-height: 20px;
+}
+
 @media(max-width:1280px){
 
 .signature{
@@ -143,8 +150,8 @@
 
 @media(max-width:910px){
   .service{
-    width: 80px;
-    height: 90px;
+    width: 82px;
+    height: 82px;
   }
   .freeFacility{
     font-size: 0.9rem;

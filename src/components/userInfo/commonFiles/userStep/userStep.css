@@ -42,4 +42,7 @@
   .steps{
     display: none;
   }
+  .stepParagraf{
+    text-align: center;
+  }
 }

@@ -119,6 +119,7 @@
 @media (max-width: 1100px) {
   .userItems{
     column-gap: 25px;
+    margin-bottom: 85px;
   }
 }
 
@@ -127,7 +128,7 @@
   .userItems{
     grid-template-columns:50% 50%;
     column-gap: 10px;
-    margin-bottom: 60px;
+    margin-bottom: 85px;
 
   }
   .userItems_item_container{
@@ -145,6 +146,8 @@
     overflow-x: scroll;
     width: 100%;
     padding: 0 29px;
+    margin-bottom: 43px;
+    margin-top: 25px;
   }
   .userItems_item_container{
 width: 127px;
