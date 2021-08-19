@@ -173,3 +173,14 @@ font-weight: 800;
 }
 
 
+@media(max-width:768px){
+.freeservices{
+  display: none;
+}
+
+}
+
+
+
+
+

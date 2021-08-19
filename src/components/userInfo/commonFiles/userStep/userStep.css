@@ -37,3 +37,9 @@
   background-color: #3770e2;
   color: white;
 }
+
+@media(max-width:768px){
+  .steps{
+    display: none;
+  }
+}

@@ -35,10 +35,11 @@ const UserItems = () => {
           <p>تیم من</p>
         </div>
       </section>
-
-      <div className="creditbtn">اعتبار من</div>
-      <div className="supportbtn">تیم ها</div>
-      <div className="financialbtn">سوابق مالی</div>
+      <div className="userguidance">
+        <div className="creditbtn">اعتبار من</div>
+        <div className="supportbtn">تیم ها</div>
+        <div className="financialbtn">سوابق مالی</div>
+      </div>
     </div>
   );
 };

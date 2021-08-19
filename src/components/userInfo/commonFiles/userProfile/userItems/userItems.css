@@ -160,6 +160,9 @@ height: 119px;
     width: 0px;
     background: transparent; 
 }
+.userguidance{
+  display: none;
+}
 
 }
 

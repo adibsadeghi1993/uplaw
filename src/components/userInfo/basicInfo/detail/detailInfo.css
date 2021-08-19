@@ -260,3 +260,79 @@ border-radius: 5px;
   }
 }
 
+@media(max-width:768px){
+  .detail{
+    margin-top:0;
+  }
+  .Inputs{
+    display: grid;
+    grid-template-columns:100% ;
+    grid-template-rows: repeat(8,60px) 134px repeat(2,60px);
+    row-gap: 17px;
+    
+  }
+  input,textarea{
+    font-size: 14px;
+  }
+
+  .firstName{
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .lastName{
+    grid-column:1/2 ;
+    grid-row: 2/3;
+  }
+  .phoneNumber{
+    grid-column:1/2 ;
+    grid-row: 3/4;
+  }
+  .confirmMobile{
+    grid-column:1/2 ;
+    grid-row: 4/5;
+  }
+  .email{
+    grid-column:1/2 ;
+    grid-row: 5/6;
+  }
+  .birthday{
+    grid-column:1/2 ;
+    grid-row: 6/7;
+  }
+  .password{
+    grid-column:1/2 ;
+    grid-row: 7/8;
+  }
+  .confirmPassword{
+    grid-column:1/2 ;
+    grid-row: 8/9;
+  }
+  .address{
+    grid-column:1/2 ;
+    grid-row: 9/10;
+    height: 134px;
+  }
+  .address textarea{
+    height: 100%;
+  }
+  .postalcode{
+    grid-column:1/2 ;
+    grid-row: 10/11;
+  }
+  .nationalCode{
+    grid-column:1/2 ;
+    grid-row: 11/12;
+  }
+
+  .confirmInfo p{
+    display: none;
+  }
+  .confirmInfo{
+    margin-bottom: 79px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 31px;
+  }
+}
+
