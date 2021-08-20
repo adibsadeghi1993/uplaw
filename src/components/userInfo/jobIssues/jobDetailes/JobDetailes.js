@@ -1,9 +1,10 @@
 import React from "react";
 import UserStep from "../../commonFiles/userStep/UserStep";
+import SelectedJob from "../selcetJob/SelectedJob";
 import "./jobDetailes.css";
 import SelectComponent from "./SelectComponent";
 
-const JobDetailes = ({ formik, step, setStep, progress, setProgress }) => {
+const JobDetailes = ({job,setJob, formik, step, setStep, progress, setProgress }) => {
   const selectedOptions = [
     { label: "سطح خود را در شغل خود انتخاب کنید", value: "" },
     { label: "ضعیف", value: "1" },
@@ -20,18 +21,26 @@ const JobDetailes = ({ formik, step, setStep, progress, setProgress }) => {
         progress={progress}
       />
       <div className="jobdeatile_sectionOne">
-          <div className="sectionOne_jobtitle">
-             <input type="text" {...formik.getFieldProps("jobTitle")} name="jobTitle" placeholder="عنوان شغلی خود را وارد کنید"/>
-             {formik.errors.jobTitle&& formik.touched.jobTitle&& (
-          <div className="error">{formik.errors.jobTitle}</div>
-        )}
-          </div>
-          <div className="sectionOne_joblevel">
-              <SelectComponent formik={formik} name="jobLevel" selectedOptions={selectedOptions}/>
-
-          </div>
-
+        <div className="sectionOne_jobtitle">
+          <input
+            type="text"
+            {...formik.getFieldProps("jobTitle")}
+            name="jobTitle"
+            placeholder="عنوان شغلی خود را وارد کنید"
+          />
+          {formik.errors.jobTitle && formik.touched.jobTitle && (
+            <div className="error">{formik.errors.jobTitle}</div>
+          )}
+        </div>
+        <div className="sectionOne_joblevel">
+          <SelectComponent
+            formik={formik}
+            name="jobLevel"
+            selectedOptions={selectedOptions}
+          />
+        </div>
       </div>
+      <SelectedJob job={job} setJob={setJob} />
     </section>
   );
 };

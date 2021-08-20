@@ -31,6 +31,8 @@ const JobIssues = ({ step, setStep, progress, setProgress }) => {
           setProgress={setProgress}
           setStep={setStep}
           progress={progress}
+          job={job}
+          setJob={setJob}
         />
       </section>
     </main>
