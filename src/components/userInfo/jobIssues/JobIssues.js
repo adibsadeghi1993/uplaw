@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import UserProfile from "../commonFiles/userProfile/UserProfile";
 import JobDetailes from "./jobDetailes/JobDetailes";
 import "./jobIssues.css";
@@ -6,6 +6,7 @@ import { useFormik } from "formik";
 import { validationSchema } from "./JobValidation";
 
 const JobIssues = ({ step, setStep, progress, setProgress }) => {
+    const [job, setJob] = useState([]);
   const initialValues = {
     jobTitle: "",
     jobLevel: "",
