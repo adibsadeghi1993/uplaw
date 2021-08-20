@@ -22,7 +22,7 @@ const JobDetailes = ({ formik, step, setStep, progress, setProgress }) => {
       <div className="jobdeatile_sectionOne">
           <div className="sectionOne_jobtitle">
              <input type="text" {...formik.getFieldProps("jobTitle")} name="jobTitle" placeholder="عنوان شغلی خود را وارد کنید"/>
-             {formik.errors.jobTitle&& formik.touchederrors.jobTitle&& (
+             {formik.errors.jobTitle&& formik.touched.jobTitle&& (
           <div className="error">{formik.errors.jobTitle}</div>
         )}
           </div>
