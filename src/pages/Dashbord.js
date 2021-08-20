@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import { useFormik } from 'formik';
 import BasicInfo from '../components/userInfo/basicInfo/BasicInfo';
 import JobIssues from '../components/userInfo/jobIssues/JobIssues';
 import Contact from '../components/userInfo/contact/Contact';
