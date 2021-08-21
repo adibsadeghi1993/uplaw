@@ -12,3 +12,13 @@
     grid-column: 2/3; 
     
 }
+
+@media(max-width:768px){
+    .jobIssues{
+        display: flex;
+        flex-direction: column;
+    }
+    .profilesection{
+        background-color: #ffffff;
+    }
+}

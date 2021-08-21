@@ -146,8 +146,8 @@
     overflow-x: scroll;
     width: 100%;
     padding: 0 29px;
-    margin-bottom: 43px;
     margin-top: 25px;
+    margin-bottom: 0;
   }
   .userItems_item_container{
 width: 127px;

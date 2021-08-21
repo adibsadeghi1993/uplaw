@@ -5,7 +5,7 @@ import "./jobDetailes.css";
 import SelectComponent from "./SelectComponent";
 import blueArrowImage from "../../../../asstes/blue arrow.svg";
 import DeleteImage from "../../../../asstes/Delete.svg";
-import whiteArrowImage from "../../../../asstes/whitearrow.svg"
+import whiteArrowImage from "../../../../asstes/whitearrow.svg";
 import FreeServices from "../../basicInfo/detail/freeServices/FreeServices";
 
 const JobDetailes = ({
@@ -30,16 +30,16 @@ const JobDetailes = ({
 
   const registrSkillHandler = () => {
     const oldSkills = [...skills];
-    const newSkills = [...oldSkills,changeSkill];
+    const newSkills = [...oldSkills, changeSkill];
     setSkills(newSkills);
     setChangeSkill("");
   };
 
   const deleteSkillHandler = (item) => {
     console.log(item);
-    const oldSkills=[...skills]
-    const filteredSkills=oldSkills.filter((skill)=>skill!==item)
-    setSkills(filteredSkills)
+    const oldSkills = [...skills];
+    const filteredSkills = oldSkills.filter((skill) => skill !== item);
+    setSkills(filteredSkills);
   };
 
   return (
@@ -72,7 +72,7 @@ const JobDetailes = ({
       </div>
       <SelectedJob job={job} setJob={setJob} />
       <div className="sectionTow">
-      <div className="sectionTow_companyName">
+        <div className="sectionTow_companyName">
           <input
             type="text"
             {...formik.getFieldProps("companyName")}
@@ -96,27 +96,35 @@ const JobDetailes = ({
             <img src={blueArrowImage} alt="next-arrow" />
           </button>
         </div>
-        
       </div>
       <div className="skills_nextStep">
-        {skills.length > 0
-          ? <div className="skilllists">
-             { skills.map((item,index) => {
+        {skills.length > 0 ? (
+          <div className="skilllists">
+            {skills.map((item, index) => {
               return (
                 <div key={index} className={`eachSkill skill${index}`}>
                   <p>{item}</p>
-                  <button className="skillbtn" onClick={() => deleteSkillHandler(item)}>
+                  <button
+                    className="skillbtn"
+                    onClick={() => deleteSkillHandler(item)}
+                  >
                     <img src={DeleteImage} alt="deleteskill" />
                   </button>
                 </div>
               );
             })}
           </div>
-          : <div className="emptySkills"></div>}
-          <button className="nextbtn">ثبت و مرحله بعد<img src={whiteArrowImage} /></button>
-
+        ) : (
+          <div className="emptySkills"></div>
+        )}
+        <div className="skills_next">
+          <button className="nextbtn">
+            ثبت و مرحله بعد
+            <img src={whiteArrowImage} />
+          </button>
         </div>
-        <FreeServices/>
+      </div>
+      <FreeServices />
     </section>
   );
 };
