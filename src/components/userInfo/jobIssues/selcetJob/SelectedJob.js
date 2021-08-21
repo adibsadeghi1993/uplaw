@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
+import { usersJob } from "./SetUsersJob";
 
 const SelectedJob = ({ job, setJob }) => {
   const [jobOptions, setJobOptions] = useState([
-    { jobTitle: "استارتاپ/شرکت دارم", id: 1, background: "white" },
-    { jobTitle: "فریلنسر هستم", id: 2, background: "white" },
-    { jobTitle: "کارمند هستم", id: 3, background: "white" },
+    { jobTitle: "استارتاپ/شرکت دارم", id: 1, background: "nonSelectedJob_white" },
+    { jobTitle: "فریلنسر هستم", id: 2, background: "nonSelectedJob_white" },
+    { jobTitle: "کارمند هستم", id: 3, background: "nonSelectedJob_white" },
   ]);
 
   const jobHandler = (item) => {
@@ -14,7 +15,7 @@ const SelectedJob = ({ job, setJob }) => {
   useEffect(() => {
     const newJobOptions = jobOptions.map((item) => {
       if (job.find((job) => job.jobTitle === item.jobTitle)) {
-        return { ...item, background: "blue" };
+        return { ...item, background: "selectedJob_blue" };
       } else {
         return item;
       }

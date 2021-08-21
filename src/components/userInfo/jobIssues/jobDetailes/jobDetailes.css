@@ -4,16 +4,18 @@
     max-width: 707px;
  
   }
-  .jobdeatile_sectionOne{
+  .jobtitle_sectionOne{
       display: flex;
       margin-top: 45px;
   }
   .sectionOne_jobtitle{
       width: 50%;
+     
   }
   .sectionOne_joblevel{
       width: 50%;
       margin-right: 22px;
+     
   }
   .sectionOne_joblevel select{
       width: 100%;
@@ -23,4 +25,51 @@
       border: 0.3px solid #00000077;
       font-family: "anjoman";
       padding-right: 10px;
+  }
+
+  .selectJob_info{
+      display: flex;
+      margin-top: 27px;
+  }
+
+  .selectJob_info p{
+      margin: auto;
+      font-size: 0.88rem;
+      opacity: 0.5;
+  }
+
+  .selectJob_info_main{
+      display: flex;
+      flex: 1;
+      justify-content: start;
+    align-items: center;
+  }
+  .selectJob_info_main button{
+      padding: 9px 22px;
+      margin-right: 24px;
+      border: none;
+  }
+  .nonSelectedJob_white{
+      background-color: #E8E8E8;
+      font-family: "anjoman";
+  }
+
+  .selectedJob_blue{
+    background: #3770E2;
+    border-radius: 13px;
+    color: white;
+    font-family: "anjoman";
+  }
+
+  .jobtitle_sectionTow{
+      display: flex;
+      margin-top: 27px;
+  }
+
+  .sectionTow_companyName{
+      width: 50%;
+  }
+  .sectionTow_skills{
+      width: 50%;
+      margin-right: 22px;
   }

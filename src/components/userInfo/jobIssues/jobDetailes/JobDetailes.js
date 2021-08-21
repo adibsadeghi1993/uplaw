@@ -20,7 +20,7 @@ const JobDetailes = ({job,setJob, formik, step, setStep, progress, setProgress }
         setProgress={setProgress}
         progress={progress}
       />
-      <div className="jobdeatile_sectionOne">
+      <div className="jobtitle_sectionOne">
         <div className="sectionOne_jobtitle">
           <input
             type="text"
@@ -41,6 +41,30 @@ const JobDetailes = ({job,setJob, formik, step, setStep, progress, setProgress }
         </div>
       </div>
       <SelectedJob job={job} setJob={setJob} />
+      <div className="jobtitle_sectionTow">
+      <div className="sectionTow_companyName">
+          <input
+            type="text"
+            {...formik.getFieldProps("companyName")}
+            name="companyName"
+            placeholder="نام شرکت محل کار خود را وارد کنید"
+          />
+          {formik.errors.companyName && formik.touched.companyName && (
+            <div className="error">{formik.errors.companyName}</div>
+          )}
+        </div>
+        <div className="sectionTow_skills">
+          <input
+            type="text"
+            {...formik.getFieldProps("skills")}
+            name="skills"
+            placeholder="مهارت های خود را وارد کنید"
+          />
+          {formik.errors.skills && formik.touched.skills && (
+            <div className="error">{formik.errors.skills}</div>
+          )}
+        </div>
+      </div>
     </section>
   );
 };
