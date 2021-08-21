@@ -108,7 +108,7 @@ const DetailInfo = ({
       </section>
       <div className="confirmInfo">
            <p>ورود همه اطلاعات ضروری است</p>
-           <button className="nextstep">
+           <button className="nextbtn">
              ثبت و مرحله بعد<img src={whitearrowImage} alt="nextstepimage"/>
            </button>
         </div>

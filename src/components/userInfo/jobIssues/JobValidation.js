@@ -9,6 +9,8 @@ export const validationSchema = Yup.object({
       .min(2, "is short")
       .max(15, "is long")
       .required("سطح خود در شغل مورد نظر الزامی است"),
+      companyName: Yup.string()
+      .required("نام شرکت ضروری است"),
       skills: Yup.string()
       .required("ذکر مهارت الزامی است"),
    

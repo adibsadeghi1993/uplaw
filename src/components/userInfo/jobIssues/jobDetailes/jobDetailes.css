@@ -4,7 +4,7 @@
     max-width: 707px;
  
   }
-  .jobtitle_sectionOne{
+  .sectionOne{
       display: flex;
       margin-top: 45px;
   }
@@ -61,14 +61,19 @@
     font-family: "anjoman";
   }
 
-  .jobtitle_sectionTow{
+  .sectionTow{
      width: 100%;
+      display: flex;
       margin-top: 27px;
+  }
+  .sectionTow_companyName{
+      flex: 1;
   }
 
   .sectionTow_skills{
-      width: 100%;
+     flex: 1;
       position: relative;
+      margin-right: 22px;
       
   }
   .sectionTow_skills p{
@@ -87,7 +92,83 @@
       background: transparent;
       border: none;
       color: blue;
+      cursor: pointer;
   }
   .skillbutton img{
       margin-right: 5px
   }
+  .skills_nextStep{
+      display: flex;
+      margin-top: 27px;
+  }
+
+  .skilllists{
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      flex: 1;
+    
+  }
+  .emptySkills{
+      flex: 1;
+  }
+  .eachSkill{
+    padding: 0 28px;
+    height: 49px;
+      background: #3770E2;
+      border-radius: 27px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .eachSkill p{
+      color: white;
+      font-weight: 800;
+     padding-top: 8px;
+      height: 100%;
+      vertical-align: middle;
+  }
+  .skillbtn{
+      background: transparent;
+      border: none;
+      display: inline-block;
+      margin-right: 15px;
+      cursor: pointer;
+  }
+
+  .skill1{
+      margin-right: 14px;
+  }
+  
+  .skill2{
+    margin-right: 14px;
+}
+
+.skill3{
+    margin-right: 14px;
+}
+
+.skill4{
+    margin-right: 14px;
+}
+.skill5{
+    margin-right: 14px;
+}
+.nextbtn{
+    height: 42px;
+    width: 149px;
+    font-family: "anjoman";
+    font-weight: 800;
+    color: white;
+    background: #3770E2;
+    border:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.88rem;
+  cursor: pointer;
+}
+.nextbtn img{
+    margin-right: 12px;
+}
+

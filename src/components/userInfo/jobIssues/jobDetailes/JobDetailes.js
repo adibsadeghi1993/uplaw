@@ -5,7 +5,8 @@ import "./jobDetailes.css";
 import SelectComponent from "./SelectComponent";
 import blueArrowImage from "../../../../asstes/blue arrow.svg";
 import DeleteImage from "../../../../asstes/Delete.svg";
-import { isTemplateElement } from "@babel/types";
+import whiteArrowImage from "../../../../asstes/whitearrow.svg"
+import FreeServices from "../../basicInfo/detail/freeServices/FreeServices";
 
 const JobDetailes = ({
   job,
@@ -49,7 +50,7 @@ const JobDetailes = ({
         setProgress={setProgress}
         progress={progress}
       />
-      <div className="jobtitle_sectionOne">
+      <div className="sectionOne">
         <div className="sectionOne_jobtitle">
           <input
             type="text"
@@ -70,7 +71,18 @@ const JobDetailes = ({
         </div>
       </div>
       <SelectedJob job={job} setJob={setJob} />
-      <div className="jobtitle_sectionTow">
+      <div className="sectionTow">
+      <div className="sectionTow_companyName">
+          <input
+            type="text"
+            {...formik.getFieldProps("companyName")}
+            name="companyName"
+            placeholder="نام شرکت محل کار خود را وارد کنید."
+          />
+          {formik.errors.companyName && formik.touched.companyName && (
+            <div className="error">{formik.errors.companyName}</div>
+          )}
+        </div>
         <div className="sectionTow_skills">
           <input
             type="text"
@@ -84,19 +96,27 @@ const JobDetailes = ({
             <img src={blueArrowImage} alt="next-arrow" />
           </button>
         </div>
+        
+      </div>
+      <div className="skills_nextStep">
         {skills.length > 0
-          ? skills.map((item,index) => {
+          ? <div className="skilllists">
+             { skills.map((item,index) => {
               return (
-                <div key={index}>
+                <div key={index} className={`eachSkill skill${index}`}>
                   <p>{item}</p>
-                  <button onClick={() => deleteSkillHandler(item)}>
+                  <button className="skillbtn" onClick={() => deleteSkillHandler(item)}>
                     <img src={DeleteImage} alt="deleteskill" />
                   </button>
                 </div>
               );
-            })
-          : null}
-      </div>
+            })}
+          </div>
+          : <div className="emptySkills"></div>}
+          <button className="nextbtn">ثبت و مرحله بعد<img src={whiteArrowImage} /></button>
+
+        </div>
+        <FreeServices/>
     </section>
   );
 };

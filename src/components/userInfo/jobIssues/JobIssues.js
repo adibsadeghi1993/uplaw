@@ -11,7 +11,8 @@ const JobIssues = ({ step, setStep, progress, setProgress }) => {
   const initialValues = {
     jobTitle: "",
     jobLevel: "",
-    skills: "",
+    companyName:""
+
   };
 
   const formik = useFormik({
