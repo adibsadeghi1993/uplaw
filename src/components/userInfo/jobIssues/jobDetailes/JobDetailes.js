@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import UserStep from "../../commonFiles/userStep/UserStep";
 import SelectedJob from "../selcetJob/SelectedJob";
 import "./jobDetailes.css";
 import SelectComponent from "./SelectComponent";
+import blueArrowImage from "../../../../asstes/blue arrow.svg";
 
-const JobDetailes = ({job,setJob, formik, step, setStep, progress, setProgress }) => {
+const JobDetailes = ({
+  job,
+  setJob,
+  skills,
+  setSkills,
+  formik,
+  step,
+  setStep,
+  progress,
+  setProgress,
+}) => {
+  const [changeSkill, setChangeSkill] = useState("");
   const selectedOptions = [
     { label: "سطح خود را در شغل خود انتخاب کنید", value: "" },
     { label: "ضعیف", value: "1" },
@@ -12,6 +24,17 @@ const JobDetailes = ({job,setJob, formik, step, setStep, progress, setProgress }
     { label: "خوب", value: "3" },
     { label: "عالی", value: "4" },
   ];
+ 
+
+  const registrSkillHandler=()=>{
+    const oldSkills=[...skills]
+    const newSkills=[...oldSkills,changeSkill]
+    setSkills(newSkills)
+    setChangeSkill("")
+  }
+
+  
+
   return (
     <section className="job_detaile">
       <UserStep
@@ -45,14 +68,22 @@ const JobDetailes = ({job,setJob, formik, step, setStep, progress, setProgress }
         <div className="sectionTow_skills">
           <input
             type="text"
-            {...formik.getFieldProps("skills")}
-            name="skills"
+            value={changeSkill}
+            onChange={(e) => setChangeSkill(e.target.value)}
             placeholder="مهارت های خود را وارد کنید"
           />
-          {formik.errors.skills && formik.touched.skills && (
-            <div className="error">{formik.errors.skills}</div>
-          )}
+          <p>حداکثر 5 مورد</p>
+          <button className="skillbutton" onClick={registrSkillHandler}>
+            ثبت
+            <img src={blueArrowImage} alt="next-arrow" />
+          </button>
         </div>
+        {skills.length > 0 ? skills.map((item)=>{
+          return <div>
+            <p>{item}</p>
+            
+          </div>
+        }):null}
       </div>
     </section>
   );

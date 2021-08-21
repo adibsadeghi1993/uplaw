@@ -7,10 +7,10 @@ import { validationSchema } from "./JobValidation";
 
 const JobIssues = ({ step, setStep, progress, setProgress }) => {
     const [job, setJob] = useState([]);
+    const [skills,setSkills]=useState([])
   const initialValues = {
     jobTitle: "",
     jobLevel: "",
-    companyName: "",
     skills: "",
   };
 
@@ -33,6 +33,8 @@ const JobIssues = ({ step, setStep, progress, setProgress }) => {
           progress={progress}
           job={job}
           setJob={setJob}
+          skills={skills}
+          setSkills={setSkills}
         />
       </section>
     </main>
