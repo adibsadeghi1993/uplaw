@@ -42,17 +42,6 @@ const JobDetailes = ({job,setJob, formik, step, setStep, progress, setProgress }
       </div>
       <SelectedJob job={job} setJob={setJob} />
       <div className="jobtitle_sectionTow">
-      <div className="sectionTow_companyName">
-          <input
-            type="text"
-            {...formik.getFieldProps("companyName")}
-            name="companyName"
-            placeholder="نام شرکت محل کار خود را وارد کنید"
-          />
-          {formik.errors.companyName && formik.touched.companyName && (
-            <div className="error">{formik.errors.companyName}</div>
-          )}
-        </div>
         <div className="sectionTow_skills">
           <input
             type="text"
