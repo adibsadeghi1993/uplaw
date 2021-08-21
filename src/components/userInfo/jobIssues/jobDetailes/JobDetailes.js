@@ -4,6 +4,8 @@ import SelectedJob from "../selcetJob/SelectedJob";
 import "./jobDetailes.css";
 import SelectComponent from "./SelectComponent";
 import blueArrowImage from "../../../../asstes/blue arrow.svg";
+import DeleteImage from "../../../../asstes/Delete.svg";
+import { isTemplateElement } from "@babel/types";
 
 const JobDetailes = ({
   job,
@@ -24,16 +26,20 @@ const JobDetailes = ({
     { label: "خوب", value: "3" },
     { label: "عالی", value: "4" },
   ];
- 
 
-  const registrSkillHandler=()=>{
+  const registrSkillHandler = () => {
+    const oldSkills = [...skills];
+    const newSkills = [...oldSkills,changeSkill];
+    setSkills(newSkills);
+    setChangeSkill("");
+  };
+
+  const deleteSkillHandler = (item) => {
+    console.log(item);
     const oldSkills=[...skills]
-    const newSkills=[...oldSkills,changeSkill]
-    setSkills(newSkills)
-    setChangeSkill("")
-  }
-
-  
+    const filteredSkills=oldSkills.filter((skill)=>skill!==item)
+    setSkills(filteredSkills)
+  };
 
   return (
     <section className="job_detaile">
@@ -78,12 +84,18 @@ const JobDetailes = ({
             <img src={blueArrowImage} alt="next-arrow" />
           </button>
         </div>
-        {skills.length > 0 ? skills.map((item)=>{
-          return <div>
-            <p>{item}</p>
-            
-          </div>
-        }):null}
+        {skills.length > 0
+          ? skills.map((item,index) => {
+              return (
+                <div key={index}>
+                  <p>{item}</p>
+                  <button onClick={() => deleteSkillHandler(item)}>
+                    <img src={DeleteImage} alt="deleteskill" />
+                  </button>
+                </div>
+              );
+            })
+          : null}
       </div>
     </section>
   );
