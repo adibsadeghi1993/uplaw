@@ -8,6 +8,10 @@
     font-family: "anjoman";
     src: url(./asstes/anjoman/Anjoman-Medium.ttf);
   }
+
+  p,input,button,span{
+      font-family: "anjoman";
+  }
   
   .App{
     font-family: "anjoman";

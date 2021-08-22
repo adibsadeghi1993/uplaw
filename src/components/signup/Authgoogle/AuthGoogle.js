@@ -7,11 +7,11 @@ const AuthGoogle = () => {
     return (
         <>
             <div className="authsection_google">
-                <button><img src={googleImage}/>از گوگل برای ثبت نام/ورود استفاده کنید</button>
+                <button><img src={googleImage}/><span>از گوگل برای ثبت نام/ ورود استفاده کنید</span></button>
             </div>
             <div className="condition">
-                <input type="checkbox"/>
-                <label>با قوانین و مقررات موافقم</label>
+                <input type="checkbox" id="checkboxCondition"/>
+                <label htmlFor="checkboxCondition">با قوانین و مقررات موافقم .</label>
             </div>
             <div className="confirm_signup">
                 <button><span>وارد شوید</span> <img src={arrowImage}/></button>

@@ -9,10 +9,10 @@ const Auth = () => {
   return (
     <section className="auth_section">
       <div className="sginup_description">
-        <p>به آینده وارد شوید</p>
-        <p>
-          با ثبت نام یا ورود به آپلا،از بین بیشتر از 150 سند،سند دلخواه خود را با
-          هوشمندی تمام <br/>تنظیم کرده، شرکت خود را تعریف کنی و مدیریت آن را اسانتر
+        <p className="sginup_description_first_p">به آینده وارد شوید .</p>
+        <p className="sginup_description_second_p">
+          با ثبت نام یا ورود به آپلا،از بین بیشتر از 150 سند،سند دلخواه خود را با 
+          هوشمندی تمام <br/> تنظیم کرده، شرکت خود را تعریف کنی و مدیریت آن را اسانتر
           کنید
         </p>
       </div>
