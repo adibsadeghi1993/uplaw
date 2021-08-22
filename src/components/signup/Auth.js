@@ -1,6 +1,8 @@
 import React from "react";
 import "./Auth.css"
 import { useFormik } from "formik";
+import AuthPhone from "./AuthPhoneNumber/AuthPhone";
+import AuthGoogle from "./Authgoogle/AuthGoogle";
 
 const Auth = () => {
   return (
@@ -12,6 +14,11 @@ const Auth = () => {
           هوشمندی تمام <br/>تنظیم کرده، شرکت خود را تعریف کنی و مدیریت آن را اسانتر
           کنید
         </p>
+      </div>
+      <div className="google_phone_auth">
+          <AuthPhone/>
+          <div>/</div>
+          <AuthGoogle/>
       </div>
     </section>
   );

@@ -7,3 +7,7 @@
     margin: auto;
     background-color: burlywood;
 }
+
+.google_phone_auth{
+    display: flex;
+}

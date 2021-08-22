@@ -1,13 +1,13 @@
 import React from 'react'
 import "./AuthGoogle.css"
-import googleImage from "../../../asstes/google.svg"
-import arrowImage from "../../../asstes/arrow.svg"
+import googleImage from "../../../asstes/google (2).svg"
+import arrowImage from "../../../asstes/arrow2.svg"
 
 const AuthGoogle = () => {
     return (
         <section className="google_section">
             <div>
-                <button>از گوگل برای ثبت نام/ورود استفاده کنید<img src={googleImage}/></button>
+                <button><img src={googleImage}/>از گوگل برای ثبت نام/ورود استفاده کنید</button>
             </div>
             <div>
                 <input type="checkbox"/>
