@@ -14,7 +14,7 @@ import { UserInfoContext } from "../../contextInfo/ContextInfo";
 const DetailInfo = () => {
    const context = useContext(UserInfoContext)
    console.log(context)
-  const {setUpLoadedImage,setBirthday,formik}=context 
+  const {setUpLoadedImage,setStep,setProgress,setBirthday,formik}=context 
   const [userProfile, setUserProfile] = useState(uploadImage);
   console.log(formik.errors);
 
@@ -29,6 +29,10 @@ const DetailInfo = () => {
 
     setUpLoadedImage(e.target.files[0]);
   };
+  const firstStepHandler=()=>{
+    setStep(step=>step+1)
+    setProgress(25)
+  }
   return (
     <div className="detail">
       <UserStep />
@@ -94,7 +98,7 @@ const DetailInfo = () => {
       </section>
       <div className="confirmInfo">
         <p>ورود همه اطلاعات ضروری است</p>
-        <button className="nextbtn">
+        <button className="nextbtn" onClick={firstStepHandler}>
           ثبت و مرحله بعد
           <img src={whitearrowImage} alt="nextstepimage" />
         </button>

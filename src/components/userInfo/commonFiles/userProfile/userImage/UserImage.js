@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./userImage.css";
 import { RiEditBoxLine } from "react-icons/all";
 import { IconContext } from "react-icons";
@@ -6,7 +6,9 @@ import userImage from "../../../../../asstes/anonymous-user-circle-icon-vector-1
 import serchImage from "../../../../../asstes/search.svg";
 import billImage from "../../../../../asstes/bill.svg";
 import menubarImage from "../../../../../asstes/menubar.svg"
+import { UserInfoContext } from "../../../contextInfo/ContextInfo";
 const UserImage = () => {
+  const {progress} = useContext(UserInfoContext)
   const ProfileHandler = () => {
     console.log("profile edit");
   };
@@ -40,11 +42,11 @@ const UserImage = () => {
         </div>
       </section>
       <div className="progress-bar">
-       <div className="progressPersentage" style={{width:`50%`}}></div>
+       <div className="progressPersentage" style={{width:`${progress}%`}}></div>
 
      </div>
      <p className="compoletedprogress">
-         50 درصد مونده به تکمیل پروفایل!
+         {100-progress} درصد مونده به تکمیل پروفایل!
       </p>
     </main>
   );

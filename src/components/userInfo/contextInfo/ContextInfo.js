@@ -5,7 +5,7 @@ import { initialValues } from "./AllInitialValues";
 export const UserInfoContext = React.createContext();
 const ContextInfo = ({ children }) => {
   const [step, setStep] = useState(1);
-  const [progress, setProgress] = useState(50);
+  const [progress, setProgress] = useState(0);
   const [upLoadedImage, setUpLoadedImage] = useState(null);
   const [bithday, setBirthday] = useState("");
   const [job, setJob] = useState([]);
