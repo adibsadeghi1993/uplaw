@@ -1,0 +1,9 @@
+.auth_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 68%;
+    margin: auto;
+    background-color: burlywood;
+}

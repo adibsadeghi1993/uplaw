@@ -1,10 +1,14 @@
 import React from 'react'
+import "./AuthGoogle.css"
 
 const AuthGoogle = () => {
     return (
-        <div>
-            auth google
-        </div>
+        <section className="google_section">
+            <div>
+                <button></button>
+            </div>
+          
+        </section>
     )
 }
 
