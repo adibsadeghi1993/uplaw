@@ -1,0 +1,26 @@
+import React,{useContext} from "react";
+import BasicInfo from "./basicInfo/BasicInfo";
+import Contact from "./contact/Contact";
+import { UserInfoContext } from "./contextInfo/ContextInfo";
+import JobIssues from "./jobIssues/JobIssues";
+import Verfication from "./userVerification/Verfication";
+
+const DashbordComponents = () => {
+const {step} = useContext(UserInfoContext)
+  switch (step) {
+    case 1:
+      return <BasicInfo />;
+    case 2:
+      return <JobIssues />;
+    case 3:
+      return <Contact />;
+    case 4:
+      return <Verfication />;
+
+    default:
+      break;
+  }
+  return <div></div>;
+};
+
+export default DashbordComponents;

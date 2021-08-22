@@ -1,42 +1,18 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import UserProfile from "../commonFiles/userProfile/UserProfile";
 import JobDetailes from "./jobDetailes/JobDetailes";
 import "./jobIssues.css";
 import { useFormik } from "formik";
 import { validationSchema } from "./JobValidation";
 
-const JobIssues = ({ step, setStep, progress, setProgress }) => {
-    const [job, setJob] = useState([]);
-    const [skills,setSkills]=useState([])
-  const initialValues = {
-    jobTitle: "",
-    jobLevel: "",
-    companyName:""
-
-  };
-
-  const formik = useFormik({
-    initialValues,
-    validateOnMount: true,
-    validationSchema,
-  });
+const JobIssues = () => {
   return (
     <main className="jobIssues">
       <section className="profilesection">
-        <UserProfile progress={progress} />
+        <UserProfile />
       </section>
       <section className="jobIssues_info">
-        <JobDetailes
-          formik={formik}
-          step={step}
-          setProgress={setProgress}
-          setStep={setStep}
-          progress={progress}
-          job={job}
-          setJob={setJob}
-          skills={skills}
-          setSkills={setSkills}
-        />
+        <JobDetailes />
       </section>
     </main>
   );

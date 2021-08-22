@@ -1,24 +1,20 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import UserStep from "../../commonFiles/userStep/UserStep";
 import "./detailInfo.css";
 import Input from "./Input";
 import uploadImage from "../../../../asstes/upload.svg";
 import { allInputs } from "./ConstantInputs";
-import DateImage from "../../../../asstes/Date.svg"
-import whitearrowImage from "../../../../asstes/whitearrow.svg"
+import DateImage from "../../../../asstes/Date.svg";
+import whitearrowImage from "../../../../asstes/whitearrow.svg";
 
 import DatePicker from "../DtaePicker/DatePicker";
 import FreeServices from "./freeServices/FreeServices";
+import { UserInfoContext } from "../../contextInfo/ContextInfo";
 
-const DetailInfo = ({
-  step,
-  setStep,
-  progress,
-  setProgress,
-  setUpLoadedImage,
-  formik,
-  setBirthday
-}) => {
+const DetailInfo = () => {
+   const context = useContext(UserInfoContext)
+   console.log(context)
+  const {setUpLoadedImage,setBirthday,formik}=context 
   const [userProfile, setUserProfile] = useState(uploadImage);
   console.log(formik.errors);
 
@@ -35,12 +31,7 @@ const DetailInfo = ({
   };
   return (
     <div className="detail">
-      <UserStep
-        step={step}
-        setStep={setStep}
-        setProgress={setProgress}
-        progress={progress}
-      />
+      <UserStep />
 
       <section className="Inputs">
         {allInputs.map((item) => {
@@ -57,10 +48,8 @@ const DetailInfo = ({
         })}
 
         <div className="confirmMobile">
-         
           <input type="text" placeholder="کد تایید" />
           <button>تایید موبایل</button>
-         
         </div>
         <div className="uploadImage">
           <img src={userProfile} alt="profileImage" className="profileImage" />
@@ -74,12 +63,10 @@ const DetailInfo = ({
         </div>
 
         <div className="birthday">
-
-        <DatePicker setBirthday={setBirthday}/>
-        <label htmlFor="datePicker">
-        <img src={DateImage} alt="dateimage"/>
-        </label>
-        
+          <DatePicker setBirthday={setBirthday} />
+          <label htmlFor="datePicker">
+            <img src={DateImage} alt="dateimage" />
+          </label>
         </div>
         <div className="label">
           <label htmlFor="image">بارگذاری عکس</label>
@@ -88,7 +75,6 @@ const DetailInfo = ({
           <Input
             type="password"
             name="password"
-            formik={formik}
             placeholder=" رمز عبور انتخابی خود را وارد کنید"
           />
           <p className="passwordChracter">8 کاراکتر</p>
@@ -101,19 +87,19 @@ const DetailInfo = ({
             {...formik.getFieldProps("address")}
             placeholder="  ادرس خود را وارد کنید"
           />
-           {formik.errors.address && formik.touched.address && (
-          <div className="error">{formik.errors.address}</div>
-        )}
+          {formik.errors.address && formik.touched.address && (
+            <div className="error">{formik.errors.address}</div>
+          )}
         </div>
       </section>
       <div className="confirmInfo">
-           <p>ورود همه اطلاعات ضروری است</p>
-           <button className="nextbtn">
-             ثبت و مرحله بعد<img src={whitearrowImage} alt="nextstepimage"/>
-           </button>
-        </div>
-        <FreeServices/>
-    
+        <p>ورود همه اطلاعات ضروری است</p>
+        <button className="nextbtn">
+          ثبت و مرحله بعد
+          <img src={whitearrowImage} alt="nextstepimage" />
+        </button>
+      </div>
+      <FreeServices />
     </div>
   );
 };

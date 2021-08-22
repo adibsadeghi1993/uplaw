@@ -1,7 +1,9 @@
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect,useContext } from "react";
+import { UserInfoContext } from "../../contextInfo/ContextInfo";
 import { usersJob } from "./SetUsersJob";
 
-const SelectedJob = ({ job, setJob }) => {
+const SelectedJob = () => {
+  const {job,setJob} = useContext(UserInfoContext)
   const [jobOptions, setJobOptions] = useState([
     { jobTitle: "استارتاپ/شرکت دارم", id: 1, background: "nonSelectedJob_white" },
     { jobTitle: "فریلنسر هستم", id: 2, background: "nonSelectedJob_white" },

@@ -20,7 +20,7 @@ export const allInputs = [
     placeholder: "ایمیل خود را وارد کنید",
   },
   {
-    type: "text",
+    type: "password",
     name: "confirmPassword",
     placeholder: "رمز عبور خود را مجدد وارد کنید",
   },

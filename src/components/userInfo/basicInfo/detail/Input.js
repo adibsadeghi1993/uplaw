@@ -1,7 +1,10 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import { UserInfoContext } from '../../contextInfo/ContextInfo'
 import "./input.css"
 
-const Input = ({name,type,placeholder,formik}) => {
+const Input = ({name,type,placeholder}) => {
+  const {formik} = useContext(UserInfoContext)
+  
     return (
         <>
            <input

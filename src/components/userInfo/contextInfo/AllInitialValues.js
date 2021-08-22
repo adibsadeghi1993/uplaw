@@ -1,3 +1,4 @@
+
 export const initialValues = {
     firstName: "",
     lastName:"",
@@ -7,6 +8,9 @@ export const initialValues = {
     confirmPassword:"",
     address:"",
     postalCode:"",
-    nationalCode:""
+    nationalCode:"",
+    jobTitle: "",
+    jobLevel: "",
+    companyName:"",
 
   };

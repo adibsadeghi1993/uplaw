@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import UserStep from "../../commonFiles/userStep/UserStep";
 import SelectedJob from "../selcetJob/SelectedJob";
 import "./jobDetailes.css";
@@ -7,18 +7,11 @@ import blueArrowImage from "../../../../asstes/blue arrow.svg";
 import DeleteImage from "../../../../asstes/Delete.svg";
 import whiteArrowImage from "../../../../asstes/whitearrow.svg";
 import FreeServices from "../../basicInfo/detail/freeServices/FreeServices";
+import Input from "../../basicInfo/detail/Input";
+import { UserInfoContext } from "../../contextInfo/ContextInfo";
 
-const JobDetailes = ({
-  job,
-  setJob,
-  skills,
-  setSkills,
-  formik,
-  step,
-  setStep,
-  progress,
-  setProgress,
-}) => {
+const JobDetailes = () => {
+  const {skills,setSkills} = useContext(UserInfoContext)
   const [changeSkill, setChangeSkill] = useState("");
   const selectedOptions = [
     { label: "سطح خود را در شغل خود انتخاب کنید", value: "" },
@@ -44,44 +37,27 @@ const JobDetailes = ({
 
   return (
     <section className="job_detaile">
-      <UserStep
-        step={step}
-        setStep={setStep}
-        setProgress={setProgress}
-        progress={progress}
-      />
+      <UserStep />
       <div className="sectionOne">
         <div className="sectionOne_jobtitle">
-          <input
-            type="text"
-            {...formik.getFieldProps("jobTitle")}
+          <Input
             name="jobTitle"
+            type="text"
             placeholder="عنوان شغلی خود را وارد کنید"
           />
-          {formik.errors.jobTitle && formik.touched.jobTitle && (
-            <div className="error">{formik.errors.jobTitle}</div>
-          )}
         </div>
         <div className="sectionOne_joblevel">
-          <SelectComponent
-            formik={formik}
-            name="jobLevel"
-            selectedOptions={selectedOptions}
-          />
+          <SelectComponent name="jobLevel" selectedOptions={selectedOptions} />
         </div>
       </div>
-      <SelectedJob job={job} setJob={setJob} />
+      <SelectedJob />
       <div className="sectionTow">
         <div className="sectionTow_companyName">
-          <input
+          <Input
+            placeholder="نام شرکت محل کار خود را وارد کنید"
             type="text"
-            {...formik.getFieldProps("companyName")}
             name="companyName"
-            placeholder="نام شرکت محل کار خود را وارد کنید."
           />
-          {formik.errors.companyName && formik.touched.companyName && (
-            <div className="error">{formik.errors.companyName}</div>
-          )}
         </div>
         <div className="sectionTow_skills">
           <input

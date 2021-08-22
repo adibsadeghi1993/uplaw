@@ -1,6 +1,8 @@
-import React from "react";
+import React,{useContext} from "react";
+import { UserInfoContext } from "../../contextInfo/ContextInfo";
 
-const SelectComponent = ({ selectedOptions,name,formik }) => {
+const SelectComponent = ({ selectedOptions,name}) => {
+  const {formik} = useContext(UserInfoContext)
   return (
     <>
       <select name={name} {...formik.getFieldProps({name})} >

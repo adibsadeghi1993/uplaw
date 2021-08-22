@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext} from "react";
+import { UserInfoContext } from "../../contextInfo/ContextInfo";
 import { steps } from "./Stages";
 import "./userStep.css";
 
-const UserStep = ({ step, setStep, progress, setProgress }) => {
+const UserStep = () => {
+  const {step,setStep,progress,setProgress} = useContext(UserInfoContext)
   const [stage, setStage] = useState(steps);
 
 

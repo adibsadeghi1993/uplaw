@@ -1,6 +1,7 @@
 
 import * as Yup from "yup";
 export const validationSchema = Yup.object({
+
     firstName: Yup.string()
       .min(2, "is short")
       .max(15, "is long")
@@ -29,5 +30,17 @@ export const validationSchema = Yup.object({
     nationalCode: Yup
     .string()
     .required("کد ملی الزامی است").matches(new RegExp("[0-9]{10}"),"کد پستی 10 رقمی وارد کنید"),
+    jobTitle: Yup.string()
+      .min(1, "is short")
+      .max(15, "is long")
+      .required("عنوان شغلی الزامی است"),
+      jobLevel: Yup.string()
+      .min(2, "is short")
+      .max(15, "is long")
+      .required("سطح خود در شغل مورد نظر الزامی است"),
+      companyName: Yup.string()
+      .required("نام شرکت ضروری است"),
+      skills: Yup.string()
+      .required("ذکر مهارت الزامی است"),
    
   });
