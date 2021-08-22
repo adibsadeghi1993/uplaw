@@ -3,3 +3,13 @@
     padding: 0;
     margin: 0;
 }
+
+@font-face {
+    font-family: "anjoman";
+    src: url(./asstes/anjoman/Anjoman-Medium.ttf);
+  }
+  
+  .App{
+    font-family: "anjoman";
+    min-height: 100vh;
+  }
