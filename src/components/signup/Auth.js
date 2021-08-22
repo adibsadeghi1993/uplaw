@@ -21,7 +21,7 @@ const Auth = () => {
           <div className="emptyspace">/</div>
           <AuthGoogle/>
       </div>
-      <img className="avatar" src={AbstractImage}/>
+      {/* <img className="avatar" src={AbstractImage}/> */}
     </section>
   );
 };
