@@ -3,11 +3,12 @@ import "./Auth.css"
 import { useFormik } from "formik";
 import AuthPhone from "./AuthPhoneNumber/AuthPhone";
 import AuthGoogle from "./Authgoogle/AuthGoogle";
+import AbstractImage from "../../asstes/Abstract 4.jpg"
 
 const Auth = () => {
   return (
     <section className="auth_section">
-      <div>
+      <div className="sginup_description">
         <p>به آینده وارد شوید</p>
         <p>
           با ثبت نام یا ورود به آپلا،از بین بیشتر از 150 سند،سند دلخواه خود را با
@@ -17,9 +18,10 @@ const Auth = () => {
       </div>
       <div className="google_phone_auth">
           <AuthPhone/>
-          <div>/</div>
+          <div className="emptyspace">/</div>
           <AuthGoogle/>
       </div>
+      <img className="avatar" src={AbstractImage}/>
     </section>
   );
 };
