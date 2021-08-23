@@ -1,11 +1,16 @@
-
-import './App.css';
-import Auth from './components/signup/Auth';
+import "./App.css";
+import { Switch, Route, Link } from "react-router-dom";
+import SignUp from "./pages/SignUp";
 
 function App() {
   return (
     <div className="App">
-     <Auth/>
+      <Link to="/auth/google">
+        <h1>go to google signup</h1>
+      </Link>
+      <Switch>
+        <Route path="/auth/google" exact component={SignUp}/>
+      </Switch>
     </div>
   );
 }

@@ -10,8 +10,8 @@ const AuthPhone = () => {
         <>
             <div className="authphone_phonenumber">
                 <input type="text" placeholder="شماره تلفن خود را وارد کنید"/>
-                <button><img src={circleArrowImage} alt="circle arrow image" /></button>
-                <img className="phoneImage" src={phoneImage} alt="phone Image" />
+                <button><img src={circleArrowImage} alt="circle arrow" /></button>
+                <img className="phoneImage" src={phoneImage} alt="phone" />
             </div>
             <div className="authphone_sendcode">
                 <p>ارسال مجدد کد تا 05:00 دقیقه</p>
