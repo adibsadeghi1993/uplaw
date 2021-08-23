@@ -7,7 +7,9 @@ import AuthGoogle from "./Authgoogle/AuthGoogle";
 
 const Auth = (props) => {
 
-  
+ console.log(props.formik.errors)
+
+ const {formik}=props
 
   return (
     <section className="auth_section">
@@ -20,9 +22,9 @@ const Auth = (props) => {
         </p>
       </div>
       <div className="google_phone_auth">
-          <AuthPhone/>
+          <AuthPhone formik={formik}/>
           <div className="emptyspace">/</div>
-          <AuthGoogle {...props}/>
+          <AuthGoogle formik={formik} {...props}/>
       </div>
       {/* <img className="avatar" src={AbstractImage}/> */}
     </section>

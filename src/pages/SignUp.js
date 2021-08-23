@@ -5,8 +5,12 @@ import * as Yup from "yup"
 
 const SignUp = (props) => {
 
-    const validationSchema=Yup.string({
-        
+    const validationSchema=Yup.object({
+        phoneNumber: Yup.string()
+        .matches(new RegExp("[0-9]{11}"),"لطفا شماره تلفن11 رقمی وارد کنید")
+        .required("شماره تلفن الزامی است"),
+        confirmCode:Yup.string().required("کد الزامی است"),
+        terms:Yup.boolean().oneOf([true], 'باید شرایط را بپذیرید')
     })
 
 
@@ -14,7 +18,7 @@ const SignUp = (props) => {
     const  initialValues={
         phoneNumber:"",
         confirmCode:"",
-        terms:""
+        terms:false
     }
     
   const formik=useFormik({
@@ -25,7 +29,7 @@ const SignUp = (props) => {
   })
     return (
         <div>
-          <Auth {...props}/>  
+          <Auth {...props} formik={formik}/>  
         </div>
     )
 }

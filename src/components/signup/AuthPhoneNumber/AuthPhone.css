@@ -1,16 +1,1 @@
-/* <GoogleLogin
-          clientId="857095448578-hb4jvirn25baa763ue2d9s13ri5o7vls.apps.googleusercontent.com"
-          render={(renderProps) => (
-            <button
-              onClick={renderProps.onClick}
-              disabled={renderProps.disabled}
-            >
-              <img src={googleImage} alt="google" />
-              <span>از گوگل برای ثبت نام/ ورود استفاده کنید</span>
-            </button>
-          )}
-          buttonText="Login"
-          onSuccess={responseSuccessGoogle}
-          onFailure={responseErrorGoogle}
-          cookiePolicy={"single_host_origin"}
-        /> */
+
