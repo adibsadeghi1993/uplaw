@@ -2,3 +2,6 @@
     display: flex;
     align-items: center;
 }
+.authsection_google button{
+    background: transparent;
+}
