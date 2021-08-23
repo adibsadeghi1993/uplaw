@@ -5,11 +5,21 @@ import lockImage from "../../../asstes/lock.svg";
 import phoneImage from "../../../asstes/phone.svg";
 
 const AuthPhone = (props) => {
-    const {formik}=props
+  const { formik } = props;
   return (
     <>
       <div className="authphone_phonenumber">
-        <input type="text" name="phoneNumber"  placeholder="شماره تلفن خود را وارد کنید" />
+        <div className="authphone_phonenumber_error">
+        <input
+          type="text"
+          name="phoneNumber"
+          {...formik.getFieldProps("phoneNumber")}
+          placeholder="شماره تلفن خود را وارد کنید"
+        />
+          {formik.errors.phoneNumber && formik.touched.phoneNumber && (
+          <div className="error">{formik.errors.phoneNumber}</div>
+        )} 
+        </div>
         <button>
           <img src={circleArrowImage} alt="circle arrow" />
         </button>
@@ -19,7 +29,17 @@ const AuthPhone = (props) => {
         <p>ارسال مجدد کد تا 05:00 دقیقه</p>
       </div>
       <div className="authphone_code">
-        <input type="text" name="confirmCode" placeholder="کد ارسال شده را وارد کنید" />
+        <div className="authphone_code_error">
+        <input
+          type="text"
+          name="confirmCode"
+          {...formik.getFieldProps("confirmCode")}
+          placeholder="کد ارسال شده را وارد کنید"
+        />
+          {formik.errors.confirmCode && formik.touched.confirmCode && (
+          <div className="error">{formik.errors.confirmCode}</div>
+        )} 
+        </div>
         <img src={lockImage} alt="lockImage" />
       </div>
     </>
