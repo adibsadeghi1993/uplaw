@@ -6,20 +6,22 @@ import arrowImage from "../../../asstes/arrow2.svg";
 import axios from "axios";
 
 const AuthGoogle = (props) => {
-
   useEffect(() => {
     const query = queryString.parse(props.location.search);
-    console.log(query)
-    console.log(query.code)
-    const bodyCode={code:query.code}
-    console.log(bodyCode)
-     axios.post("http://localhost:3000/api/v1/customer/profile/auth/google",bodyCode).then((response)=>{
-    console.log(response)
-     }).catch((err)=>{
-        console.log(err)
-     })
-
-  }, [props.location.search])
+    const bodyCode = { code: query.code };
+    console.log(bodyCode);
+    axios
+      .post(
+        "http://localhost:3000/api/v1/customer/profile/auth/google",
+        bodyCode
+      )
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [props.location.search]);
 
   const stringifiedParams = queryString.stringify({
     client_id:

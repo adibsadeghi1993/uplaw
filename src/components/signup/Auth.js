@@ -6,6 +6,9 @@ import AuthGoogle from "./Authgoogle/AuthGoogle";
 // import AbstractImage from "../../asstes/Abstract 4.jpg"
 
 const Auth = (props) => {
+
+  
+
   return (
     <section className="auth_section">
       <div className="sginup_description">
