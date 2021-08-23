@@ -1,8 +1,15 @@
 import React from 'react'
 import Auth from '../components/signup/Auth'
 import { useFormik } from "formik";
+import * as Yup from "yup"
 
 const SignUp = (props) => {
+
+    const validationSchema=Yup.string({
+        
+    })
+
+
 
     const  initialValues={
         phoneNumber:"",
