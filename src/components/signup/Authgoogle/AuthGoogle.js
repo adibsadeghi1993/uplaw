@@ -1,25 +1,15 @@
 import React, { useEffect } from "react";
 import "./AuthGoogle.css";
 import queryString from "query-string";
-import { GoogleLogin } from "react-google-login";
+import { useParams } from "react-router-dom";
 import googleImage from "../../../asstes/google (2).svg";
 import arrowImage from "../../../asstes/arrow2.svg";
-import { Link } from "react-router-dom";
 
-const AuthGoogle = () => {
-  //   const responseSuccessGoogle = (response) => {
-  //     console.log(response);
-  //   };
-  //   const responseErrorGoogle = (response) => {
-  //     console.log(response);
-  //   };
+const AuthGoogle = (props) => {
   useEffect(() => {
-    console.log(
-      queryString.parse(
-        "?code=4%2F0AX4XfWiaowJljHJezlA5aOdYdLfAYBTzBPmYigp8GLHLU902OgRlOFE1k8ijJvUo_KVi9Q&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent#"
-      )
-    );
-  }, []);
+    const query = queryString.parse(props.location.search);
+    console.log(query.code);
+  }, [props]);
 
   const stringifiedParams = queryString.stringify({
     client_id:

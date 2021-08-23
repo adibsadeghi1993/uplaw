@@ -5,7 +5,7 @@ import AuthPhone from "./AuthPhoneNumber/AuthPhone";
 import AuthGoogle from "./Authgoogle/AuthGoogle";
 import AbstractImage from "../../asstes/Abstract 4.jpg"
 
-const Auth = () => {
+const Auth = (props) => {
   return (
     <section className="auth_section">
       <div className="sginup_description">
@@ -19,7 +19,7 @@ const Auth = () => {
       <div className="google_phone_auth">
           <AuthPhone/>
           <div className="emptyspace">/</div>
-          <AuthGoogle/>
+          <AuthGoogle {...props}/>
       </div>
       {/* <img className="avatar" src={AbstractImage}/> */}
     </section>
