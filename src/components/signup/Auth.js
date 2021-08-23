@@ -1,9 +1,9 @@
 import React from "react";
 import "./Auth.css"
-import { useFormik } from "formik";
+// import { useFormik } from "formik";
 import AuthPhone from "./AuthPhoneNumber/AuthPhone";
 import AuthGoogle from "./Authgoogle/AuthGoogle";
-import AbstractImage from "../../asstes/Abstract 4.jpg"
+// import AbstractImage from "../../asstes/Abstract 4.jpg"
 
 const Auth = (props) => {
   return (

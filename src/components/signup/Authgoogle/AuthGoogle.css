@@ -6,3 +6,6 @@
     background: transparent;
     cursor: pointer;
 }
+.authsection_google a {
+    text-decoration: none;
+}
