@@ -268,7 +268,7 @@ border-radius: 5px;
 @media(max-width:768px){
   .detail{
     margin-top: 43px;
-   padding: 0 54px;
+   padding: 0 30px;
   }
   .Inputs{
     display: grid;
