@@ -1,6 +1,7 @@
 import React, { useState,useEffect,useContext } from "react";
 import { UserInfoContext } from "../../contextInfo/ContextInfo";
 import { usersJob } from "./SetUsersJob";
+import styles from "../jobDetailes/jobDetailes.module.css"
 
 const SelectedJob = () => {
   const {job,setJob} = useContext(UserInfoContext)
@@ -25,13 +26,13 @@ const SelectedJob = () => {
     setJobOptions(newJobOptions);
   }, [job]);
   return (
-    <section className="selectJob_info">
+    <section className={styles.selectJob_info}>
       <p>شما؟</p>
-      <div className="selectJob_info_main">
+      <div className={styles.selectJob_info_main}>
         {jobOptions.map((item) => {
           return (
             <button
-              className={item.background}
+              className={styles[item.background]}
               onClick={() => jobHandler(item)}
             >
               {item.jobTitle}

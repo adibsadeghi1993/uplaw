@@ -1,7 +1,7 @@
 import React, { useState,useContext } from "react";
 import UserStep from "../../commonFiles/userStep/UserStep";
 import SelectedJob from "../selcetJob/SelectedJob";
-import "./jobDetailes.css";
+import styles from "./jobDetailes.module.css";
 import SelectComponent from "./SelectComponent";
 import blueArrowImage from "../../../../asstes/blue arrow.svg";
 import DeleteImage from "../../../../asstes/Delete.svg";
@@ -36,30 +36,30 @@ const JobDetailes = () => {
   };
 
   return (
-    <section className="job_detaile">
+    <section className={styles.job_detaile}>
       <UserStep />
-      <div className="sectionOne">
-        <div className="sectionOne_jobtitle">
+      <div className={styles.sectionOne}>
+        <div className={styles.sectionOne_jobtitle}>
           <Input
             name="jobTitle"
             type="text"
             placeholder="عنوان شغلی خود را وارد کنید"
           />
         </div>
-        <div className="sectionOne_joblevel">
+        <div className={styles.sectionOne_joblevel}>
           <SelectComponent name="jobLevel" selectedOptions={selectedOptions} />
         </div>
       </div>
       <SelectedJob />
-      <div className="sectionTow">
-        <div className="sectionTow_companyName">
+      <div className={styles.sectionTow}>
+        <div className={styles.sectionTow_companyName}>
           <Input
             placeholder="نام شرکت محل کار خود را وارد کنید"
             type="text"
             name="companyName"
           />
         </div>
-        <div className="sectionTow_skills">
+        <div className={styles.sectionTow_skills}>
           <input
             type="text"
             value={changeSkill}
@@ -67,21 +67,21 @@ const JobDetailes = () => {
             placeholder="مهارت های خود را وارد کنید"
           />
           <p>حداکثر 5 مورد</p>
-          <button className="skillbutton" onClick={registrSkillHandler}>
+          <button className={styles.skillbutton} onClick={registrSkillHandler}>
             ثبت
             <img src={blueArrowImage} alt="next-arrow" />
           </button>
         </div>
       </div>
-      <div className="skills_nextStep">
+      <div className={styles.skills_nextStep}>
         {skills.length > 0 ? (
-          <div className="skilllists">
+          <div className={styles.skilllists}>
             {skills.map((item, index) => {
               return (
-                <div key={index} className={`eachSkill skill${index}`}>
+                <div key={index} className={`${styles.eachSkill} ${styles[`skill${index}`]}`}>
                   <p>{item}</p>
                   <button
-                    className="skillbtn"
+                    className={styles.skillbtn}
                     onClick={() => deleteSkillHandler(item)}
                   >
                     <img src={DeleteImage} alt="deleteskill" />
@@ -91,10 +91,10 @@ const JobDetailes = () => {
             })}
           </div>
         ) : (
-          <div className="emptySkills"></div>
+          <div className={styles.emptySkills}></div>
         )}
-        <div className="skills_next">
-          <button className="nextbtn">
+        <div className={styles.skills_next}>
+          <button className={styles.nextbtn}>
             ثبت و مرحله بعد
             <img src={whiteArrowImage} />
           </button>

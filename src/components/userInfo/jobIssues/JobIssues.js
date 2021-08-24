@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import UserProfile from "../commonFiles/userProfile/UserProfile";
 import JobDetailes from "./jobDetailes/JobDetailes";
-import "./jobIssues.css";
+import styles from "./jobIssues.module.css";
 import { useFormik } from "formik";
 import { validationSchema } from "./JobValidation";
 
 const JobIssues = () => {
   return (
-    <main className="jobIssues">
-      <section className="profilesection">
+    <main className={styles.jobIssues}>
+      <section className={styles.profilesection}>
         <UserProfile />
       </section>
-      <section className="jobIssues_info">
+      <section className={styles.jobIssues_info}>
         <JobDetailes />
       </section>
     </main>

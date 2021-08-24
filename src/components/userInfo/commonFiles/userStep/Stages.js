@@ -2,25 +2,29 @@ export const steps = [
     {
       step: 1,
       stepTitle: "اطلاعات پایه",
-      defaultClass: "step stepOne",
+      defaultClass: "step",
       background: "defaltBackground",
+      stepNumber:"stepOne"
     },
     {
         step: 2,
         stepTitle: "مسائل شغلی",
-        defaultClass: "step stepTow",
+        defaultClass: "step",
         background: "defaltBackground",
+        stepNumber:"stepTow"
       },
       {
         step: 3,
         stepTitle: "راه های ارتباطی",
-        defaultClass: "step stepThree",
+        defaultClass: "step",
         background: "defaltBackground",
+        stepNumber:"stepThree"
       },
       {
         step: 4,
         stepTitle: "احراز هویت",
-        defaultClass: "step stepFour",
+        defaultClass: "step",
         background: "defaltBackground",
+        stepNumber:"stepFour"
       }
   ]
