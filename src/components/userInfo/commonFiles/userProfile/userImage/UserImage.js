@@ -1,5 +1,5 @@
 import React,{useContext} from "react";
-import "./userImage.css";
+import styles from "./userImage.module.css";
 import { RiEditBoxLine } from "react-icons/all";
 import { IconContext } from "react-icons";
 import userImage from "../../../../../asstes/anonymous-user-circle-icon-vector-18958255.jpg";
@@ -13,11 +13,11 @@ const UserImage = () => {
     console.log("profile edit");
   };
   return (
-    <main className="prfileImage_main">
-      <section className="profile">
-        <div className="image-cotainer">
-          <img src={userImage} alt="userImage" className="image" />
-          <div className="editProfile" onClick={ProfileHandler}>
+    <main className={styles.prfileImage_main}>
+      <section className={styles.profile}>
+        <div className={styles.image_container}>
+          <img src={userImage} alt="userImage" className={styles.image} />
+          <div className={styles.editProfile} onClick={ProfileHandler}>
             <IconContext.Provider value={{ color: "white", size: "1.5rem" }}>
               <div>
                 <RiEditBoxLine />
@@ -25,27 +25,27 @@ const UserImage = () => {
             </IconContext.Provider>
           </div>
         </div>
-        <div className="userName">
+        <div className={styles.userName}>
           <p>ادیب صادقی</p>
-          <div className="icons">
-            <div className="bill">
+          <div className={styles.icons}>
+            <div className={styles.bill}>
               <img src={billImage} alt="billimage" />
-              <div className="empty"></div>
+              <div className={styles.empty}></div>
             </div>
-            <div className="search">
+            <div className={styles.search}>
               <img src={serchImage} alt="searchimage" />
             </div>
           </div>
         </div>
-        <div className="menubar">
+        <div className={styles.menubar}>
           <img src={menubarImage} alt="menubar"/>
         </div>
       </section>
-      <div className="progress-bar">
-       <div className="progressPersentage" style={{width:`${progress}%`}}></div>
+      <div className={styles.progress_bar}>
+       <div className={styles.progressPersentage} style={{width:`${progress}%`}}></div>
 
      </div>
-     <p className="compoletedprogress">
+     <p className={styles.compoletedprogress}>
          {100-progress} درصد مونده به تکمیل پروفایل!
       </p>
     </main>

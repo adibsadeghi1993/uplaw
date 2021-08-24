@@ -2,7 +2,7 @@
   display: flex;
 }
 
-.image-cotainer {
+.image_container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,7 +58,7 @@
   border-radius: 50%;
 }
 
-.progress-bar {
+.progress_bar {
   display: flex;
   margin-top: 22px;
   background: #ffffff;
@@ -86,7 +86,7 @@
 }
 
 @media (max-width: 989px) {
-  .image-cotainer {
+  .image_container {
     width: 97px;
   }
   .editProfile {
@@ -94,7 +94,7 @@
   }
 }
 @media (max-width: 900px) {
-  .image-cotainer {
+  .image_container {
     width: 97px;
   }
   .userName p {
@@ -104,7 +104,7 @@
 }
 
 @media (max-width: 830px) {
-  .image-cotainer {
+  .image_container {
     width: 70px;
   }
   .editProfile {
@@ -132,11 +132,11 @@
     display: flex;
     width: 100%;
   }
-  .progress-bar{
+  .progress_bar{
     height: 30px;
   }
 
-  .image-cotainer{
+  .image_container{
     width: 58px;
     height: 58px;
   }

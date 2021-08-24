@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import UserProfile from "../commonFiles/userProfile/UserProfile";
 import DetailInfo from "./detail/DetailInfo";
-import "./basicInfo.css";
+import styles from "./basicInfo.module.css"
 
 const BasicInfo = () => {
   return (
-    <div className="basicInfo">
-      <section className="profilesection">
+    <div className={styles.basicInfo}>
+      <section className={styles.profilesection}>
         <UserProfile />
       </section>
-      <section className="detailinfo">
+      <section className={styles.detailinfo}>
         <DetailInfo />
       </section>
     </div>
