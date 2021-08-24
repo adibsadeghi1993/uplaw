@@ -1,5 +1,5 @@
 import React from "react";
-import "./freeservices.css";
+import styles from "./freeservices.module.css"
 import signatureImage from "../../../../../asstes/signature.svg";
 import adjustImage from "../../../../../asstes/adjust.svg.svg";
 import registermeeting from "../../../../../asstes/registermeeting.svg";
@@ -7,21 +7,21 @@ import registermeeting from "../../../../../asstes/registermeeting.svg";
 const FreeServices = () => {
 
   return (
-    <section className="freeservices">
-      <div className="freeservices_info">
+    <section className={styles.freeservices}>
+      <div className={styles.freeservices_info}>
        
-          <p className="freeFacility">
+          <p className={styles.freeFacility}>
             با تکمیل ثبت نام از امکانات روبرو <br />
             به صورت <span>رایگان</span> استفاده کنید.
           </p>
       
-        <p className="completedRegistration">
+        <p className={styles.completedRegistration}>
           جلوتر از <span>544</span> نفر در تکمیل ثبت نام
         </p>
       </div>
-      <div className="freeservices_icons">
-        <div className="adjustagreement">
-          <div className="service">
+      <div className={styles.freeservices_icons}>
+        <div className={styles.adjustagreement}>
+          <div className={styles.service}>
             <img src={adjustImage} />
           </div>
           <p>
@@ -29,8 +29,8 @@ const FreeServices = () => {
             یک قرارداد
           </p>
         </div>
-        <div className="signature ">
-          <div className="service">
+        <div className={styles.signature }>
+          <div className={styles.service}>
             <img src={signatureImage} />
           </div>
           <p>
@@ -38,8 +38,8 @@ const FreeServices = () => {
             دیجیتال
           </p>
         </div>
-        <div className="register ">
-          <div className="service">
+        <div className={styles.register}>
+          <div className={styles.service}>
             <img src={registermeeting} />
           </div>
           <p>
