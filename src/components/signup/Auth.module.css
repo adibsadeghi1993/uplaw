@@ -53,6 +53,7 @@
   background: #3770e2;
   border-radius: 8px;
   border: none;
+  cursor: pointer;
 }
 
 .emptyspace {
@@ -173,6 +174,23 @@
   margin-top: 5px;
   font-size: 0.8rem;
   color: red;
+}
+
+.authsection_google button{
+  display: flex;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+}
+
+.authsection_google a {
+  text-decoration: none;
+}
+.sendphone{
+  opacity: 1;
+}
+.notsendphone{
+  opacity: 0.5;
 }
 
 

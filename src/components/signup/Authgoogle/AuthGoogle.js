@@ -1,18 +1,20 @@
 import React, { useEffect } from "react";
-import "./AuthGoogle.css";
+import styles from "../Auth.module.css"
 import queryString from "query-string";
 import googleImage from "../../../asstes/google (2).svg";
 import arrowImage from "../../../asstes/arrow2.svg";
 import axios from "axios";
+import stylesGoogle from "./AuthGoogle.module.css"
 
 const AuthGoogle = (props) => {
+  const { formik } = props;
   useEffect(() => {
     const query = queryString.parse(props.location.search);
     const bodyCode = { code: query.code };
     console.log(bodyCode);
     axios
       .post(
-        "http://localhost:3000/api/v1/customer/profile/auth/google",
+        "http://uplawpi/api/v1/customer/profile/auth/google",
         bodyCode
       )
       .then((response) => {
@@ -23,6 +25,8 @@ const AuthGoogle = (props) => {
       });
   }, [props.location.search]);
 
+
+
   const stringifiedParams = queryString.stringify({
     client_id:
       "857095448578-hb4jvirn25baa763ue2d9s13ri5o7vls.apps.googleusercontent.com",
@@ -32,9 +36,16 @@ const AuthGoogle = (props) => {
     access_type: "offline",
   });
 
+
+  let SignUpConfirmButton=false
+
+  if(!formik.errors.terms && !formik.errors.confirmCode && props.location.search ){
+    SignUpConfirmButton=true
+  }
+
   return (
     <>
-      <div className="authsection_google">
+      <div className={styles.authsection_google}>
         <a
           href={`https://accounts.google.com/o/oauth2/v2/auth?${stringifiedParams}`}
         >
@@ -44,12 +55,22 @@ const AuthGoogle = (props) => {
           </button>
         </a>
       </div>
-      <div className="condition">
-        <input type="checkbox" id="checkboxCondition" />
-        <label htmlFor="checkboxCondition">با قوانین و مقررات موافقم .</label>
+      <div className={styles.condition}>
+        <input
+          type="checkbox"
+          id="terms"
+          value={true}
+          name="terms"
+          onChange={formik.handleChange}
+          checked={formik.values.terms}
+        />
+        <label htmlFor="terms">با قوانین و مقررات موافقم .</label>
+        {formik.errors.terms && formik.touched.terms && (
+          <div className={styles.error}>{formik.errors.terms}</div>
+        )} 
       </div>
-      <div className="confirm_signup">
-        <button>
+      <div className={styles.confirm_signup}>
+        <button className={`${SignUpConfirmButton ? stylesGoogle.successSignUp :stylesGoogle.failedSignUp}`}>
           <span>وارد شوید</span> <img src={arrowImage} alt="arrow" />
         </button>
       </div>
