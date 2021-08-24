@@ -17,3 +17,7 @@ input:active{
     border: 0.3px solid #00000077;
   outline: none;
 }
+.error{
+  font-size: 0.7rem;
+  color: red;
+}

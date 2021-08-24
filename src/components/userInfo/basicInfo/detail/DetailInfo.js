@@ -1,6 +1,6 @@
 import React, { useState,useContext } from "react";
 import UserStep from "../../commonFiles/userStep/UserStep";
-import "./detailInfo.css";
+import styles from "./detailInfo.module.css"
 import Input from "./Input";
 import uploadImage from "../../../../asstes/upload.svg";
 import { allInputs } from "./ConstantInputs";
@@ -34,13 +34,13 @@ const DetailInfo = () => {
     setProgress(25)
   }
   return (
-    <div className="detail">
+    <div className={styles.detail}>
       <UserStep />
 
-      <section className="Inputs">
+      <section className={styles.Inputs}>
         {allInputs.map((item) => {
           return (
-            <div className={item.name}>
+            <div className={styles[item.name]}>
               <Input
                 type={item.type}
                 name={item.name}
@@ -51,12 +51,12 @@ const DetailInfo = () => {
           );
         })}
 
-        <div className="confirmMobile">
+        <div className={styles.confirmMobile}>
           <input type="text" placeholder="کد تایید" />
           <button>تایید موبایل</button>
         </div>
-        <div className="uploadImage">
-          <img src={userProfile} alt="profileImage" className="profileImage" />
+        <div className={styles.uploadImage}>
+          <img src={userProfile} alt="profileImage" className={styles.profileImage} />
           <input
             type="file"
             accept="image/*"
@@ -66,25 +66,25 @@ const DetailInfo = () => {
           />
         </div>
 
-        <div className="birthday">
+        <div className={styles.birthday}>
           <DatePicker setBirthday={setBirthday} />
           <label htmlFor="datePicker">
             <img src={DateImage} alt="dateimage" />
           </label>
         </div>
-        <div className="label">
+        <div className={styles.label}>
           <label htmlFor="image">بارگذاری عکس</label>
         </div>
-        <div className="password">
+        <div className={styles.password}>
           <Input
             type="password"
             name="password"
             placeholder=" رمز عبور انتخابی خود را وارد کنید"
           />
-          <p className="passwordChracter">8 کاراکتر</p>
+          <p className={styles.passwordChracter}>8 کاراکتر</p>
         </div>
 
-        <div className="address">
+        <div className={styles.address}>
           <textarea
             type="text"
             name="address"
@@ -92,11 +92,11 @@ const DetailInfo = () => {
             placeholder="  ادرس خود را وارد کنید"
           />
           {formik.errors.address && formik.touched.address && (
-            <div className="error">{formik.errors.address}</div>
+            <div className={styles.error}>{formik.errors.address}</div>
           )}
         </div>
       </section>
-      <div className="confirmInfo">
+      <div className={styles.confirmInfo}>
         <p>ورود همه اطلاعات ضروری است</p>
         <button className="nextbtn" onClick={firstStepHandler}>
           ثبت و مرحله بعد

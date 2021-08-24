@@ -120,33 +120,6 @@
     }
 }
 
-/* 
-@media(max-width:910px){
- .freeservices{
-     flex-direction: column;
-    align-items: center;
-
- }
- .freeservices_info{
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     width: 100%;
-     margin-bottom: 40px;
- }
- .completedRegistration{
-     margin-top: 0;
- }
- .freeservices_icons{
-     display: flex;
-     justify-content: center;
-     width: 100%;
- }
- .signature{
-     margin: 0 40px;
- }
-
-} */
 
 @media(max-width:910px){
   .service{

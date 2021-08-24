@@ -1,7 +1,7 @@
 import React from "react";
 import DatePicker from "react-datepicker2";
 import momentJalaali from "moment-jalaali";
-import classes from "./datePicker.module.scss";
+import classes from "./datePicker.module.css";
 import { useState } from "react";
 
 const BirthDay = ({ setBirthday }) => {
