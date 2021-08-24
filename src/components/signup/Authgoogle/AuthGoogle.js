@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import styles from "../Auth.module.css"
+import styles from "../Auth.module.css";
 import queryString from "query-string";
 import googleImage from "../../../asstes/google (2).svg";
 import arrowImage from "../../../asstes/arrow2.svg";
 import axios from "axios";
-import stylesGoogle from "./AuthGoogle.module.css"
+import stylesGoogle from "./AuthGoogle.module.css";
 
 const AuthGoogle = (props) => {
   const { formik } = props;
@@ -12,20 +12,18 @@ const AuthGoogle = (props) => {
     const query = queryString.parse(props.location.search);
     const bodyCode = { code: query.code };
     console.log(bodyCode);
-    axios
-      .post(
-        "http://uplawpi/api/v1/customer/profile/auth/google",
-        bodyCode
-      )
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // axios
+    //   .post(
+    //     "http://uplawpi/api/v1/customer/profile/auth/google",
+    //     bodyCode
+    //   )
+    //   .then((response) => {
+    //     console.log(response);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
   }, [props.location.search]);
-
-
 
   const stringifiedParams = queryString.stringify({
     client_id:
@@ -36,11 +34,14 @@ const AuthGoogle = (props) => {
     access_type: "offline",
   });
 
+  let SignUpConfirmButton = false;
 
-  let SignUpConfirmButton=false
-
-  if(!formik.errors.terms && !formik.errors.confirmCode && props.location.search ){
-    SignUpConfirmButton=true
+  if (
+    !formik.errors.terms &&
+    !formik.errors.confirmCode &&
+    props.location.search
+  ) {
+    SignUpConfirmButton = true;
   }
 
   return (
@@ -67,10 +68,16 @@ const AuthGoogle = (props) => {
         <label htmlFor="terms">با قوانین و مقررات موافقم .</label>
         {formik.errors.terms && formik.touched.terms && (
           <div className={styles.error}>{formik.errors.terms}</div>
-        )} 
+        )}
       </div>
       <div className={styles.confirm_signup}>
-        <button className={`${SignUpConfirmButton ? stylesGoogle.successSignUp :stylesGoogle.failedSignUp}`}>
+        <button
+          className={`${
+            SignUpConfirmButton
+              ? stylesGoogle.successSignUp
+              : stylesGoogle.failedSignUp
+          }`}
+        >
           <span>وارد شوید</span> <img src={arrowImage} alt="arrow" />
         </button>
       </div>

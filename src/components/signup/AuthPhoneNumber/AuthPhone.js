@@ -3,7 +3,7 @@ import styles from "../Auth.module.css"
 import circleArrowImage from "../../../asstes/circlearrow.svg";
 import lockImage from "../../../asstes/lock.svg";
 import phoneImage from "../../../asstes/phone.svg";
-import axios from "axios"
+
 
 const AuthPhone = (props) => {
   const { formik } = props;
