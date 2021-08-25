@@ -2,7 +2,7 @@ import React,{useContext} from 'react'
 import { UserInfoContext } from '../../../contextInfo/ContextInfo'
 import styles from "./contactInputs.module.css"
 
-const Input = ({name,type,placeholder}) => {
+const ContactInputs = ({name,type="text",placeholder}) => {
   const {formik} = useContext(UserInfoContext)
   
     return (
@@ -21,4 +21,4 @@ const Input = ({name,type,placeholder}) => {
     )
 }
 
-export default Input
+export default ContactInputs
