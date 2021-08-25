@@ -3,7 +3,7 @@ import styles from "../Auth.module.css";
 import queryString from "query-string";
 import googleImage from "../../../asstes/google (2).svg";
 import arrowImage from "../../../asstes/arrow2.svg";
-import axios from "axios";
+import axios from "axios"
 import stylesGoogle from "./AuthGoogle.module.css";
 
 const AuthGoogle = (props) => {
@@ -12,17 +12,17 @@ const AuthGoogle = (props) => {
     const query = queryString.parse(props.location.search);
     const bodyCode = { code: query.code };
     console.log(bodyCode);
-    // axios
-    //   .post(
-    //     "http://uplawpi/api/v1/customer/profile/auth/google",
-    //     bodyCode
-    //   )
-    //   .then((response) => {
-    //     console.log(response);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
+    axios
+      .post(
+        "http://uplawpi/api/v1/customer/profile/auth/google",
+        bodyCode
+      )
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, [props.location.search]);
 
   const stringifiedParams = queryString.stringify({

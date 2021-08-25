@@ -10,8 +10,15 @@
   position: relative;
 }
 
+.sginup_description{
+ 
+  width: 100%;
+}
+
 .sginup_description p {
   text-align: center;
+  width: 100%;
+  
 }
 
 .google_phone_auth {
@@ -32,6 +39,7 @@
 .authphone_phonenumber_error{
   width: 77%;
 }
+
 .authphone_phonenumber .phoneImage {
   position: absolute;
   top: 19px;
@@ -41,10 +49,16 @@
 .authphone_phonenumber input {
   width: 100%;
   height: 100%;
-  padding-right: 53px;
+  padding-right: 43px;
   border: 1px solid #000000;
   border-radius: 8px;
   outline: none;
+}
+.authphone_phonenumber_error input::placeholder{
+  font-weight: bold;
+  font-family: "anjoman";
+  font-size: 1rem;
+  color: #000000;
 }
 
 .authphone_phonenumber button {
@@ -88,6 +102,9 @@
   border-radius: 8px;
   outline: none;
 }
+.authphone_code input::placeholder{
+  font-size: 1rem;
+}
 
 
 
@@ -126,6 +143,9 @@
 .confirm_signup {
   grid-column: 3/4;
   grid-row: 3/4;
+}
+.confirm_signup span{
+  font-size: 1rem;
 }
 .confirm_signup button {
   height: 100%;
@@ -182,9 +202,14 @@
   background: transparent;
   cursor: pointer;
 }
+.authsection_google button span{
+  font-weight: bold;
+  font-size: 1rem;
+}
 
 .authsection_google a {
   text-decoration: none;
+  
 }
 .sendphone{
   opacity: 1;
@@ -192,5 +217,132 @@
 .notsendphone{
   opacity: 0.5;
 }
+.forgotPassword{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 116px;
+  width: 100%;
+  height: 63px;
+  width: 100%;
+  grid-column: 1/4;
+  
+}
+.forgotPassword p{
+  cursor: pointer;
+  border-bottom: solid 2px black;
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding-bottom: 2px;
+}
+
+@media(max-width:1400px){
+  .sginup_description_second_p{
+    font-size: 1.5rem;
+  }
+}
+
+@media(max-width:1250px){
+  .auth_section{
+    width: 78%;
+  }
+  .sginup_description_second_p{
+    font-size: 1.5rem;
+  }
+  .authphone_phonenumber_error input::placeholder{
+    font-size: 0.87rem;
+  }
+  .sginup_description_first_p{
+    font-size: 1.8rem;
+  }
+  .authsection_google button span{
+    font-size: 0.87rem;
+  }
+  .authphone_code input::placeholder{
+    font-size: 0.87rem;
+  }
+}
+
+@media(max-width:1100px){
+  .sginup_description_first_p{
+    font-size: 1.5rem;
+  }
+  .sginup_description_second_p{
+    font-size: 1.2rem;
+  }
+}
+
+@media(max-width:1000px){
+  .auth_section {
+    width: 85%;
+  }
+}
+@media(max-width:900px){
+  .google_phone_auth {
+    grid-template-columns: 39% 20% 39%;
+  }
+}
+@media(max-width:800px){
+  .google_phone_auth {
+    grid-template-columns: 42% 15% 42%;
+  }
+}
+
+@media(max-width:768px){
+  .auth_section{
+    width: 70%;
+  }
+  .google_phone_auth {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8,63px);
+  }
+  .authphone_phonenumber{
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .authphone_sendcode{
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .authphone_code{
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .forgotPassword{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    margin-top: 0;
+  }
+  .emptyspace{
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  .authsection_google{
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+  .condition{
+    grid-column: 1/2;
+    grid-row: 7/8;
+  }
+  .confirm_signup{
+    grid-column: 1/2;
+    grid-row: 8/9;
+   
+  }
+  .sginup_description_second_p{
+    font-size: 0.94rem;
+  }
+  .sginup_description_first_p{
+    font-size: 1.25rem;
+  }
+}
+
+@media(max-width:500px){
+  .auth_section{
+    width: 75%;
+  }}
+
 
 

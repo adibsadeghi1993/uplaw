@@ -15,18 +15,21 @@ const Auth = (props) => {
     <section className={styles.auth_section}>
       <div className={styles.sginup_description}>
         <p className={styles.sginup_description_first_p}>به آینده وارد شوید .</p>
-        <p className={styles.sginup_description_second_p}>
-          با ثبت نام یا ورود به آپلا،از بین بیشتر از 150 سند،سند دلخواه خود را با 
-          هوشمندی تمام <br/> تنظیم کرده، شرکت خود را تعریف کنی و مدیریت آن را اسانتر
-          کنید
-        </p>
+        <div className={styles.sginup_description_second_p}>
+          <p>با ثبت نام و یا ورود به آپلا، از بین بیشتر از 150 سند ، سند دلخواه خود را با هوشمندی تمام</p>
+          <p>تنظیم کرده، شرکت خود را تعریف کنی و مدیریت آن را آسانتر کنید.</p>
+        </div>
       </div>
       <div className={styles.google_phone_auth}>
           <AuthPhone formik={formik}/>
           <div className={styles.emptyspace}>/</div>
           <AuthGoogle formik={formik} {...props}/>
+          <div className={styles.forgotPassword}>
+        <p>رمز عبور خود را فراموش کردید؟</p>
       </div>
-      {/* <img className="avatar" src={AbstractImage}/> */}
+      </div>
+    
+      
     </section>
   );
 };
