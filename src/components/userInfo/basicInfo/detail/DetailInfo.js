@@ -98,7 +98,7 @@ const DetailInfo = () => {
       </section>
       <div className={styles.confirmInfo}>
         <p>ورود همه اطلاعات ضروری است</p>
-        <button className="nextbtn" onClick={firstStepHandler}>
+        <button className={styles.nextbtn} onClick={firstStepHandler}>
           ثبت و مرحله بعد
           <img src={whitearrowImage} alt="nextstepimage" />
         </button>

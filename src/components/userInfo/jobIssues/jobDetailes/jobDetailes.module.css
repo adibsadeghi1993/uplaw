@@ -27,6 +27,13 @@
       padding-right: 10px;
   }
 
+  .sectionOne_joblevel select:active{
+    border: 0.3px solid #00000077;
+  }
+  .sectionOne_joblevel select:focus{
+    border: 0.3px solid #00000077;
+  }
+
   .selectJob_info{
       display: flex;
       margin-top: 27px;
@@ -295,6 +302,7 @@
         flex-wrap: nowrap;
         display: flex;
         overflow-x: scroll;
+        padding: 0 35px;
     }
     .eachSkill{
         flex-shrink: 0;
