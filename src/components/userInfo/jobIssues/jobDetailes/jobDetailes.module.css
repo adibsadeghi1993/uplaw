@@ -135,7 +135,7 @@
       flex: 1;
   }
   .eachSkill{
-    padding: 0 28px;
+    width: 142px;
     height: 49px;
       background: #3770E2;
       border-radius: 27px;
@@ -157,6 +157,9 @@
       margin-right: 15px;
       cursor: pointer;
   }
+  .skill0{
+    margin-right:0;
+}
 
   .skill1{
       margin-right: 14px;
@@ -167,14 +170,17 @@
 }
 
 .skill3{
-    margin-right: 14px;
+    margin-top: 10px;
 }
+
 
 .skill4{
     margin-right: 14px;
+    margin-top: 10px;
 }
 .skill5{
     margin-right: 14px;
+    margin-top: 10px;
 }
 .nextbtn{
     height: 42px;
@@ -319,7 +325,19 @@
         right: 0;
         font-size: 14px;
     }
-
+    .skill3{
+        margin-right: 14px;
+        margin-top: 0; 
+    }
+    
+    
+    .skill4{
+        margin-right: 14px;
+        margin-top: 0;
+    }
+    .skill5{
+        margin-right: 14px;
+    }
     
   }
 
