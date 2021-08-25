@@ -1,9 +1,8 @@
 import React from "react";
 import styles from "./Auth.module.css"
-// import { useFormik } from "formik";
 import AuthPhone from "./AuthPhoneNumber/AuthPhone";
 import AuthGoogle from "./Authgoogle/AuthGoogle";
-// import AbstractImage from "../../asstes/Abstract 4.jpg"
+import AbstractImage from "../../asstes/Abstract 4.jpg"
 
 const Auth = (props) => {
 
@@ -28,6 +27,7 @@ const Auth = (props) => {
         <p>رمز عبور خود را فراموش کردید؟</p>
       </div>
       </div>
+      <img className={styles.avatar} src={AbstractImage} alt="abstract"/>
     
       
     </section>
