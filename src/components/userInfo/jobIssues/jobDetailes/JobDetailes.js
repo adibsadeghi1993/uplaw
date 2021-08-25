@@ -11,7 +11,7 @@ import Input from "../../basicInfo/detail/Input";
 import { UserInfoContext } from "../../contextInfo/ContextInfo";
 
 const JobDetailes = () => {
-  const {skills,setSkills} = useContext(UserInfoContext)
+  const {skills,setSkills,setStep,setProgress} = useContext(UserInfoContext)
   const [changeSkill, setChangeSkill] = useState("");
   const selectedOptions = [
     { label: "سطح خود را در شغل خود انتخاب کنید", value: "" },
@@ -34,6 +34,11 @@ const JobDetailes = () => {
     const filteredSkills = oldSkills.filter((skill) => skill !== item);
     setSkills(filteredSkills);
   };
+
+  const nextStepHandler=()=>{
+     setStep(step=>step+1)
+     setProgress(50)
+  }
 
   return (
     <section className={styles.job_detaile}>
@@ -94,7 +99,7 @@ const JobDetailes = () => {
           <div className={styles.emptySkills}></div>
         )}
         <div className={styles.skills_next}>
-          <button className={styles.nextbtn}>
+          <button onClick={nextStepHandler} className={styles.nextbtn}>
             ثبت و مرحله بعد
             <img src={whiteArrowImage} />
           </button>

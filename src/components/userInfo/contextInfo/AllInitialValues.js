@@ -12,5 +12,11 @@ export const initialValues = {
     jobTitle: "",
     jobLevel: "",
     companyName:"",
+    linkedin:"",
+    instagram:"",
+    dribl:"",
+    portfo:"",
+    github:"",
+    gitlab:""
 
   };
