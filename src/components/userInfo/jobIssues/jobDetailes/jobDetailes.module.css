@@ -15,6 +15,7 @@
   .sectionOne_joblevel{
       width: 50%;
       margin-right: 22px;
+      position: relative;
      
   }
   .sectionOne_joblevel select{
@@ -25,13 +26,38 @@
       border: 0.3px solid #00000077;
       font-family: "anjoman";
       padding-right: 10px;
+      appearance: none;
+      -webkit-appearance: none;
+      outline: none;
+      
   }
 
-  .sectionOne_joblevel select:active{
+  .option{
+    
+    font-size: 14px;
+    font-family: "anjoman";
+    line-height: 20px;
+    outline:none;
+  }
+  .sectionOne_joblevel::after{
+      content: "";
+    position: absolute;
+    left: 18px;
+    top: 45%;
+    border-top: 8px solid rgb(79, 72, 175);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    pointer-events: none;
+   
+}
+
+  .sectionOne_joblevel select:hover{
     border: 0.3px solid #00000077;
+    outline: none;
   }
   .sectionOne_joblevel select:focus{
     border: 0.3px solid #00000077;
+    outline: none;
   }
 
   .selectJob_info{
@@ -199,6 +225,7 @@
 .nextbtn img{
     margin-right: 12px;
 }
+
 
 @media(max-width:1230px){
     .job_detaile{

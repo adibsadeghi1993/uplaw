@@ -3,7 +3,8 @@ import BasicInfo from "./basicInfo/BasicInfo";
 import Contact from "./contact/Contact";
 import { UserInfoContext } from "./contextInfo/ContextInfo";
 import JobIssues from "./jobIssues/JobIssues";
-import Verfication from "./userVerification/Verfication";
+import Verification from "./userVerification/Verification";
+
 
 const DashbordComponents = () => {
 const {step} = useContext(UserInfoContext)
@@ -15,7 +16,7 @@ const {step} = useContext(UserInfoContext)
     case 3:
       return <Contact />;
     case 4:
-      return <Verfication />;
+      return <Verification />;
 
     default:
       break;

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext} from "react";
 import UserStep from "../../commonFiles/userStep/UserStep";
 import styles from "./contactDetailes.module.css";
 import linkedinIcon from "../../../../asstes/linkedin.svg"
@@ -10,11 +10,16 @@ import instaIcon from "../../../../asstes/insta.svg"
 import whiteArrowImage from "../../../../asstes/whitearrow.svg"
 import ContactInputs from "./contactInputs/ContactInputs";
 import FreeServices from "../../basicInfo/detail/freeServices/FreeServices";
+import { UserInfoContext } from "../../contextInfo/ContextInfo";
+
 
 const ContactDetailes = () => {
+ const {setStep,setProgress} =useContext(UserInfoContext)
 
     const nextStepHandler=()=>{
 
+      setStep(step=>step+1)
+      setProgress(75)
     }
   return (
     <section className={styles.contact_detaile}>
