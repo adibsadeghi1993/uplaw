@@ -19,6 +19,7 @@ const UserStep = () => {
   const stepHandler=(item)=>{
     console.log(item)
     setStep(item.step)
+    setProgress(item.progress)
  
 }
   return (

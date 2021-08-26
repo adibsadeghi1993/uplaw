@@ -85,6 +85,19 @@
   display: none;
 }
 
+
+
+.progressPersentage{
+  animation-name: mymove;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes mymove {
+  0%   {width: 0;} 
+}
+
 @media (max-width: 989px) {
   .image_container {
     width: 97px;
