@@ -6,6 +6,7 @@ import JobIssues from "./jobIssues/JobIssues";
 import Verification from "./userVerification/Verification";
 
 
+
 const DashbordComponents = () => {
 const {step} = useContext(UserInfoContext)
   switch (step) {
@@ -16,7 +17,7 @@ const {step} = useContext(UserInfoContext)
     case 3:
       return <Contact />;
     case 4:
-      return <Verification />;
+      return <Verification/>;
 
     default:
       break;
