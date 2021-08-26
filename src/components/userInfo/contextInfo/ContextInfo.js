@@ -7,6 +7,7 @@ const ContextInfo = ({ children }) => {
   const [step, setStep] = useState(4);
   const [progress, setProgress] = useState(0);
   const [upLoadedImage, setUpLoadedImage] = useState(null);
+  const [upLoadedNationalCodeImage, setUpLoadedNationalCodeImage] = useState(null);
   const [bithday, setBirthday] = useState("");
   const [job, setJob] = useState([]);
   const [skills, setSkills] = useState([]);
