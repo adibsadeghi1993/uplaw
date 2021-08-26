@@ -111,6 +111,12 @@
 }
 }
 
+@media(max-width:1000px){
+  .service{
+    width: 85px;
+    height: 85px;
+  }}
+
 
 
 
@@ -151,7 +157,7 @@ font-weight: 800;
   }
   
 }
-@media (max-width: 781px){
+@media (max-width: 800px){
   .service {
     width: 71px;
     height: 71px;

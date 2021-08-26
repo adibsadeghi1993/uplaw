@@ -32,6 +32,7 @@ const ContextInfo = ({ children }) => {
         setBirthday,
         upLoadedImage,
         setUpLoadedImage,
+        setUpLoadedNationalCodeImage
       }}
     >
       {children}
