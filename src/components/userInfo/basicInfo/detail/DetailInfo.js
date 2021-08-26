@@ -16,6 +16,14 @@ const DetailInfo = () => {
   console.log(context);
   const { setUpLoadedImage, setStep, setProgress, setBirthday, formik } =
     context;
+
+    let statueBtn=true
+
+    const {postalCode,birthday,nationalCode,firstName,lastName,email,password,address, confirmPassword}=formik.errors
+    if(!postalCode && !birthday && !nationalCode && !firstName && !lastName && !email && !address && !password && !confirmPassword){
+      statueBtn=false
+
+    }
   const [userProfile, setUserProfile] = useState("");
   console.log(formik.errors);
 
@@ -111,7 +119,7 @@ const DetailInfo = () => {
       </section>
       <div className={styles.confirmInfo}>
         <p>ورود همه اطلاعات ضروری است</p>
-        <button className={styles.nextbtn} onClick={firstStepHandler}>
+        <button disabled={statueBtn} className={styles.nextbtn} onClick={firstStepHandler}>
           ثبت و مرحله بعد
           <img src={whitearrowImage} alt="nextstepimage" />
         </button>

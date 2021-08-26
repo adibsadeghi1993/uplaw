@@ -222,6 +222,16 @@
     font-size: 0.88rem;
   cursor: pointer;
 }
+.nextbtn:disabled{
+    color: white;
+    background: #3770E2;
+    opacity: 0.5;
+}
+.nextbtn:disabled:hover{
+    color: white;
+    background: #3770E2;
+    opacity: 0.5;
+}
 .nextbtn img{
     margin-right: 12px;
 }

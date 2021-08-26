@@ -11,7 +11,7 @@ import Input from "../../basicInfo/detail/Input";
 import { UserInfoContext } from "../../contextInfo/ContextInfo";
 
 const JobDetailes = () => {
-  const {skills,setSkills,setStep,setProgress} = useContext(UserInfoContext)
+  const {skills,setSkills,setStep,setProgress,formik} = useContext(UserInfoContext)
   const [changeSkill, setChangeSkill] = useState("");
   const selectedOptions = [
     { label: "سطح خود را در شغل خود انتخاب کنید", value: "" },
@@ -38,6 +38,14 @@ const JobDetailes = () => {
   const nextStepHandler=()=>{
      setStep(step=>step+1)
      setProgress(50)
+  }
+
+  let statusBtn=true
+
+  const {jobTitle,jobLevel,companyName}=formik.errors
+  if(!jobLevel && !jobTitle && !companyName && skills.length){
+    statusBtn=false
+
   }
 
   return (
@@ -99,7 +107,7 @@ const JobDetailes = () => {
           <div className={styles.emptySkills}></div>
         )}
         <div className={styles.skills_next}>
-          <button onClick={nextStepHandler} className={styles.nextbtn}>
+          <button disabled={statusBtn} onClick={nextStepHandler} className={styles.nextbtn}>
             ثبت و مرحله بعد
             <img src={whiteArrowImage} />
           </button>
