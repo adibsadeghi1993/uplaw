@@ -1,6 +1,6 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import UserStep from "../../commonFiles/userStep/UserStep";
-import styles from "./detailInfo.module.css"
+import styles from "./detailInfo.module.css";
 import Input from "./Input";
 import uploadImage from "../../../../asstes/upload.svg";
 import { allInputs } from "./ConstantInputs";
@@ -12,10 +12,11 @@ import FreeServices from "./freeServices/FreeServices";
 import { UserInfoContext } from "../../contextInfo/ContextInfo";
 
 const DetailInfo = () => {
-   const context = useContext(UserInfoContext)
-   console.log(context)
-  const {setUpLoadedImage,setStep,setProgress,setBirthday,formik}=context 
-  const [userProfile, setUserProfile] = useState(uploadImage);
+  const context = useContext(UserInfoContext);
+  console.log(context);
+  const { setUpLoadedImage, setStep, setProgress, setBirthday, formik } =
+    context;
+  const [userProfile, setUserProfile] = useState("");
   console.log(formik.errors);
 
   const imageHandler = (e) => {
@@ -29,10 +30,10 @@ const DetailInfo = () => {
 
     setUpLoadedImage(e.target.files[0]);
   };
-  const firstStepHandler=()=>{
-    setStep(step=>step+1)
-    setProgress(25)
-  }
+  const firstStepHandler = () => {
+    setStep((step) => step + 1);
+    setProgress(25);
+  };
   return (
     <div className={styles.detail}>
       <UserStep />
@@ -56,7 +57,19 @@ const DetailInfo = () => {
           <button>تایید موبایل</button>
         </div>
         <div className={styles.uploadImage}>
-          <img src={userProfile} alt="profileImage" className={styles.profileImage} />
+          {userProfile ? (
+            <img
+              src={userProfile}
+              alt="profileImage"
+              className={styles.profileImage}
+            />
+          ) : (
+            <img
+              src={uploadImage}
+              alt="profileImage"
+              className={styles.imageIcon}
+            />
+          )}
           <input
             type="file"
             accept="image/*"
