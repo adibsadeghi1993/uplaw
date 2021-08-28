@@ -7,7 +7,7 @@ const CompletedInfo = () => {
   return (
     <main className={styles.completedInfo}>
       <section className={styles.profilesection}>
-        <UserProfile />
+        <UserProfile opacity="opacity" />
       </section>
       <section className={styles.completedInfo_detaile}>
         <CompletedDetailes />

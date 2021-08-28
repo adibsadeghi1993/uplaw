@@ -42,6 +42,15 @@
   max-width: 127px;
   opacity: 0.3;
 }
+.opacity {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 127px;
+  opacity: 1;
+}
 .userItems_item p {
   margin-top: 10px;
 }

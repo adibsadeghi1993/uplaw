@@ -3,9 +3,9 @@ import styles from "./completedDetailes.module.css"
 
 const CompletedDetailes = () => {
     return (
-        <div>
-            
-        </div>
+        <main className={styles.completed_detailes} >
+            completed_detailes
+        </main >
     )
 }
 

@@ -4,7 +4,7 @@ import { validationSchema } from "./AllValidation";
 import { initialValues } from "./AllInitialValues";
 export const UserInfoContext = React.createContext();
 const ContextInfo = ({ children }) => {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(5);
   const [progress, setProgress] = useState(0);
   const [upLoadedImage, setUpLoadedImage] = useState(null);
   const [upLoadedNationalCodeImage, setUpLoadedNationalCodeImage] = useState(null);

@@ -5,33 +5,33 @@ import adjustImage from "../../../../../asstes/adjust.svg";
 import adviseImage from "../../../../../asstes/advise.svg";
 import teamImage from "../../../../../asstes/team.svg";
 
-const UserItems = () => {
+const UserItems = ({opacity}) => {
   return (
     
     <div>
       <section className={styles.userItems}>
-        <div className={`${styles.userItems_item} ${styles.meeting}`}>
+        <div className={  opacity ? `${styles.opacity} ${styles.meeting}` : `${styles.userItems_item} ${styles.meeting}`}>
           <div className={styles.userItems_item_container}>
             <img src={meetingImage} alt="slider" />
           </div>
           <p>صورت جلسه</p>
           
         </div>
-        <div className={`${styles.userItems_item} ${styles.adjust}`}>
+        <div className={  opacity ? `${styles.opacity} ${styles.adjust}` : `${styles.userItems_item} ${styles.adjust}`}>
           <div className={`${styles.userItems_item_container} ${styles.adjust_container}`}>
             <img src={adjustImage} alt="adjust" />
           </div>
           <p>تنظیم هوشمند</p>
         </div>
         
-        <div className={`${styles.userItems_item} ${styles.consultant} `}>
+        <div className={  opacity ? `${styles.opacity} ${styles.consultant}` : `${styles.userItems_item} ${styles.consultant}`}>
           <div className={styles.userItems_item_container}>
             <img src={adviseImage} alt="consultant" />
           </div>
           <p>مشاوره</p>
          
         </div>
-        <div className={`${styles.userItems_item} ${styles.myteam}`}>
+        <div className={  opacity ? `${styles.opacity} ${styles.myteam}` : `${styles.userItems_item} ${styles.myteam}`}>
           <div className={styles.userItems_item_container}>
             <img src={teamImage} alt="teamwork" />
           </div>
