@@ -1,5 +1,6 @@
 import React,{useContext} from "react";
 import BasicInfo from "./basicInfo/BasicInfo";
+import CompletedInfo from "./completedInfo/CompletedInfo";
 import Contact from "./contact/Contact";
 import { UserInfoContext } from "./contextInfo/ContextInfo";
 import JobIssues from "./jobIssues/JobIssues";
@@ -18,6 +19,8 @@ const {step} = useContext(UserInfoContext)
       return <Contact />;
     case 4:
       return <Verification/>;
+      case 5:
+        return <CompletedInfo/>;
 
     default:
       break;

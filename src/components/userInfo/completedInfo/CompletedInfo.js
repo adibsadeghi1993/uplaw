@@ -1,4 +1,6 @@
 import React from "react";
+import UserProfile from "../commonFiles/userProfile/UserProfile";
+import CompletedDetailes from "./completedDetailes/CompletedDetailes";
 import styles from "./completedInfo.module.css";
 
 const CompletedInfo = () => {
@@ -8,7 +10,7 @@ const CompletedInfo = () => {
         <UserProfile />
       </section>
       <section className={styles.completedInfo_detaile}>
-        <JobDetailes />
+        <CompletedDetailes />
       </section>
     </main>
   );
