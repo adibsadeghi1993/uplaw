@@ -23,7 +23,7 @@ const ContactDetailes = () => {
     }
   return (
     <section className={styles.contact_detaile}>
-      <UserStep />
+      <UserStep stepName="راه های ارتباطی" />
       <section className={styles.contact_detaile_inputs}>
         <div className={styles.linkedin}>
         <img src={linkedinIcon} alt={linkedinIcon} className={styles.socialMediaicon}/>

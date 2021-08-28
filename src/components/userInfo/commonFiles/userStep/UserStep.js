@@ -3,7 +3,7 @@ import { UserInfoContext } from "../../contextInfo/ContextInfo";
 import { steps } from "./Stages";
 import styles from "./userStep.module.css";
 
-const UserStep = () => {
+const UserStep = ({stepName}) => {
   const {step,setStep,progress,setProgress} = useContext(UserInfoContext)
   const [stage, setStage] = useState(steps);
 
@@ -24,7 +24,7 @@ const UserStep = () => {
 }
   return (
     <div>
-      <p className={styles.stepParagraf}>تکمیل پروفایل/اطلاعات پایه</p>
+      <p className={styles.stepParagraf}>تکمیل پروفایل/{stepName}</p>
       <section className={styles.steps}>
         {stage.map((item) => {
           return (

@@ -44,7 +44,7 @@ const DetailInfo = () => {
   };
   return (
     <div className={styles.detail}>
-      <UserStep />
+      <UserStep stepName="اطلاعات پایه"/>
 
       <section className={styles.Inputs}>
         {allInputs.map((item) => {

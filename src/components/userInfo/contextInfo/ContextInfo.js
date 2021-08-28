@@ -15,6 +15,7 @@ const ContextInfo = ({ children }) => {
     initialValues,
     validateOnMount: true,
     validationSchema,
+    enableReinitialize:true
   });
   return (
     <UserInfoContext.Provider

@@ -50,7 +50,7 @@ const JobDetailes = () => {
 
   return (
     <section className={styles.job_detaile}>
-      <UserStep />
+      <UserStep stepName="اطلاعات شغلی" />
       <div className={styles.sectionOne}>
         <div className={styles.sectionOne_jobtitle}>
           <Input

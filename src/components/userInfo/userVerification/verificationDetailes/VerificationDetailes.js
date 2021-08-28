@@ -27,7 +27,7 @@ const VerificationDetailes = () => {
   }
   return (
     <section className={styles.verification_detaile}>
-      <UserStep />
+      <UserStep stepName="احراز هویت" />
       <section className={styles.nationalcode_desc}>
         <div className={styles.description}>
           <p>
