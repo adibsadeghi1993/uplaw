@@ -1,6 +1,8 @@
 .completed_detailes {
   width: 71%;
-  margin: 93px auto 50px;
+  margin-top: 93px;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 731px;
 }
 
@@ -33,29 +35,33 @@
 }
 
 .completed_detailes_sectionTow {
-  background-color: rgba(232,232,232,0.5);
+  background-color: rgba(232, 232, 232, 0.5);
   border-radius: 27px;
   margin-top: 50px;
-  height: 152px;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  
   display: grid;
   grid-template-columns: 28% 30% 30%;
-  grid-auto-rows: 50% 50%;
+  grid-auto-rows: 48% 48%;
   grid-column-gap: 15px;
+  grid-row-gap: 15px;
   position: relative;
 }
 .circle {
-  width: 150px;
-  height: 150px;
+  width: 162px;
+    height: 132px;
   grid-column: 1/2;
   grid-row: 1/3;
   margin-right: 20px;
   position: absolute;
+  bottom: 5px;
 }
-.epmty{
+.epmty {
   position: absolute;
   width: 15px;
   height: 12px;
-  background-color:white;
+  background-color: white;
   top: 15px;
   right: 40%;
   border-radius: 50%;
@@ -133,55 +139,145 @@
 .begainButton img {
   margin-right: 12px;
 }
-.pridication{
+.pridication {
   font-weight: 900;
   font-size: 1.25rem;
   margin-top: 46px;
 }
-.completed_detailes_sectionThree{
+.completed_detailes_sectionThree {
   display: flex;
   margin-top: 34px;
 }
-.eachDocs{
-  background: #3770E2;
-padding: 10px 10px;
+.eachDocs {
+  background: #3770e2;
+  padding: 10px 10px;
 
-box-shadow: 0px 104px 80px rgba(55, 112, 226, 0.07), 0px 43.4487px 33.4221px rgba(55, 112, 226, 0.0503198), 0px 23.2298px 17.869px rgba(55, 112, 226, 0.0417275), 0px 13.0224px 10.0172px rgba(55, 112, 226, 0.035), 0px 6.91611px 5.32008px rgba(55, 112, 226, 0.0282725), 0px 2.87795px 2.21381px rgba(55, 112, 226, 0.0196802);
-border-radius: 27px
+  box-shadow: 0px 104px 80px rgba(55, 112, 226, 0.07),
+    0px 43.4487px 33.4221px rgba(55, 112, 226, 0.0503198),
+    0px 23.2298px 17.869px rgba(55, 112, 226, 0.0417275),
+    0px 13.0224px 10.0172px rgba(55, 112, 226, 0.035),
+    0px 6.91611px 5.32008px rgba(55, 112, 226, 0.0282725),
+    0px 2.87795px 2.21381px rgba(55, 112, 226, 0.0196802);
+  border-radius: 27px;
 }
-.eachDocs p{
+.eachDocs p {
   font-weight: 300;
-font-size: 10px;
-line-height: 16px;
-color: #FFFFFF;
+  font-size: 10px;
+  line-height: 16px;
+  color: #ffffff;
 }
-.docs2{
+.docs2 {
   margin-right: 11px;
 }
-.docs3{
+.docs3 {
   margin-right: 11px;
 }
-.docs4{
+.docs4 {
   margin-right: 11px;
 }
-.docs5{
+.docs5 {
   margin-right: 11px;
 }
-.adjustbtn{
+.adjustbtn {
   font-family: Anjoman;
-font-style: normal;
-font-weight: 800;
-font-size: 8px;
-line-height: 13px;
-margin-top: 13px;
-color: #3770E2;
-border: none;
-background-color: transparent;
-cursor: pointer;
-display: flex;
-justify-content: center;
-align-items: center;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 8px;
+  line-height: 13px;
+  margin-top: 13px;
+  color: #3770e2;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.adjustbtn img{
+.adjustbtn img {
   margin-right: 5px;
+}
+.completed_detailes_sectionFour {
+  background: linear-gradient(264.38deg, #0938df 0.25%, #3770e2 94.42%);
+  border-radius: 27px;
+  padding: 30px 50px;
+  position: relative;
+  margin-top: 138px;
+}
+.raise_acount {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 31px;
+  color: #ffffff;
+}
+.purchaseAcount_services {
+  display: flex;
+  margin-top: 22px;
+}
+.purchaseAcount {
+  position: relative;
+}
+.startup {
+  margin-right: 52px;
+  display: flex;
+  flex-direction: column;
+}
+.startup_purchase {
+  background: transparent;
+  border: none;
+  font-family: "anjoman";
+  font-weight: 800;
+  font-size: 11px;
+  line-height: 17px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.startup_price {
+  background-color: #ffffff;
+  padding: 6px 10px;
+  color: #3770e2;
+  font-weight: 800;
+  font-size: 8px;
+  line-height: 13px;
+  border-radius: 27px;
+  margin-top: 8px;
+}
+.rocket {
+  position: absolute;
+  right: -80%;
+  top: -17%;
+}
+.services {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+.createTeam {
+  display: flex;
+}
+.createTeam p {
+  margin-right: 10px;
+  font-size: 11px;
+  line-height: 17px;
+
+  color: #ffffff;
+}
+.adjustDocs {
+  display: flex;
+  margin-top: 10px;
+  font-size: 11px;
+  line-height: 17px;
+  color: #ffffff;
+}
+.adjustDocs p {
+  margin-right: 10px;
+}
+.smileImage {
+  position: absolute;
+  left: 3%;
+  bottom: 20%;
+  width: 198px;
+  height: 198px;
+}
+.smileImage img {
+  width: 100%;
 }
