@@ -1,31 +1,126 @@
 .completed_detailes {
-    width: 71%;
-    margin: 93px auto 50px;
-    max-width: 731px;
-    
- 
-  }
+  width: 71%;
+  margin: 93px auto 50px;
+  max-width: 731px;
+}
 
-  .completed_detailes{
-      position: relative;
-      background: #3770E2;
-box-shadow: 0px 104px 80px rgba(55, 112, 226, 0.07), 0px 43.4487px 33.4221px rgba(55, 112, 226, 0.0503198), 0px 23.2298px 17.869px rgba(55, 112, 226, 0.0417275), 0px 13.0224px 10.0172px rgba(55, 112, 226, 0.035), 0px 6.91611px 5.32008px rgba(55, 112, 226, 0.0282725), 0px 2.87795px 2.21381px rgba(55, 112, 226, 0.0196802);
-border-radius: 26px;
-height: 119px;
-display: flex;
-justify-content: flex-start;
-padding-right: 30px;
-align-items: center;
-  }
-  .completed_detailes p{
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 27px;
-    color: white;
-  }
-  .completed_detailes img{
- position: absolute;
- left: -3%;
- top: -90%;
-  }
+.completede_desc {
+  position: relative;
+  background: #3770e2;
+  box-shadow: 0px 104px 80px rgba(55, 112, 226, 0.07),
+    0px 43.4487px 33.4221px rgba(55, 112, 226, 0.0503198),
+    0px 23.2298px 17.869px rgba(55, 112, 226, 0.0417275),
+    0px 13.0224px 10.0172px rgba(55, 112, 226, 0.035),
+    0px 6.91611px 5.32008px rgba(55, 112, 226, 0.0282725),
+    0px 2.87795px 2.21381px rgba(55, 112, 226, 0.0196802);
+  border-radius: 26px;
+  height: 119px;
+  display: flex;
+  justify-content: flex-start;
+  padding-right: 30px;
+  align-items: center;
+}
+.completed_detailes p {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 27px;
+  color: white;
+}
+.completede_desc img {
+  position: absolute;
+  left: -3%;
+  top: -90%;
+}
 
+.completed_detailes_sectionTow {
+  background-color: rgba(232,232,232,0.5);
+  border-radius: 27px;
+  margin-top: 50px;
+  position: relative;
+  height: 152px;
+  display: grid;
+  grid-template-columns: 28% 30% 30%;
+  grid-auto-rows: 50% 50%;
+  grid-column-gap: 15px;
+}
+.circle {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  z-index: 2;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  right: 20px;
+}
+.cricular_desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contract {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.descdiv {
+  margin-right: 14px;
+  border: none;
+  background: #3770e2;
+  border-radius: 27px;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 16px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 169px;
+  flex-shrink: 0;
+}
+.descdiv span {
+  margin-left: 8px;
+  display: inline-block;
+  color: white;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 18px;
+}
+.meeting {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signature {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.begainButton {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  align-self: center;
+  border: none;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 800;
+  font-size: 0.875rem;
+  line-height: 22px;
+  color: #3770e2;
+  background: transparent;
+  font-family: "anjoman";
+}
+.begainButton img {
+  margin-right: 12px;
+}
