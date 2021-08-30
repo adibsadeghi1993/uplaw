@@ -42,18 +42,18 @@
   padding-bottom: 35px;
   
   display: grid;
-  grid-template-columns: 28% 30% 30%;
+  grid-template-columns: 30% 30% 30%;
   grid-auto-rows: 48% 48%;
   grid-column-gap: 15px;
   grid-row-gap: 15px;
   position: relative;
+  justify-content: center;
 }
 .circle {
   width: 162px;
     height: 132px;
   grid-column: 1/2;
   grid-row: 1/3;
-  margin-right: 20px;
   position: absolute;
   bottom: 5px;
 }
@@ -147,6 +147,7 @@
 .completed_detailes_sectionThree {
   display: flex;
   margin-top: 34px;
+  flex-wrap: wrap;
 }
 .eachDocs {
   background: #3770e2;
@@ -166,17 +167,28 @@
   line-height: 16px;
   color: #ffffff;
 }
+.docs1{
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
 .docs2 {
   margin-right: 11px;
+  margin-bottom: 10px;
+  flex-shrink: 0;
 }
 .docs3 {
   margin-right: 11px;
+  margin-bottom: 10px;
+  flex-shrink: 0;
 }
 .docs4 {
   margin-right: 11px;
+  margin-bottom: 10px;
+  flex-shrink: 0;
 }
 .docs5 {
   margin-right: 11px;
+  flex-shrink: 0;
 }
 .adjustbtn {
   font-family: Anjoman;
@@ -201,7 +213,7 @@
   border-radius: 27px;
   padding: 30px 50px;
   position: relative;
-  margin-top: 138px;
+  margin-top: 128px;
 }
 .raise_acount {
   font-weight: 800;
@@ -281,3 +293,299 @@
 .smileImage img {
   width: 100%;
 }
+.number{
+font-weight: 900;
+font-size: 14px;
+}
+.day{
+  font-weight: 900;
+  font-size: 14px;
+}
+
+@media(max-width:1310px){
+  .completed_detailes{
+    width: 75%;
+  }
+}
+@media(max-width:1300px){
+  .completed_detailes{
+    width: 80%;
+  }
+}
+@media(max-width:1200px){
+  .completed_detailes{
+    width: 85%;
+  }
+  .completede_desc{
+    padding-right: 50px;
+  }
+  .completede_desc img{
+    left: 1%;
+  }
+
+  .completede_desc p{
+    font-weight: 800;
+    font-size: 1.15rem;
+  }
+}
+@media(max-width:1100px){
+  .completede_desc p{
+    font-weight: 800;
+    font-size: 1.1rem;
+  }
+  .completede_desc{
+    padding-right: 30px;
+  }
+  .completede_desc img{
+    left: -1%;
+  }
+
+  .circle{
+    width: 150px;
+    height: 120px;
+  }
+  .completed_detailes_sectionTow{
+    grid-template-columns: 24% 30% 30%;
+    grid-column-gap: 27px;
+  }
+  
+}
+@media(max-width:1050px){
+  .descdiv{
+    width: 160px;
+  }
+  
+}
+
+
+@media(max-width:1000px){
+  .completede_desc p{
+    font-weight: 800;
+    font-size: 0.95rem;
+  }
+  .descdiv{
+    width: 140px;
+  }
+  .circle{
+    width: 115px;
+    height: 96px;
+    margin-right: 0;
+  }
+  .completed_detailes_sectionTow{
+    grid-template-columns: 22% 30% 30%;
+    grid-column-gap: 29px;
+    grid-row-gap: 10px;
+  }
+  .number{
+    font-size: 12px;
+  }
+  .day{
+    font-size: 12px;
+  }
+  
+}
+@media(max-width:950px){
+ .smileImage img{
+  width: 189px;
+    height: 165px;
+ }
+ 
+  
+}
+
+@media(max-width:900px){
+  .completed_detailes_sectionTow{
+    grid-template-columns: 21% 31% 31%;
+    grid-column-gap: 27px;
+    grid-row-gap: 10px;
+  }
+  .circle{
+    width: 113px;
+    height: 97px;
+  }
+  .descdiv{
+    width: 130px;
+    margin-right: 10px;
+  }
+  .completede_desc p{
+    font-weight: 800;
+    font-size: 0.8rem;
+  }
+  
+}
+
+@media(max-width:850px){
+  .smileImage img{
+   width: 160px;
+   height: 162px;
+  }
+  .startup_purchase{
+    font-size: 10px;
+  }
+  .raise_acount{
+    font-weight: 800;
+    font-size: 18px;
+  }
+  .completed_detailes_sectionFour{
+    padding: 30px 35px;
+  }
+
+  .smileImage{
+    left: -3%;
+  }
+  .createTeam{
+    font-size: 10px;
+  }
+  .adjustDocs{
+    font-size: 10px;
+  }
+  
+   
+ }
+@media(max-width:800px){
+  .completede_desc{
+    padding-right: 20px;
+  }
+  .completede_desc img{
+    left: -1%;
+  }
+  .circle{
+    width: 113px;
+    height: 97px;
+  }
+  .descdiv{
+    width: 130px;
+    margin-right: 10px;
+  }
+  .completede_desc p{
+    font-weight: 800;
+    font-size: 0.75rem;
+  }
+  
+}
+@media(max-width:768px){
+  .completede_desc{
+    width: 70%;
+    margin: auto;
+  }
+
+  .completed_detailes{
+    width: 100%;
+    margin-top: 130px;
+  }
+  .completede_desc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 25px;
+    padding-top: 46px;
+  }
+  .completede_desc p{
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+  }
+  .completede_desc img{
+    right: -14%;
+    top: -141%;
+  }
+
+  .completed_detailes_sectionTow{
+    grid-template-columns: 1fr;
+    grid-template-rows:152px repeat(4,36px);
+      grid-row-gap: 24px;
+      background:transparent;
+      width: 70%;
+      margin: auto;
+      margin-top: 50px;
+  }
+  .circle{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: red;
+    width: 100%;
+    border-radius: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #E8E8E8;
+    height: 100%;
+  }
+  .progress_container{
+    width: 181px;
+    height: 150px;
+    top: -27%;
+    position: absolute;
+  }
+  .contract{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    
+  }
+  .signature{
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .meeting{
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .begainButton{
+    grid-column: 1/2;
+    grid-row: 5/6;
+    display: flex;
+    justify-content: center;
+  }
+  .descdiv{
+    width: 169px;
+  }
+  .pridication p{
+    text-align: center;
+  }
+  .adjustbtn{
+    display: none;
+  }
+ .completed_detailes_sectionThree{
+  display: flex;
+  margin-top: 34px;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  padding-left: 30px;
+  padding-right: 30px;
+ }
+ .completed_detailes_sectionFour{
+   width: 80%;
+   margin: auto;
+   margin-top: 50px;
+   margin-bottom: 159px;
+ } 
+ .services{
+   display: none;
+ }
+ .smileImage{
+  left: -17%;
+  bottom: -63%;
+ }
+  
+}
+
+@media(max-width:600px){
+  .completede_desc img{
+    right: -20%;
+    top: -141%;
+  }
+}
+@media(max-width:500px){
+  .completede_desc img{
+    right: -25%;
+    top: -141%;
+  }
+}
+@media(max-width:400px){
+  .completede_desc img{
+    right: -30%;
+    top: -141%;
+  }
+}
+

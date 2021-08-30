@@ -23,6 +23,7 @@ const CompletedDetailes = () => {
       </section>
       <section className={styles.completed_detailes_sectionTow}>
         <div className={styles.circle}>
+          <div className={styles.progress_container}>
           <CircularProgressbarWithChildren
             strokeWidth={26}
             styles={buildStyles({
@@ -32,15 +33,16 @@ const CompletedDetailes = () => {
             maxValue={45}
           >
             <div style={{ marginTop: -5 }} className={styles.cricular_desc}>
-              <p style={{ color: "black", fontSize: 14, fontWeight: 900 }}>
+              <p className={styles.number} >
                 30 از 45
               </p>
-              <p style={{ color: "black", fontSize: 14, fontWeight: 900 }}>
+              <p className={styles.day}>
                 روز
               </p>
             </div>
           </CircularProgressbarWithChildren>
           <div className={styles.epmty}></div>
+          </div>
         </div>
 
         <div className={styles.contract}>
