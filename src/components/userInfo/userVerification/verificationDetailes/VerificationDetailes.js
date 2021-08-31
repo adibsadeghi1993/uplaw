@@ -6,7 +6,7 @@ import whiteArrowImage from "../../../../asstes/whitearrow.svg"
 import FreeServices from "../../basicInfo/detail/freeServices/FreeServices";
 
 const VerificationDetailes = () => {
-  const { setUpLoadedNationalCodeImage } = useContext(UserInfoContext);
+  const { setUpLoadedNationalCodeImage,setProgress,setStep } = useContext(UserInfoContext);
 
   const [nationalCodeImage, setNationalCodeImage] = useState("");
 
@@ -23,7 +23,8 @@ const VerificationDetailes = () => {
   };
 
   const completedStepHandler=()=>{
-
+setStep(step=>step+1)
+setProgress(100)
   }
   return (
     <section className={styles.verification_detaile}>

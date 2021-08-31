@@ -9,11 +9,18 @@ const UserStep = ({stepName}) => {
 
 
   useEffect(() => {
-    const updatedStages = [...stage];
-    const findedStep = updatedStages[step - 1];
-    const newStep = { ...findedStep, background: "activeBackground" };
-    updatedStages[step - 1] = newStep;
-    setStage(updatedStages);
+    // const updatedStages = [...stage];
+    // const findedStep = updatedStages[step - 1];
+    // const newStep = { ...findedStep, background: "activeBackground" };
+    // updatedStages[step - 1] = newStep;
+    // setStage(updatedStages);
+    const completedSteps=stage.map((item)=>{
+      if(step>=item.step){
+        return {...item, background:"activeBackground"}
+      }
+      return item
+    })
+    setStage(completedSteps)
   }, [step]);
 
   const stepHandler=(item)=>{
