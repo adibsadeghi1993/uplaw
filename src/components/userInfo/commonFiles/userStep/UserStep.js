@@ -36,6 +36,7 @@ const UserStep = ({stepName}) => {
         {stage.map((item) => {
           return (
             <button
+                disabled={step<item.step ?true:false}
               key={item.step}
               onClick={() => stepHandler(item)}
               className={[styles[item.defaultClass],styles[item.stepNumber],styles[item.background]].join(" ")}
