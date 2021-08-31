@@ -46,7 +46,7 @@ const UserImage = () => {
 
      </div>
      <p className={styles.compoletedprogress}>
-         {100-progress} درصد مونده به تکمیل پروفایل!
+        {progress < 100 ?`${100-progress} درصد مونده به تکمیل پروفایل!`:"100 درصد پروفایل شما تکمیل شد !"} 
       </p>
     </main>
   );

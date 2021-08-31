@@ -15,6 +15,7 @@ import smileImage from "../../../../asstes/smiling face with sunglasses emoji 1 
 import { Docs } from "./Docs/Docs";
 
 const CompletedDetailes = () => {
+  const persentage=30
   return (
     <main className={styles.completed_detailes}>
       <section className={styles.completede_desc}>
@@ -27,9 +28,9 @@ const CompletedDetailes = () => {
           <CircularProgressbarWithChildren
             strokeWidth={26}
             styles={buildStyles({
-              pathColor: "#3770E2",
+              pathColor: `rgba(55, 112, 226, 1)`,
             })}
-            value={30}
+            value={persentage}
             maxValue={45}
           >
             <div style={{ marginTop: -5 }} className={styles.cricular_desc}>
