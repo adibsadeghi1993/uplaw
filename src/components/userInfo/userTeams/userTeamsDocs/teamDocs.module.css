@@ -18,7 +18,8 @@
   padding: 10px 13px;
 }
 .credit p {
-  margin-right: 48px;
+  flex: 1;
+  text-align: center;
 }
 .adjust_docs {
   grid-column: 2/3;
@@ -33,7 +34,8 @@
   padding: 10px 13px;
 }
 .adjust_docs p {
-  margin-right: 110px;
+  flex: 1;
+  text-align: center;
 }
 .progressbar {
   grid-column: 1/2;
@@ -93,3 +95,23 @@ color: #3770E2;
     line-height: 22px;
     color: #3770E2;
 }
+@media(max-width:1150px){
+    .progress_container{
+        width: 153px;
+    }
+}
+
+@media(max-width:1000px){
+    .progress_container{
+        width: 139px;
+    }
+}
+
+@media(max-width:1000px){
+    .progress_container{
+        width: 125px;
+    }
+}
+
+
+

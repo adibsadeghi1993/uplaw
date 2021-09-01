@@ -3,6 +3,7 @@ import teamImage from "../../../../asstes/team.svg";
 import styles from "./userTeams.module.css";
 import uplawImage from "../../../../asstes/uplaw.png";
 import blueArrowImage from "../../../../asstes/blue arrow.svg";
+import plusImage from "../../../../asstes/plussvg.svg";
 
 const UserTeams = () => {
   const initialState = [
@@ -21,7 +22,7 @@ const UserTeams = () => {
             <div className={styles.team_container}>
               <div className={styles.team_image}>
                 <img src={item.src} />
-                <p>{item.teamName}</p>
+                <p className={styles.team_name}>{item.teamName}</p>
               </div>
               <div className={styles.team_btn_container}>
               <button className={styles.team_btn}>
@@ -33,8 +34,8 @@ const UserTeams = () => {
           );
         })}
         <div className={styles.team_container}>
-          <div className={styles.team_image}>
-            <p className={styles.plus}>+</p>
+          <div className={styles.team_image_add}>
+            <div ><img className={styles.plus} src={plusImage}/></div>
           </div>
          <div className={styles.team_btn_container}>
          <button className={styles.team_btn}>
