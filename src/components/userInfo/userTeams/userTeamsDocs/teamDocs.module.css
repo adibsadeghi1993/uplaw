@@ -1,5 +1,95 @@
-.docs{
-    display: grid;
-    grid-template-columns:33% 62% ;
-    grid-template-rows: 44px 253px 30px;
+.docs_grid {
+  display: grid;
+  grid-template-columns: 33% 62%;
+  grid-template-rows: 44px 253px 30px;
+  grid-column-gap: 36px;
+  grid-row-gap: 26px;
+}
+.credit {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #ffffff;
+  justify-content: flex-end;
+  align-self: center;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 10px 13px;
+}
+.credit p {
+  margin-right: 48px;
+}
+.adjust_docs {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #ffffff;
+  justify-content: flex-end;
+  align-self: center;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 10px 13px;
+}
+.adjust_docs p {
+  margin-right: 110px;
+}
+.progressbar {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-color: rgba(232, 232, 232, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 26px;
+}
+.progress_container {
+  width: 170px;
+  height: 170px;
+  position: relative;
+}
+.empty{
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top: 5%;
+    background-color: white;
+}
+.docs {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-color: rgba(232, 232, 232, 0.25);
+  border-radius: 26px;
+  padding: 24px 32px 17px 28px;
+}
+.plan {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  align-self: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.plan p{
+    margin-left: 12px;
+    font-weight: 800;
+font-size: 14px;
+line-height: 22px;
+color: #3770E2;
+}
+.new_adjust {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  align-self: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.new_adjust p{
+    margin-left: 12px;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    color: #3770E2;
 }

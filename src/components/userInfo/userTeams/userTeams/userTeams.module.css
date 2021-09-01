@@ -1,0 +1,20 @@
+.team_desc {
+  width: 33%;
+  padding: 10px 12px;
+  display: flex;
+  margin-top: 52px;
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.team_desc p {
+  margin-right: 45px;
+}
+.team_desc img{
+    width: 20px;
+    height: 20px;
+}
+
+.team{
+    grid-template-columns: repeat(auto-fill,minmax(252,1fr));
+}

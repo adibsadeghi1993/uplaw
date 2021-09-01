@@ -1,0 +1,59 @@
+.doc {
+  display: flex;
+}
+
+.eachDoc {
+  display: flex;
+}
+.docbtn {
+  display: flex;
+}
+.legal_docs {
+  padding-bottom: 11px;
+  cursor: pointer;
+}
+.business_docs {
+  margin-right: 27px;
+  padding-bottom: 11px;
+  cursor: pointer;
+}
+.active {
+  border-bottom: 1px solid #3770e2;
+}
+.alldocs {
+  margin-top: 25px;
+}
+.eachDoc {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  margin-top: 15px;
+}
+
+.eachDoc p span{
+    font-weight: 900;
+}
+
+.docbtn {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.observe{
+    font-weight: 800;
+font-size: 14px;
+line-height: 22px;
+color: #3770E2;
+margin-left: 20px;
+}
+.doc1 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.doc2{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
