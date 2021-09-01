@@ -19,6 +19,7 @@
 }
 .active {
   border-bottom: 1px solid #3770e2;
+  font-weight: 900;
 }
 .alldocs {
   margin-top: 25px;
@@ -99,7 +100,62 @@ font-family: "anjoman";
         font-size: 10px;
         font-weight: 500;
     }
+    
  }
+ @media(max-width:768px){
+  .legal_docs{
+      font-size: 1rem;
+     
+  }
+  .business_docs{
+    font-size: 1rem;
+    
+  }
+  .eachDoc p{
+      font-size: 0.875rem;
+  }
+.docbtn .observe{
+      display: none;
+  }
+  
+  
+}
+
+@media(max-width:413px){
+  .legal_docs{
+      font-size: 0.9rem;
+      font-weight: 400;
+  }
+  .business_docs{
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+  .eachDoc p{
+      font-size: 0.875rem;
+  }
+.docbtn .observe{
+      display: none;
+  }
+  
+  
+}
+
+@media(max-width:413px){
+  .legal_docs{
+      font-size: 0.65rem;
+      font-weight: 400;
+  }
+  .business_docs{
+    font-size: 0.65rem;
+    font-weight: 400;
+  }
+  .eachDoc p{
+      font-size: 0.7rem;
+  }
+
+  
+  
+}
 
 
 

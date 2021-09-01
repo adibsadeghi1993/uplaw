@@ -4,7 +4,7 @@ import "react-circular-progressbar/dist/styles.css";
 import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 import styles from "../../completedInfo/completedDetailes/completedDetailes.module.css"
 
-const ProgressBar = ({persentage}) => {
+const ProgressBar = ({persentage,title,subTitle}) => {
     return (
         <div className={styles.progress_container}>
         <CircularProgressbarWithChildren
@@ -17,10 +17,10 @@ const ProgressBar = ({persentage}) => {
         >
           <div style={{ marginTop: -5 }} className={styles.cricular_desc}>
             <p className={styles.number} >
-              30 از 45
+              {title}
             </p>
             <p className={styles.day}>
-              روز
+              {subTitle}
             </p>
           </div>
         </CircularProgressbarWithChildren>

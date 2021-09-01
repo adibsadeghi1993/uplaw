@@ -23,6 +23,7 @@ const UserTeams = () => {
               <div className={styles.team_image}>
                 <img src={item.src} />
                 <p className={styles.team_name}>{item.teamName}</p>
+                <div className={styles.memberShip}>{item.memberShip} نفر</div>
               </div>
               <div className={styles.team_btn_container}>
               <button className={styles.team_btn}>

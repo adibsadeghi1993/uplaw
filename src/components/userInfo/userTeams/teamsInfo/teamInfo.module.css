@@ -28,6 +28,9 @@
 }
 
 @media(max-width:768px){
+    .teams_docs{
+        width: 70%;
+    }
     .teams{
         display: flex;
         flex-direction: column;

@@ -23,7 +23,7 @@ const CompletedDetailes = () => {
       </section>
       <section className={styles.completed_detailes_sectionTow}>
         <div className={styles.circle}>
-         <ProgressBar persentage={30} />
+         <ProgressBar title="30 از 45" subTitle="روز" persentage={30} />
         </div>
 
         <div className={styles.contract}>
