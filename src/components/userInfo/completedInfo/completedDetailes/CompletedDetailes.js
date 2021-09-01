@@ -1,9 +1,7 @@
 import React from "react";
 import styles from "./completedDetailes.module.css";
 import completedImage from "../../../../asstes/completedpic.svg";
-import { buildStyles } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
-import { CircularProgressbarWithChildren } from "react-circular-progressbar";
+
 import contractImage from "../../../../asstes/blueadjustcontract.svg";
 import signatureImage from "../../../../asstes/blue signature.svg";
 import adjustMeetingImage from "../../../../asstes/blueadjustmeeting.svg";
@@ -13,9 +11,10 @@ import teamImage from "../../../../asstes/team10.svg";
 import starImage from "../../../../asstes/starIcon.svg";
 import smileImage from "../../../../asstes/smiling face with sunglasses emoji 1 (1).svg";
 import { Docs } from "./Docs/Docs";
+import ProgressBar from "../../commonFiles/circleProgress/ProgressBar";
 
 const CompletedDetailes = () => {
-  const persentage=30
+  
   return (
     <main className={styles.completed_detailes}>
       <section className={styles.completede_desc}>
@@ -24,26 +23,7 @@ const CompletedDetailes = () => {
       </section>
       <section className={styles.completed_detailes_sectionTow}>
         <div className={styles.circle}>
-          <div className={styles.progress_container}>
-          <CircularProgressbarWithChildren
-            strokeWidth={26}
-            styles={buildStyles({
-              pathColor: `rgba(55, 112, 226, 1)`,
-            })}
-            value={persentage}
-            maxValue={45}
-          >
-            <div style={{ marginTop: -5 }} className={styles.cricular_desc}>
-              <p className={styles.number} >
-                30 از 45
-              </p>
-              <p className={styles.day}>
-                روز
-              </p>
-            </div>
-          </CircularProgressbarWithChildren>
-          <div className={styles.epmty}></div>
-          </div>
+         <ProgressBar persentage={30} />
         </div>
 
         <div className={styles.contract}>

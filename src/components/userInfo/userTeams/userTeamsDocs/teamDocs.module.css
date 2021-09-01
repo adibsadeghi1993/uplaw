@@ -1,0 +1,5 @@
+.docs{
+    display: grid;
+    grid-template-columns:33% 62% ;
+    grid-template-rows: 44px 253px 30px;
+}

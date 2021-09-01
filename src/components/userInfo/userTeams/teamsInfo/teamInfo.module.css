@@ -13,6 +13,15 @@
     
 }
 
+.teams_docs{
+    width: 74%;
+   margin-top: 80px;
+   margin-left: auto;
+   margin-right: auto;
+    background-color: chartreuse;
+    
+}
+
 @media(max-width:768px){
     .teams{
         display: flex;
