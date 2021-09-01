@@ -23,21 +23,25 @@ const UserTeams = () => {
                 <img src={item.src} />
                 <p>{item.teamName}</p>
               </div>
-              <button>
+              <div className={styles.team_btn_container}>
+              <button className={styles.team_btn}>
                 <span>ورود به تیم</span>
                 <img src={blueArrowImage} />
               </button>
+              </div>
             </div>
           );
         })}
         <div className={styles.team_container}>
           <div className={styles.team_image}>
-            <p>+</p>
+            <p className={styles.plus}>+</p>
           </div>
-          <button>
+         <div className={styles.team_btn_container}>
+         <button className={styles.team_btn}>
             <span>افزودن تیم جدید</span>
             <img src={blueArrowImage} />
           </button>
+         </div>
         </div>
       </section>
     </section>

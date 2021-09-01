@@ -16,5 +16,46 @@
 }
 
 .team{
-    grid-template-columns: repeat(auto-fill,minmax(252,1fr));
+    display: grid;
+    grid-template-columns: 33% 33%;
+    grid-gap: 36px;
+    margin-top: 27px;
+}
+
+.team_container{
+    height: 295px;
+}
+.team_image{
+    display: flex;
+    height: 252px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(232, 232, 232, 0.25);
+    border-radius: 27px
+}
+.team_image img{
+    width: 138px;
+    height: 138px;
+}
+.team_btn_container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.team_btn{
+   background-color: transparent; 
+   border: none;
+}
+.team_btn span{
+    margin-left: 20px;
+    font-weight: 800;
+font-size: 14px;
+line-height: 22px;
+color: #3770E2;
+}
+
+.plus{
+    
 }
