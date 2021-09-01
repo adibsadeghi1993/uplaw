@@ -1,0 +1,48 @@
+.stepParagraf {
+  margin-bottom: 30px;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+.steps {
+  margin-top: 45px;
+  display: flex;
+}
+.step {
+  width: 24.4%;
+  height: 74px;
+
+  outline: none;
+  border: none;
+  font-family: "anjoman";
+}
+
+.stepOne {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.stepFour {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.stepTow,
+.stepThree,
+.stepFour {
+  margin-right: 5px;
+}
+
+.defaltBackground {
+  background-color: #e8e8e8;
+}
+.activeBackground {
+  background-color: #3770e2;
+  color: white;
+}
+
+@media(max-width:768px){
+  .steps{
+    display: none;
+  }
+  .stepParagraf{
+    text-align: center;
+  }
+}

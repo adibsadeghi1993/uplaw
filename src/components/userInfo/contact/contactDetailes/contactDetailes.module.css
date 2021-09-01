@@ -1,0 +1,175 @@
+.contact_detaile {
+    width: 71%;
+    margin: 93px auto 50px;
+    max-width: 707px;
+  
+ 
+  }
+  .contact_detaile_inputs{
+      margin-top: 45px;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: repeat(3,60px);
+      grid-column-gap: 67px;
+      grid-row-gap: 20px;
+  }
+  .linkedin{
+      grid-column: 1/2;
+      grid-row: 1/2;
+      display: flex;
+  }
+  .dribl{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+  }
+  .portfo{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    display: flex; 
+  }
+  .github{
+    grid-column: 2/3;
+    grid-row: 1/2; 
+    display: flex;  
+  }
+  .gitlab{
+    grid-column: 2/3;
+    grid-row: 2/3; 
+    display: flex;
+  }
+  .instagram{
+    grid-column: 2/3;
+    grid-row: 3/4; 
+    display: flex;
+
+  }
+  .socialMediaicon{
+      width: 20px;
+      height: 20px;
+      margin-left: 40px;
+      margin-top: 15px;
+  }
+  .contact_nextStep{
+    display: flex;
+    margin-top: 27px;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.nextbtn{
+    height: 42px;
+    width: 149px;
+    font-family: "anjoman";
+    font-weight: 800;
+    color: white;
+    background: #3770E2;
+    border:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.88rem;
+  cursor: pointer;
+}
+.nextbtn img{
+    margin-right: 12px;
+}
+
+
+@media(max-width:1250px){
+    .contact_detaile{
+        width: 77%;
+    }
+}
+
+@media(max-width:1100px){
+    .contact_detaile_inputs{
+        grid-column-gap: 40px;
+    }
+    .socialMediaicon{
+        margin-left: 20px;
+    }
+}
+
+@media(max-width:1000px){
+    .contact_detaile{
+        width: 83%;
+    }
+}
+
+@media(max-width:940px){
+    .contact_detaile{
+        width: 86%;
+    }
+}
+
+
+@media(max-width:900px){
+    .contact_detaile_inputs{
+        grid-column-gap: 25px;
+    }
+    .socialMediaicon{
+        margin-left: 10px;
+    }
+}
+
+
+@media(max-width:800px){
+    .contact_detaile{
+        width: 89%;
+    }
+}
+
+
+@media(max-width:748px){
+    .socialMediaicon{
+        margin-left: 40px;
+    }
+    .contact_detaile{
+        width: 80%;
+    }
+    .contact_detaile_inputs{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(6,60px);
+    }
+    .linkedin{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: flex;
+    }
+    .dribl{
+      grid-column: 1/2;
+      grid-row: 2/3;
+      display: flex;
+    }
+    .portfo{
+      grid-column: 1/2;
+      grid-row: 3/4;
+      display: flex; 
+    }
+    .github{
+      grid-column: 1/2;
+      grid-row: 4/5; 
+      display: flex;  
+    }
+    .gitlab{
+      grid-column: 1/2;
+      grid-row: 5/6; 
+      display: flex;
+    }
+    .instagram{
+      grid-column: 1/2;
+      grid-row: 6/7; 
+      display: flex;
+  
+    }
+    .contact_nextStep{
+        display: flex;
+        margin-top: 27px;
+        justify-content: center;
+        width: 100%;
+    }
+
+}
+

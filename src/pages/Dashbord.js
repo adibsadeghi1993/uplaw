@@ -1,10 +1,16 @@
 import React from 'react'
+import ContextInfo from '../components/userInfo/contextInfo/ContextInfo';
+import DashbordComponents from '../components/userInfo/DashbordComponents';
+import TeamInfo from '../components/userInfo/userTeams/teamsInfo/TeamInfo';
+
 
 const Dashbord = () => {
+
     return (
-        <div>
-           Dashbord page 
-        </div>
+        <ContextInfo>
+         {/* <DashbordComponents/> */}
+        <TeamInfo/>
+        </ContextInfo>
     )
 }
 

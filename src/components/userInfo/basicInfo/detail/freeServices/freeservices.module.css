@@ -1,0 +1,179 @@
+.freeservices {
+  margin-top: 34px;
+  display: flex;
+  width: 100%;
+  margin-bottom: 109px;
+  justify-content: space-between;
+}
+
+.freeservices_icons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.service {
+  width: 105px;
+  height: 114px;
+  background: rgba(232, 232, 232, 0.5);
+
+  border-radius: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.adjustagreement {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.adjustagreement p {
+  text-align: center;
+}
+
+.signature {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.signature p {
+  text-align: center;
+}
+
+.register {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+ 
+}
+.register p {
+  text-align: center;
+}
+
+
+.freeFacility {
+  margin-top: 10px;
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+.freeFacility span {
+  font-size: 29px;
+  font-weight: bold;
+}
+.completedRegistration {
+  margin-top: 30px;
+  font-weight: 800;
+  font-size: 0.82rem;
+  text-align: center;
+}
+.completedRegistration span {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #3770e2;
+  border-radius: 13px;
+  margin: 0 8px;
+  color: white;
+  font-size: 0.98rem;
+  font-weight: 800;
+}
+
+.register p,.signature p ,.adjustagreement p{
+  margin-top: 12px;
+  font-weight: 800;
+  font-size: .81rem;
+  line-height: 20px;
+}
+
+@media(max-width:1280px){
+
+.signature{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.freeFacility{
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+.freeFacility span{
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+.completedRegistration{
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+.completedRegistration span{
+    padding: 10px 15px;
+    margin: 0 5px;
+}
+}
+
+@media(max-width:1000px){
+  .service{
+    width: 85px;
+    height: 85px;
+  }}
+
+
+
+
+@media(max-width:965px){
+    .freeFacility{
+        font-size: 1rem;
+    }
+}
+
+
+@media(max-width:910px){
+  .service{
+    width: 82px;
+    height: 82px;
+  }
+  .freeFacility{
+    font-size: 0.9rem;
+  }
+  .completedRegistration{
+    font-size: 0.8rem;
+    margin-top: 20px;
+  }
+  .completedRegistration span{
+font-size: 0.8rem;
+font-weight: 800;
+   padding: 5px 10px;
+  }
+  .adjustagreement p {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  .register p{
+    font-size: 0.8rem;
+  }
+  .signature p {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  
+}
+@media (max-width: 800px){
+  .service {
+    width: 71px;
+    height: 71px;
+}
+}
+
+
+
+@media(max-width:768px){
+.freeservices{
+  display: none;
+}
+
+}
+
+
+
+
+
