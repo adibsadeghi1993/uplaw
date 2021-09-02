@@ -99,6 +99,20 @@
   0%   {width: 0;}  
 }
 
+.teams{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 50px;
+}
+.teams img{
+  width: 44px;
+}
+.teams p{
+  margin-right: 16px;
+  font-size: 1.25rem;
+}
+
 @media (max-width: 989px) {
   .image_container {
     width: 97px;

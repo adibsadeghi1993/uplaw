@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import teamImage from "../../../../asstes/team.svg";
 import styles from "./userTeams.module.css";
-import uplawImage from "../../../../asstes/uplaw.png";
+
 import blueArrowImage from "../../../../asstes/blue arrow.svg";
 import plusImage from "../../../../asstes/plussvg.svg";
 
-const UserTeams = () => {
-  const initialState = [
-    { teamName: "آپلا", id: 1, memberShip: 8, src: uplawImage },
-  ];
-  const [team, setTeam] = useState(initialState);
+const UserTeams = ({team}) => {
+ 
+  
   return (
     <section>
       <div className={styles.team_desc}>

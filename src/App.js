@@ -9,9 +9,6 @@ function App() {
   return (
     <div className="App">
      <Dashbord/>
-      <Link to="/auth/google">
-        <h1>go to google signup</h1>
-      </Link>
       <Switch>
         <Route path="/auth/google" exact component={SignUp}/>
       </Switch>
