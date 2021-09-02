@@ -31,7 +31,7 @@
     .teams_docs{
         width: 70%;
     }
-    .teams{
+    .createteam{
         display: flex;
         flex-direction: column;
     }

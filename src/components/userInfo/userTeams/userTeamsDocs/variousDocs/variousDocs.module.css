@@ -1,5 +1,6 @@
 .doc {
   display: flex;
+
 }
 
 .eachDoc {
@@ -103,9 +104,18 @@ font-family: "anjoman";
     
  }
  @media(max-width:768px){
+   .alldocs{
+     background-color: rgba(232, 232, 232, 0.25);
+     padding: 12px 19px 14px 21px;
+     border-radius: 27px;
+   }
+   .doc{
+     margin-top: 36px;
+     display: flex;
+     justify-content: center;
+   }
   .legal_docs{
-      font-size: 1rem;
-     
+      font-size: 1rem;  
   }
   .business_docs{
     font-size: 1rem;
@@ -117,11 +127,19 @@ font-family: "anjoman";
 .docbtn .observe{
       display: none;
   }
+  .active {
+    border-bottom: 1px solid #3770e2;
+    font-weight: 900;
+  }
   
   
 }
-
+/* 
 @media(max-width:413px){
+  .active {
+    border-bottom: 1px solid #3770e2;
+    font-weight: 700;
+  }
   .legal_docs{
       font-size: 0.9rem;
       font-weight: 400;
@@ -140,22 +158,24 @@ font-family: "anjoman";
   
 }
 
-@media(max-width:413px){
+
+@media(max-width:355px){
+  .active {
+    border-bottom: 1px solid #3770e2;
+    font-weight: 800;
+  }
   .legal_docs{
-      font-size: 0.65rem;
-      font-weight: 400;
+      font-size: 0.7rem;
+      
   }
   .business_docs{
-    font-size: 0.65rem;
-    font-weight: 400;
+    font-size: 0.7rem;
+   
   }
   .eachDoc p{
       font-size: 0.7rem;
-  }
-
-  
-  
-}
+  } 
+} */
 
 
 

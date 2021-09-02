@@ -1,3 +1,7 @@
+.main_section_metting{
+    margin-bottom: 91px;
+}
+
 .meeting {
     width: 33%;
     padding: 10px 12px;
@@ -15,3 +19,150 @@
       width: 20px;
       height: 20px;
   }
+  .meeting_section{
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+  }
+  .eachmeeting{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 28px;
+      border-bottom:1px solid rgba(0, 0, 0, 0.1);
+      padding-bottom: 16px;
+  }
+  .meetingName{
+      flex: 1;
+  }
+  .date{
+      flex: 1;
+      display: flex;
+      justify-content: center;
+  }
+  .username{
+      flex: 1;
+      display: flex;
+      justify-content: center;
+  }
+  .observe_meeting{
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      cursor: pointer;
+  }
+  .observe_meeting span{
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    color: #3770E2;
+    margin-left: 20px;
+  }
+  .adjust_newmeeting{
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 40px;
+      cursor: pointer;
+  }
+  .adjust_newmeeting span{
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    color: #3770E2;
+    margin-left: 20px; 
+  }
+  .dropdown_section{
+      display: none;
+  }
+  @media(max-width:1000px){
+      .meeting p{
+        font-size: 0.87rem;
+        margin-right: 2px;
+      }
+      .meetingName{
+          font-size: 0.875rem;
+        
+      }
+      .date{
+        font-size: 0.875rem;
+      }
+      .username{
+        font-size: 0.875rem;
+      }
+      .observe_meeting span{
+          font-size: 0.7rem;
+      }
+  }
+  @media(max-width:900px){
+      .meeting{
+          width: 40%;
+      }
+    .meeting p{
+        font-size: 0.75rem;
+        margin-right: 2px;
+      }
+    .meetingName{
+        font-size: 0.875rem;
+        flex: 2;
+    }
+    
+}
+@media(max-width:768px){
+    .meeting{
+        width: 100%;
+    }
+    .adjust_newmeeting{
+        display: none;
+    }
+  .meeting p{
+      font-size: 1rem;
+     
+    }
+    .meeting_section{
+        display: none;
+    }
+    .dropdown_section{
+        display: block;
+    }
+    .eachselect{
+        margin-top: 15px;
+        padding-bottom: 5px;
+        border-bottom:1px solid rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+    .select{
+       width: 100%;
+       border: none;
+       padding: 15px;
+       background: transparent;
+       font-family: "anjoman";
+       font-size: 1rem;
+       appearance: none;
+       -moz-appearance: none;
+       
+    }
+    .eachselect::after{
+        content: "";
+        border-width: 8px;
+        border-color: transparent;
+        border-top-color: #222;
+        border-style: solid;
+        display: inline-block;
+        position: absolute;
+        top: 25px;
+        left: 5px;
+        border-radius: 2px;
+    }
+    
+    .select:hover{
+        border: none;
+        outline: none;
+    }
+    .select:focus{
+        border: none;
+        outline: none;
+    }
+
+  
+  
+}
