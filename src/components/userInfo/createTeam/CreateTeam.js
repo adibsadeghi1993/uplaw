@@ -2,6 +2,7 @@ import React from 'react'
 import UserProfile from '../commonFiles/userProfile/UserProfile'
 import TeamDocs from '../userTeams/userTeamsDocs/TeamDocs'
 import styles from "./createTeam.module.css"
+import Meeting from './meeting/Meeting'
 
 const CreateTeam = () => {
     return (
@@ -12,6 +13,7 @@ const CreateTeam = () => {
         <section className={styles.createteam_info}>
          <div className={styles.teams_docs}>
          <TeamDocs/>
+         <Meeting/>
          
          </div>
         </section>
