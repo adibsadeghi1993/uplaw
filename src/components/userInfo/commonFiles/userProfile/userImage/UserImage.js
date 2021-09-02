@@ -6,10 +6,11 @@ import userImage from "../../../../../asstes/anonymous-user-circle-icon-vector-1
 import serchImage from "../../../../../asstes/search.svg";
 import billImage from "../../../../../asstes/bill.svg";
 import menubarImage from "../../../../../asstes/menubar.svg";
+import arrowDownImage from "../../../../../asstes/arrowdown team.svg";
 import { UserInfoContext } from "../../../contextInfo/ContextInfo";
 const UserImage = ({ team }) => {
   const { progress } = useContext(UserInfoContext);
-  const firstTeam=team[0]
+  
   const ProfileHandler = () => {
     console.log("profile edit");
   };
@@ -43,8 +44,9 @@ const UserImage = ({ team }) => {
         </div>
       </section>
       {team ? <div className={styles.teams}>
-        <img src={firstTeam.src}/>
-        <p>{firstTeam.teamName}</p>
+        <img src={team[0].src}/>
+        <p>{team[0].teamName}</p>
+        <div className={styles.arrowDownImage}><img src={arrowDownImage}/></div>
       </div>:<><div className={styles.progress_bar}>
         <div
           className={styles.progressPersentage}

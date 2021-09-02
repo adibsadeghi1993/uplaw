@@ -1,0 +1,38 @@
+.createteam{
+    grid-template-columns: 30% 70%;
+    display: grid;
+}
+
+.profilesection{
+    grid-column: 1/2;
+    background-color: #E5E5E5;
+    border-left: 0.35px solid #00000028;
+}
+.createteam_info{
+    grid-column: 2/3; 
+    
+}
+
+.teams_docs{
+    width: 74%;
+   margin-top: 80px;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 760px;
+    
+}
+@media(max-width:1200px){
+   .teams_docs{
+       width: 80%;
+   }
+}
+
+@media(max-width:768px){
+    .teams_docs{
+        width: 70%;
+    }
+    .teams{
+        display: flex;
+        flex-direction: column;
+    }
+}
