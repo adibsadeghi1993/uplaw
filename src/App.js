@@ -8,9 +8,10 @@ import SignUp from "./pages/SignUp";
 function App() {
   return (
     <div className="App">
-     <Dashbord/>
+    
       <Switch>
         <Route path="/auth/google" exact component={SignUp}/>
+        <Route path="/dashbord" exact component={Dashbord}/>
       </Switch>
     </div>
   );
