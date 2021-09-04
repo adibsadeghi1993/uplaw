@@ -6,8 +6,9 @@ import userImage from "../../../../../asstes/anonymous-user-circle-icon-vector-1
 import serchImage from "../../../../../asstes/search.svg";
 import billImage from "../../../../../asstes/bill.svg";
 import menubarImage from "../../../../../asstes/menubar.svg";
-import arrowDownImage from "../../../../../asstes/arrowdown team.svg";
+
 import { UserInfoContext } from "../../../contextInfo/ContextInfo";
+import TeamOption from "./TeamOption";
 const UserImage = ({ team }) => {
   const { progress } = useContext(UserInfoContext);
   
@@ -43,7 +44,7 @@ const UserImage = ({ team }) => {
           <img src={menubarImage} alt="menubar" />
         </div>
       </section>
-      {team ? <div className={styles.teams}>
+      {/* {team ? <div className={styles.teams}>
         <img src={team[0].src}/>
         <p>{team[0].teamName}</p>
         <div className={styles.arrowDownImage}><img src={arrowDownImage}/></div>
@@ -57,7 +58,8 @@ const UserImage = ({ team }) => {
         {progress < 100
           ? `${100 - progress} درصد مونده به تکمیل پروفایل!`
           : "100 درصد پروفایل شما تکمیل شد !"}
-      </p></>}
+      </p></>} */}
+      <TeamOption progress={progress} team={team}/>
     </main>
   );
 };

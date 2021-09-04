@@ -8,7 +8,7 @@ const CreateTeam = () => {
     return (
         <main className={styles.createteam}>
         <section className={styles.profilesection}>
-          <UserProfile opacity="opacity" />
+          <UserProfile opacity="opacity" team="createdTeam"/>
         </section>
         <section className={styles.createteam_info}>
          <div className={styles.teams_docs}>

@@ -123,6 +123,31 @@
   height: 6px;
 }
 
+.notTeam{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 61px;
+}
+.createTeambtn{
+  display: inline-block;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.createTeambtn span{
+  margin-left: 10px;
+  font-weight: 800;
+font-size: 14px;
+line-height: 22px;
+color: #3770E2;
+}
+
+
 @media (max-width: 989px) {
   .image_container {
     width: 97px;
