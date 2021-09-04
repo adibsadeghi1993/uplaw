@@ -3,9 +3,6 @@ import DatePicker from "react-datepicker2";
 import momentJalaali from "moment-jalaali";
 import classes from "./datePicker.module.css";
 import { useState } from "react";
-import moment from "moment";
-
-
 const BirthDay = ({ setBirthday }) => {
   const [value, setValue] = useState(momentJalaali());
   
