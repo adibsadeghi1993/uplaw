@@ -9,7 +9,6 @@ import Home from './pages/Home';
 function App() {
   return (
     <div className="App">
-    
       <Switch>
         <Route path="/auth/google" component={SignUp}/>
         <Route path="/dashbord" component={Dashbord}/>

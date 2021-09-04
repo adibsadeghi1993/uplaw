@@ -3,15 +3,18 @@ import DatePicker from "react-datepicker2";
 import momentJalaali from "moment-jalaali";
 import classes from "./datePicker.module.css";
 import { useState } from "react";
+import moment from "moment";
+
 
 const BirthDay = ({ setBirthday }) => {
-  const [value, setValue] = useState(momentJalaali("1396/7/6", "jYYYY/jM/jD"));
+  const [value, setValue] = useState(momentJalaali());
+  
 
   const handleChange = (value) => {
     setValue(value);
-    const formattedDate = `${value.jYear()}/${
-      value.jMonth() + 1
-    }/${value.jDate()}`;
+    const now =value
+    const formattedDate = now.format("M / D / YYYY")
+    console.log(formattedDate) 
     setBirthday(formattedDate);
   };
   return (
@@ -23,7 +26,7 @@ const BirthDay = ({ setBirthday }) => {
         id="datePicker"
         showTodayButton={false}
         isGregorian={false}
-        // value={value}
+        value={value}
         onChange={(value) => handleChange(value)}
       />
     </div>
