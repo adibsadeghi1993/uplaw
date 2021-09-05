@@ -6,6 +6,7 @@ import { Switch, Route, Link } from "react-router-dom";
 import SignUp from "./pages/SignUp";
 import Home from './pages/Home';
 
+
 function App() {
   return (
     <div className="App">
