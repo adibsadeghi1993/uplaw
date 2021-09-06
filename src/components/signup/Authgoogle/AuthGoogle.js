@@ -1,13 +1,22 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import styles from "../Auth.module.css";
 import queryString from "query-string";
 import googleImage from "../../../asstes/google (2).svg";
 import arrowImage from "../../../asstes/arrow2.svg";
 import stylesGoogle from "./AuthGoogle.module.css";
 import { signUpGooleAction } from "../../../redux/Actions/SignUpAction";
+import { useHistory } from "react-router-dom";
 
 const AuthGoogle = (props) => {
+
+  const history=useHistory()
+ const state= useSelector(state=>state.userInfo.userInfo)
+
+ if (state.data.customer.verified.email ) {
+   history.push("/dashbord")
+ } 
+ console.log(state)
   const { formik } = props;
   const dispatch = useDispatch()
   useEffect(() => {
