@@ -1,24 +1,26 @@
 import axios from "axios";
+import { formatError, saveTokenInLocalStorage, signUpGoogle } from "../../services/userInfoServices";
 import { CONFIRMED_AUTH_GOOGLE, FAILED_AUTH_GOOGLE } from "../Constants";
 
 export const signUpGooleAction = (data) => {
-  console.log("adibbbbbbbb");
-  return (dispatch) => {
-    axios
-      .post(
-        "http://193.176.240.81:3000/api/v1/customer/profile/auth/google",
-        data
-      )
-      .then((response) => {
-          console.log(response.data)
+  
+  return async(dispatch) => {
+    try {
+        const response=await signUpGoogle(data)
+        console.log(response)
+       
         dispatch(confrimSignUpGoogleAction(response.data))
-      })
-      .catch((err) => {
-        console.log(err.response.msg);
-        dispatch(failedSignUpGoogleAction(err.response.data.msg))
-      });
+        saveTokenInLocalStorage(response.data.data.token)
+        
+    } catch (error) {
+        const errorMessage=formatError(error.response)
+        dispatch(failedSignUpGoogleAction(errorMessage))
+    }
   };
 };
+
+
+
 
 const confrimSignUpGoogleAction = (data) => {
   return {
