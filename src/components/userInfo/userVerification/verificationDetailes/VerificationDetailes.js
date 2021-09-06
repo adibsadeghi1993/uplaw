@@ -65,7 +65,7 @@ setProgress(100)
       <div className={styles.verification_lastStep}>
           <button onClick={completedStepHandler} className={styles.nextbtn}>
             آپلود و تکمیل ثبت نام
-            <img src={whiteArrowImage} />
+            <img src={whiteArrowImage} alt="arrow" />
           </button>
         </div>
         <FreeServices/>

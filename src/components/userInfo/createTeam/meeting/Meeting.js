@@ -16,7 +16,7 @@ const Meeting = () => {
   return (
     <section className={styles.main_section_metting}>
       <div className={styles.meeting}>
-        <img src={meetingImage} />
+        <img src={meetingImage} alt="arrow" />
         <p>آخرین صورت جلسات</p>
       </div>
       <section className={styles.meeting_section}>
@@ -26,7 +26,7 @@ const Meeting = () => {
               <p className={styles.meetingName}>{item.meetingName}</p>
               <p className={styles.date}>{item.date}</p>
               <p className={styles.username}>{item.name}</p>
-              <div className={styles.observe_meeting}><span>مشاهده</span><img src={blueArrowImage}/></div>
+              <div className={styles.observe_meeting}><span>مشاهده</span><img src={blueArrowImage} alt="arrow"/></div>
             </article>
           );
         })}
@@ -43,7 +43,7 @@ const Meeting = () => {
           })}
 
       </section>
-      <div className={styles.adjust_newmeeting}><span>تنظیم صورت جلسه جدید</span><img src={blueArrowImage}/></div>
+      <div className={styles.adjust_newmeeting}><span>تنظیم صورت جلسه جدید</span><img src={blueArrowImage} alt="arrow"/></div>
     </section>
   );
 };

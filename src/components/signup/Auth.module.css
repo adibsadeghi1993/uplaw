@@ -12,7 +12,6 @@
   align-items: center;
   width: 68%;
   margin: auto;
-  max-width: 976px;
   padding-top: 102px;
   position: relative;
 
@@ -185,7 +184,7 @@
 }
 .avatar {
   position: absolute;
-  right: -226px;
+  right: -287px;
   top: -31px;
   z-index: -1;
 
@@ -248,6 +247,22 @@
   font-size: 1.125rem;
   padding-bottom: 2px;
 }
+
+@media(max-width:1700px){
+ .avatar{
+   right: -280px;
+ }
+}
+@media(max-width:1600px){
+  .avatar{
+    right: -255px;
+  }
+ }
+ @media(max-width:1500px){
+  .avatar{
+    right: -240px;
+  }
+ }
 
 @media(max-width:1400px){
   .sginup_description_second_p{

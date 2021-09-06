@@ -22,7 +22,7 @@ const FreeServices = () => {
       <div className={styles.freeservices_icons}>
         <div className={styles.adjustagreement}>
           <div className={styles.service}>
-            <img src={adjustImage} />
+            <img src={adjustImage} alt="تنظیم سند" />
           </div>
           <p>
             تنظیم هوشمند <br />
@@ -31,7 +31,7 @@ const FreeServices = () => {
         </div>
         <div className={styles.signature }>
           <div className={styles.service}>
-            <img src={signatureImage} />
+            <img src={signatureImage} alt="امضا قرارداد" />
           </div>
           <p>
             ثبت امضای <br />
@@ -40,7 +40,7 @@ const FreeServices = () => {
         </div>
         <div className={styles.register}>
           <div className={styles.service}>
-            <img src={registermeeting} />
+            <img src={registermeeting} alt="تنظیم جلسه"/>
           </div>
           <p>
             ثبت یک <br />

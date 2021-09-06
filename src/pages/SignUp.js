@@ -30,7 +30,7 @@ const SignUp = (props) => {
   })
     return (
         <div>
-          <div className={styles.navbar}></div>
+          {/* <div className={styles.navbar}></div> */}
           <Auth {...props} formik={formik}/>  
         </div>
     )

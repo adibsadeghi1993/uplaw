@@ -44,7 +44,7 @@ const VariousDocs = () => {
                 }}
               ></p>
               <button className={styles.docbtn}>
-                <p className={styles.observe}>مشاهده</p> <img src={blueArrow} />
+                <p className={styles.observe}>مشاهده</p> <img src={blueArrow} alt="arrow" />
               </button>
             </div>
           );

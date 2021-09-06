@@ -27,7 +27,7 @@ const TeamOption = ({ team,progress }) => {
         <img src={team[0].src} />
         <p>{team[0].teamName}</p>
         <div className={styles.arrowDownImage}>
-          <img src={arrowDownImage} />
+          <img src={arrowDownImage} alt="arrow" />
         </div>
       </div>
     );
@@ -35,7 +35,7 @@ const TeamOption = ({ team,progress }) => {
   if (typeof team === "string") {
       options=<div className={styles.notTeam}>
           <p>شما تیمی ندارید!</p>
-          <button className={styles.createTeambtn}><span>ایجاد تیم</span><img src={blueArrowImage}/></button>
+          <button className={styles.createTeambtn}><span>ایجاد تیم</span><img src={blueArrowImage} alt="arrow"/></button>
       </div>
   }
 

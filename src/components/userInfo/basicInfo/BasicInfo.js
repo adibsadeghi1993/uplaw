@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import UserProfile from "../commonFiles/userProfile/UserProfile";
 import DetailInfo from "./detail/DetailInfo";
 import styles from "./basicInfo.module.css"
