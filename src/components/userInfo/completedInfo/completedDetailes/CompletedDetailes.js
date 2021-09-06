@@ -19,7 +19,7 @@ const CompletedDetailes = () => {
     <main className={styles.completed_detailes}>
       <section className={styles.completede_desc}>
         <p>پروفایل شما کامل و تایید شد! از بسته رایگانتون امکانات زیر باقیه!</p>
-        <img src={completedImage} />
+        <img src={completedImage} alt="completed" />
       </section>
       <section className={styles.completed_detailes_sectionTow}>
         <div className={styles.circle}>
@@ -27,23 +27,23 @@ const CompletedDetailes = () => {
         </div>
 
         <div className={styles.contract}>
-          <img src={contractImage} className={styles.image} />
+          <img src={contractImage} className={styles.image} alt="contract"/>
           <div className={styles.descdiv}>
             <span>یک</span>تنظیم هوشمند قرارداد
           </div>
         </div>
         <div className={styles.meeting}>
-          <img src={adjustMeetingImage} className={styles.image} />
+          <img src={adjustMeetingImage} className={styles.image} alt="adjustmeeting" />
           <div className={styles.descdiv}>
             <span>یک</span>تنظیم صورت جلسه
           </div>
         </div>
         <div className={styles.signature}>
-          <img src={signatureImage} className={styles.image} />
+          <img src={signatureImage} className={styles.image} alt="signature" />
           <div className={styles.descdiv}>ثبت امضای دیجیتال</div>
         </div>
         <button className={styles.begainButton}>
-          <img src={blueArrowImage} />
+          <img src={blueArrowImage} alt="arrow" />
           شروع میکنم
         </button>
       </section>
@@ -58,7 +58,7 @@ const CompletedDetailes = () => {
                 <p>{item.title}</p>
               </div>
               <button className={styles.adjustbtn}>
-                تنظیم هوشمند <img src={blueArrowImage} />
+                تنظیم هوشمند <img src={blueArrowImage}  alt="arrow" />
               </button>
             </div>
           );
@@ -87,12 +87,12 @@ const CompletedDetailes = () => {
               <p>امکان ایجاد یک تیم 10 نفره</p>
             </div>
             <div className={styles.adjustDocs}>
-              <img src={starImage} alt="تنظیم سند" />
+              <img src={starImage} alt="adjust docs" />
               <p>تنظیم هوشمند 10 سند حقوقی و مدیریتی</p>
             </div>
           </div>
         </div>
-       <div className={styles.smileImage}> <img  src={smileImage}/></div>
+       <div className={styles.smileImage}> <img  src={smileImage} alt="smile"/></div>
       </section>
    
     </main>

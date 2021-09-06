@@ -14,8 +14,8 @@ const AuthGoogle = (props) => {
     console.log(bodyCode);
     axios
       .post(
-        "http://uplawpi/api/v1/customer/profile/auth/google",
-        bodyCode
+        `http://193.176.240.81:3000/api/v1/customer/profile/auth/google`,bodyCode
+        
       )
       .then((response) => {
         console.log(response);

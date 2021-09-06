@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React  from "react";
 import teamImage from "../../../../asstes/team.svg";
 import styles from "./userTeams.module.css";
 
@@ -11,7 +11,7 @@ const UserTeams = ({team}) => {
   return (
     <section>
       <div className={styles.team_desc}>
-        <img src={teamImage} />
+        <img src={teamImage}  alt="team" />
         <p>تیم های شما</p>
       </div>
       <section className={styles.team}>
@@ -19,14 +19,14 @@ const UserTeams = ({team}) => {
           return (
             <div className={styles.team_container}>
               <div className={styles.team_image}>
-                <img src={item.src} />
+                <img src={item.src} alt="team" />
                 <p className={styles.team_name}>{item.teamName}</p>
                 <div className={styles.memberShip}>{item.memberShip} نفر</div>
               </div>
               <div className={styles.team_btn_container}>
               <button className={styles.team_btn}>
                 <span>ورود به تیم</span>
-                <img src={blueArrowImage} />
+                <img src={blueArrowImage}  alt="entry" />
               </button>
               </div>
             </div>
@@ -34,12 +34,12 @@ const UserTeams = ({team}) => {
         })}
         <div className={styles.team_container}>
           <div className={styles.team_image_add}>
-            <div ><img className={styles.plus} src={plusImage}/></div>
+            <div ><img className={styles.plus} src={plusImage}  alt="plus"/></div>
           </div>
          <div className={styles.team_btn_container}>
          <button className={styles.team_btn}>
             <span>افزودن تیم جدید</span>
-            <img src={blueArrowImage} />
+            <img src={blueArrowImage}  alt="added team" />
           </button>
          </div>
         </div>
