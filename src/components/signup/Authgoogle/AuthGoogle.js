@@ -14,9 +14,9 @@ const AuthGoogle = (props) => {
   const history=useHistory()
  const state= useSelector(state=>state.userInfo.userInfo)
 
- if (state.data.customer.verified.email ) {
-   history.push("/dashbord")
- } 
+//  if (state.data.customer.verified.email ) {
+//    history.push("/dashbord")
+//  } 
   const { formik } = props;
   const dispatch = useDispatch()
   useEffect(() => {

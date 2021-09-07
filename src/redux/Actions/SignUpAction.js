@@ -1,4 +1,4 @@
-import axios from "axios";
+
 import { formatError, saveTokenInLocalStorage, signUpGoogle } from "../../services/userInfoServices";
 import { CONFIRMED_AUTH_GOOGLE, FAILED_AUTH_GOOGLE } from "../Constants";
 
@@ -7,7 +7,7 @@ export const signUpGooleAction = (data) => {
   return async(dispatch) => {
     try {
         const response=await signUpGoogle(data)
-        console.log(response)
+        console.log(response.data)
        
         dispatch(confrimSignUpGoogleAction(response.data))
         saveTokenInLocalStorage(response.data.data.token)
