@@ -14,10 +14,11 @@ const AuthGoogle = (props) => {
   const dispatch = useDispatch()
   const history=useHistory()
  const state= useSelector(state=>state.userInfo.userInfo)
+ console.log(state)
 
-//  if (state.data.customer.verified.email ) {
-//    history.push("/dashbord")
-//  } 
+ if (state.email || state.mobileNumber ) {
+   history.push("/dashbord")
+ } 
   const { formik } = props;
 
   useEffect(() => {
@@ -46,7 +47,7 @@ const AuthGoogle = (props) => {
     SignUpConfirmButton = true;
   }
 
-  const authPhoneNumberHandler= async()=>{
+  const authPhoneNumberHandler= ()=>{
     const {phoneNumber,confirmCode}=formik.values
     const bodyRequest={mobileNumber:phoneNumber,code:confirmCode}
     console.log(bodyRequest)

@@ -150,6 +150,7 @@
 .confirm_signup {
   grid-column: 3/4;
   grid-row: 3/4;
+
 }
 .confirm_signup span{
   font-size: 1rem;
@@ -165,6 +166,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  cursor: pointer;
 }
 .confirm_signup button span {
   text-align: start;
@@ -345,6 +347,7 @@
     grid-template-columns: 1fr;
     grid-row-gap: 15px;
     grid-template-rows: repeat(8,63px);
+    margin-bottom: 50px;
   }
   .authphone_phonenumber{
     grid-column: 1/2;

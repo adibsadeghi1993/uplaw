@@ -25,15 +25,17 @@ export const userInfoReducer = (state = initialState, action) => {
     case CONFIRMED_AUTH_GOOGLE:
       const updatedState = { ...state ,successMsg:"ثبت نام با گوگل انجام شد"};
       updatedState.userInfo={...state.userInfo,token:action.payload.data.token,email:action.payload.data.customer.email}
-
       return updatedState;
+      
       case FAILED_AUTH_GOOGLE:
         const newState={...state,failedMsg:"ثبت نام با گوگل با خطا روبرو شد"}
       return newState
 
       case CONFIRMED_AUTH_PHONENUMBER:
         const newStateAuthPhonNumber = { ...state ,successMsg:"ثبت نام با شماره تلفن انجام شد"};
-        newStateAuthPhonNumber.userInfo={...state.userInfo,token:action.payload.data.token,email:action.payload.data.customer.mobileNumber}
+        newStateAuthPhonNumber.userInfo={...state.userInfo,token:action.payload.data.token,mobileNumber:action.payload.data.customer.mobileNumber}
+        return newStateAuthPhonNumber
+
         case FAILED_AUTH_PHONENUMBER:
           const failedStatePhoneNumber={...state,failedMsg:"ثبت نام با شماره تلفن با خطا روبرو شد"}
         return failedStatePhoneNumber
