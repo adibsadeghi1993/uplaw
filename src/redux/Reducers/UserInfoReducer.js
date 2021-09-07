@@ -1,4 +1,4 @@
-import { CONFIRMED_AUTH_GOOGLE } from "../Constants";
+import { CONFIRMED_AUTH_GOOGLE, FAILED_AUTH_GOOGLE } from "../Constants";
 
 const initialState = {
   successMsg: "",
@@ -24,11 +24,12 @@ export const userInfoReducer = (state = initialState, action) => {
   switch (action.type) {
     case CONFIRMED_AUTH_GOOGLE:
       const updatedState = { ...state ,successMsg:"ثبت نام با گوگل انجام شد"};
-      // updatedState.successMsg="authenticated"
-      // updatedState.userInfo.token=action.data.token
       updatedState.userInfo={...state.userInfo,token:action.payload.data.token,email:action.payload.data.customer.email}
 
       return updatedState;
+      case FAILED_AUTH_GOOGLE:
+        const newState={...state,failedMsg:"ثبت نام با گوگل با خطا انجام شد"}
+      return newState
 
     default:
       return state;
