@@ -5,12 +5,13 @@ import queryString from "query-string";
 import googleImage from "../../../asstes/google (2).svg";
 import arrowImage from "../../../asstes/arrow2.svg";
 import stylesGoogle from "./AuthGoogle.module.css";
-import { signUpGooleAction } from "../../../redux/Actions/SignUpAction";
+import { signUpGooleAction, signUpPhoneNumberAction } from "../../../redux/Actions/SignUpAction";
 import { useHistory } from "react-router-dom";
-import { signUpValidateCode } from "../../../services/userInfoServices";
+
 
 const AuthGoogle = (props) => {
 
+  const dispatch = useDispatch()
   const history=useHistory()
  const state= useSelector(state=>state.userInfo.userInfo)
 
@@ -18,7 +19,7 @@ const AuthGoogle = (props) => {
 //    history.push("/dashbord")
 //  } 
   const { formik } = props;
-  const dispatch = useDispatch()
+
   useEffect(() => {
     const query = queryString.parse(props.location.search);
     const bodyCode = { code: query.code };
@@ -50,14 +51,7 @@ const AuthGoogle = (props) => {
     const bodyRequest={mobileNumber:phoneNumber,code:confirmCode}
     console.log(bodyRequest)
     if (SignUpConfirmButton) {
-      try {
-      const response=await  signUpValidateCode(bodyRequest)
-      console.log(response)
-
-        
-      } catch (error) {
-        
-      }
+      dispatch(signUpPhoneNumberAction(bodyRequest))
       
     }
   }
