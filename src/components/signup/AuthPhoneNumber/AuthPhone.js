@@ -3,12 +3,21 @@ import styles from "../Auth.module.css"
 import circleArrowImage from "../../../asstes/circlearrow.svg";
 import lockImage from "../../../asstes/lock.svg";
 import phoneImage from "../../../asstes/phone.svg";
+import { Formik } from "formik";
+import { signUpPhoneNumber } from "../../../services/userInfoServices";
 
 
 const AuthPhone = (props) => {
   const { formik } = props;
   const phoneHandler=()=>{
-   console.log(formik.values.phoneNumber)
+   const phoneNumber=formik.values.phoneNumber
+   console.log(phoneNumber)
+   const axiosBody={mobileNumber:phoneNumber}
+   signUpPhoneNumber(axiosBody).then((response)=>{
+     console.log(response)
+   }).catch((err)=>{
+     console.log(err.response)
+   })
   }
 
   return (

@@ -21,7 +21,6 @@ export const signUpGooleAction = (data) => {
 
 
 
-
 const confrimSignUpGoogleAction = (data) => {
   return {
     type: CONFIRMED_AUTH_GOOGLE,

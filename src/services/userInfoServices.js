@@ -5,6 +5,16 @@ export const signUpGoogle=(data)=>{
     return axios.post("http://193.176.240.81:3000/api/v1/customer/profile/auth/google",data)
 }
 
+
+export const signUpPhoneNumber=(data)=>{
+    return axios.post("http://193.176.240.81:3000/api/v1/customer/profile/register",data)
+}
+
+export const signUpValidateCode=(data)=>{
+    return axios.post("http://193.176.240.81:3000/api/v1/customer/profile/validate",data)
+}
+
+
 export const saveTokenInLocalStorage=(token)=>{
     localStorage.setItem("userToken",JSON.stringify(token))
 

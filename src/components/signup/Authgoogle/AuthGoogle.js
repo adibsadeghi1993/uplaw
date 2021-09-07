@@ -7,6 +7,7 @@ import arrowImage from "../../../asstes/arrow2.svg";
 import stylesGoogle from "./AuthGoogle.module.css";
 import { signUpGooleAction } from "../../../redux/Actions/SignUpAction";
 import { useHistory } from "react-router-dom";
+import { signUpValidateCode } from "../../../services/userInfoServices";
 
 const AuthGoogle = (props) => {
 
@@ -39,9 +40,26 @@ const AuthGoogle = (props) => {
   if (
     !formik.errors.terms &&
     !formik.errors.confirmCode &&
-    props.location.search
+    !formik.errors.phoneNumber
   ) {
     SignUpConfirmButton = true;
+  }
+
+  const authPhoneNumberHandler= async()=>{
+    const {phoneNumber,confirmCode}=formik.values
+    const bodyRequest={mobileNumber:phoneNumber,code:confirmCode}
+    console.log(bodyRequest)
+    if (SignUpConfirmButton) {
+      try {
+      const response=await  signUpValidateCode(bodyRequest)
+      console.log(response)
+
+        
+      } catch (error) {
+        
+      }
+      
+    }
   }
 
   return (
@@ -77,6 +95,7 @@ const AuthGoogle = (props) => {
               ? stylesGoogle.successSignUp
               : stylesGoogle.failedSignUp
           }`}
+          onClick={authPhoneNumberHandler}
         >
           <span>وارد شوید</span> <img src={arrowImage} alt="arrow" />
         </button>
