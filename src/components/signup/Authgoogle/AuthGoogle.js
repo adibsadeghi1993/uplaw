@@ -25,7 +25,9 @@ const AuthGoogle = (props) => {
     const query = queryString.parse(props.location.search);
     const bodyCode = { code: query.code };
     console.log(bodyCode);
-   dispatch(signUpGooleAction(bodyCode))
+  if (bodyCode.code) {
+    dispatch(signUpGooleAction(bodyCode))
+  }
   }, [props.location.search]);
 
   const stringifiedParams = queryString.stringify({
@@ -57,9 +59,13 @@ const AuthGoogle = (props) => {
     }
   }
 
+  const signUpGoogleHandler=()=>{
+
+  }
+
   return (
     <>
-      <div className={styles.authsection_google}>
+      <div className={styles.authsection_google} onClick={signUpGoogleHandler}>
         <a
           href={`https://accounts.google.com/o/oauth2/v2/auth?${stringifiedParams}`}
         >

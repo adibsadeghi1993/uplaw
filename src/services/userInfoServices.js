@@ -38,7 +38,7 @@ export const saveTokenInLocalStorage = (token) => {
 };
 
 export const formatError = (errorReasponse) => {
-  switch (errorReasponse.msg) {
+  switch (errorReasponse) {
     default:
       return "";
   }

@@ -28,16 +28,16 @@ export const userInfoReducer = (state = initialState, action) => {
       return updatedState;
       
       case FAILED_AUTH_GOOGLE:
-        const newState={...state,failedMsg:"ثبت نام با گوگل با خطا روبرو شد"}
-      return newState
+        const failedGoogleAuthState={...state,failedMsg:"ثبت نام با گوگل با خطا روبرو شد"}
+      return failedGoogleAuthState
 
       case CONFIRMED_AUTH_PHONENUMBER:
-        const newStateAuthPhonNumber = { ...state ,successMsg:"ثبت نام با شماره تلفن انجام شد"};
+        const newStateAuthPhonNumber = { ...state ,successMsg:"ثبت نام با شماره تلفن انجام شد",failedMsg:""};
         newStateAuthPhonNumber.userInfo={...state.userInfo,token:action.payload.data.token,mobileNumber:action.payload.data.customer.mobileNumber}
         return newStateAuthPhonNumber
 
         case FAILED_AUTH_PHONENUMBER:
-          const failedStatePhoneNumber={...state,failedMsg:"ثبت نام با شماره تلفن با خطا روبرو شد"}
+          const failedStatePhoneNumber={...state,failedMsg:"ثبت نام با شماره تلفن با خطا روبرو شد",successMsg:""}
         return failedStatePhoneNumber
   
 
