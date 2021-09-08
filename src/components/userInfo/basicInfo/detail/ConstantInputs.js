@@ -9,11 +9,11 @@ export const allInputs = [
     name: "lastName",
     placeholder: "نام خانوادگی خود را وراد کنید",
   },
-  {
-    type: "text",
-    name: "phoneNumber",
-    placeholder: "شماره موبایل خود را وراد کنید",
-  },
+  // {
+  //   type: "text",
+  //   name: "phoneNumber",
+  //   placeholder: "شماره موبایل خود را وراد کنید",
+  // },
   {
     type: "text",
     name: "email",

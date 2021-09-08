@@ -8,7 +8,7 @@ const initialState = {
     nationalCardImage: "",
     fullName: "",
     mobileNumber: "",
-    email: "",
+    userEmail: "",
     skills: [],
     socialMedia: [],
     userType:[],
@@ -22,7 +22,7 @@ export const userInfoReducer = (state = initialState, action) => {
   switch (action.type) {
     case CONFIRMED_AUTH_GOOGLE:
       const updatedState = { ...state ,successMsg:"ثبت نام با گوگل انجام شد"};
-      updatedState.userInfo={...state.userInfo,token:action.payload.data.token,email:action.payload.data.customer.email}
+      updatedState.userInfo={...state.userInfo,token:action.payload.data.token,userEmail:action.payload.data.customer.email}
       return updatedState;
       
       case FAILED_AUTH_GOOGLE:
@@ -38,7 +38,6 @@ export const userInfoReducer = (state = initialState, action) => {
           const failedStatePhoneNumber={...state,failedMsg:"ثبت نام با شماره تلفن با خطا روبرو شد",successMsg:""}
         return failedStatePhoneNumber
   
-
     default:
       return state;
   }

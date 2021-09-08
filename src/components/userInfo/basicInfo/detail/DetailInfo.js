@@ -11,13 +11,22 @@ import DatePicker from "../DtaePicker/DatePicker";
 import FreeServices from "./freeServices/FreeServices";
 import { UserInfoContext } from "../../contextInfo/ContextInfo";
 import { sendProfileImage } from "../../../../services/userInfoServices";
-
+import { useSelector } from "react-redux";
 
 const DetailInfo = () => {
+  const state = useSelector((state) => state.userInfo.userInfo);
+  const { mobileNumber, userEmail } = state;
+
   const context = useContext(UserInfoContext);
   console.log(context);
-  const { upLoadedImage, setUpLoadedImage, setStep, setProgress, setBirthday, formik } =
-    context;
+  const {
+    upLoadedImage,
+    setUpLoadedImage,
+    setStep,
+    setProgress,
+    setBirthday,
+    formik,
+  } = context;
 
   let statueBtn = true;
 
@@ -64,37 +73,27 @@ const DetailInfo = () => {
     setProgress(25);
   };
 
-
-  const sendHandlerImage=()=>{
-    console.log("send image")
+  const sendHandlerImage = () => {
+    console.log("send image");
     const formData = new FormData();
-    console.log(uploadImage)
-    formData.append("profile",  upLoadedImage);
-    sendProfileImage(formData).then((res)=>{
-        console.log(res)
-      const file = new Blob([res.data.data], {type:'image/png'})
-    console.log(file) 
-   
-    
-    }).catch((error)=>{
-      console.log(error)
-    })
-  }
+    console.log(uploadImage);
+    formData.append("profile", upLoadedImage);
+    sendProfileImage(formData)
+      .then((res) => {
+        console.log(res);
+        const file = new Blob([res.data.data], { type: "image/png" });
+        console.log(file);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   useEffect(() => {
-      if ( upLoadedImage) {
-        sendHandlerImage()
-      }
-   
-   
-  }, [ upLoadedImage])
-
-
-
-
-
-
-
+    if (upLoadedImage) {
+      sendHandlerImage();
+    }
+  }, [upLoadedImage]);
 
   return (
     <div className={styles.detail}>
@@ -113,6 +112,13 @@ const DetailInfo = () => {
             </div>
           );
         })}
+        <div className={styles.phoneNumber}>
+          <Input
+            type="text"
+            name="phoneNumber"
+            placeholder="شماره تلفن خود را وارد کنید"
+          />
+        </div>
 
         <div className={styles.confirmMobile}>
           <input type="text" placeholder="کد تایید" />
@@ -148,7 +154,7 @@ const DetailInfo = () => {
           </label>
         </div>
         <div className={styles.label}>
-          <label  htmlFor="image">بارگذاری عکس</label>
+          <label htmlFor="image">بارگذاری عکس</label>
         </div>
         <div className={styles.password}>
           <Input
