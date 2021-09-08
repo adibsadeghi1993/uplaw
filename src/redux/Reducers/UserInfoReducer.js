@@ -12,10 +12,8 @@ const initialState = {
     skills: [],
     socialMedia: [],
     userType:[],
-    image:
-      "http://localhost:3000/uploads/profile-images/611bba8bc72421483ec48f95-image-1630591564129-the-only-rule-is-there-are-no-rules.jpg",
-    thumbnail:
-      "http://localhost:3000/uploads/profile-images/611bba8bc72421483ec48f95-image-1630591564129-the-only-rule-is-there-are-no-rules-thumbnail.jpg",
+    image:"",  
+    thumbnail:"" 
   },
   failedMsg: "",
 };

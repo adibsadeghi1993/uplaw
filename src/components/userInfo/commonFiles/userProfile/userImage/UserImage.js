@@ -9,9 +9,13 @@ import menubarImage from "../../../../../asstes/menubar.svg";
 
 import { UserInfoContext } from "../../../contextInfo/ContextInfo";
 import TeamOption from "./TeamOption";
+import { useSelector } from "react-redux";
 const UserImage = ({ team }) => {
   const { progress } = useContext(UserInfoContext);
-  
+
+  const state = useSelector(state => state.userInfo.userInfo)
+  console.log(state)
+  const {thumbnail}=state
   const ProfileHandler = () => {
     console.log("profile edit");
   };
@@ -19,7 +23,7 @@ const UserImage = ({ team }) => {
     <main className={styles.prfileImage_main}>
       <section className={styles.profile}>
         <div className={styles.image_container}>
-          <img src={userImage} alt="userImage" className={styles.image} />
+          <img src={thumbnail || userImage} alt="userImage" alt="عکس پروفایل" className={styles.image} />
           <div className={styles.editProfile} onClick={ProfileHandler}>
             <IconContext.Provider value={{ color: "white", size: "1.5rem" }}>
               <div>
