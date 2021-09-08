@@ -23,7 +23,7 @@ const BirthDay = ({ setBirthday }) => {
         id="datePicker"
         showTodayButton={false}
         isGregorian={false}
-        value={value}
+        // value={value}
         onChange={(value) => handleChange(value)}
       />
     </div>
