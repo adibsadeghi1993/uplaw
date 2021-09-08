@@ -44,21 +44,6 @@ const UserImage = ({ team }) => {
           <img src={menubarImage} alt="menubar" />
         </div>
       </section>
-      {/* {team ? <div className={styles.teams}>
-        <img src={team[0].src}/>
-        <p>{team[0].teamName}</p>
-        <div className={styles.arrowDownImage}><img src={arrowDownImage}/></div>
-      </div>:<><div className={styles.progress_bar}>
-        <div
-          className={styles.progressPersentage}
-          style={{ width: `${progress}%` }}
-        ></div>
-      </div>
-      <p className={styles.compoletedprogress}>
-        {progress < 100
-          ? `${100 - progress} درصد مونده به تکمیل پروفایل!`
-          : "100 درصد پروفایل شما تکمیل شد !"}
-      </p></>} */}
       <TeamOption progress={progress} team={team}/>
     </main>
   );

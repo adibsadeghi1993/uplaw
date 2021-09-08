@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import UserStep from "../../commonFiles/userStep/UserStep";
 import styles from "./detailInfo.module.css";
 import Input from "./Input";
@@ -10,20 +10,41 @@ import whitearrowImage from "../../../../asstes/whitearrow.svg";
 import DatePicker from "../DtaePicker/DatePicker";
 import FreeServices from "./freeServices/FreeServices";
 import { UserInfoContext } from "../../contextInfo/ContextInfo";
+import { sendProfileImage } from "../../../../services/userInfoServices";
+
 
 const DetailInfo = () => {
   const context = useContext(UserInfoContext);
   console.log(context);
-  const { setUpLoadedImage, setStep, setProgress, setBirthday, formik } =
+  const { upLoadedImage, setUpLoadedImage, setStep, setProgress, setBirthday, formik } =
     context;
 
-    let statueBtn=true
+  let statueBtn = true;
 
-    const {postalCode,birthday,nationalCode,firstName,lastName,email,password,address, confirmPassword}=formik.errors
-    if(!postalCode && !birthday && !nationalCode && !firstName && !lastName && !email && !address && !password && !confirmPassword){
-      statueBtn=false
-
-    }
+  const {
+    postalCode,
+    birthday,
+    nationalCode,
+    firstName,
+    lastName,
+    email,
+    password,
+    address,
+    confirmPassword,
+  } = formik.errors;
+  if (
+    !postalCode &&
+    !birthday &&
+    !nationalCode &&
+    !firstName &&
+    !lastName &&
+    !email &&
+    !address &&
+    !password &&
+    !confirmPassword
+  ) {
+    statueBtn = false;
+  }
   const [userProfile, setUserProfile] = useState("");
   console.log(formik.errors);
 
@@ -42,9 +63,42 @@ const DetailInfo = () => {
     setStep((step) => step + 1);
     setProgress(25);
   };
+
+
+  const sendHandlerImage=()=>{
+    console.log("send image")
+    const formData = new FormData();
+    console.log(uploadImage)
+    formData.append("profile",  upLoadedImage);
+    sendProfileImage(formData).then((res)=>{
+        console.log(res)
+      const file = new Blob([res.data.data], {type:'image/png'})
+    console.log(file) 
+   
+    
+    }).catch((error)=>{
+      console.log(error)
+    })
+  }
+
+  useEffect(() => {
+      if ( upLoadedImage) {
+        sendHandlerImage()
+      }
+   
+   
+  }, [ upLoadedImage])
+
+
+
+
+
+
+
+
   return (
     <div className={styles.detail}>
-      <UserStep stepName="اطلاعات پایه"/>
+      <UserStep stepName="اطلاعات پایه" />
 
       <section className={styles.Inputs}>
         {allInputs.map((item) => {
@@ -94,7 +148,7 @@ const DetailInfo = () => {
           </label>
         </div>
         <div className={styles.label}>
-          <label htmlFor="image">بارگذاری عکس</label>
+          <label  htmlFor="image">بارگذاری عکس</label>
         </div>
         <div className={styles.password}>
           <Input
@@ -119,7 +173,11 @@ const DetailInfo = () => {
       </section>
       <div className={styles.confirmInfo}>
         <p>ورود همه اطلاعات ضروری است</p>
-        <button disabled={statueBtn} className={styles.nextbtn} onClick={firstStepHandler}>
+        <button
+          disabled={statueBtn}
+          className={styles.nextbtn}
+          onClick={firstStepHandler}
+        >
           ثبت و مرحله بعد
           <img src={whitearrowImage} alt="nextstepimage" />
         </button>
