@@ -16,7 +16,7 @@ const AuthGoogle = (props) => {
  const state= useSelector(state=>state.userInfo.userInfo)
  console.log(state)
 
- if (state.email || state.mobileNumber ) {
+ if (state.userEmail || state.mobileNumber ) {
    history.push("/dashbord")
  } 
   const { formik } = props;
