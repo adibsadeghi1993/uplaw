@@ -1,5 +1,6 @@
 import React from 'react'
 import UserProfile from '../commonFiles/userProfile/UserProfile'
+import AboutContract from './chooseDoc/chooseContract/aboutContract/AboutContract'
 import ChooseDoc from './chooseDoc/ChooseDoc'
 import styles from "./smartAdjustment.module.css"
 
@@ -14,6 +15,7 @@ const SmartAdjustment = () => {
          <div className={styles.adjust_detail}>
         
          <ChooseDoc/>
+        
          </div>
         </section>
       </main>

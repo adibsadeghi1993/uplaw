@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "./chooseContract.module.css";
 import { fistContracts, secondContracts } from "./AllContract";
+import { IoCompassOutline } from "react-icons/io5";
+import AboutContract from "./aboutContract/AboutContract";
 
 const ChooseContract = () => {
   const [docType, setDocType] = useState("legal");
@@ -17,10 +19,13 @@ const ChooseContract = () => {
       setChoosedContract(name)
 
   }
+  const serchDocHandler=(e)=>{
+    console.log(e.target.value)
+  }
   return (
     <section>
       <div className={styles.search_contract}>
-        <input onChange={} placeholder="نام سند مورد نظر خود را وارد کنید.برای مثال : قرارداداستخدام برنامه نویس" />
+        <input onChange={serchDocHandler} placeholder="نام سند مورد نظر خود را وارد کنید.برای مثال : قرارداداستخدام برنامه نویس" />
         <p
           onClick={legalHandler}
           className={`${styles.legal_docs} ${
@@ -51,6 +56,7 @@ const ChooseContract = () => {
           })}
 
       </div>
+      <AboutContract title={choosedContract}/>
     </section>
   );
 };
