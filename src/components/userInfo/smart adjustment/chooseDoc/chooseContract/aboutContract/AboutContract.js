@@ -9,36 +9,41 @@ import blueArrowImage from "../../../../../../asstes/blue arrow.svg"
 const AboutContract = ({title}) => {
     return (
         <section className={styles.about_contract} >
-            <article className={styles.contract_description}>
+           <div className={styles.contract_flex}>
+           <article className={styles.contract_description}>
                 <h1>{title}</h1>
                 <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
             </article>
             <article className={styles.contract_info}>
                 <div className={styles.contract_pageNumber}>
                     <img src={pageNumberImage} alt="تعداد صفحات"/>
-                   <p>تعداد صفحات قرارداد</p>
-                   <p>3 تا 8 (بسته به طراحی شما)</p>
+                   <p className={styles.first_paragraf}>تعداد صفحات قرارداد</p>
+                   <p className={styles.second_paragraf}>3 تا 8 (بسته به طراحی شما)</p>
                 </div>
                 <div className={styles.contract_usefulfor}>
                 <img src={usefulForCompanyImage} alt="مناسب برای"/>
-                   <p>مناسب برای</p>
-                   <p>استارتاپ و شرکت ها</p>
+                   <p className={styles.first_paragraf}>مناسب برای</p>
+                   <p className={styles.second_paragraf}>استارتاپ و شرکت ها</p>
                 </div>
                 <div className={styles.contract_pdf}>
                 <img src={pdfImage} alt="داکیومنت"/>
-                   <p>نوع خروجی</p>
-                   <p>Docx And Pdf</p>
+                   <p className={styles.first_paragraf}>نوع خروجی</p>
+                   <p className={styles.second_paragraf}>Docx And Pdf</p>
                 </div>
                 <div className={styles.contract_timer}>
                 <img src={timerImage} alt="مدت زمان تنظیم قرارداد"/>
-                   <p>حداکثر زمان تنظیم قرارداد</p>
-                   <p>10 دقیقه</p>
+                   <p className={styles.timer}>حداکثر زمان<br></br> تنظیم قرارداد</p>
+                   <p className={styles.second_paragraf}>10 دقیقه</p>
                 </div>
-                <div>
-                    <button>تنظیم هوشمند <img src={blueArrowImage} alt="ثبت و مرحله بعد"/></button>
-                </div>
+                
 
             </article>
+           </div>
+            <div className={styles.contract_btns}>
+                    <button className={styles.adjust_btn}>تنظیم هوشمند <img src={blueArrowImage} alt="ثبت و مرحله بعد"/></button>
+                    <button className={styles.download_btn}>دانلود نمونه قرارداد<img src={blueArrowImage} alt="ثبت و مرحله بعد"/></button>
+
+                </div>
             
         </section>
     )

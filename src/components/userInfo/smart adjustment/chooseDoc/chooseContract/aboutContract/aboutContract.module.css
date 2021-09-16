@@ -1,0 +1,214 @@
+.about_contract {
+  display: flex;
+  margin-top: 41px;
+  padding-right: 40px;
+  padding-bottom: 35px;
+  padding-top: 33px;
+  background: rgb(229, 229, 229, 0.25);
+  padding-left: 37px;
+  border-radius: 27px;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.contract_flex{
+display: flex;
+}
+
+.contract_description {
+  flex: 50%;
+  padding-left: 69px;
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+}
+.contract_description h1 {
+  font-weight: 900;
+  font-size: 0.94rem;
+  line-height: 27px;
+  color: #3770e2;
+  margin-bottom: 18px;
+}
+.contract_description p {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: right;
+  color: #000000;
+}
+
+.contract_info {
+  flex: 50%;
+  padding-right: 74px;
+}
+.contract_pageNumber {
+  display: flex;
+  align-items: center;
+}
+.contract_usefulfor {
+  display: flex;
+  margin-top: 17px;
+  align-items: center;
+}
+.contract_pdf {
+  display: flex;
+  margin-top: 17px;
+  align-items: center;
+}
+.contract_timer {
+  display: flex;
+  margin-top: 17px;
+  align-items: center;
+}
+
+.first_paragraf {
+  font-weight: 300;
+  font-size: 0.625rem;
+  line-height: 16px;
+  color: #000000;
+  margin-right: 7px;
+}
+.second_paragraf {
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 16px;
+  color: #000000;
+  flex: 1;
+  text-align: end;
+}
+.timer {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 16px;
+  text-align: right;
+  color: #3770e2;
+  margin-right: 7px;
+}
+.contract_btns {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+.contract_btns button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 0.5rem;
+  line-height: 13px;
+  color: #3770e2;
+  display: flex;
+  align-items: center;
+}
+.download_btn{
+    margin-left: 30px;
+}
+.contract_btns button img {
+  margin-right: 5px;
+}
+
+@media (max-width: 1330px) {
+  .contract_description {
+    padding-left: 30px;
+  }
+  .contract_info {
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .contract_description {
+    padding-left: 30px;
+  }
+  .contract_description h1 {
+    font-size: 0.8rem;
+  }
+  .contract_description p {
+    font-size: 00.75rem;
+  }
+  .contract_info {
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 950px) {
+  .contract_description h1 {
+    font-size: 0.7rem;
+  }
+  .contract_description p {
+    font-size: 00.6rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .contract_description {
+    padding-left: 15px;
+  }
+
+  .contract_description h1 {
+    font-size: 0.7rem;
+  }
+  .contract_description p {
+    font-size: 00.6rem;
+  }
+  .contract_info {
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  .contract_description {
+    padding-left: 15px;
+  }
+
+  .contract_description h1 {
+    font-size: 0.65rem;
+  }
+  .contract_description p {
+    font-size: 00.6rem;
+  }
+  .contract_info {
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about_contract {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    padding:0 50px;
+  }
+  .contract_flex{
+      flex-direction: column;
+  }
+  .contract_description {
+    background: rgb(229, 229, 229, 0.25);
+    border-radius: 27px;
+    padding: 20px;
+    border: none;
+  }
+  .contract_description h1 {
+    font-weight: 900;
+    font-size: 0.94rem;
+  }
+  .contract_description p {
+    font-weight: 600;
+    font-size: 0.81rem;
+    line-height: 25px;
+    text-align: right;
+    color: #000000;
+  }
+  .contract_info {
+    background: rgb(229, 229, 229, 0.25);
+    margin-top: 20px;
+    
+    padding: 25px;
+   
+    border-radius: 27px;
+  }
+  .contract_btns{
+      margin-top: 30px;
+  }
+  .download_btn{
+      opacity: 0;
+  }
+}

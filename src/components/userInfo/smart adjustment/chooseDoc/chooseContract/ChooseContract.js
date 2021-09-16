@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import styles from "./chooseContract.module.css";
 import { fistContracts, secondContracts } from "./AllContract";
 import { IoCompassOutline } from "react-icons/io5";
@@ -7,6 +7,16 @@ import AboutContract from "./aboutContract/AboutContract";
 const ChooseContract = () => {
   const [docType, setDocType] = useState("legal");
   const [choosedContract, setChoosedContract] = useState("قرارداد استخدام کارشناس تولید محتوا");
+
+  const [width, setWidth]   = useState(window.innerWidth);
+
+const updateDimensions = () => {
+    setWidth(window.innerWidth);
+}
+useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+}, []);
 
   const legalHandler = () => {
     setDocType("legal");
@@ -43,7 +53,8 @@ const ChooseContract = () => {
           اسناد کسب و کاری
         </p>
       </div>
-      <div className={styles.fistContracts}>
+     <div className={styles.sample_doc}>
+       {width < 768 ? <> <div className={styles.fistContracts}>
           {fistContracts.map((contract)=>{
               return <button onClick={()=>contractHandler(contract.name)} className={`${styles[contract.className]} ${contract.name === choosedContract ? styles.activeContract:null}`}>{contract.name}</button>
 
@@ -55,7 +66,20 @@ const ChooseContract = () => {
 
           })}
 
-      </div>
+      </div></>:<>
+      {fistContracts.map((contract)=>{
+              return <button onClick={()=>contractHandler(contract.name)} className={`${styles[contract.className]} ${contract.name === choosedContract ? styles.activeContract:null}`}>{contract.name}</button>
+
+          })}
+          {secondContracts.map((contract)=>{
+              return <button onClick={()=>contractHandler(contract.name)}  className={`${styles[contract.className]} ${contract.name === choosedContract ? styles.activeContract:null}`}>{contract.name}</button>
+
+          })}
+
+      
+      
+      </> }
+     </div>
       <AboutContract title={choosedContract}/>
     </section>
   );

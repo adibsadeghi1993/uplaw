@@ -117,6 +117,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-left: 40px;
 }
 .arrowDownImage img{
   width: 12px;

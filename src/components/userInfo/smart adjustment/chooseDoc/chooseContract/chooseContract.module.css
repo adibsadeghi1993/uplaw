@@ -3,19 +3,20 @@
     margin-top: 36px;
     align-items: center;
     margin-bottom: 38px;
+    justify-content: space-between;
 }
 .search_contract input{
-    width: 60%;
+   width: 60%;
 }
 .legal_docs{
-    margin-right: 44px;
+   
     font-size: 0.8rem;
     cursor: pointer;
     padding-bottom: 11px;
 }
 
 .businesses_docs{
-    margin-right: 44px;
+  
     font-size: 0.8rem;
     cursor: pointer;
     padding-bottom: 11px;
@@ -25,15 +26,19 @@
     border-bottom: 1px solid #3770E2;
     font-weight: 900;
 }
+.sample_doc{
+    display: flex;
+    flex-wrap: wrap;
+}
 .fistContracts{
    
 
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 .secondContracts{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   
 }
 .contract{
@@ -62,4 +67,80 @@ border-radius: 27px;
 
 color: #3770E2;
 }
+
+@media(max-width:1330px){
+    .search_contract input::placeholder{
+        font-size: 12px;
+    }
+    
+ }
+
+ @media(max-width:1100px){
+    .search_contract input::placeholder{
+        font-size: 11px;
+        font-weight: 500;
+    }
+    
+ }
+ 
+ @media(max-width:1000px){
+    .search_contract input::placeholder{
+        font-size: 10px;
+        font-weight: 500;
+    }
+    .search_contract input{
+        width: 65%;
+    }
+    .legal_docs{
+        font-size: 0.7rem;
+    }
+    .businesses_docs{
+        font-size: 0.7rem;
+    }
+    .active{
+        font-size: 0.75rem;
+    }
+    
+ }
+ @media(max-width:850px){
+    .search_contract input::placeholder{
+        font-size: 9px;
+        font-weight:600;
+    }
+    .search_contract input{
+        width: 65%;
+    }
+    .legal_docs{
+        font-size: 0.6rem;
+    }
+    .businesses_docs{
+        font-size: 0.6rem;
+    }
+    .active{
+        font-size: 0.7rem;
+        font-weight: 700;
+    }
+    
+ }
+
+ @media(max-width:768px){
+   
+    .search_contract{
+        display: none;
+    }
+
+    .fistContracts{
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        padding: 0 50px;
+    }
+    .secondContracts{
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        padding: 0 50px;
+    }
+    .contract{
+        flex-shrink: 0;
+    }
+ }
 

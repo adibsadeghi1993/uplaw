@@ -9,6 +9,7 @@
     padding-bottom: 26px;
     padding-right: 23px;
     width: 100%;
+    padding-left: 23px;
 }
 
 .docs_info p{
@@ -35,3 +36,67 @@ color: #FFFFFF;
     margin-top: 30px;
     color: #000000; 
 }
+
+@media(max-width:1330px){
+    .fingerImage{
+        left: -23px;
+    }
+ }
+ 
+@media(max-width:1270px){
+    .fingerImage{
+        left: -17px;
+    }
+    .docs_info p{
+        font-size: 1.1rem;
+    }
+    
+ }
+
+ @media(max-width:1050px){
+    .fingerImage{
+        left: -36px;
+        top: -200%;
+    }
+    .docs_info p{
+        font-size: 1.1rem;
+    }
+    
+ }
+
+ @media(max-width:890px){
+    .fingerImage{
+        left: -36px;
+        top: -200%;
+    }
+    .docs_info p{
+        font-size: 1rem;
+    }
+    
+ }
+ @media(max-width:812px){
+    .fingerImage{
+        left: -36px;
+        top: -200%;
+    }
+    .docs_info p{
+        font-size: 0.9rem;
+    }
+    
+ }
+
+ @media(max-width:768px){
+    
+     .main_content{
+         padding: 0 50px;
+     }
+    .fingerImage{
+       display: none;
+    }
+    .docs_info p{
+        font-size: 1.25rem;
+        font-weight: 900;
+    }
+    
+ }
+
