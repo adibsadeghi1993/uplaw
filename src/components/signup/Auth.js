@@ -21,7 +21,7 @@ const Auth = (props) => {
       </div>
       <div className={styles.google_phone_auth}>
           <AuthPhone formik={formik}/>
-          <div className={styles.emptyspace}>/</div>
+          <h1 className={styles.emptyspace}>/</h1>
           <AuthGoogle formik={formik} {...props}/>
           <div className={styles.forgotPassword}>
         <p>رمز عبور خود را فراموش کردید؟</p>
