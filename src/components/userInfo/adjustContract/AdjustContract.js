@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import styles from "./adjustContract.module.css"
 import uplawImage from "../../../asstes/uplaw.png"
 import UserProfile from '../commonFiles/userProfile/UserProfile';
-import ContractHeader from './contractHeader/ContractHeader';
+import ContractHeader from '../commonFiles/contractHeader/ContractHeader';
 
 const AdjustContract = () => {
     const initialState = [
