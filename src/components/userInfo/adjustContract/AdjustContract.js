@@ -1,5 +1,8 @@
 import React,{useState} from 'react'
 import styles from "./adjustContract.module.css"
+import uplawImage from "../../../asstes/uplaw.png"
+import UserProfile from '../commonFiles/userProfile/UserProfile';
+import ContractHeader from './contractHeader/ContractHeader';
 
 const AdjustContract = () => {
     const initialState = [
@@ -8,14 +11,14 @@ const AdjustContract = () => {
       const [team, setTeam] = useState(initialState);
         return (
            
-            <main className={styles.main_adjust}>
+            <main className={styles.main_adjustContract}>
             <section className={styles.profilesection}>
-        
+             <UserProfile opacity="opacity" team={team}/>
             </section>
-            <section className={styles.adjust_info}>
-             <div className={styles.adjust_detail}>
+            <section className={styles.adjustContract_info}>
+             <div className={styles.adjustContract_detail}>
             
-           
+                <ContractHeader/>
             
              </div>
             </section>

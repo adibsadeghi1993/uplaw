@@ -1,4 +1,5 @@
 import React from 'react'
+import AdjustContract from '../components/userInfo/adjustContract/AdjustContract';
 import ContextInfo from '../components/userInfo/contextInfo/ContextInfo';
 import CreateTeam from '../components/userInfo/createTeam/CreateTeam';
 import DashbordComponents from '../components/userInfo/DashbordComponents';
@@ -13,7 +14,8 @@ const Dashbord = () => {
          {/* <DashbordComponents/> */}
         {/* <TeamInfo/> */}
         {/* <CreateTeam/> */}
-        <SmartAdjustment/>
+        {/* <SmartAdjustment/> */}
+        <AdjustContract/>
         </ContextInfo>
     )
 }
