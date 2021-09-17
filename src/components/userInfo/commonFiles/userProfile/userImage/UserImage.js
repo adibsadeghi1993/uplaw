@@ -23,7 +23,7 @@ const UserImage = ({ team }) => {
     <main className={styles.prfileImage_main}>
       <section className={styles.profile}>
         <div className={styles.image_container}>
-          <img src={thumbnail || userImage} alt="userImage" alt="عکس پروفایل" className={styles.image} />
+          <img src={thumbnail || userImage}  alt="پروفایل شما" className={styles.image} />
           <div className={styles.editProfile} onClick={ProfileHandler}>
             <IconContext.Provider value={{ color: "white", size: "1.5rem" }}>
               <div>

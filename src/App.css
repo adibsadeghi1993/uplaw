@@ -17,3 +17,11 @@
     font-family: "anjoman";
     min-height: 100vh;
   }
+
+  
+@media(min-width:1440px){
+ .App{
+   max-width: 1440px;
+   margin: 0 auto;
+ }
+}

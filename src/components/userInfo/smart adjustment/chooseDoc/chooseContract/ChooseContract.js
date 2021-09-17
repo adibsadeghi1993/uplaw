@@ -1,7 +1,6 @@
 import React, { useState,useEffect } from "react";
 import styles from "./chooseContract.module.css";
 import { fistContracts, secondContracts } from "./AllContract";
-import { IoCompassOutline } from "react-icons/io5";
 import AboutContract from "./aboutContract/AboutContract";
 
 const ChooseContract = () => {
