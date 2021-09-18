@@ -2,9 +2,11 @@
 import './App.css';
 import Dashbord from './pages/Dashbord';
 import "./App.css";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route} from "react-router-dom";
 import SignUp from "./pages/SignUp";
 import Home from './pages/Home';
+import Contract from './pages/Contract';
+import Team from './pages/Team';
 
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
       <Switch>
         <Route path="/auth/google" component={SignUp}/>
         <Route path="/dashbord" component={Dashbord}/>
+        <Route path="/dashbord" component={Contract}/>
+        <Route path="/dashbord" component={Team}/>
         <Route path="/" exact component={Home}/>
       </Switch>
     </div>
