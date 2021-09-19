@@ -1,10 +1,10 @@
 import React,{useContext} from 'react'
-import { ContextForContract } from '../common/contractcontext/ContractContext';
+import { UserInfoContext } from '../common/contextInfo/ContextInfo';
 import AdjustContract from './adjustContract/AdjustContract';
 import SmartAdjustment from './smart adjustment/SmartAdjustment';
 
 const ContractComponents = () => {
-  const {contractStep}=useContext(ContextForContract)
+  const {contractStep}=useContext(UserInfoContext)
 
     switch (contractStep) {
         case 1:

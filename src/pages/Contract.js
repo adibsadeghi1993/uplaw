@@ -1,13 +1,13 @@
 import React  from 'react'
-import ContractContext from '../components/common/contractcontext/ContractContext'
+import ContextInfo from '../components/common/contextInfo/ContextInfo'
 import ContractComponents from '../components/contract/ContractComponents'
 
 
 const Contract = () => {
     return (
-        <ContractContext>
+        <ContextInfo>
             <ContractComponents/>
-        </ContractContext>
+        </ContextInfo>
     )
     
     

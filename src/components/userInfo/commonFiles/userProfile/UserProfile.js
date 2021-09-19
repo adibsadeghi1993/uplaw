@@ -3,10 +3,10 @@ import UserImage from "./userImage/UserImage";
 import UserItems from "./userItems/UserItems";
 import  styles from "./userProfile.module.css";
 
-const UserProfile = ({opacity,team,progress}) => {
+const UserProfile = ({opacity,team}) => {
   return (
     <section className={styles.userProfile}>
-      <UserImage team={team} progress={progress} />
+      <UserImage team={team} />
         <UserItems opacity={opacity}/>
     </section>
   );

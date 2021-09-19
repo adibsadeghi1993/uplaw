@@ -9,9 +9,12 @@ import menubarImage from "../../../../../asstes/menubar.svg";
 
 import TeamOption from "./TeamOption";
 import { useSelector } from "react-redux";
+import { UserInfoContext } from "../../../../common/contextInfo/ContextInfo";
 
-const UserImage = ({ team,progress }) => {
+const UserImage = ({ team }) => {
  
+ const context = useContext(UserInfoContext)
+ const {progress}=context
 
   const state = useSelector(state => state.userInfo.userInfo)
   console.log(state)

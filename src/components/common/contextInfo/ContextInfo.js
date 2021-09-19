@@ -11,6 +11,7 @@ const ContextInfo = ({ children }) => {
   const [bithday, setBirthday] = useState("");
   const [job, setJob] = useState([]);
   const [skills, setSkills] = useState([]);
+  const [contractStep, setContractStep] = useState(2);
  
 
 
@@ -36,7 +37,8 @@ const ContextInfo = ({ children }) => {
         setBirthday,
         upLoadedImage,
         setUpLoadedImage,
-        setUpLoadedNationalCodeImage
+        setUpLoadedNationalCodeImage,
+        contractStep,setContractStep
       }}
     >
       {children}
