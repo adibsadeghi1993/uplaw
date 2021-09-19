@@ -6,12 +6,11 @@ import uploadImage from "../../../../asstes/upload.svg";
 import { allInputs } from "./ConstantInputs";
 import DateImage from "../../../../asstes/Date.svg";
 import whitearrowImage from "../../../../asstes/whitearrow.svg";
-
 import DatePicker from "../DtaePicker/DatePicker";
 import FreeServices from "./freeServices/FreeServices";
-import { UserInfoContext } from "../../contextInfo/ContextInfo";
 import { sendProfileImage } from "../../../../services/userInfoServices";
 import { useSelector } from "react-redux";
+import { UserInfoContext } from "../../../common/contextInfo/ContextInfo";
 
 const DetailInfo = () => {
   const state = useSelector((state) => state.userInfo.userInfo);

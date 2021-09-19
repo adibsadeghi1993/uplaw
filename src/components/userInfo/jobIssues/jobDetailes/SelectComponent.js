@@ -1,5 +1,6 @@
 import React,{useContext} from "react";
-import { UserInfoContext } from "../../contextInfo/ContextInfo";
+import { UserInfoContext } from "../../../common/contextInfo/ContextInfo";
+
 import styles from "./jobDetailes.module.css"
 
 const SelectComponent = ({ selectedOptions,name}) => {

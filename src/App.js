@@ -15,8 +15,8 @@ function App() {
       <Switch>
         <Route path="/auth/google" component={SignUp}/>
         <Route path="/dashbord" component={Dashbord}/>
-        <Route path="/dashbord" component={Contract}/>
-        <Route path="/dashbord" component={Team}/>
+        <Route path="/contract" component={Contract}/>
+        <Route path="/team" component={Team}/>
         <Route path="/" exact component={Home}/>
       </Switch>
     </div>

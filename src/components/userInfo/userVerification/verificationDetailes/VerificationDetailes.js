@@ -1,9 +1,9 @@
 import React, { useState, useContext } from "react";
 import UserStep from "../../commonFiles/userStep/UserStep";
-import { UserInfoContext } from "../../contextInfo/ContextInfo";
 import styles from "./verificationDetailes.module.css";
 import whiteArrowImage from "../../../../asstes/whitearrow.svg"
 import FreeServices from "../../basicInfo/detail/freeServices/FreeServices";
+import { UserInfoContext } from "../../../common/contextInfo/ContextInfo";
 
 const VerificationDetailes = () => {
   const { setUpLoadedNationalCodeImage,setProgress,setStep } = useContext(UserInfoContext);

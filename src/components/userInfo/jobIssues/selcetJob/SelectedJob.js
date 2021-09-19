@@ -1,7 +1,8 @@
 import React, { useState,useEffect,useContext } from "react";
-import { UserInfoContext } from "../../contextInfo/ContextInfo";
+
 import { usersJob } from "./SetUsersJob";
 import styles from "../jobDetailes/jobDetailes.module.css"
+import { UserInfoContext } from "../../../common/contextInfo/ContextInfo";
 
 const SelectedJob = () => {
   const {job,setJob} = useContext(UserInfoContext)

@@ -1,5 +1,6 @@
 import React, { useState, useEffect,useContext} from "react";
-import { UserInfoContext } from "../../contextInfo/ContextInfo";
+import { UserInfoContext } from "../../../common/contextInfo/ContextInfo";
+
 import { steps } from "./Stages";
 import styles from "./userStep.module.css";
 

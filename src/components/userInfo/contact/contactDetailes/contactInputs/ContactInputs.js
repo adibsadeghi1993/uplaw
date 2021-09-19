@@ -1,5 +1,6 @@
 import React,{useContext} from 'react'
-import { UserInfoContext } from '../../../contextInfo/ContextInfo'
+import { UserInfoContext } from '../../../../common/contextInfo/ContextInfo'
+
 import styles from "./contactInputs.module.css"
 
 const ContactInputs = ({name,type="text",placeholder}) => {

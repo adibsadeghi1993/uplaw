@@ -10,7 +10,8 @@ import instaIcon from "../../../../asstes/insta.svg"
 import whiteArrowImage from "../../../../asstes/whitearrow.svg"
 import ContactInputs from "./contactInputs/ContactInputs";
 import FreeServices from "../../basicInfo/detail/freeServices/FreeServices";
-import { UserInfoContext } from "../../contextInfo/ContextInfo";
+import { UserInfoContext } from "../../../common/contextInfo/ContextInfo";
+
 
 
 const ContactDetailes = () => {

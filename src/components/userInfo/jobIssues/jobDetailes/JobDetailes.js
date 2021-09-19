@@ -8,7 +8,8 @@ import DeleteImage from "../../../../asstes/Delete.svg";
 import whiteArrowImage from "../../../../asstes/whitearrow.svg";
 import FreeServices from "../../basicInfo/detail/freeServices/FreeServices";
 import Input from "../../basicInfo/detail/Input";
-import { UserInfoContext } from "../../contextInfo/ContextInfo";
+import { UserInfoContext } from "../../../common/contextInfo/ContextInfo";
+
 
 const JobDetailes = () => {
   const {skills,setSkills,setStep,setProgress,formik} = useContext(UserInfoContext)

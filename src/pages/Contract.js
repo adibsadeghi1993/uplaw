@@ -1,14 +1,24 @@
-import React from 'react'
-// import AdjustContract from '../components/userInfo/adjustContract/AdjustContract'
-import SmartAdjustment from '../components/userInfo/smart adjustment/SmartAdjustment'
+import React,{useContext} from 'react'
+import { UserInfoContext } from '../components/common/contextInfo/ContextInfo'
+import AdjustContract from '../components/contract/adjustContract/AdjustContract'
+import SmartAdjustment from '../components/contract/smart adjustment/SmartAdjustment'
 
 const Contract = () => {
-    return (
-        <div>
-            <SmartAdjustment/>
-            {/* <AdjustContract/> */}
-        </div>
-    )
+    const {contractStep} = useContext(UserInfoContext)
+    switch (contractStep) {
+      case 1:
+        return <SmartAdjustment />;
+      case 2:
+        return <AdjustContract />;
+      case 3:
+        return <SmartAdjustment />;
+      case 4:
+        return <SmartAdjustment/>;
+  
+      default:
+        break;
+    }
+    
 }
 
 export default Contract

@@ -11,6 +11,8 @@ const ContextInfo = ({ children }) => {
   const [bithday, setBirthday] = useState("");
   const [job, setJob] = useState([]);
   const [skills, setSkills] = useState([]);
+  const [contractStep, setContractStep] = useState(1);
+
   const formik = useFormik({
     initialValues,
     validateOnMount: true,
@@ -25,6 +27,8 @@ const ContextInfo = ({ children }) => {
         setStep,
         skills,
         setSkills,
+        contractStep,
+        setContractStep,
         job,
         setJob,
         progress,
