@@ -4,16 +4,23 @@ import addImage from "../../../../asstes/add.svg"
 import minesImage from "../../../../asstes/mines.svg"
 import confirmImage from "../../../../asstes/confirm.svg"
 import { useSelector } from 'react-redux'
+import { selectedBands } from './SelectedBands'
+
 
 const ContractInfo = () => {
  
     const state = useSelector(state => state.contract.contract)
-    console.log(state)
+    const {made}=state
+    console.log(made)
     return (
         <section className={styles.main_contract_info}>
-            <div><img src={addImage} alt="تایید"/></div>
-            <div><img src={minesImage} alt="تایید"/></div>
-            <div><img src={confirmImage} alt="تایید"/></div>
+
+            {made[0].bands?.map((item)=>{
+                const element= selectedBands(item,made[0].bands)
+                return element
+            })}
+            
+           
 
             
         </section>

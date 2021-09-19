@@ -1,5 +1,90 @@
 .main_contract_info{
-    background-color: red;
     margin-top: 31px;
+    background-color: red;
+
+}
+
+.select{
+    display: flex;
+  
+}
+
+.select_container{
+    margin-right: 42px;
+    display: flex;
+    background: rgb(232, 232, 232,0.5);
+    width: 100%;
+    padding: 21px 30px 22px 30px;
+    border-radius: 27px;
+  align-items: center;
+
+}
+.selectedAnswers{
+    display: flex;
+    flex: 1;
+    margin-right: 30px;
+    justify-content: space-around;
+}
+.emptySpace{
+    display: flex;
+    margin-top: 25px;
+}
+
+.emptySpace_input{
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    background:rgb(232, 232, 232,0.5) ;
+    padding: 5px 15px 22px 30px;
+    border-radius: 27px;
+    align-items: center;
+    margin-right: 42px;
+}
+.emptySpace_input p{
+    margin-right: 10px;
+}
+
+.emptySpace_input input{
+    width: auto;
+    margin: 10px 10px 0 0;
+    padding: 5px;
+}
+.text_title{
+    background:rgb(232, 232, 232,0.5) ;
+    padding: 20px 29px 22px 30px;
+    border-radius: 27px;
+    margin-right: 42px;
+}
+.QA{
+    display: flex;
+    width: 100%;
+    margin-top: 25px;
+}
+.QA_container{
+    margin-right: 42px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background: rgb(232, 232, 232,0.5);
+    padding: 21px 30px 22px 30px;
+    border-radius: 27px;
+}
+.QA_textarea{
+    margin-top: 10px;
+}
+.SQA{
+    display: flex;
+    width: 100%;
+    margin-top: 25px; 
+}
+.SQA_container{
+    margin-right: 42px;
+    display: flex;
+    flex: 1;
+  justify-content: space-between;
+    background: rgb(232, 232, 232,0.5);
+    padding: 21px 30px 22px 30px;
+    border-radius: 27px;
+    align-items: center;
     
 }
