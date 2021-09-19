@@ -5,9 +5,9 @@ import ContractComponents from '../components/contract/ContractComponents'
 
 const Contract = () => {
     return (
-        <ContextInfo>
+        // <ContextInfo>
             <ContractComponents/>
-        </ContextInfo>
+        // </ContextInfo>
     )
     
     
