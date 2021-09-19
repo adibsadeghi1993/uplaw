@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import UserProfile from '../commonFiles/userProfile/UserProfile'
+import UserProfile from '../../userInfo/commonFiles/userProfile/UserProfile'
 import ChooseDoc from './chooseDoc/ChooseDoc'
 import styles from "./smartAdjustment.module.css"
 import uplawImage from "../../../asstes/uplaw.png"
