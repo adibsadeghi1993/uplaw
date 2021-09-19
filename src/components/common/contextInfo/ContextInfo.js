@@ -11,7 +11,7 @@ const ContextInfo = ({ children }) => {
   const [bithday, setBirthday] = useState("");
   const [job, setJob] = useState([]);
   const [skills, setSkills] = useState([]);
-  const [contractStep, setContractStep] = useState(2);
+ 
 
 
   const formik = useFormik({
@@ -25,14 +25,12 @@ const ContextInfo = ({ children }) => {
       value={{
         step,
         setProgress,
+        progress,
         setStep,
         skills,
         setSkills,
-        contractStep,
-        setContractStep,
         job,
         setJob,
-        progress,
         formik,
         bithday,
         setBirthday,

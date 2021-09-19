@@ -15,7 +15,8 @@ const initialState={
 
 
 
-export const contractReducer=(state,action)=>{
+export const contractReducer=(state=initialState,action)=>{
+    return state
 
     
 

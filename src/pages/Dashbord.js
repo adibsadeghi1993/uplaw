@@ -1,17 +1,14 @@
-import React from 'react'
+import React from "react";
+import ContextInfo from "../components/common/contextInfo/ContextInfo";
 
-import DashbordComponenst from "../components/userInfo/DashbordComponents"
-
-
+import DashbordComponenst from "../components/userInfo/DashbordComponents";
 
 const Dashbord = () => {
+  return (
+    <ContextInfo>
+      <DashbordComponenst />
+    </ContextInfo>
+  );
+};
 
-    return (
-    
-     <DashbordComponenst/>
-       
-       
-    )
-}
-
-export default Dashbord
+export default Dashbord;

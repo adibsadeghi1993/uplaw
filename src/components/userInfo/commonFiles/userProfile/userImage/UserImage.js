@@ -7,11 +7,11 @@ import serchImage from "../../../../../asstes/search.svg";
 import billImage from "../../../../../asstes/bill.svg";
 import menubarImage from "../../../../../asstes/menubar.svg";
 
-import { UserInfoContext } from "../../../../common/contextInfo/ContextInfo";
 import TeamOption from "./TeamOption";
 import { useSelector } from "react-redux";
-const UserImage = ({ team }) => {
-  const { progress } = useContext(UserInfoContext);
+
+const UserImage = ({ team,progress }) => {
+ 
 
   const state = useSelector(state => state.userInfo.userInfo)
   console.log(state)

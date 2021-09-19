@@ -3,6 +3,7 @@ import styles from "./adjustContract.module.css"
 import uplawImage from "../../../asstes/uplaw.png"
 import UserProfile from '../../userInfo/commonFiles/userProfile/UserProfile';
 import ContractHeader from '../../userInfo/commonFiles/contractHeader/ContractHeader';
+import ContractInfo from './contractInfo/ContractInfo';
 
 const AdjustContract = () => {
     const initialState = [
@@ -17,9 +18,9 @@ const AdjustContract = () => {
             </section>
             <section className={styles.adjustContract_info}>
              <div className={styles.adjustContract_detail}>
-            
                 <ContractHeader/>
-            
+                <ContractInfo/>
+
              </div>
             </section>
           </main>
