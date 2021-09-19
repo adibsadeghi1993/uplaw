@@ -7,7 +7,7 @@ import serchImage from "../../../../../asstes/search.svg";
 import billImage from "../../../../../asstes/bill.svg";
 import menubarImage from "../../../../../asstes/menubar.svg";
 
-import { UserInfoContext } from "../../../contextInfo/ContextInfo";
+import { UserInfoContext } from "../../../../common/contextInfo/ContextInfo";
 import TeamOption from "./TeamOption";
 import { useSelector } from "react-redux";
 const UserImage = ({ team }) => {
