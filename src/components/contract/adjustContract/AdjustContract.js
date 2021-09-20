@@ -19,7 +19,8 @@ const AdjustContract = () => {
             <section className={styles.adjustContract_info}>
              <div className={styles.adjustContract_detail}>
                 <ContractHeader/>
-                <ContractInfo/>
+                {/* <ContractInfo/> */}
+                
 
              </div>
             </section>

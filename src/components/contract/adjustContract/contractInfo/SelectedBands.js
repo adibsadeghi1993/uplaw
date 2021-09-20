@@ -22,6 +22,7 @@ export const selectedBands = (item, bands, modalHandler) => {
           )}
           <div className={styles.select_container}>
             <p>{item.title}</p>
+            <div className={styles.emptySpaace_container}></div>
             <div className={styles.selectedAnswers}>
               {item.value.map((answer) => {
                 return <p>{answer}</p>;
@@ -63,6 +64,7 @@ export const selectedBands = (item, bands, modalHandler) => {
             <div>
               <p>{item.title}</p>
             </div>
+            <hr className={styles.hr}/>
             <div className={styles.QA_textarea}>
               <textarea></textarea>
             </div>

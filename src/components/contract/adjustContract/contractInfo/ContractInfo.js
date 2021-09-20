@@ -33,10 +33,10 @@ useEffect(() => {
         return element;
       })}
       <div className={styles.finished_contract}>
-          <div> <img src={confirmImage} alt="تکمیل اطلاعات"/></div>
+          <div className={styles.confirm_contract}> <img src={confirmImage} alt="تکمیل اطلاعات"/></div>
           <div className={styles.get_contract_container}>
               <p>قرارداد شما آماده شد!</p>
-              <button><span>دریافت قرارداد</span><img src={blueArrowImage} alt="دریافت قرارداد"/></button>
+              <button className={styles.get_contract_btn}><span>دریافت قرارداد</span><img src={blueArrowImage} alt="دریافت قرارداد"/></button>
           </div>
       </div>
     </section>
