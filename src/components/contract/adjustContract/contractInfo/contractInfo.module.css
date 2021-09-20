@@ -1,12 +1,14 @@
 .main_contract_info{
     margin-top: 31px;
-    background-color: red;
+    position: relative;
+    background-color: darkred;
+    padding-bottom: 10px;
 
 }
 
 .select{
     display: flex;
-  
+    margin-top: 25px; 
 }
 
 .select_container{
@@ -49,16 +51,22 @@
     margin: 10px 10px 0 0;
     padding: 5px;
 }
+.text{
+    display: flex;
+    margin-top: 25px;
+    width: 100%;
+}
 .text_title{
     background:rgb(232, 232, 232,0.5) ;
     padding: 20px 29px 22px 30px;
     border-radius: 27px;
     margin-right: 42px;
+    width: 100%;
 }
 .QA{
     display: flex;
     width: 100%;
-    margin-top: 25px;
+    margin-top: 25px; 
 }
 .QA_container{
     margin-right: 42px;
@@ -72,6 +80,7 @@
 .QA_textarea{
     margin-top: 10px;
 }
+
 .SQA{
     display: flex;
     width: 100%;
@@ -86,5 +95,49 @@
     padding: 21px 30px 22px 30px;
     border-radius: 27px;
     align-items: center;
+    
+}
+
+.btn{
+   background: #3770E2;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    padding: 5px;
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+}
+.firstElemnt{
+   background: #3770E2;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.border{
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    opacity: 0.3;
+    background-color: #3770E2;
+    margin: 0 20px 0 0;
+   
+    z-index: 1;
+}
+.contract_input{
+    height: 25px;
+    border: 0.25px solid #000000;
+    opacity: 0.25;
     
 }

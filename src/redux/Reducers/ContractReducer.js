@@ -7,6 +7,7 @@ const initialState={
             {type:"text",title:"text content",value:null},
             {type:"QA",title:"soale man ?",value:null},
             {type:"SQA",title:"soale kotah ?",value:null},
+           
           ]}
         ]
       }
