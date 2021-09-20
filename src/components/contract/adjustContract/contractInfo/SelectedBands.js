@@ -2,7 +2,7 @@ import addImage from "../../../../asstes/add.svg";
 import minesImage from "../../../../asstes/mines.svg";
 import confirmImage from "../../../../asstes/confirm.svg";
 import styles from "./contractInfo.module.css";
-export const selectedBands = (item, bands) => {
+export const selectedBands = (item, bands,modalHandler) => {
   const index = bands.indexOf(item);
 
   console.log(item, index);
