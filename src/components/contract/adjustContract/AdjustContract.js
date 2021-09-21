@@ -21,8 +21,6 @@ const AdjustContract = () => {
              <div className={styles.adjustContract_detail}>
                 <ContractHeader/>
                 <ContractInfo/>
-              
-
              </div>
             </section>
           </main>
