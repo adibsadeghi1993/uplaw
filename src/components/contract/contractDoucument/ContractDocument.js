@@ -6,7 +6,7 @@ import styles from "./ContractDocument.module.css"
 
 const ContractDocument = () => {
     const context = useContext(UserInfoContext)
-    const {team}=context
+    const {team,choosedContract}=context
     return (
         <main className={styles.main_contractDocument}>
         <section className={styles.profilesection}>
@@ -15,7 +15,8 @@ const ContractDocument = () => {
         <section className={styles.contractDocument_info}>
          <div className={styles.contractDocument_detail}>
         
-              <ContractHeader/>
+              <ContractHeader opacity="1" width="100%" ContractName={choosedContract}/>
+              
         
          </div>
         </section>
