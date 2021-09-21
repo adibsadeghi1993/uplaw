@@ -1,16 +1,20 @@
-import React,{useState} from 'react'
+import React,{useContext,useState, useEffect} from 'react'
 import styles from "./adjustContract.module.css"
-import uplawImage from "../../../asstes/uplaw.png"
 import UserProfile from '../../userInfo/commonFiles/userProfile/UserProfile';
 import ContractHeader from '../../userInfo/commonFiles/contractHeader/ContractHeader';
 import ContractInfo from './contractInfo/ContractInfo';
+import { UserInfoContext } from '../../common/contextInfo/ContextInfo';
 
 
-const AdjustContract = () => {
-    const initialState = [
-        { teamName: "آپلا", id: 1, memberShip: 8, src: uplawImage },
-      ];
-      const [team, setTeam] = useState(initialState);
+const AdjustContract = (props) => {
+  const [ContractName, setCntractName] = useState("")
+  console.log(props)
+  console.log(props.match.params.id)
+  useEffect(() => {
+   setCntractName(props.match.params.id)
+  }, [props.match.params.id])
+  const context = useContext(UserInfoContext)
+  const {team}=context
         return (
            
             <main className={styles.main_adjustContract}>
@@ -19,7 +23,7 @@ const AdjustContract = () => {
             </section>
             <section className={styles.adjustContract_info}>
              <div className={styles.adjustContract_detail}>
-                <ContractHeader/>
+                <ContractHeader ContractName={ContractName} />
                 <ContractInfo/>
              </div>
             </section>

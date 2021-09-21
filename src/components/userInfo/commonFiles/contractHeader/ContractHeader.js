@@ -5,10 +5,10 @@ import spacialContractInfoImage from "../../../../asstes/specialinfocontract.svg
 import confirmContractImage from "../../../../asstes/confirmcontract.svg"
 
 
-const ContractHeader = ({opacity=0.5,width="33.333%"}) => {
+const ContractHeader = ({opacity=0.5,width="33.333%",ContractName}) => {
     return (
         <section>
-            <h1>/تنظیم هوشمند/تنظیم هوشمند قرارداد استخدام کارشناس تولید محتوا</h1>
+            <h1>/تنظیم هوشمند/{ContractName}</h1>
             <section className={styles.contractHeader}>
                 <div className={styles.minute}>
                     <h3> فقط 3 دقیقه </h3>

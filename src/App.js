@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Contract from "./pages/Contract";
 import Team from "./pages/Team";
 import Proceeding from "./components/proceeding/Proceeding";
+import AdjustContract from "./components/contract/adjustContract/AdjustContract";
 
 
 function App() {
@@ -16,7 +17,9 @@ function App() {
         <Switch>
           <Route path="/auth/google" component={SignUp} />
           <Route path="/dashbord" component={Dashbord} />
+          <Route path="/contract/:id" component={AdjustContract} />
           <Route path="/contract" component={Contract} />
+          
           <Route path="/proceeding" component={Proceeding} />
           <Route path="/team" component={Team} />
           <Route path="/" exact component={Home} />

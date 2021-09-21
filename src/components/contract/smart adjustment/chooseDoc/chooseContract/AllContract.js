@@ -4,6 +4,12 @@ export const fistContracts=[
     {name:"قرارداد استخدام برنامه نویس اندروید" ,id:3,className:"contract"},
     {name:"قرارداد محرمانگی",id:4, className:"contract"},
     {name:"قرارداد استخدام مدیر مارکتینگ" ,id:5,className:"contract"},
+    {name:"قرارداد استخدام مدیر مارکتینگ" ,id:5,className:"contract"},
+
+    {name:"قرارداد استخدام مدیر مارکتینگ" ,id:5,className:"contract"},
+
+    {name:"قرارداد استخدام مدیر مارکتینگ" ,id:5,className:"contract"},
+
     
 ]
 

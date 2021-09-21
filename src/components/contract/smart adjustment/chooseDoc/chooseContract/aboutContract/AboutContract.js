@@ -5,8 +5,16 @@ import usefulForCompanyImage from "../../../../../../asstes/useful for company.s
 import pdfImage from "../../../../../../asstes/pdf.svg"
 import timerImage from "../../../../../../asstes/time.svg"
 import blueArrowImage from "../../../../../../asstes/blue arrow.svg"
+import { useHistory } from 'react-router'
 
 const AboutContract = ({title}) => {
+
+   const history= useHistory()
+
+    const adjustHandler=()=>{
+        history.push(`/contract/${title}`)
+
+    }
     return (
         <section className={styles.about_contract} >
            <div className={styles.contract_flex}>
@@ -40,7 +48,7 @@ const AboutContract = ({title}) => {
             </article>
            </div>
             <div className={styles.contract_btns}>
-                    <button className={styles.adjust_btn}>تنظیم هوشمند <img src={blueArrowImage} alt="ثبت و مرحله بعد"/></button>
+                    <button onClick={adjustHandler} className={styles.adjust_btn}>تنظیم هوشمند <img src={blueArrowImage} alt="ثبت و مرحله بعد"/></button>
                     <button className={styles.download_btn}>دانلود نمونه قرارداد<img src={blueArrowImage} alt="ثبت و مرحله بعد"/></button>
 
                 </div>

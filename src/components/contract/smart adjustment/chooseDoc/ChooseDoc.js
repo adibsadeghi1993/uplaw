@@ -31,7 +31,6 @@ const ChooseDoc = () => {
           </p>
         )}
         <div className={styles.fingerImage}>
-        
           <img src={fingerImage} alt="انتخاب یک سند" />
         </div>
       </div>

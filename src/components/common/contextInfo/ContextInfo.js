@@ -13,7 +13,7 @@ const ContextInfo = ({ children }) => {
   const [bithday, setBirthday] = useState("");
   const [job, setJob] = useState([]);
   const [skills, setSkills] = useState([]);
-  const [contractStep, setContractStep] = useState(2);
+  const [contractStep, setContractStep] = useState(1);
   const [team, setTeam] = useState([
     { teamName: "آپلا", id: 1, memberShip: 8, src: uplawImage },
     { teamName: "حسینی فاینانس", id: 2, memberShip: 8, src: uplawImage },
@@ -26,6 +26,9 @@ const ContextInfo = ({ children }) => {
     { teamName: "ساران فن آور گستران اطلس", id: 3, memberShip: 8, src: uplawImage },
 
   ]);
+
+  const [choosedContract, setChoosedContract] = useState("قرارداد استخدام کارشناس تولید محتوا");
+
 
   const formik = useFormik({
     initialValues,
@@ -56,6 +59,8 @@ const ContextInfo = ({ children }) => {
         setTeam,
         teamIncludedMe,
         setTeamIncludedMe,
+        setChoosedContract,
+        choosedContract
       }}
     >
       {children}

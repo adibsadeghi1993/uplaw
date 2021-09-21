@@ -1,11 +1,14 @@
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect,useContext } from "react";
 import styles from "./chooseContract.module.css";
 import { fistContracts, secondContracts } from "./AllContract";
 import AboutContract from "./aboutContract/AboutContract";
+import { UserInfoContext } from "../../../../common/contextInfo/ContextInfo";
 
 const ChooseContract = () => {
+  const context = useContext(UserInfoContext)
+  const {choosedContract,setChoosedContract}=context
   const [docType, setDocType] = useState("legal");
-  const [choosedContract, setChoosedContract] = useState("قرارداد استخدام کارشناس تولید محتوا");
+  
 
   const [width, setWidth]   = useState(window.innerWidth);
 
