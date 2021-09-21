@@ -2,20 +2,15 @@ import "./App.css";
 import Dashbord from "./pages/Dashbord";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
+
 import SignUp from "./pages/SignUp";
 import Home from "./pages/Home";
 import Contract from "./pages/Contract";
 import Team from "./pages/Team";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-
-const theme = createTheme({
-  direction: "rtl",
-});
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
       <div className="App">
         <Switch>
           <Route path="/auth/google" component={SignUp} />
@@ -25,7 +20,7 @@ function App() {
           <Route path="/" exact component={Home} />
         </Switch>
       </div>
-    </ThemeProvider>
+   
   );
 }
 

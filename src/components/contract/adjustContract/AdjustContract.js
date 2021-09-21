@@ -5,6 +5,7 @@ import UserProfile from '../../userInfo/commonFiles/userProfile/UserProfile';
 import ContractHeader from '../../userInfo/commonFiles/contractHeader/ContractHeader';
 import ContractInfo from './contractInfo/ContractInfo';
 
+
 const AdjustContract = () => {
     const initialState = [
         { teamName: "آپلا", id: 1, memberShip: 8, src: uplawImage },
@@ -19,8 +20,8 @@ const AdjustContract = () => {
             <section className={styles.adjustContract_info}>
              <div className={styles.adjustContract_detail}>
                 <ContractHeader/>
-                {/* <ContractInfo/> */}
-                
+                <ContractInfo/>
+              
 
              </div>
             </section>
