@@ -1,12 +1,14 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import UserProfile from '../userInfo/commonFiles/userProfile/UserProfile'
 import styles from "./proceeding.module.css"
+import uplawImage from "../../asstes/uplaw.png"
+import ProceedingDetailes from './proceedingDetailes/ProceedingDetailes'
+import { UserInfoContext } from '../common/contextInfo/ContextInfo'
 
 const Proceeding = () => {
-    const initialState = [
-        { teamName: "آپلا", id: 1, memberShip: 8, src: uplawImage },
-      ];
-      const [team, setTeam] = useState(initialState);
+  const context = useContext(UserInfoContext)
+  const {team}=context
+   
     return (
         <main className={styles.main_proceeding}>
         <section className={styles.profilesection}>
@@ -14,7 +16,8 @@ const Proceeding = () => {
         </section>
         <section className={styles.proceeding_info}>
          <div className={styles.proceeding_detail}>
-                <h1>hi</h1> 
+           <h1>صورت جلسه/ </h1>
+                <ProceedingDetailes/>
          </div>
         </section>
       </main>
