@@ -2,6 +2,7 @@ import React,{useContext} from 'react'
 import { UserInfoContext } from '../common/contextInfo/ContextInfo';
 import AdjustContract from './adjustContract/AdjustContract';
 import ContractDocument from './contractDoucument/ContractDocument';
+import SigntureContract from './SigntureContract/SigntureContract';
 import SmartAdjustment from './smart adjustment/SmartAdjustment';
 
 const ContractComponents = () => {
@@ -9,7 +10,7 @@ const ContractComponents = () => {
 
     switch (contractStep) {
         case 1:
-          return <ContractDocument />;
+          return <SigntureContract />;
         case 2:
           return <AdjustContract />;
         case 3:
