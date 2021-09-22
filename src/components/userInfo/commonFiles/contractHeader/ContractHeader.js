@@ -8,7 +8,7 @@ import confirmContractImage from "../../../../asstes/confirmcontract.svg"
 const ContractHeader = ({opacity=0.5,width="33.333%",ContractName}) => {
     return (
         <section>
-            <h1>/تنظیم هوشمند/{ContractName}</h1>
+            <h1 className={styles.contractName}>/تنظیم هوشمند/{ContractName}</h1>
             <section className={styles.contractHeader}>
                 <div className={styles.minute}>
                     <h3> فقط 3 دقیقه </h3>
