@@ -183,7 +183,6 @@ margin-top: 29px;
     .nextStep_download{
         display: flex;
         flex-direction: column;
-        background-color: yellow;
         align-items: center;
     }
     .nextStep_download button{
@@ -232,7 +231,6 @@ margin-top: 29px;
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
-        background-color: yellow;
         align-items: center;
         align-items: flex-start;
         margin-top: 38px;
