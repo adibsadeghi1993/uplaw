@@ -1,0 +1,33 @@
+.customerSignture{
+   display: grid;
+   grid-template-columns: 1fr;
+   width: 85%;
+   margin: auto;
+   background-color: yellow;
+
+}
+.customerSignture_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.customer_input_label{
+   display: flex;
+   width: 100%;
+   flex-direction: row-reverse; 
+   margin-top: 18px;
+   justify-content: flex-end;
+   
+}
+.customer_input_label input{
+    width: 18px;
+    height: 18px;
+}
+.customer_input_label label{
+ font-weight: 800;
+font-size: 14px;
+line-height: 22px;
+margin-right: 9px;
+}

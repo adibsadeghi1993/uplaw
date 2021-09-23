@@ -22,16 +22,16 @@
     
 }
 @media(max-width:1200px){
-   .contractDocument_detail{
+   .signtureContract_detail{
        width: 80%;
    }
 }
 
 @media(max-width:768px){
-    .contractDocument_detail{
+    .signtureContract_detail{
         width: 100%;
     }
-    .main_contractDocument{
+    .main_signtureContract{
         display: flex;
         flex-direction: column;
     }

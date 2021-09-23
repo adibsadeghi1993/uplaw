@@ -3,6 +3,7 @@ import styles from "./signtureContract.module.css"
 import ContractHeader from '../../userInfo/commonFiles/contractHeader/ContractHeader'
 import UserProfile from '../../userInfo/commonFiles/userProfile/UserProfile'
 import { UserInfoContext } from '../../common/contextInfo/ContextInfo'
+import CustomerSignture from './CustomerSignture/CustomerSignture'
 
 const SigntureContract = () => {
     const context = useContext(UserInfoContext)
@@ -16,6 +17,7 @@ const SigntureContract = () => {
          <div className={styles.signtureContract_detail}>
         
               <ContractHeader opacity="1" width="100%" ContractName={choosedContract}/>
+              <CustomerSignture/>
 
        
          </div>
