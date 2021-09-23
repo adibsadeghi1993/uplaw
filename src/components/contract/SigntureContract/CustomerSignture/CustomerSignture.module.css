@@ -1,7 +1,7 @@
 .customerSignture{
    display: grid;
    grid-template-columns: 1fr;
-   width: 85%;
+   width: 80%;
    margin: auto;
 
 }
@@ -13,20 +13,21 @@
 
 }
 .customerSignture_left{
-   margin-bottom: 100px;
+   margin:47px 0 100px 0;
    display: flex;
    position: relative;
-
+   width: 100%;
+}
+.customerSignture_left div:last-child{
+    width: 100%;
 }
 .boredr{
     width: 1px;
     height: 85%;
     background-color: rgba(55, 112, 226, 0.3);
     position: absolute;
-    right: 22px;
+    right:22px;
     z-index: 1;
-   
-  
 }
 .customer_input_label{
    display: flex;
@@ -49,28 +50,24 @@ margin-right: 9px;
 .confirm_mobile_code{
     display: flex;
     width: 100%;
+    position: relative;
+}
+.confirm_mobile_code::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(55, 112, 226, 0.3);
+    right: 22px;
 }
 .main_confirm{
-    flex: 1;
+    flex: 2;
     margin-right: 35px;
-}
-
-.draw_signture{
+    padding: 8px 40px 8px 15px;
+    background: rgb(232, 232, 232,0.5);
     display: flex;
-    width: 100%;
-    margin-top: 20px;
-}
-.main_draw{
-    flex: 1;
-    margin-right: 46px;
-}
-.request_signture{
-    display: flex;
-    margin-top: 20px;
-}
-.main_request{
-    flex: 1;
-    margin-right: 46px;
+    flex-direction: column;
+ border-radius: 27px;
 }
 .confirm_mobile{
     display: flex;
@@ -79,8 +76,6 @@ margin-right: 9px;
     border-bottom: 1px solid rgb(0, 0, 0,0.08);
     margin-top: 15px;
     align-items: center;
-  
-   
 }
 .confirm_mobile button{
     background: transparent;
@@ -125,13 +120,7 @@ margin-right: 9px;
     line-height: 13px;
     opacity: 0.5;
 }
-.main_confirm{
-    padding: 8px 40px;
-    background: rgb(232, 232, 232,0.5);
-    display: flex;
-    flex-direction: column;
- border-radius: 27px;
-}
+
 .confirm_person_paragraf p{
     font-size: 00.5rem;
     font-weight: 500;
@@ -143,13 +132,39 @@ margin-right: 9px;
     line-height: 13px;
     opacity: 0.5;
 }
-.main_draw{
-    padding: 8px 40px;
-    background: rgb(232, 232, 232,0.5);
-    display: flex;
-    flex-direction: column;
-    border-radius: 27px;
+.draw_signture::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(55, 112, 226, 0.3);
+    right: 22px;
+    top: 0;
 }
+
+.request_signture::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 21px;
+    background-color: rgba(55, 112, 226, 0.3);
+    right: 22px;
+    top: 0;  
+}
+
+
+
+.draw_signture{
+    display: flex;
+    width: 100%;
+    position: relative;
+    padding-top: 20px;
+}
+.main_draw{
+    flex: 1;
+    margin-right: 46px;
+}
+
 .confirm_signture{
     width: 100%;
     display: flex;
@@ -181,6 +196,24 @@ margin-right: 9px;
     margin-top: 14px;
     margin-bottom: 6px;
 }
+.request_signture{
+    display: flex;
+    padding-top: 20px;
+    position: relative;
+}
+.main_request{
+    flex: 1;
+    margin-right: 46px;
+}
+
+.main_draw{
+    padding: 8px 40px;
+    background: rgb(232, 232, 232,0.5);
+    display: flex;
+    flex-direction: column;
+    border-radius: 27px;
+}
+
 .main_request{
     padding: 15px 40px;
     background: rgb(232, 232, 232,0.5);
@@ -192,11 +225,7 @@ margin-right: 9px;
     font-size: 00.5rem;
     font-weight: 500;
 }
-.main_request div:last-child{
-    display: flex;
-    margin-top: 16px;
-    align-items: center;
-}
+
 .main_request div:last-child p{
     font-size: 00.5rem;
     font-weight: 500;
@@ -245,4 +274,21 @@ margin-right: 9px;
     position: relative;
     z-index: 2;
     cursor: pointer;
+}
+.hide{
+    display: none;
+    transition: 1s display ease-in;
+}
+.show{
+    display: block;
+    transition: 1s display ease-in;
+}
+.hideThree{
+    display: none;
+    margin-top: 16px;
+}
+.showThree{
+    display: flex;
+    margin-top: 16px;
+    align-items: center;
 }
