@@ -16,22 +16,23 @@ const CustomerSignture = () => {
         </div>
       </section>
       <section className={styles.customerSignture_left}>
-        <div></div>
+        <div className={styles.boredr}></div>
         <div>
-          <article>
-            <div>
+          <article className={styles.confirm_mobile_code}>
+            <div className={styles.first_image}>
               <img src={minesImage} alt="بستن سوال" />
             </div>
-            <p>احراز هویت</p>
+          <div className={styles.main_confirm}>
+             <div className={styles.confirm_person_paragraf}> <p>احراز هویت</p></div>
             <div>
-              <div>
+              <div className={styles.confirm_mobile}>
                 <p>شماره موبایل خود را وراد کنید</p>
                 <button>
                   <span>ارسال کد تایید</span>
                   <img src={blueArrowImage} alt="تایید" />
                 </button>
               </div>
-              <div>
+              <div className={styles.confirm_code}>
                 <p>کد تایید ارسال شده را وارد کنید</p>
                 <button>
                   <span>ثبت کد تایید</span>
@@ -39,28 +40,32 @@ const CustomerSignture = () => {
                 </button>
               </div>
             </div>
+          </div>
           </article>
-          <article>
-            <div>
+          <article className={styles.draw_signture}>
+            <div className={styles.second_image}>
               <img src={minesImage} alt="بستن سوال" />
             </div>
-            <div>
-              <div>
+            <div className={styles.main_draw}>
+              <div className={styles.signture_paragraf}>
                 <p>ترسیم امضا</p>
               </div>
-              <div>
-                <button>
+              <div >
+                <input className={styles.emptySpace_signture}/>
+               <div className={styles.confirm_signture}>
+               <button>
                   <span>ثبت امضا</span>
                   <img src={blueArrowImage} alt="تایید" />
                 </button>
+               </div>
               </div>
             </div>
           </article>
-          <article>
-            <div>
+          <article className={styles.request_signture}>
+            <div className={styles.third_image}>
               <img src={minesImage} alt="بستن سوال" />
             </div>
-            <div>
+            <div className={styles.main_request}>
               <div>
                 <p>درخواست امضا از طرفین</p>
               </div>
