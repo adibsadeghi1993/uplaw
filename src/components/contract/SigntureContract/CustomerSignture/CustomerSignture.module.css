@@ -78,6 +78,7 @@ margin-right: 9px;
     padding-bottom: 5px;
     border-bottom: 1px solid rgb(0, 0, 0,0.08);
     margin-top: 15px;
+    align-items: center;
   
    
 }
@@ -101,6 +102,7 @@ margin-right: 9px;
     padding-bottom: 5px;
     border-bottom: 1px solid rgb(0, 0, 0,0.08);
     margin-top: 15px;
+    align-items: center;
 }
 .confirm_code button{
     background: transparent;
