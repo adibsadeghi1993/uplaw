@@ -27,7 +27,6 @@ margin-top: 54px;
 .nextStep_download{
     display: flex;
     justify-content: space-between;
-    background-color: chocolate;
     width: 100%;
 }
 .signture_contract{
@@ -55,3 +54,44 @@ margin-top: 54px;
     color: #3770E2;
     margin-left: 12px;
 }
+
+
+@media(min-width:768px){
+   .contractPdf{
+       width: 84%;
+       height: 250px;
+   }
+}
+
+@media(min-width:900px){
+    .contractPdf{
+        width: 84%;
+        height: 270px;
+    }
+ }
+ 
+@media(min-width:1000px){
+    .contractPdf{
+        width: 84%;
+        height: 290px;
+    }
+ }
+  
+@media(min-width:1100px){
+    .contractPdf{
+        width: 84%;
+        height: 310px;
+    }
+ }
+ @media(min-width:1200px){
+    .contractPdf{
+        width: 84%;
+        height: 325px;
+    }
+ }
+ @media(min-width:1300px){
+    .contractPdf{
+        width: 84%;
+        height: 358px;
+    }
+ }

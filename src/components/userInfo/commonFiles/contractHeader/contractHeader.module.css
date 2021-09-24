@@ -116,7 +116,7 @@ margin-bottom: 8px;
          display: none;
      }
     .contractHeader{
-        width: 80%;
+        width: 60%;
         margin: auto;
     }
    .minute{
@@ -125,4 +125,19 @@ margin-bottom: 8px;
    .contract_info{
        display: none;
    }
+}
+@media(max-width:481px){
+    .contractName{
+        display: none;
+    }
+   .contractHeader{
+       width: 80%;
+       margin: auto;
+   }
+  .minute{
+      display: none;
+  }
+  .contract_info{
+      display: none;
+  }
 }

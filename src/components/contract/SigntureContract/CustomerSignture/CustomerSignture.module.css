@@ -21,14 +21,6 @@
 .customerSignture_left div:last-child{
     width: 100%;
 }
-.boredr{
-    width: 1px;
-    height: 85%;
-    background-color: rgba(55, 112, 226, 0.3);
-    position: absolute;
-    right:22px;
-    z-index: 1;
-}
 .customer_input_label{
    display: flex;
    width: 100%;
@@ -51,6 +43,7 @@ margin-right: 9px;
     display: flex;
     width: 100%;
     position: relative;
+   
 }
 .confirm_mobile_code::before{
     content: "";
@@ -279,8 +272,10 @@ margin-right: 9px;
     display: none;
     transition: 1s display ease-in;
 }
+.hide_confirm_mobile_code{
+    align-items: center;
+}
 .show{
-    display: block;
     transition: 1s display ease-in;
 }
 .hideThree{
@@ -291,4 +286,31 @@ margin-right: 9px;
     display: flex;
     margin-top: 16px;
     align-items: center;
+}
+
+@media(min-width:481px){
+    .customerSignture{
+        width: 60%;
+    }
+}
+
+@media(min-width:768px){
+    .customerSignture{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 46% 54%;
+        margin: 0;
+    }
+    .main_confirm{
+        margin-right: 15px;
+        padding-right: 20px;
+    }
+    .main_draw{
+        margin-right: 22px;
+        padding-right: 20px;
+    }
+    .main_request{
+        margin-right: 22px;
+        padding: 8px 20px 8px 40px;
+    }
 }

@@ -32,7 +32,7 @@ const CustomerSignture = () => {
       <section className={styles.customerSignture_left}>
         {/* <div className={styles.boredr}></div> */}
         <div>
-          <article className={styles.confirm_mobile_code}>
+          <article className={`${styles.confirm_mobile_code} ${showQes[0].show?null:styles.hide_confirm_mobile_code}`}>
             <div onClick={() => showHandler(1)} className={styles.first_image}>
               {showQes[0].show ? (
                 <img src={minesImage} alt="بستن سوال" />
