@@ -2,11 +2,14 @@ import React, { useState,useEffect,useContext } from "react";
 import styles from "./chooseContract.module.css";
 import { fistContracts, secondContracts } from "./AllContract";
 import AboutContract from "./aboutContract/AboutContract";
-import { UserInfoContext } from "../../../../common/contextInfo/ContextInfo";
+import { useSelector,useDispatch } from "react-redux";
+import { choosedContractAction } from "../../../../../redux/Actions/contractActions";
+
 
 const ChooseContract = () => {
-  const context = useContext(UserInfoContext)
-  const {choosedContract,setChoosedContract}=context
+ const {choosedContract}= useSelector(state=>state.contract)
+ const dispatch = useDispatch()
+  
   const [docType, setDocType] = useState("legal");
   
 
@@ -28,7 +31,7 @@ useEffect(() => {
   };
 
   const contractHandler=(name)=>{
-      setChoosedContract(name)
+      dispatch(choosedContractAction(name))
 
   }
   const serchDocHandler=(e)=>{

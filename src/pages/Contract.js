@@ -1,13 +1,13 @@
 import React  from 'react'
-import ContextInfo from '../components/common/contextInfo/ContextInfo'
-import ContractComponents from '../components/contract/ContractComponents'
+import AdjustContract from '../components/contract/adjustContract/AdjustContract'
+import SmartAdjustment from '../components/contract/smart adjustment/SmartAdjustment'
+
+
 
 
 const Contract = () => {
     return (
-        // <ContextInfo>
-            <ContractComponents/>
-        // </ContextInfo>
+    <SmartAdjustment/>
     )
     
     

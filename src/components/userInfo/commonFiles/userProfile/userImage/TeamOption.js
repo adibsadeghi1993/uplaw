@@ -24,7 +24,7 @@ const TeamOption = ({ team,progress }) => {
   if (typeof team === "object") {
     options = (
       <div className={styles.teams}>
-        <img src={team[0].src} />
+        <img src={team[0].src} alt="عکس تیم"/>
         <p>{team[0].teamName}</p>
         <div className={styles.arrowDownImage}>
           <img src={arrowDownImage} alt="arrow" />

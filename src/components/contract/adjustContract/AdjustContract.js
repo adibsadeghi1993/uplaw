@@ -3,7 +3,8 @@ import styles from "./adjustContract.module.css"
 import UserProfile from '../../userInfo/commonFiles/userProfile/UserProfile';
 import ContractHeader from '../../userInfo/commonFiles/contractHeader/ContractHeader';
 import ContractInfo from './contractInfo/ContractInfo';
-import { UserInfoContext } from '../../common/contextInfo/ContextInfo';
+import { useSelector } from 'react-redux';
+
 
 
 const AdjustContract = (props) => {
@@ -13,8 +14,9 @@ const AdjustContract = (props) => {
   useEffect(() => {
    setCntractName(props.match.params.id)
   }, [props.match.params.id])
-  const context = useContext(UserInfoContext)
-  const {team}=context
+
+  const team= useSelector(state=>state.team.myTeam)
+  console.log(team)
         return (
            
             <main className={styles.main_adjustContract}>
