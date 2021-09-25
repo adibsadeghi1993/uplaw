@@ -1,0 +1,41 @@
+.select_option{
+    margin-top: 35px;
+    padding-bottom: 5px;
+    border:1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+
+.select_proceeding{
+    width: 100%;
+    border: none;
+    padding: 10px;
+    background: transparent;
+    font-family: "anjoman";
+    font-size: 0.96rem;
+    appearance: none;
+    -moz-appearance: none;
+    opacity: 0.5;
+    
+ }
+ .select_option::after{
+     content: "";
+     border-width: 7px;
+     border-color: transparent;
+     border-top-color: #222;
+     border-style: solid;
+     display: inline-block;
+     position: absolute;
+     top: 20px;
+     left: 15px;
+     border-radius: 2px;
+ }
+ 
+ .select_proceeding:hover{
+     border: none;
+     outline: none;
+ }
+ .select_proceeding:focus{
+     border: none;
+     outline: none;
+ }
