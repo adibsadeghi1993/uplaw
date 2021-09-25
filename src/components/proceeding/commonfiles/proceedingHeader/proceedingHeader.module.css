@@ -1,0 +1,22 @@
+.proceeding_create_team{
+    background: #3770E2;
+   box-shadow: 0px 104px 80px rgba(55, 112, 226, 0.07), 0px 43.4487px 33.4221px rgba(55, 112, 226, 0.0503198), 0px 23.2298px 17.869px rgba(55, 112, 226, 0.0417275), 0px 13.0224px 10.0172px rgba(55, 112, 226, 0.035), 0px 6.91611px 5.32008px rgba(55, 112, 226, 0.0282725), 0px 2.87795px 2.21381px rgba(55, 112, 226, 0.0196802);
+   border-radius: 26px;
+   width: 100%;
+   padding: 12px 22px 8px 140px;
+   position: relative;
+   }
+   
+   .proceeding_create_team h1{
+   font-weight: 900;
+   font-size: 20px;
+   line-height: 27px;
+   text-align: right;
+   color: #FFFFFF;
+   }
+   
+   .proceeding_create_team img{
+       position: absolute;
+       left: -3%;
+       top: -150%;
+   }
