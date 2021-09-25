@@ -4,10 +4,12 @@ import blueArrowImage from "../../../../asstes/blue arrow.svg";
 import { useSelector } from 'react-redux'
 import styles from "./createMeetingDetailes.module.css";
 import ProceedingHeader from "../../commonfiles/proceedingHeader/ProceedingHeader";
+import ContractHeader from "../../../userInfo/commonFiles/contractHeader/ContractHeader";
 
 
 const CreateMeetingDetailes = () => {
   const [teamStatus, setTeamStatus] = useState("myTeam");
+  const [proceedingStatus, setProceedingStatus] = useState("createProceeding");
   const {myTeam,teamIncudedMe}=  useSelector(state=>state.team)
 
   const myTeamHandler = () => {
@@ -21,6 +23,11 @@ const CreateMeetingDetailes = () => {
     <main className={styles.proceeding_main}>
       <section>
       <ProceedingHeader/>
+      <div>
+        <p>ایجاد صورت جلسه</p>
+        <p>صورت جلسه های قبلی</p>
+      </div>
+      <ContractHeader adjust="nonadjustent" mainContent="noneContent" opacityTow="0.5" opacityThree="0.5" stepOne="انتخاب تیم" stepTow="تاریخ و موضوع" noneBox="noneBox" />
         <p className={styles.guide_paragraf}>
           تیم مورد نظر خود را برای ساخت صورت جلسه انتخاب کنید.
         </p>
