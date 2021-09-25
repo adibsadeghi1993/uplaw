@@ -3,14 +3,20 @@ import styles from "./setMeetingTime.module.css"
 
 const SetMeetingTime = () => {
     return (
-        <div>
-              <div className={styles.select_option}>
-          <select className={styles.select_proceeding}>
-            <option>صورت جلسه مورد نظر خود را جستجو کنید.</option>
-            <option>صورت جلسه</option>
-          </select>
-        </div>
-        </div>
+
+
+           <main className={styles.main_proceeding}>
+        <section className={styles.profilesection}>
+         <UserProfile opacity="opacity" team={ myTeam}/>
+        </section>
+        <section className={styles.proceeding_info}>
+         <div className={styles.proceeding_detail}>
+           <h1>صورت جلسه/ </h1>
+                <CreateMeetingDetailes/>
+         </div>
+        </section>
+      </main>
+      
     )
 }
 

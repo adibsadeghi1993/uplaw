@@ -35,10 +35,16 @@ color: #000000;
  
  @media(max-width:768px){
      .proceeding_detail{
-         width: 70%;
+         width: 87%;
+         margin-top: 50px;
+     }
+     .proceeding_detail h1{
+         text-align: center;
      }
      .main_proceeding{
          display: flex;
          flex-direction: column;
+    
      }
+
  }

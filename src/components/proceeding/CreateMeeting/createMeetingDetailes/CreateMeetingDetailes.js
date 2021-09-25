@@ -18,14 +18,25 @@ const CreateMeetingDetailes = () => {
   const teamIncludedMeHandler = () => {
     setTeamStatus("teamIncludedMe");
   };
+  const createProceedingHandler =()=>{
+    setProceedingStatus("createProceeding")
+  }
+  const previousProceedingHandler =()=>{
+    setProceedingStatus("previousProceeding")
+  }
+  const chooseTeamHandler =(e,item)=>{
+   console.log(e.target.checked)
+   console.log(item)
+  }
+
 
   return (
     <main className={styles.proceeding_main}>
-      <section>
+      <section className={styles.proceeding_main_section_one}>
       <ProceedingHeader/>
-      <div>
-        <p>ایجاد صورت جلسه</p>
-        <p>صورت جلسه های قبلی</p>
+      <div className={styles.chooseProceeding}>
+        <p onClick={createProceedingHandler} className={proceedingStatus==="createProceeding"?styles.activeProceeding:null}>ایجاد صورت جلسه</p>
+        <p onClick={previousProceedingHandler} className={proceedingStatus==="previousProceeding"?styles.activeProceeding:null}>صورت جلسه های قبلی</p>
       </div>
       <ContractHeader adjust="nonadjustent" mainContent="noneContent" opacityTow="0.5" opacityThree="0.5" stepOne="انتخاب تیم" stepTow="تاریخ و موضوع" noneBox="noneBox" />
         <p className={styles.guide_paragraf}>
@@ -60,10 +71,7 @@ const CreateMeetingDetailes = () => {
                  <img className={styles.team_image} src={item.src} alt="تیم" />
                   <p className={index===myTeam.length-1 ?styles.lastTeamName:null}>{item.teamName}</p>
                  </div>
-                  <button>
-                    <span>انتخاب</span>
-                    <img src={blueArrowImage} alt="انتخاب" />
-                  </button>
+                <input onChange={(e)=>chooseTeamHandler(e,item)} value={item.teamName}  type="checkbox" className={styles.checkbox_round} />
                 </div>
               );
             })
@@ -76,10 +84,7 @@ const CreateMeetingDetailes = () => {
                  <img className={styles.team_image}  src={item.src} alt="تیم" />
                   <p className={index===teamIncudedMe.length-1 ?styles.lastTeamName:null}>{item.teamName}</p>
                  </div>
-                  <button>
-                    <span>انتخاب</span>
-                    <img src={blueArrowImage} alt="انتخاب" />
-                  </button>
+                 <input value={item.teamName}  onChange={(e)=>chooseTeamHandler(e,item)} type="checkbox" className={styles.checkbox_round} />
                 </div>
               );
             })

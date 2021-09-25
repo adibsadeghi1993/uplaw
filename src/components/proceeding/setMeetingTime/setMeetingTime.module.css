@@ -1,41 +1,50 @@
-.select_option{
-    margin-top: 35px;
-    padding-bottom: 5px;
-    border:1px solid rgba(0, 0, 0, 0.1);
-    position: relative;
+.main_proceeding{
+    grid-template-columns: 30% 70%;
+    display: grid;
+}
+
+.profilesection{
+    grid-column: 1/2;
+    background-color: rgb(229, 229, 229,0.25);
+    border-left: 0.35px solid #00000028;
+}
+.proceeding_info{
+    grid-column: 2/3;     
+}
+
+.proceeding_detail{
+    width: 74%;
+   margin-top: 90px;
+   margin-left: auto;
+   margin-right: auto;     
+}
+.proceeding_detail h1{
+font-weight: 800;
+font-size: 20px;
+line-height: 31px;
+text-align: right;
+color: #000000;
 }
 
 
-.select_proceeding{
-    width: 100%;
-    border: none;
-    padding: 10px;
-    background: transparent;
-    font-family: "anjoman";
-    font-size: 0.96rem;
-    appearance: none;
-    -moz-appearance: none;
-    opacity: 0.5;
-    
- }
- .select_option::after{
-     content: "";
-     border-width: 7px;
-     border-color: transparent;
-     border-top-color: #222;
-     border-style: solid;
-     display: inline-block;
-     position: absolute;
-     top: 20px;
-     left: 15px;
-     border-radius: 2px;
+@media(max-width:1200px){
+    .proceeding_detail{
+        width: 80%;
+    }
  }
  
- .select_proceeding:hover{
-     border: none;
-     outline: none;
- }
- .select_proceeding:focus{
-     border: none;
-     outline: none;
+ @media(max-width:768px){
+     .proceeding_detail{
+         width: 87%;
+         margin-top: 50px;
+     }
+     .proceeding_detail h1{
+         text-align: center;
+     }
+     .main_proceeding{
+         display: flex;
+         flex-direction: column;
+    
+     }
+
  }
