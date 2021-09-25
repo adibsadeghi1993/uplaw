@@ -15,7 +15,7 @@ const MeetingDatePicker = () => {
         <div>
          <DatePicker
         calssName={styles.input_datepicker}
-        placeholder="تاریخ تولد خود را وارد کنید"
+        placeholder="تاریخ تشکیل جلسه را انتخاب کنید"
         timePicker={false}
         id="datePicker"
         showTodayButton={false}
