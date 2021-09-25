@@ -1,14 +1,13 @@
 import React, { useState, useContext } from "react";
 import fingerImage from "../../../asstes/finger.png";
 import blueArrowImage from "../../../asstes/blue arrow.svg";
-import { UserInfoContext } from "../../common/contextInfo/ContextInfo";
+import { useSelector } from 'react-redux'
 import styles from "./procedingDetailes.module.css";
 
 
 const ProceedingDetailes = () => {
   const [teamStatus, setTeamStatus] = useState("myTeam");
-  const context = useContext(UserInfoContext);
-  const { team, teamIncludedMe } = context;
+  const {myTeam,teamIncudedMe}=  useSelector(state=>state.team)
 
   const myTeamHandler = () => {
     setTeamStatus("myTeam");
@@ -58,12 +57,12 @@ const ProceedingDetailes = () => {
         </div>
 
         {teamStatus === "myTeam"
-          ? team.map((item,index) => {
+          ? myTeam.map((item,index) => {
               return (
-                <div className={`${styles.eachTeam} ${index===team.length-1 ?styles.last:null}`}>
+                <div className={`${styles.eachTeam} ${index===myTeam.length-1 ?styles.last:null}`}>
                  <div className={styles.team_and_image}>
                  <img className={styles.team_image} src={item.src} alt="تیم" />
-                  <p className={index===team.length-1 ?styles.lastTeamName:null}>{item.teamName}</p>
+                  <p className={index===myTeam.length-1 ?styles.lastTeamName:null}>{item.teamName}</p>
                  </div>
                   <button>
                     <span>انتخاب</span>
@@ -74,12 +73,12 @@ const ProceedingDetailes = () => {
             })
           : null}
         {teamStatus === "teamIncludedMe"
-          ? teamIncludedMe.map((item,index) => {
+          ? teamIncudedMe.map((item,index) => {
               return (
-                <div className={`${styles.eachTeam} ${index===team.length-1 ?styles.last:null}`} >
+                <div className={`${styles.eachTeam} ${index===teamIncudedMe.length-1 ?styles.last:null}`} >
                  <div  className={styles.team_and_image}>
                  <img className={styles.team_image}  src={item.src} alt="تیم" />
-                  <p className={index===team.length-1 ?styles.lastTeamName:null}>{item.teamName}</p>
+                  <p className={index===teamIncudedMe.length-1 ?styles.lastTeamName:null}>{item.teamName}</p>
                  </div>
                   <button>
                     <span>انتخاب</span>
