@@ -1,11 +1,11 @@
-import React,{useState,useContext} from 'react'
+
 import { useSelector } from 'react-redux'
-import UserProfile from '../userInfo/commonFiles/userProfile/UserProfile'
-import styles from "./proceeding.module.css"
-import ProceedingDetailes from './proceedingDetailes/ProceedingDetailes'
+import UserProfile from '../../userInfo/commonFiles/userProfile/UserProfile'
+import styles from "./createMeeting.module.css"
+import CreateMeetingDetailes from './createMeetingDetailes/CreateMeetingDetailes'
 
 
-const Proceeding = () => {
+const CreateMeeting = () => {
      const {myTeam}=  useSelector(state=>state.team)
    
     return (
@@ -16,11 +16,11 @@ const Proceeding = () => {
         <section className={styles.proceeding_info}>
          <div className={styles.proceeding_detail}>
            <h1>صورت جلسه/ </h1>
-                <ProceedingDetailes/>
+                <CreateMeetingDetailes/>
          </div>
         </section>
       </main>
     )
 }
 
-export default Proceeding
+export default CreateMeeting

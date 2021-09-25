@@ -1,11 +1,11 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
+import fingerImage from "../../../asstes/finger.png";
 import blueArrowImage from "../../../asstes/blue arrow.svg";
 import { useSelector } from 'react-redux'
-import styles from "./procedingDetailes.module.css";
-import ProceedingHeader from "../commonfiles/proceedingHeader/ProceedingHeader";
+import styles from "./createMeetingDetailes.module.css";
 
 
-const ProceedingDetailes = () => {
+const CreateMeetingDetailes = () => {
   const [teamStatus, setTeamStatus] = useState("myTeam");
   const {myTeam,teamIncudedMe}=  useSelector(state=>state.team)
 
@@ -19,8 +19,19 @@ const ProceedingDetailes = () => {
   return (
     <main className={styles.proceeding_main}>
       <section>
-      
-         <ProceedingHeader/>
+        <div className={styles.proceeding_create_team}>
+          <h1>
+            این صفحه برای ساختن هر نوع صورت جلسه ایه! تو میتونی برای هر صورت
+            جلسه اعضای مورد نظرت رو دعوت کنی و صورت جلسه رو درست کنی.
+          </h1>
+          <img src={fingerImage} alt="تنظیم صورت جلسه" />
+        </div>
+        <div className={styles.select_option}>
+          <select className={styles.select_proceeding}>
+            <option>صورت جلسه مورد نظر خود را جستجو کنید.</option>
+            <option>صورت جلسه</option>
+          </select>
+        </div>
         <p className={styles.guide_paragraf}>
           تیم مورد نظر خود را برای ساخت صورت جلسه انتخاب کنید.
         </p>
@@ -83,4 +94,4 @@ const ProceedingDetailes = () => {
   );
 };
 
-export default ProceedingDetailes;
+export default CreateMeetingDetailes;
