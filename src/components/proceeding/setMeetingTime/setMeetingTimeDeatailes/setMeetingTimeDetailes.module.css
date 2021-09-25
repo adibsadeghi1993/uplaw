@@ -60,6 +60,19 @@
      border: none;
      outline: none;
  }
+ .date_and_time_picker{
+     width: 100%;
+     display: grid;
+     grid-template-columns: repeat(2,fr);
+     grid-column-gap: 15px;
+     margin-top: 22px;
+ }
+ .proceeding_date_picker{
+     grid-column: 1/2;
+ }
+ .proceeding_time_picker{
+     grid-column: 2/3;
+ }
 
 
  

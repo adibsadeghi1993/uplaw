@@ -63,7 +63,10 @@ console.log(e.target.value)
           </select>
         </div>
       </div>
-    <TimePickerComponent/>
+   <section className={styles.date_and_time_picker}>
+     <div className={styles.proceeding_date_picker}></div>
+     <div className={styles.proceeding_time_picker}><TimePickerComponent/></div>
+   </section>
      
     </div>
   );
