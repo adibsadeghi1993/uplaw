@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import ContractHeader from "../../../userInfo/commonFiles/contractHeader/ContractHeader";
 import ProceedingHeader from "../../commonfiles/proceedingHeader/ProceedingHeader";
 import styles from "./setMeetingTimeDetailes.module.css";
+import TimePickerComponent from "./timePicker/TimePicker";
+
 
 const SetMeetingTimeDetailes = () => {
   const [proceedingStatus, setProceedingStatus] = useState("createProceeding");
@@ -61,6 +63,8 @@ console.log(e.target.value)
           </select>
         </div>
       </div>
+    <TimePickerComponent/>
+     
     </div>
   );
 };
