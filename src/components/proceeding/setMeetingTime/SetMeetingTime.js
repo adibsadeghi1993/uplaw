@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import UserProfile from "../../userInfo/commonFiles/userProfile/UserProfile";
 import styles from "./setMeetingTime.module.css";
+import SetMeetingTimeDetailes from "./setMeetingTimeDeatailes/SetMeetingTimeDetailes";
 
 const SetMeetingTime = () => {
   const { myTeam } = useSelector((state) => state.team);
@@ -12,7 +13,8 @@ const SetMeetingTime = () => {
       </section>
       <section className={styles.proceeding_info}>
         <div className={styles.proceeding_detail}>
-          <h1>صورت جلسه/ </h1>
+          <h1 className={styles.main_title}>صورت جلسه/ </h1>
+          <SetMeetingTimeDetailes/>
         </div>
       </section>
     </main>

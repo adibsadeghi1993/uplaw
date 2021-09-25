@@ -8,6 +8,7 @@ import Contract from "./pages/Contract";
 import Team from "./pages/Team";
 import AdjustContract from "./components/contract/adjustContract/AdjustContract";
 import CreateMeeting from "./components/proceeding/CreateMeeting/CreateMeeting";
+import SetMeetingTime from "./components/proceeding/setMeetingTime/SetMeetingTime";
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
           <Route path="/contract/:id" component={AdjustContract} />
           <Route path="/contract" component={Contract} />
           
-          <Route path="/proceeding" component={CreateMeeting} />
+          <Route path="/proceeding" component={SetMeetingTime} />
           <Route path="/team" component={Team} />
           <Route path="/" exact component={Home} />
         </Switch>
