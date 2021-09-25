@@ -26,12 +26,7 @@ const ProceedingDetailes = () => {
           </h1>
           <img src={fingerImage} alt="تنظیم صورت جلسه" />
         </div>
-        <div className={styles.select_option}>
-          <select className={styles.select_proceeding}>
-            <option>صورت جلسه مورد نظر خود را جستجو کنید.</option>
-            <option>صورت جلسه</option>
-          </select>
-        </div>
+       
         <p className={styles.guide_paragraf}>
           تیم مورد نظر خود را برای ساخت صورت جلسه انتخاب کنید.
         </p>
