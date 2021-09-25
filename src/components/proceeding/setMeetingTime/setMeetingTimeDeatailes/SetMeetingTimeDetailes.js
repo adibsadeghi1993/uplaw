@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ContractHeader from "../../../userInfo/commonFiles/contractHeader/ContractHeader";
 import ProceedingHeader from "../../commonfiles/proceedingHeader/ProceedingHeader";
+import MeetingDatePicker from "./meetingDatePicker/MeetingDatePicker";
 import styles from "./setMeetingTimeDetailes.module.css";
 import TimePickerComponent from "./timePicker/TimePicker";
 
@@ -64,7 +65,9 @@ console.log(e.target.value)
         </div>
       </div>
    <section className={styles.date_and_time_picker}>
-     <div className={styles.proceeding_date_picker}></div>
+     <div className={styles.proceeding_date_picker}>
+       <MeetingDatePicker/>
+     </div>
      <div className={styles.proceeding_time_picker}><TimePickerComponent/></div>
    </section>
      
