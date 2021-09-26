@@ -48,7 +48,7 @@ const SigntureMeetingDetailes = () => {
         width="100%"
       />
 
-      <ShowContract choosedContract="صورت جلسه ثبت شرکت"/>
+      <ShowContract download="دریافت صورتجلسه" checkboxTitle="صورت جلسه امضا شود ؟" suggestedContracts="notExistedContracts" choosedContract="صورت جلسه ثبت شرکت"/>
 
         </div>
     )

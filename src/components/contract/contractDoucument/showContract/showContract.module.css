@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 57% 43%;
     margin-top: 33px; 
+    margin-bottom: 50px;
 }
 .showContract_sectionRight{
     grid-column: 1/2;
@@ -93,6 +94,9 @@ font-weight: 800;
 font-size: 0.875rem;
 line-height: 22px;
 }
+.notExistedContracts{
+    display: none;
+}
 .contrac_btns{
     display: flex;
     flex-wrap: wrap;
@@ -158,6 +162,15 @@ margin-top: 29px;
     font-size: 00.875rem;
     color: #3770E2;
     margin-left: 12px;
+}
+.download_proceeding{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.download_proceeding div:first-child{
+    margin-bottom: 15px;
 }
 
  @media(max-width:1250px){
@@ -279,6 +292,12 @@ margin-top: 29px;
     }
     .contrac_btns button{
         padding: 10px 12px;
+    }
+    .download_proceeding{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
    
  }

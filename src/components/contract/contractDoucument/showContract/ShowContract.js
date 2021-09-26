@@ -6,7 +6,7 @@ import walletImage from "../../../../asstes/wallet.svg";
 import contractPdf from "../../../../asstes/pdfcontract.png";
 import blueArrowImage from "../../../../asstes/blue arrow.svg";
 
-const ShowContract = ({ choosedContract }) => {
+const ShowContract = ({ choosedContract,suggestedContracts,checkboxTitle="قرارداد امضا شود ؟",download="دریافت قرارداد" }) => {
   return (
     <main className={styles.main_showContract}>
       <section className={styles.showContract_sectionRight}>
@@ -34,7 +34,7 @@ const ShowContract = ({ choosedContract }) => {
             <p>300 هزار تومان ذخیره شد.</p>
           </div>
         </div>
-        <div className={styles.suggest_contract}>
+        <div className={`${styles.suggest_contract} ${styles[suggestedContracts]}`}>
           <p>قرارداد های پیشنهادی :</p>
           <div className={styles.contrac_btns}>
             <button>قرارداد استخدام برنامه نویس موبایل</button>
@@ -53,13 +53,13 @@ const ShowContract = ({ choosedContract }) => {
             کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
           </p>
         </div>
-        <div className={styles.nextStep_download}>
+        <div className={`${styles.nextStep_download} ${download ? styles.download_proceeding:null}`}>
          <div className={styles.signture_contract}>
-         <label htmlFor="sign">قرارداد امضا شود ؟</label>
+         <label htmlFor="sign">{checkboxTitle}</label>
           <input type="checkbox" id="sign" />
          </div>
           <button>
-            <span>دریافت قرارداد</span>
+            <span>{download}</span>
             <img src={blueArrowImage} alt="دریافت قرارداد" />
           </button>
         </div>
