@@ -3,11 +3,11 @@ import UserImage from "./userImage/UserImage";
 import UserItems from "./userItems/UserItems";
 import  styles from "./userProfile.module.css";
 
-const UserProfile = ({opacity,team}) => {
+const UserProfile = ({opacity,team,activeSubject="صورت جلسه"}) => {
   return (
     <section className={styles.userProfile}>
       <UserImage team={team} />
-        <UserItems opacity={opacity}/>
+        <UserItems opacity={opacity} activeSubject={activeSubject}/>
     </section>
   );
 };

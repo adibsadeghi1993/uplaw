@@ -11,7 +11,7 @@ const CreateMeeting = () => {
     return (
         <main className={styles.main_proceeding}>
         <section className={styles.profilesection}>
-         <UserProfile opacity="opacity" team={ myTeam}/>
+         <UserProfile activeSubject="صورت جلسه" opacity="opacity" team={ myTeam}/>
         </section>
         <section className={styles.proceeding_info}>
          <div className={styles.proceeding_detail}>
