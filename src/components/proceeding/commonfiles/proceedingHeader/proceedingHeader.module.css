@@ -41,7 +41,11 @@
     .proceeding_create_team img{
        display: none;
         } 
-        .proceeding_create_team{
+        .proceeding_create_team {
             padding-left: 22px;
+           
+        }
+        .invite_title{
+            text-align: center;
         } 
    }

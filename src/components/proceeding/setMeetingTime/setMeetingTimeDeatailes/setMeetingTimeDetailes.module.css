@@ -37,8 +37,13 @@
     appearance: none;
     -moz-appearance: none;
     opacity: 0.5;
+    font-size: 12px;
     
  }
+
+ .select_proceeding {
+    -webkit-appearance: none;
+}
  .select_option::after{
      content: "";
      border-width: 7px;
@@ -74,6 +79,14 @@
      grid-column: 2/3;
  }
 
+ @media(max-width:900px){
+.select_proceeding{
+    font-size: 10px;
+    font-weight: bold;
+}
+}
+
+
 
  
  @media(max-width:768px){
@@ -82,6 +95,25 @@
         justify-content: center;
        
     }
+    .select_proceeding{
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .date_and_time_picker{
+        display: flex;
+        flex-direction: column;
+    }
+    .proceeding_time_picker{
+        margin-top: 20px;
+    }
+
+}
+@media(max-width:600px){
+
+    .select_proceeding{
+        font-size: 10px;
+        font-weight: 600;
+    }
 
 }
 
@@ -89,5 +121,17 @@
    .chooseProceeding p{
        font-size: 0.85rem;
    }
+   .select_proceeding{
+    font-size: 8px;
+    font-weight: 600;
+}
 
 }
+@media(max-width:400px){
+  
+    .select_proceeding{
+     font-size: 6px;
+     font-weight: 600;
+ }
+ 
+ }
