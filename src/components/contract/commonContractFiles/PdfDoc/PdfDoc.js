@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./PdfDoc.module.css";
 import blueArrowImage from "../../../../asstes/blue arrow.svg"
 
-const PdfDoc = () => {
+const PdfDoc = ({checkboxTitle,downloadTitle}) => {
   return (
     <>
       <div className={styles.contractPdf}>hi</div>
@@ -17,11 +17,11 @@ const PdfDoc = () => {
       </div>
       <div className={styles.nextStep_download}>
         <div className={styles.signture_contract}>
-          <label htmlFor="sign">قرارداد امضا شود ؟</label>
+          <label htmlFor="sign">{checkboxTitle}</label>
           <input type="checkbox" id="sign" />
         </div>
         <button>
-          <span>دریافت قرارداد</span>
+          <span>{downloadTitle}</span>
           <img src={blueArrowImage} alt="دریافت قرارداد" />
         </button>
       </div>

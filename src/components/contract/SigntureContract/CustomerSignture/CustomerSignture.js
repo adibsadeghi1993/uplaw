@@ -5,7 +5,7 @@ import blueArrowImage from "../../../../asstes/blue arrow.svg";
 import addImage from "../../../../asstes/add.svg";
 import minesImage from "../../../../asstes/mines.svg";
 
-const CustomerSignture = () => {
+const CustomerSignture = ({downloadTitle="دریافت قرارداد",checkboxTitle="قرارداد امضا شود ؟"}) => {
   const [showQes, setShowQes] = useState([
     { item: 1, show: true },
     { item: 2, show: false },
@@ -23,7 +23,7 @@ const CustomerSignture = () => {
   return (
     <main className={styles.customerSignture}>
       <section className={styles.customerSignture_right}>
-        <PdfDoc />
+        <PdfDoc downloadTitle={downloadTitle} checkboxTitle={checkboxTitle}/>
         <div className={styles.customer_input_label}>
           <label htmlFor="customer">طرف مقابل قرارداد را امضا کند ؟</label>
           <input id="customer" type="checkbox" />
