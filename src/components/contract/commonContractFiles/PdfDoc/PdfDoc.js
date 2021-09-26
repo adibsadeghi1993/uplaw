@@ -15,7 +15,7 @@ const PdfDoc = ({checkboxTitle,downloadTitle}) => {
           متنوع با هدف بهبود ابزارهای کاربردی می باشد.
         </p>
       </div>
-      <div className={styles.nextStep_download}>
+      <div className={`${styles.nextStep_download} ${downloadTitle==="دانلود صورت جلسه"?styles.column_direction_next_step:null}`}>
         <div className={styles.signture_contract}>
           <label htmlFor="sign">{checkboxTitle}</label>
           <input type="checkbox" id="sign" />

@@ -106,6 +106,12 @@ const CustomerSignture = ({downloadTitle="دریافت قرارداد",checkboxT
             </div>
           </article>
         </div>
+       <div className={downloadTitle==="دانلود صورت جلسه" ? styles.downloadbtn:null}>
+       <button >
+          <span>{downloadTitle}</span>
+          <img src={blueArrowImage} alt="دریافت قرارداد" />
+        </button>
+       </div>
       </section>
     </main>
   );

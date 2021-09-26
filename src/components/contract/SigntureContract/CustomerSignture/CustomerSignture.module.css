@@ -1,8 +1,9 @@
 .customerSignture{
    display: grid;
    grid-template-columns: 1fr;
-   width: 80%;
+   width: 95%;
    margin: auto;
+   margin-bottom: 100px;
 
 }
 .customerSignture_right{
@@ -17,6 +18,7 @@
    display: flex;
    position: relative;
    width: 100%;
+   flex-direction: column;
 }
 .customerSignture_left div:last-child{
     width: 100%;
@@ -26,7 +28,8 @@
    width: 100%;
    flex-direction: row-reverse; 
    margin-top: 18px;
-   justify-content: flex-end;
+   justify-content: center;
+
    
 }
 .customer_input_label input{
@@ -287,10 +290,17 @@ margin-right: 9px;
     margin-top: 16px;
     align-items: center;
 }
+.downloadbtn{
+    display: none;
+}
 
 @media(min-width:481px){
     .customerSignture{
-        width: 60%;
+        width: 95%;
+        margin: 0 0 100px 0;
+    }
+    .customer_input_label{
+        justify-content: flex-end;
     }
 }
 
@@ -299,7 +309,7 @@ margin-right: 9px;
         width: 100%;
         display: grid;
         grid-template-columns: 46% 54%;
-        margin: 0;
+      margin: 0 0 100px 0;
     }
     .main_confirm{
         margin-right: 15px;
@@ -312,5 +322,26 @@ margin-right: 9px;
     .main_request{
         margin-right: 22px;
         padding: 8px 20px 8px 40px;
+    }
+    .customer_input_label{
+        justify-content: flex-end;
+    }
+    .downloadbtn{
+       margin-top: 25px;
+       display: flex;
+       width: 180px;
+       text-align: end;
+       justify-content: flex-end;
+        
+    }
+    .downloadbtn button span{
+        margin-left: 8px;
+        color: #3770E2;
+       
+         
+     }
+    .downloadbtn button{
+        background: none;
+        border: none;
     }
 }

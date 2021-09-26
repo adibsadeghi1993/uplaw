@@ -47,7 +47,7 @@ const CustomerSigntureMeetingDetailes = () => {
         noneBox="noneBox"
         width="100%"
       />
-      <CustomerSignture checkboxTitle="صورت جلسه امضا شود ؟" downloadTitle="دانلود صورت جلسه"/>
+      <CustomerSignture  checkboxTitle="صورت جلسه امضا شود ؟" downloadTitle="دانلود صورت جلسه"/>
 
         </div>
     )
