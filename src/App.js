@@ -13,22 +13,20 @@ import SigntureMeeting from "./components/proceeding/signtureMeeting/SigntureMee
 import CustomerSigntureMeeting from "./components/proceeding/customerSigntureMeeting/CustomerSigntureMeeting";
 import CustomerSigntureMeetingDetailes from "./components/proceeding/customerSigntureMeeting/custmoerSigntureMeetingDetailes/CustomerSigntureMeetingDetailes";
 
-
 function App() {
   return (
-      <div className="App">
-        <Switch>
-          <Route path="/auth/google" component={SignUp} />
-          <Route path="/dashbord" component={Dashbord} />
-          <Route path="/contract/:id" component={AdjustContract} />
-          <Route path="/contract" component={Contract} />
-          
-          <Route path="/proceeding" component={SetMeetingTime} />
-          <Route path="/team" component={Team} />
-          <Route path="/" exact component={Home} />
-        </Switch>
-      </div>
-   
+    <div className="App">
+      <Switch>
+        <Route path="/auth/google" component={SignUp} />
+        <Route path="/dashbord" component={Dashbord} />
+        <Route path="/contract/:id" component={AdjustContract} />
+        <Route path="/contract" component={Contract} />
+
+        <Route path="/proceeding" component={CreateMeeting} />
+        <Route path="/team" component={Team} />
+        <Route path="/" exact component={Home} />
+      </Switch>
+    </div>
   );
 }
 
