@@ -9,6 +9,8 @@ import Team from "./pages/Team";
 import AdjustContract from "./components/contract/adjustContract/AdjustContract";
 import CreateMeeting from "./components/proceeding/CreateMeeting/CreateMeeting";
 import SetMeetingTime from "./components/proceeding/setMeetingTime/SetMeetingTime";
+import SigntureMeetingDetailes from "./components/proceeding/signtureMeeting/signtureMeetingDetailes/SigntureMeetingDetailes";
+import SigntureMeeting from "./components/proceeding/signtureMeeting/SigntureMeeting";
 
 
 function App() {
@@ -20,7 +22,7 @@ function App() {
           <Route path="/contract/:id" component={AdjustContract} />
           <Route path="/contract" component={Contract} />
           
-          <Route path="/proceeding" component={SetMeetingTime} />
+          <Route path="/proceeding" component={SigntureMeeting} />
           <Route path="/team" component={Team} />
           <Route path="/" exact component={Home} />
         </Switch>
