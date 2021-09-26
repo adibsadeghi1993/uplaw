@@ -4,6 +4,7 @@ import ProceedingHeader from "../../commonfiles/proceedingHeader/ProceedingHeade
 import MeetingDatePicker from "./meetingDatePicker/MeetingDatePicker";
 import styles from "./setMeetingTimeDetailes.module.css";
 import TimePickerComponent from "./timePicker/TimePicker";
+import blueArrowImage from "../../../../asstes/blue arrow.svg"
 
 
 const SetMeetingTimeDetailes = () => {
@@ -70,6 +71,12 @@ console.log(e.target.value)
      </div>
      <div className={styles.proceeding_time_picker}><TimePickerComponent/></div>
    </section>
+   <div className={styles.nextStep}>
+     <button>
+       <span>مرحله بعد</span>
+       <img src={blueArrowImage} alt="مرحله بعد"/>
+     </button>
+   </div>
      
     </div>
   );
