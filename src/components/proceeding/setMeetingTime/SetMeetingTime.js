@@ -9,7 +9,7 @@ const SetMeetingTime = () => {
   return (
     <main className={styles.main_proceeding}>
       <section className={styles.profilesection}>
-        <UserProfile opacity="opacity" team={myTeam} />
+        <UserProfile subject="meeting" opacity="opacity" team={myTeam} />
       </section>
       <section className={styles.proceeding_info}>
         <div className={styles.proceeding_detail}>

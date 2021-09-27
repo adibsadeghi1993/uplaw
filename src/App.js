@@ -21,9 +21,9 @@ function App() {
         <Route path="/dashbord" component={Dashbord} />
         <Route path="/contract/:id" component={AdjustContract} />
         <Route path="/contract" component={Contract} />
-
-        <Route path="/meeting" component={CreateMeeting} />
         <Route path="/meeting/setMeetingTime" component={SetMeetingTime} />
+        <Route path="/meeting" component={CreateMeeting} />
+       
         <Route path="/team" component={Team} />
         <Route path="/" exact component={Home} />
       </Switch>

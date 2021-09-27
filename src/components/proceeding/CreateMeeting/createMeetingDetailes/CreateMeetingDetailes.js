@@ -39,6 +39,9 @@ const CreateMeetingDetailes = () => {
   }
 
   const nextStepHandler=()=>{
+    if(choosedTeam){
+      history.push("/meeting/setMeetingTime")
+    }
 
   }
 
