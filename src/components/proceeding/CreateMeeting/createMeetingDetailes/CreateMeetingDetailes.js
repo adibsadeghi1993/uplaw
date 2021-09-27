@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import blueArrowImage from "../../../../asstes/blue arrow.svg";
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import styles from "./createMeetingDetailes.module.css";
 import ProceedingHeader from "../../commonfiles/proceedingHeader/ProceedingHeader";
 import ContractHeader from "../../../userInfo/commonFiles/contractHeader/ContractHeader";
+import { choosedTeamForMeeting } from "../../../../redux/Actions/MeetingActions";
+import Item from "antd/lib/list/Item";
 
 
 const CreateMeetingDetailes = () => {
@@ -11,6 +13,7 @@ const CreateMeetingDetailes = () => {
   const [choosedTeam, setChoosedTeam] = useState(null);
   const [checked, setChecked] = useState(false);
   const [proceedingStatus, setProceedingStatus] = useState("createProceeding");
+ const dispatch=useDispatch()
   const {myTeam,teamIncudedMe}=  useSelector(state=>state.team)
 
   const myTeamHandler = () => {
@@ -30,6 +33,8 @@ const CreateMeetingDetailes = () => {
    console.log(item)
    setChoosedTeam(item.teamName)
    setChecked(e.target.checked)
+   dispatch(choosedTeamForMeeting(item))
+  
   }
 
 
@@ -69,26 +74,26 @@ const CreateMeetingDetailes = () => {
         {teamStatus === "myTeam"
           ? myTeam.map((item,index) => {
               return (
-                <div className={`${styles.eachTeam} ${index===myTeam.length-1 ?styles.last:null}`}>
+                <label className={`${styles.eachTeam} ${index===myTeam.length-1 ?styles.last:null}`}>
                  <div className={styles.team_and_image}>
                  <img className={styles.team_image} src={item.src} alt="تیم" />
                   <p className={index===myTeam.length-1 ?styles.lastTeamName:null}>{item.teamName}</p>
                  </div>
-                <input disabled={checked ?true:false}  onChange={(e)=>chooseTeamHandler(e,item)} value={item.teamName}  type="checkbox" className={styles.checkbox_round} />
-                </div>
+                <input checked={choosedTeam===item.teamName} onChange={(e)=>chooseTeamHandler(e,item)} value={item.teamName}  type="radio" className={styles.checkbox_round} />
+                </label>
               );
             })
           : null}
         {teamStatus === "teamIncludedMe"
           ? teamIncudedMe.map((item,index) => {
               return (
-                <div className={`${styles.eachTeam} ${index===teamIncudedMe.length-1 ?styles.last:null}`} >
+                <label className={`${styles.eachTeam} ${index===teamIncudedMe.length-1 ?styles.last:null}`} >
                  <div  className={styles.team_and_image}>
                  <img className={styles.team_image}  src={item.src} alt="تیم" />
                   <p className={index===teamIncudedMe.length-1 ?styles.lastTeamName:null}>{item.teamName}</p>
                  </div>
-                 <input disabled={checked ?true:false}  value={item.teamName}  onChange={(e)=>chooseTeamHandler(e,item)} type="checkbox" className={styles.checkbox_round} />
-                </div>
+                 <input  value={item.teamName} checked={choosedTeam===item.teamName} onChange={(e)=>chooseTeamHandler(e,item)} type="radio" className={styles.checkbox_round} />
+                </label>
               );
             })
           : null}

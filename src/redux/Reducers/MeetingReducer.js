@@ -4,7 +4,7 @@ const initialState={
     setMeeting:{
         date:"",
         time:"",
-        teamForMeeting:""
+        teamForMeeting:{}
     }
 }
 export const meetingReducer=(state=initialState,{type,payload})=>{
