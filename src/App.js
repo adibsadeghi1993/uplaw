@@ -22,7 +22,8 @@ function App() {
         <Route path="/contract/:id" component={AdjustContract} />
         <Route path="/contract" component={Contract} />
 
-        <Route path="/proceeding" component={CreateMeeting} />
+        <Route path="/meeting" component={CreateMeeting} />
+        <Route path="/meeting/setMeetingTime" component={SetMeetingTime} />
         <Route path="/team" component={Team} />
         <Route path="/" exact component={Home} />
       </Switch>

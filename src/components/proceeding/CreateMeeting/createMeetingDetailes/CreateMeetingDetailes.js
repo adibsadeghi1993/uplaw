@@ -5,15 +5,17 @@ import styles from "./createMeetingDetailes.module.css";
 import ProceedingHeader from "../../commonfiles/proceedingHeader/ProceedingHeader";
 import ContractHeader from "../../../userInfo/commonFiles/contractHeader/ContractHeader";
 import { choosedTeamForMeeting } from "../../../../redux/Actions/MeetingActions";
-import Item from "antd/lib/list/Item";
+import { useHistory } from "react-router";
+
 
 
 const CreateMeetingDetailes = () => {
   const [teamStatus, setTeamStatus] = useState("myTeam");
   const [choosedTeam, setChoosedTeam] = useState(null);
-  const [checked, setChecked] = useState(false);
   const [proceedingStatus, setProceedingStatus] = useState("createProceeding");
  const dispatch=useDispatch()
+
+ const history=useHistory()
   const {myTeam,teamIncudedMe}=  useSelector(state=>state.team)
 
   const myTeamHandler = () => {
@@ -32,13 +34,12 @@ const CreateMeetingDetailes = () => {
    console.log(e.target.checked)
    console.log(item)
    setChoosedTeam(item.teamName)
-   setChecked(e.target.checked)
    dispatch(choosedTeamForMeeting(item))
   
   }
 
   const nextStepHandler=()=>{
-    
+
   }
 
 
