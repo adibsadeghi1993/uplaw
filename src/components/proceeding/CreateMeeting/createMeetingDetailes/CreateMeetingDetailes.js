@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import fingerImage from "../../../../asstes/finger.png";
 import blueArrowImage from "../../../../asstes/blue arrow.svg";
 import { useSelector } from 'react-redux'
 import styles from "./createMeetingDetailes.module.css";
@@ -9,6 +8,8 @@ import ContractHeader from "../../../userInfo/commonFiles/contractHeader/Contrac
 
 const CreateMeetingDetailes = () => {
   const [teamStatus, setTeamStatus] = useState("myTeam");
+  const [choosedTeam, setChoosedTeam] = useState(null);
+  const [checked, setChecked] = useState(false);
   const [proceedingStatus, setProceedingStatus] = useState("createProceeding");
   const {myTeam,teamIncudedMe}=  useSelector(state=>state.team)
 
@@ -27,6 +28,8 @@ const CreateMeetingDetailes = () => {
   const chooseTeamHandler =(e,item)=>{
    console.log(e.target.checked)
    console.log(item)
+   setChoosedTeam(item.teamName)
+   setChecked(e.target.checked)
   }
 
 
@@ -71,7 +74,7 @@ const CreateMeetingDetailes = () => {
                  <img className={styles.team_image} src={item.src} alt="تیم" />
                   <p className={index===myTeam.length-1 ?styles.lastTeamName:null}>{item.teamName}</p>
                  </div>
-                <input onChange={(e)=>chooseTeamHandler(e,item)} value={item.teamName}  type="checkbox" className={styles.checkbox_round} />
+                <input disabled={checked ?true:false}  onChange={(e)=>chooseTeamHandler(e,item)} value={item.teamName}  type="checkbox" className={styles.checkbox_round} />
                 </div>
               );
             })
@@ -84,7 +87,7 @@ const CreateMeetingDetailes = () => {
                  <img className={styles.team_image}  src={item.src} alt="تیم" />
                   <p className={index===teamIncudedMe.length-1 ?styles.lastTeamName:null}>{item.teamName}</p>
                  </div>
-                 <input value={item.teamName}  onChange={(e)=>chooseTeamHandler(e,item)} type="checkbox" className={styles.checkbox_round} />
+                 <input disabled={checked ?true:false}  value={item.teamName}  onChange={(e)=>chooseTeamHandler(e,item)} type="checkbox" className={styles.checkbox_round} />
                 </div>
               );
             })
