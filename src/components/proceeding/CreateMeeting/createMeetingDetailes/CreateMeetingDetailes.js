@@ -37,6 +37,10 @@ const CreateMeetingDetailes = () => {
   
   }
 
+  const nextStepHandler=()=>{
+    
+  }
+
 
   return (
     <main className={styles.proceeding_main}>
@@ -98,7 +102,7 @@ const CreateMeetingDetailes = () => {
             })
           : null}
       </section>
-      <div className={styles.nextStep}><button><span>مرحله بعد</span><img src={blueArrowImage} alt="مرحله بعد"/></button></div>
+      <div onClick={nextStepHandler} className={styles.nextStep}><button><span>مرحله بعد</span><img src={blueArrowImage} alt="مرحله بعد"/></button></div>
     </main>
   );
 };

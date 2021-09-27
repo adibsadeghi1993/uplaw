@@ -60,7 +60,9 @@ margin-top: 25px;
      padding: 0 17px 15px 40px;
      margin-top: 14px;
      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-     align-items:center
+     align-items:center;
+     cursor: pointer;
+     
  }
  .eachTeam button{
      background: transparent;
