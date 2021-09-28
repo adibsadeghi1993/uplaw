@@ -5,11 +5,18 @@ import riskImage from "../../../../asstes/risk.svg";
 import walletImage from "../../../../asstes/wallet.svg";
 import contractPdf from "../../../../asstes/pdfcontract.png";
 import blueArrowImage from "../../../../asstes/blue arrow.svg";
+import { useHistory } from "react-router";
 
-const ShowContract = ({ choosedContract,suggestedContracts,checkboxTitle="قرارداد امضا شود ؟",download="دریافت قرارداد" }) => {
+const ShowContract = ({path="" ,choosedContract,suggestedContracts,checkboxTitle="قرارداد امضا شود ؟",download="دریافت قرارداد" }) => {
   const [isChecked,setIsChecked]=useState(false)
+  const history=useHistory()
   const checkHander=()=>{
+    setIsChecked(true)
+  }
+  const clickHandler=()=>{
+    if(isChecked){
 
+    }
   }
   return (
     <main className={styles.main_showContract}>
@@ -60,9 +67,9 @@ const ShowContract = ({ choosedContract,suggestedContracts,checkboxTitle="قرا
         <div className={`${styles.nextStep_download} ${download ? styles.download_proceeding:null}`}>
          <div className={styles.signture_contract}>
          <label htmlFor="sign">{checkboxTitle}</label>
-          <input onChange={checkHander} type="checkbox" id="sign" />
+          <input onChange={checkHander} checked={isChecked} type="checkbox" id="sign" />
          </div>
-          <button>
+          <button onClick={clickHandler}>
             <span>{download}</span>
             <img src={blueArrowImage} alt="دریافت قرارداد" />
           </button>

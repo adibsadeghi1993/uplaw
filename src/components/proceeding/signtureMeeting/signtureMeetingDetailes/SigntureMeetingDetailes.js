@@ -6,7 +6,7 @@ import styles from "./signtureMeetingDetailes.module.css";
 
 const SigntureMeetingDetailes = () => {
   const [proceedingStatus, setProceedingStatus] = useState("createProceeding");
-  const [isChecked,setIsChecked]=useState(false)
+  
   const createProceedingHandler = () => {
     setProceedingStatus("createProceeding");
   };
@@ -54,6 +54,7 @@ const SigntureMeetingDetailes = () => {
         checkboxTitle="صورت جلسه امضا شود ؟"
         suggestedContracts="notExistedContracts"
         choosedContract="صورت جلسه ثبت شرکت"
+        path="/meeting/customerSigntureMeeting"
       
       />
     </div>

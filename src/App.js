@@ -23,6 +23,7 @@ function App() {
         <Route path="/contract" component={Contract} />
         <Route path="/meeting/setMeetingTime" component={SetMeetingTime} />
         <Route path="/meeting/signtureMeeting" component={SigntureMeeting} />
+        <Route path="/meeting/customerSigntureMeeting" component={CustomerSigntureMeeting} />
         <Route path="/meeting" component={CreateMeeting} />
        
         <Route path="/team" component={Team} />
