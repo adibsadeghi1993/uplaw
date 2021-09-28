@@ -4,13 +4,14 @@ import moment from "moment";
 import { TimePicker } from "antd";
 import styles from "./timePicker.module.css"
 
-const TimePickerComponent = ({setValue,value}) => {
+const TimePickerComponent = ({setValue,value,setTime}) => {
 
   const format = "HH:mm";
   const onChange = (time) => {
    
-    const dateTime=moment(time._d).format("hh:mm")
-    setValue(dateTime);
+    const dateTime=moment(time).format("hh:mm")
+    setValue(time);
+    setTime(dateTime)
 
   
   };

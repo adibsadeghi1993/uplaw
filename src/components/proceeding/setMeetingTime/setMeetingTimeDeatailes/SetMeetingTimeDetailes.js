@@ -13,6 +13,7 @@ import { setMeetingDate, setMeetingSubject, setMeetingTime } from "../../../../r
 const SetMeetingTimeDetailes = () => {
   const [proceedingStatus, setProceedingStatus] = useState("createProceeding");
   const [selectedOption, setSelectedOption] = useState(null);
+  const [value, setValue] = useState(null);
   const [time, setTime] = useState(null);
   const [date, setDate] = useState(null);
   const dispatch=useDispatch()
@@ -74,7 +75,7 @@ const SetMeetingTimeDetailes = () => {
      <div className={styles.proceeding_date_picker}>
        <MeetingDatePicker setDate={setDate}/>
      </div>
-     <div className={styles.proceeding_time_picker}><TimePickerComponent value={time} setValue={setTime}/></div>
+     <div className={styles.proceeding_time_picker}><TimePickerComponent setTime={setTime} value={value} setValue={setValue}/></div>
    </section>
    <div className={styles.nextStep}>
      <button onClick={nextStepHandler}>
