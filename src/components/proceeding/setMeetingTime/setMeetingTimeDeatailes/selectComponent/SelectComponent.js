@@ -26,6 +26,16 @@ callback(items.map((item)=>{
   return {label:item.volumeInfo.title,value:item.volumeInfo.title}
 }))
   }
+
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+      boxShadow:"none",
+      outline:"none",
+
+    }),
+  };
+
   return (
     <div>
       <AsyncSelect
@@ -33,6 +43,7 @@ callback(items.map((item)=>{
         loadOptions={loadOptions}
         defaultOptions={options}
          value={selectedOption}
+      styles={customStyles}
         isRtl={true}
         isSearchable={true}
         className="react-select-container"
