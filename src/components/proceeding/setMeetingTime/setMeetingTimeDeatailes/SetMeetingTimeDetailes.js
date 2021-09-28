@@ -6,19 +6,29 @@ import styles from "./setMeetingTimeDetailes.module.css";
 import TimePickerComponent from "./timePicker/TimePicker";
 import blueArrowImage from "../../../../asstes/blue arrow.svg"
 import SelectComponent from "./selectComponent/SelectComponent";
+import { useDispatch } from "react-redux";
+import { setMeetingDate, setMeetingSubject, setMeetingTime } from "../../../../redux/Actions/MeetingActions";
 
 
 const SetMeetingTimeDetailes = () => {
   const [proceedingStatus, setProceedingStatus] = useState("createProceeding");
   const [selectedOption, setSelectedOption] = useState(null);
-  const [value, setValue] = useState(null);
+  const [time, setTime] = useState(null);
   const [date, setDate] = useState(null);
+  const dispatch=useDispatch()
   const createProceedingHandler = () => {
     setProceedingStatus("createProceeding");
   };
   const previousProceedingHandler = () => {
     setProceedingStatus("previousProceeding");
   };
+
+  const nextStepHandler=()=>{
+    dispatch(setMeetingTime(time))
+    dispatch(setMeetingDate(date))
+    dispatch(setMeetingSubject(selectedOption))
+
+  }
 
   return (
     <div>
@@ -64,10 +74,10 @@ const SetMeetingTimeDetailes = () => {
      <div className={styles.proceeding_date_picker}>
        <MeetingDatePicker setDate={setDate}/>
      </div>
-     <div className={styles.proceeding_time_picker}><TimePickerComponent value={value} setValue={setValue}/></div>
+     <div className={styles.proceeding_time_picker}><TimePickerComponent value={time} setValue={setTime}/></div>
    </section>
    <div className={styles.nextStep}>
-     <button>
+     <button onClick={nextStepHandler}>
        <span>مرحله بعد</span>
        <img src={blueArrowImage} alt="مرحله بعد"/>
      </button>
