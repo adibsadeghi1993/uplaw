@@ -1,11 +1,46 @@
-import React from 'react'
+import axios from "axios";
+import React, { useState } from "react";
+import AsyncSelect from 'react-select/async';
+import "./selectComponent.css"
 
 const SelectComponent = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  const [selectedOption, setSelectedOption] = useState(null);
 
-export default SelectComponent
+  const options = [
+    { value: "chocolate", label: "Chocolate" },
+    { value: "strawberry", label: "Strawberry" },
+    { value: "vanilla", label: "Vanilla" },
+  ];
+  const handleChange = (selectedOption) => {
+    
+    setSelectedOption(selectedOption );
+    console.log(`Option selected:`, selectedOption);
+  };
+  console.log(selectedOption)
+  const loadOptions= async(inputText,callback)=>{
+    const response= await axios.get(`https://www.googleapis.com/books/v1/volumes?country
+    =US&projection=lite&printType=books&key=AIzaSyD6SlU9JUr7Z
+    -3SOOy0TfZTJtqv_EEqfZY&q=intitle:${inputText}&startIndex=0&maxResults=5`)
+    const {data:{items}}=response
+callback(items.map((item)=>{
+  return {label:item.volumeInfo.title,value:item.volumeInfo.title}
+}))
+  }
+  return (
+    <div>
+      <AsyncSelect
+        onChange={handleChange}
+        loadOptions={loadOptions}
+        defaultOptions={options}
+         value={selectedOption}
+        isRtl={true}
+        isSearchable={true}
+        className="react-select-container"
+        classNamePrefix="react-select"
+        placeholder="برای چه منظوری قصد تنظیم صورت جلسه دارید ؟ تایپ کنید یا از موارد پیشفرض انتخاب کنید"
+      />
+    </div>
+  );
+};
+
+export default SelectComponent;

@@ -5,6 +5,7 @@ import MeetingDatePicker from "./meetingDatePicker/MeetingDatePicker";
 import styles from "./setMeetingTimeDetailes.module.css";
 import TimePickerComponent from "./timePicker/TimePicker";
 import blueArrowImage from "../../../../asstes/blue arrow.svg"
+import SelectComponent from "./selectComponent/SelectComponent";
 
 
 const SetMeetingTimeDetailes = () => {
@@ -55,14 +56,7 @@ console.log(e.target.value)
       />
       <div>
         <div className={styles.select_option}>
-          <select onChange={adjustProceedingHandler} className={styles.select_proceeding}>
-            <option value="" selected>
-              برای چه منظوری قصد تنظیم صورت جلسه دارید؟ تایپ کنید یا از موارد
-              پیشفرض انتخاب کنید
-            </option>
-            <option value="forMystartup">برای استارتاپ خودم</option>
-            <option value="formycompany">برای شرکت</option>
-          </select>
+         <SelectComponent/>
         </div>
       </div>
    <section className={styles.date_and_time_picker}>
