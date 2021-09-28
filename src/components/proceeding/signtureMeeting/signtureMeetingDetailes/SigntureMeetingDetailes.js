@@ -1,21 +1,21 @@
-import React,{useState} from 'react'
-import ShowContract from '../../../contract/contractDoucument/showContract/ShowContract';
-import ContractHeader from '../../../userInfo/commonFiles/contractHeader/ContractHeader';
-import ProceedingHeader from '../../commonfiles/proceedingHeader/ProceedingHeader'
-import styles from "./signtureMeetingDetailes.module.css"
+import React, { useState } from "react";
+import ShowContract from "../../../contract/contractDoucument/showContract/ShowContract";
+import ContractHeader from "../../../userInfo/commonFiles/contractHeader/ContractHeader";
+import ProceedingHeader from "../../commonfiles/proceedingHeader/ProceedingHeader";
+import styles from "./signtureMeetingDetailes.module.css";
 
 const SigntureMeetingDetailes = () => {
-    const [proceedingStatus, setProceedingStatus] = useState("createProceeding");
-    const createProceedingHandler = () => {
-      setProceedingStatus("createProceeding");
-    };
-    const previousProceedingHandler = () => {
-      setProceedingStatus("previousProceeding");
-    };
-    return (
-        <div>
-          <ProceedingHeader/>
-          <div className={styles.chooseProceeding}>
+  const [proceedingStatus, setProceedingStatus] = useState("createProceeding");
+  const createProceedingHandler = () => {
+    setProceedingStatus("createProceeding");
+  };
+  const previousProceedingHandler = () => {
+    setProceedingStatus("previousProceeding");
+  };
+  return (
+    <div>
+      <ProceedingHeader />
+      <div className={styles.chooseProceeding}>
         <p
           onClick={createProceedingHandler}
           className={
@@ -48,10 +48,14 @@ const SigntureMeetingDetailes = () => {
         width="100%"
       />
 
-      <ShowContract download="دریافت صورتجلسه" checkboxTitle="صورت جلسه امضا شود ؟" suggestedContracts="notExistedContracts" choosedContract="صورت جلسه ثبت شرکت"/>
+      <ShowContract
+        download="دریافت صورتجلسه"
+        checkboxTitle="صورت جلسه امضا شود ؟"
+        suggestedContracts="notExistedContracts"
+        choosedContract="صورت جلسه ثبت شرکت"
+      />
+    </div>
+  );
+};
 
-        </div>
-    )
-}
-
-export default SigntureMeetingDetailes
+export default SigntureMeetingDetailes;

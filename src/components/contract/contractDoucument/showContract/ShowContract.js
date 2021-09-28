@@ -7,6 +7,10 @@ import contractPdf from "../../../../asstes/pdfcontract.png";
 import blueArrowImage from "../../../../asstes/blue arrow.svg";
 
 const ShowContract = ({ choosedContract,suggestedContracts,checkboxTitle="قرارداد امضا شود ؟",download="دریافت قرارداد" }) => {
+
+  const checkHander=()=>{
+    
+  }
   return (
     <main className={styles.main_showContract}>
       <section className={styles.showContract_sectionRight}>
@@ -56,7 +60,7 @@ const ShowContract = ({ choosedContract,suggestedContracts,checkboxTitle="قرا
         <div className={`${styles.nextStep_download} ${download ? styles.download_proceeding:null}`}>
          <div className={styles.signture_contract}>
          <label htmlFor="sign">{checkboxTitle}</label>
-          <input type="checkbox" id="sign" />
+          <input onChange={checkHander} type="checkbox" id="sign" />
          </div>
           <button>
             <span>{download}</span>

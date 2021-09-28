@@ -9,7 +9,7 @@ const SigntureMeeting = () => {
     return (
         <main className={styles.main_signture_meeting}>
       <section className={styles.profilesection}>
-        <UserProfile opacity="opacity" team={myTeam} />
+        <UserProfile subject="meeting" opacity="opacity" team={myTeam} />
       </section>
       <section className={styles.signture_meeting_info}>
         <div className={styles.signture_meeting_detail}>

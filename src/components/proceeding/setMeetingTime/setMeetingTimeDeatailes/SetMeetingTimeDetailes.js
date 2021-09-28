@@ -8,6 +8,7 @@ import blueArrowImage from "../../../../asstes/blue arrow.svg"
 import SelectComponent from "./selectComponent/SelectComponent";
 import { useDispatch } from "react-redux";
 import { setMeetingDate, setMeetingSubject, setMeetingTime } from "../../../../redux/Actions/MeetingActions";
+import { useHistory } from "react-router";
 
 
 const SetMeetingTimeDetailes = () => {
@@ -16,6 +17,7 @@ const SetMeetingTimeDetailes = () => {
   const [value, setValue] = useState(null);
   const [time, setTime] = useState(null);
   const [date, setDate] = useState(null);
+  const history=useHistory()
   const dispatch=useDispatch()
   const createProceedingHandler = () => {
     setProceedingStatus("createProceeding");
@@ -28,6 +30,10 @@ const SetMeetingTimeDetailes = () => {
     dispatch(setMeetingTime(time))
     dispatch(setMeetingDate(date))
     dispatch(setMeetingSubject(selectedOption))
+    if(time&&date&&selectedOption){
+      history.push("/meeting/signtureMeeting")
+    }
+   
 
   }
 
