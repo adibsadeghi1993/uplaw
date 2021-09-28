@@ -15,6 +15,7 @@ const ShowContract = ({path="" ,choosedContract,suggestedContracts,checkboxTitle
   }
   const clickHandler=()=>{
     if(isChecked){
+      history.push(path)
 
     }
   }
