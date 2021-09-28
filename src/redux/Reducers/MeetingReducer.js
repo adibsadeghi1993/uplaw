@@ -1,11 +1,11 @@
 import { CHOOSED_TEAM_FORM_MEETING, SET_MEETING_DATE, SET_MEETING_TIME } from "../Constants"
 
 const initialState={
-    setMeeting:{
+    
         date:"",
         time:"",
         teamForMeeting:{}
-    }
+    
 }
 export const meetingReducer=(state=initialState,{type,payload})=>{
     

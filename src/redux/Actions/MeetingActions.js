@@ -1,4 +1,5 @@
-import { CHOOSED_TEAM_FORM_MEETING, SET_MEETING_DATE, SET_MEETING_TIME } from "../Constants"
+import { CHOOSED_TEAM_FORM_MEETING, SET_MEETING_DATE, SET_MEETING_SUBJECT, SET_MEETING_TIME } from "../constants/MeetingConstants"
+
 
 export const choosedTeamForMeeting=(data)=>{
     return{
@@ -15,6 +16,12 @@ export const setMeetingDate=(data)=>{
 export const setMeetingTime=(data)=>{
     return{
      type:SET_MEETING_TIME,
+     payload:data
+    }
+}
+export const setMeetingSubject=(data)=>{
+    return{
+     type:SET_MEETING_SUBJECT,
      payload:data
     }
 }

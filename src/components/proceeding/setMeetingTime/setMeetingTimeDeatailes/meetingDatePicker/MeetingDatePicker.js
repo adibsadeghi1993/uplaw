@@ -2,13 +2,14 @@ import React from 'react'
 import DatePicker from "react-datepicker2";
 import styles from "./meetingDatePicker.module.css"
 
-const MeetingDatePicker = () => {
+const MeetingDatePicker = ({setDate}) => {
     const handleChange = (value) => {
         console.log(value)
     
         const now =value
         const formattedDate = now.format('jYYYY/jMM/jDD')
         console.log(formattedDate) 
+        setDate(formattedDate)
        
       };
     return (

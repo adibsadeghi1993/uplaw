@@ -10,15 +10,16 @@ import SelectComponent from "./selectComponent/SelectComponent";
 
 const SetMeetingTimeDetailes = () => {
   const [proceedingStatus, setProceedingStatus] = useState("createProceeding");
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [value, setValue] = useState(null);
+  const [date, setDate] = useState(null);
   const createProceedingHandler = () => {
     setProceedingStatus("createProceeding");
   };
   const previousProceedingHandler = () => {
     setProceedingStatus("previousProceeding");
   };
-  const adjustProceedingHandler=(e)=>{
-console.log(e.target.value)
-  }
+
   return (
     <div>
       <ProceedingHeader />
@@ -56,14 +57,14 @@ console.log(e.target.value)
       />
       <div>
         <div className={styles.select_option}>
-         <SelectComponent/>
+         <SelectComponent selectedOption={selectedOption} setSelectedOption={setSelectedOption}/>
         </div>
       </div>
    <section className={styles.date_and_time_picker}>
      <div className={styles.proceeding_date_picker}>
-       <MeetingDatePicker/>
+       <MeetingDatePicker setDate={setDate}/>
      </div>
-     <div className={styles.proceeding_time_picker}><TimePickerComponent/></div>
+     <div className={styles.proceeding_time_picker}><TimePickerComponent value={value} setValue={setValue}/></div>
    </section>
    <div className={styles.nextStep}>
      <button>

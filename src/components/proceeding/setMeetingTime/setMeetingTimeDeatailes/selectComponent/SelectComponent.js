@@ -1,10 +1,9 @@
 import axios from "axios";
-import React, { useState } from "react";
 import AsyncSelect from 'react-select/async';
 import "./selectComponent.css"
 
-const SelectComponent = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+const SelectComponent = ({setSelectedOption,selectedOption}) => {
+
 
   const options = [
     { value: "chocolate", label: "Chocolate" },
@@ -16,7 +15,7 @@ const SelectComponent = () => {
     setSelectedOption(selectedOption );
     console.log(`Option selected:`, selectedOption);
   };
-  console.log(selectedOption)
+
   const loadOptions= async(inputText,callback)=>{
     const response= await axios.get(`https://www.googleapis.com/books/v1/volumes?country
     =US&projection=lite&printType=books&key=AIzaSyD6SlU9JUr7Z
