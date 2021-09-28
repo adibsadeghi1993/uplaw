@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import styles from "./showContract.module.css";
 import saveTimeImage from "../../../../asstes/saveTime.svg";
 import riskImage from "../../../../asstes/risk.svg";
@@ -7,9 +7,9 @@ import contractPdf from "../../../../asstes/pdfcontract.png";
 import blueArrowImage from "../../../../asstes/blue arrow.svg";
 
 const ShowContract = ({ choosedContract,suggestedContracts,checkboxTitle="قرارداد امضا شود ؟",download="دریافت قرارداد" }) => {
-
+  const [isChecked,setIsChecked]=useState(false)
   const checkHander=()=>{
-    
+
   }
   return (
     <main className={styles.main_showContract}>
