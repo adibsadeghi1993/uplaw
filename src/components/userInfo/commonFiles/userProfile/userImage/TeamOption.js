@@ -4,7 +4,10 @@ import arrowDownImage from "../../../../../asstes/arrowdown team.svg";
 import blueArrowImage from "../../../../../asstes/blue arrow.svg";
 
 
-const TeamOption = ({ team,progress }) => {
+
+const TeamOption = ({progress,team }) => {
+ 
+ 
   let options = (
     <>
       <div className={styles.progress_bar}>

@@ -21,7 +21,7 @@ const AdjustContract = (props) => {
            
             <main className={styles.main_adjustContract}>
             <section className={styles.profilesection}>
-             <UserProfile opacity="opacity" team={team}/>
+             <UserProfile subject="adjust" opacity="opacity" team={team}/>
             </section>
             <section className={styles.adjustContract_info}>
              <div className={styles.adjustContract_detail}>

@@ -5,12 +5,13 @@ import confirmImage from "../../../../asstes/confirm.svg";
 import { useSelector } from "react-redux";
 import { selectedBands } from "./SelectedBands";
 import { SortedContract } from "./SortedContract";
+import { useHistory } from "react-router";
 
 const ContractInfo = () => {
     const [openQ, setOpenQ] = useState(false)
-    const state = useSelector((state) => state.contract.contract);
-    const { made } = state;
-   
+    const {contract, choosedContract}= useSelector((state) => state.contract);
+    const { made } = contract;
+  const history= useHistory()
     const [sortedBands, setSortedBands] = useState([])
 
 useEffect(() => {
@@ -24,6 +25,13 @@ useEffect(() => {
   const modalHandler=()=>{
       setOpenQ(!openQ)
   }
+  const nextStepHandler=()=>{
+if (choosedContract) {
+  history.push("/contract/signtureContract")
+  
+}
+  }
+  
   console.log(made);
   return (
     <section className={styles.main_contract_info}>
@@ -36,7 +44,7 @@ useEffect(() => {
           <div className={styles.confirm_contract}> <img src={confirmImage} alt="تکمیل اطلاعات"/></div>
           <div className={styles.get_contract_container}>
               <p>قرارداد شما آماده شد!</p>
-              <button className={styles.get_contract_btn}><span>دریافت قرارداد</span><img src={blueArrowImage} alt="دریافت قرارداد"/></button>
+              <button onClick={nextStepHandler} className={styles.get_contract_btn}><span>دریافت قرارداد</span><img src={blueArrowImage} alt="دریافت قرارداد"/></button>
           </div>
       </div>
     </section>

@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 import { UserInfoContext } from "../../../../common/contextInfo/ContextInfo";
 
 
-const UserImage = ({ team }) => {
+const UserImage = ({team}) => {
  
   let progress=null
   const context=useContext(UserInfoContext)
