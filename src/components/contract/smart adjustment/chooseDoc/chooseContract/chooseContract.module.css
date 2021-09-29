@@ -8,6 +8,9 @@
 .search_contract input{
    width: 60%;
 }
+.search_contract input::placeholder{
+    font-size: 0.75rem;
+}
 .legal_docs{
    
     font-size: 0.8rem;

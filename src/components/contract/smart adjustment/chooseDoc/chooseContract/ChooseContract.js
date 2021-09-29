@@ -4,12 +4,13 @@ import { fistContracts, secondContracts } from "./AllContract";
 import AboutContract from "./aboutContract/AboutContract";
 import { useSelector,useDispatch } from "react-redux";
 import { choosedContractAction } from "../../../../../redux/Actions/contractActions";
+import SelectContract from "./selectContract/SelectContract";
 
 
 const ChooseContract = () => {
  const {choosedContract}= useSelector(state=>state.contract)
  const dispatch = useDispatch()
-  
+ const [selectedOption, setSelectedOption] = useState("legal");
   const [docType, setDocType] = useState("legal");
   
 
@@ -40,7 +41,7 @@ useEffect(() => {
   return (
     <section>
       <div className={styles.search_contract}>
-        <input onChange={serchDocHandler} placeholder="نام سند مورد نظر خود را وارد کنید.برای مثال : قرارداداستخدام برنامه نویس" />
+        <SelectContract selectedOption={selectedOption} setSelectedOption={setSelectedOption}/>
         <p
           onClick={legalHandler}
           className={`${styles.legal_docs} ${
