@@ -13,6 +13,7 @@ import SigntureMeeting from "./components/proceeding/signtureMeeting/SigntureMee
 import CustomerSigntureMeeting from "./components/proceeding/customerSigntureMeeting/CustomerSigntureMeeting";
 import CustomerSigntureMeetingDetailes from "./components/proceeding/customerSigntureMeeting/custmoerSigntureMeetingDetailes/CustomerSigntureMeetingDetailes";
 import SigntureContract from "./components/contract/SigntureContract/SigntureContract";
+import ContractDocument from "./components/contract/contractDoucument/ContractDocument";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
       <Switch>
         <Route path="/auth/google" component={SignUp} />
         <Route path="/dashbord" component={Dashbord} />
-        <Route path="/contract/signtureContract" component={SigntureContract} />
+        <Route path="/contract/signtureContract" component={ContractDocument} />
         <Route path="/contract/:id" component={AdjustContract} />
        
         <Route path="/contract" component={Contract} />
