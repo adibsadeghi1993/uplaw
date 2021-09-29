@@ -1,6 +1,5 @@
 import React, { useState,useEffect } from "react";
 import styles from "./chooseContract.module.css";
-import { allContracts } from "./AllContract";
 import AboutContract from "./aboutContract/AboutContract";
 import { useSelector,useDispatch } from "react-redux";
 import { choosedContractAction } from "../../../../../redux/Actions/contractActions";
@@ -8,9 +7,9 @@ import SelectContract from "./selectContract/SelectContract";
 
 
 const ChooseContract = () => {
- const {choosedContract}= useSelector(state=>state.contract)
+ const {choosedContract,allContracts}= useSelector(state=>state.contract)
  const dispatch = useDispatch()
- const [selectedOption, setSelectedOption] = useState("legal");
+ const [selectedOption, setSelectedOption] = useState(null);
   const [docType, setDocType] = useState("legal");
   const [width, setWidth]   = useState(window.innerWidth);
 const updateDimensions = () => {
@@ -29,12 +28,17 @@ useEffect(() => {
   };
 
   const contractHandler=(name)=>{
+    // setSelectedOption(name)
       dispatch(choosedContractAction(name))
 
   }
+  // if (selectedOption) {
+  //   dispatch(choosedContractAction(selectedOption))
+    
+  // }
   const Num=allContracts.length
   const averageNum=Math.floor(Num/2)
-  let fistContracts=allContracts.slice(0,averageNum)
+  let firstContracts=allContracts.slice(0,averageNum)
   let secondContracts=allContracts.slice(averageNum)
 
 
@@ -44,7 +48,8 @@ useEffect(() => {
       <div className={styles.select_contract}>
       <SelectContract selectedOption={selectedOption} setSelectedOption={setSelectedOption}/>
       </div>
-        <p
+    <div className={styles.legal_business}>
+    <p
           onClick={legalHandler}
           className={`${styles.legal_docs} ${
             docType === "legal" ? styles.active : null
@@ -60,10 +65,11 @@ useEffect(() => {
         >
           اسناد کسب و کاری
         </p>
+    </div>
       </div>
      <div className={styles.sample_doc}>
        {width < 768 ? <> <div className={styles.fistContracts}>
-          {fistContracts.map((contract)=>{
+          {firstContracts.map((contract)=>{
               return <button onClick={()=>contractHandler(contract.name)} className={`${styles[contract.className]} ${contract.name === choosedContract ? styles.activeContract:null}`}>{contract.name}</button>
 
           })}
@@ -75,7 +81,7 @@ useEffect(() => {
           })}
 
       </div></>:<>
-      {fistContracts.map((contract)=>{
+      {firstContracts.map((contract)=>{
               return <button onClick={()=>contractHandler(contract.name)} className={`${styles[contract.className]} ${contract.name === choosedContract ? styles.activeContract:null}`}>{contract.name}</button>
 
           })}

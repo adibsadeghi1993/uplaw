@@ -6,8 +6,13 @@
   justify-content: space-between;
   width: 100%;
 }
-.select_contract{
-width: 60%;
+.select_contract {
+  flex: 3;
+}
+.legal_business {
+  display: flex;
+  flex: 2;
+  justify-content: space-around;
 }
 
 .legal_docs {
@@ -65,11 +70,7 @@ button:first-child {
   color: #3770e2;
 }
 
-
-
-
 @media (max-width: 1000px) {
-
   .legal_docs {
     font-size: 0.7rem;
   }
@@ -94,9 +95,18 @@ button:first-child {
 }
 
 @media (max-width: 768px) {
-    
   .search_contract {
-    display: none;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 87%;
+    margin: auto;
+  }
+  .select_contract {
+    width: 100%;
+  }
+  .legal_business {
+    width: 100%;
+    margin-top: 30px;
   }
 
   .fistContracts {
@@ -111,5 +121,13 @@ button:first-child {
   }
   .contract {
     flex-shrink: 0;
+  }
+}
+@media (max-width: 468px) {
+  .search_contract {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 89%;
+    margin: auto;
   }
 }
