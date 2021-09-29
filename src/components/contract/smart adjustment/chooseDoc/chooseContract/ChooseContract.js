@@ -32,10 +32,10 @@ useEffect(() => {
       dispatch(choosedContractAction(name))
 
   }
-  // if (selectedOption) {
-  //   dispatch(choosedContractAction(selectedOption))
+  if (selectedOption) {
+   
     
-  // }
+  }
   const Num=allContracts.length
   const averageNum=Math.floor(Num/2)
   let firstContracts=allContracts.slice(0,averageNum)

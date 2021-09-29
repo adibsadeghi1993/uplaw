@@ -1,14 +1,19 @@
 import axios from "axios";
 import AsyncSelect from 'react-select/async';
 import "./selectContract.css"
+import { useDispatch } from "react-redux";
+import { choosedContractAction } from "../../../../../../redux/Actions/contractActions";
 
 const SelectContract = ({setSelectedOption,selectedOption}) => {
 
-
+const dispatch = useDispatch()
  
   const handleChange = (selectedOption) => {
-    
+     console.log(selectedOption)
     setSelectedOption(selectedOption );
+    const nameContract=selectedOption.value
+    console.log(nameContract)
+    dispatch(choosedContractAction(nameContract))
     console.log(`Option selected:`, selectedOption);
   };
 

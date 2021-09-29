@@ -13,7 +13,7 @@ const SmartAdjustment = () => {
        
         <main className={styles.main_adjust}>
         <section className={styles.profilesection}>
-          <UserProfile opacity="opacity" team={team}/>
+          <UserProfile subject="adjust" opacity="opacity" team={team}/>
         </section>
         <section className={styles.adjust_info}>
          <div className={styles.adjust_detail}>
