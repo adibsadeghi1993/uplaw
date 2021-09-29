@@ -1,6 +1,6 @@
 import axios from "axios";
 import AsyncSelect from 'react-select/async';
-// import "./selectComponent.css"
+import "./selectContract.css"
 
 const SelectContract = ({setSelectedOption,selectedOption}) => {
 

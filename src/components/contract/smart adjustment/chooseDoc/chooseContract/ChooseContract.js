@@ -1,6 +1,6 @@
-import React, { useState,useEffect,useContext } from "react";
+import React, { useState,useEffect } from "react";
 import styles from "./chooseContract.module.css";
-import { fistContracts, secondContracts } from "./AllContract";
+import { allContracts } from "./AllContract";
 import AboutContract from "./aboutContract/AboutContract";
 import { useSelector,useDispatch } from "react-redux";
 import { choosedContractAction } from "../../../../../redux/Actions/contractActions";
@@ -12,10 +12,7 @@ const ChooseContract = () => {
  const dispatch = useDispatch()
  const [selectedOption, setSelectedOption] = useState("legal");
   const [docType, setDocType] = useState("legal");
-  
-
   const [width, setWidth]   = useState(window.innerWidth);
-
 const updateDimensions = () => {
     setWidth(window.innerWidth);
 }
@@ -35,13 +32,18 @@ useEffect(() => {
       dispatch(choosedContractAction(name))
 
   }
-  const serchDocHandler=(e)=>{
-    console.log(e.target.value)
-  }
+  const Num=allContracts.length
+  const averageNum=Math.floor(Num/2)
+  let fistContracts=allContracts.slice(0,averageNum)
+  let secondContracts=allContracts.slice(averageNum)
+
+
   return (
     <section>
       <div className={styles.search_contract}>
-        <SelectContract selectedOption={selectedOption} setSelectedOption={setSelectedOption}/>
+      <div className={styles.select_contract}>
+      <SelectContract selectedOption={selectedOption} setSelectedOption={setSelectedOption}/>
+      </div>
         <p
           onClick={legalHandler}
           className={`${styles.legal_docs} ${
