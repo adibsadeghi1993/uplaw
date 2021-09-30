@@ -4,6 +4,7 @@ import styles from "./CustomerSignture.module.css";
 import blueArrowImage from "../../../../asstes/blue arrow.svg";
 import addImage from "../../../../asstes/add.svg";
 import minesImage from "../../../../asstes/mines.svg";
+import DigitalSignture from "./digitalSignture/DigitalSignture";
 
 const CustomerSignture = ({downloadTitle="دریافت قرارداد",checkboxTitle="قرارداد امضا شود ؟"}) => {
   const [showQes, setShowQes] = useState([
@@ -75,13 +76,8 @@ const CustomerSignture = ({downloadTitle="دریافت قرارداد",checkboxT
                 <p>ترسیم امضا</p>
               </div>
               <div className={showQes[1].show?styles.show:styles.hide}>
-                <input className={styles.emptySpace_signture} />
-                <div className={styles.confirm_signture}>
-                  <button>
-                    <span>ثبت امضا</span>
-                    <img src={blueArrowImage} alt="تایید" />
-                  </button>
-                </div>
+                 <DigitalSignture/>
+               
               </div>
             </div>
           </article>

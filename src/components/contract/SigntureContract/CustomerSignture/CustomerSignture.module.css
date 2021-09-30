@@ -1,7 +1,7 @@
 .customerSignture{
    display: grid;
    grid-template-columns: 1fr;
-   width: 95%;
+   width: 91%;
    margin: auto;
    margin-bottom: 100px;
 
@@ -161,25 +161,7 @@ margin-right: 9px;
     margin-right: 46px;
 }
 
-.confirm_signture{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
-.confirm_signture button{
-    background: transparent;
-    border: none;
-    
-}
-.confirm_signture button span{
-    font-weight: 800;
-    font-size: 0.5rem;
-    margin-left: 6px;
-    color: #3770E2;
-}
-.confirm_signture button img{
-    height: 6px;
-}
+
 .signture_paragraf p{
     font-size: 00.5rem;
     font-weight: 500;
@@ -203,7 +185,7 @@ margin-right: 9px;
 }
 
 .main_draw{
-    padding: 8px 40px;
+    padding: 8px 20px;
     background: rgb(232, 232, 232,0.5);
     display: flex;
     flex-direction: column;

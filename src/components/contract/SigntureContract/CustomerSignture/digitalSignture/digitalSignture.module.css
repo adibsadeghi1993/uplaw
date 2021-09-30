@@ -1,0 +1,28 @@
+.signture {
+  display: flex;
+  flex-direction: column;
+}
+.canvas{
+  border:1px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+.signture_container{
+    background-color: red;
+    width: 100%;
+}
+
+.flex_btns {
+  background-color: yellow;
+  display: flex;
+  justify-content: space-between;
+}
+.saveButton {
+  background: transparent;
+  border: none;
+}
+
+.clearButton {
+  background: transparent;
+  border: none;
+}
