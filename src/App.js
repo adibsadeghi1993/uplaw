@@ -22,6 +22,7 @@ function App() {
         <Route path="/auth/google" component={SignUp} />
         <Route path="/dashbord" component={Dashbord} />
         <Route path="/contract/signtureContract" component={ContractDocument} />
+        <Route path="/contract/customerSigntureContract"  component={SigntureContract}/>
         <Route path="/contract/:id" component={AdjustContract} />
        
         <Route path="/contract" component={Contract} />

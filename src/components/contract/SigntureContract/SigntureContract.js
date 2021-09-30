@@ -20,7 +20,7 @@ const SigntureContract = () => {
             width="100%"
             ContractName={choosedContract}
           />
-          <CustomerSignture />
+          <CustomerSignture  />
         </div>
       </section>
     </main>

@@ -3,7 +3,7 @@ import UserImage from "./userImage/UserImage";
 import UserItems from "./userItems/UserItems";
 import styles from "./userProfile.module.css";
 
-const UserProfile = ({opacity,team,subject="advise"}) => {
+const UserProfile = ({opacity,team,subject="adjust"}) => {
  
 
   return (

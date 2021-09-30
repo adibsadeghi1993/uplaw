@@ -293,6 +293,18 @@ margin-right: 9px;
 .downloadbtn{
     display: none;
 }
+.disapperbtn{
+    display: none;
+}
+.signture_input{
+    height: 25px;
+    width: 65%;
+    border: none;
+    background: transparent;
+}
+.signture_input::placeholder{
+    font-size: 10px;
+}
 
 @media(min-width:481px){
     .customerSignture{
