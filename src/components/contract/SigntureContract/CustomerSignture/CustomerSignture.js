@@ -12,6 +12,7 @@ const CustomerSignture = ({downloadTitle="دریافت قرارداد",checkboxT
     { item: 2, show: false },
     { item: 3, show: false },
   ]);
+  const [showSignture, setShowSignture] = useState(false)
 
   const showHandler = (num) => {
     const oldShowQes = [...showQes];
@@ -21,6 +22,9 @@ const CustomerSignture = ({downloadTitle="دریافت قرارداد",checkboxT
     oldShowQes[num - 1] = updateItem;
     setShowQes(oldShowQes);
   };
+  const signtureHandler=()=>{
+    setShowSignture(true)
+  }
   return (
     <main className={styles.customerSignture}>
       <section className={styles.customerSignture_right}>
@@ -31,7 +35,7 @@ const CustomerSignture = ({downloadTitle="دریافت قرارداد",checkboxT
         </div>
       </section>
       <section className={styles.customerSignture_left}>
-        {/* <div className={styles.boredr}></div> */}
+     
         <div>
           <article className={`${styles.confirm_mobile_code} ${showQes[0].show?null:styles.hide_confirm_mobile_code}`}>
             <div onClick={() => showHandler(1)} className={styles.first_image}>
@@ -59,6 +63,7 @@ const CustomerSignture = ({downloadTitle="دریافت قرارداد",checkboxT
                     <span>ثبت کد تایید</span>
                     <img src={blueArrowImage} alt="تایید" />
                   </button>
+
                 </div>
               </div>
             </div>
@@ -94,10 +99,17 @@ const CustomerSignture = ({downloadTitle="دریافت قرارداد",checkboxT
                 <p>درخواست امضا از طرفین</p>
               </div>
               <div className={showQes[2].show ? styles.showThree:styles.hideThree}>
-                <p>ادیب صادقی</p>
-                <button>
+               <div className={styles.add_signture}>
+               <p>محسن خانی</p>
+                <button onClick={signtureHandler}>
                   <span>+ افزودن</span>
                 </button>
+               </div>
+               {showSignture ?<DigitalSignture/>:null}
+             
+             
+            
+    
               </div>
             </div>
           </article>

@@ -38,9 +38,9 @@
 }
 .customer_input_label label{
  font-weight: 800;
-font-size: 14px;
+font-size: 12px;
 line-height: 22px;
-margin-right: 9px;
+margin-right: 5px;
 }
 .confirm_mobile_code{
     display: flex;
@@ -58,7 +58,7 @@ margin-right: 9px;
 }
 .main_confirm{
     flex: 2;
-    margin-right: 35px;
+    margin-right: 15px;
     padding: 8px 40px 8px 15px;
     background: rgb(232, 232, 232,0.5);
     display: flex;
@@ -158,7 +158,7 @@ margin-right: 9px;
 }
 .main_draw{
     flex: 1;
-    margin-right: 46px;
+    margin-right: 15px;
 }
 
 
@@ -181,7 +181,7 @@ margin-right: 9px;
 }
 .main_request{
     flex: 1;
-    margin-right: 46px;
+    margin-right: 15px;
 }
 
 .main_draw{
@@ -269,9 +269,25 @@ margin-right: 9px;
 }
 .showThree{
     display: flex;
-    margin-top: 16px;
     align-items: center;
+    flex-direction: column;
 }
+.add_signture{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.showThree div:first-child p{
+   font-size: 10px;
+   margin-bottom: 0;
+}
+.showThree div:first-child button span{
+ font-size: 10px;
+}
+
+
 .downloadbtn{
     display: none;
 }
@@ -339,4 +355,9 @@ margin-right: 9px;
         background: none;
         border: none;
     }
+}
+@media(min-width:900px){
+    .customer_input_label label{
+       font-size: 14px;
+       }
 }

@@ -38,7 +38,7 @@ margin-top: 54px;
     height: 18px;
     border: 2px solid black;
 }
-.signture_contract label{
+.meeting_checkbox{
     font-size: 00.875rem;
     font-weight: 800;
     margin-right: 9px;
@@ -48,12 +48,7 @@ margin-top: 54px;
     border: none;
     cursor: pointer;
 }
-.nextStep_download button span{
-    font-weight: 800;
-    font-size: 00.875rem;
-    color: #3770E2;
-    margin-left: 12px;
-}
+
 .column_direction_next_step{
     display: flex;
     flex-direction: column;
@@ -61,6 +56,17 @@ margin-top: 54px;
 }
 .column_direction_next_step div:first-child{
 margin-bottom: 15px;
+}
+.contract_checkox{
+    font-size: 0.7rem;
+    font-weight: 800;
+    margin-right: 4px;
+}
+.contract_download{
+    font-size: 0.7rem;
+    font-weight: 800;
+    margin-right: 4px; 
+    color: #3770E2;
 }
 
 @media(min-width:481px){
@@ -96,6 +102,14 @@ margin-bottom: 15px;
     .contractPdf{
         width: 84%;
         height: 270px;
+    }
+    .contract_checkox{
+        font-size: 0.8rem;
+      
+    }
+    .contract_download{
+        font-size: 0.8rem;
+      
     }
  }
  

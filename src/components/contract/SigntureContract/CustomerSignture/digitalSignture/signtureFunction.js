@@ -7,7 +7,9 @@ export const signtureFunction = (width,sigCanvas,styles) => {
     if (width>=1300) {
       return <SignatureCanvas
             ref={sigCanvas}
-            penColor="green"
+            penColor="blue"
+            maxWidth="1.5"
+            throttle="12"
             canvasProps={{
               height: 100,
               width: 200,
@@ -77,6 +79,7 @@ export const signtureFunction = (width,sigCanvas,styles) => {
       return <SignatureCanvas
             ref={sigCanvas}
             penColor="green"
+            throttle={12}
             canvasProps={{
               height: 150,
               width: 150,
