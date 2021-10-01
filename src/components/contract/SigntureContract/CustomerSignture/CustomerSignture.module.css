@@ -292,6 +292,7 @@ margin-right: 9px;
     .customerSignture{
         width: 95%;
         margin: 0 0 100px 0;
+        margin: auto;
     }
     .customer_input_label{
         justify-content: flex-end;
