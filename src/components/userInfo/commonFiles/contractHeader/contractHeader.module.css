@@ -122,10 +122,6 @@ margin-bottom: 8px;
      .contractName{
          display: none;
      }
-    .contractHeader{
-        width: 90%;
-        margin: auto;
-    }
    .minute{
        display: none;
    }
@@ -137,10 +133,6 @@ margin-bottom: 8px;
     .contractName{
         display: none;
     }
-   .contractHeader{
-       width: 90%;
-       margin: auto;
-   }
   .minute{
       display: none;
   }

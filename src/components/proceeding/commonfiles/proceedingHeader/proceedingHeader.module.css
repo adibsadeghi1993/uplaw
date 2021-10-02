@@ -28,6 +28,13 @@
             top: -150%;
         }
       }
+      @media(max-width:839px){
+        .proceeding_create_team img{
+            position: absolute;
+            left: -3%;
+            top: -150%;
+        }
+      }
 
    @media(max-width:980px){
      .invite_title{

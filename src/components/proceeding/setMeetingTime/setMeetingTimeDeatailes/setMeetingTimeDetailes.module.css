@@ -37,27 +37,7 @@
 .select_proceeding {
   -webkit-appearance: none;
 }
-/* .select_option::after {
-  content: "";
-  border-width: 7px;
-  border-color: transparent;
-  border-top-color: #222;
-  border-style: solid;
-  display: inline-block;
-  position: absolute;
-  top: 20px;
-  left: 15px;
-  border-radius: 2px;
-} */
 
-/* .select_proceeding:hover {
-  border: none;
-  outline: none;
-}
-.select_proceeding:focus {
-  border: none;
-  outline: none;
-} */
 .date_and_time_picker {
   width: 100%;
   display: grid;

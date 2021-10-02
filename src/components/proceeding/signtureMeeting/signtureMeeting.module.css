@@ -27,10 +27,16 @@ color: #000000;
 margin-bottom: 25px;
 }
 
-
 @media(max-width:1200px){
     .signture_meeting_detail{
-        width: 80%;
+        width: 85%;
+    }
+ }
+
+
+@media(max-width:1000px){
+    .signture_meeting_detail{
+        width: 90%;
     }
  }
  

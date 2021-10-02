@@ -18,7 +18,6 @@
    margin-top: 90px;
    margin-left: auto;
    margin-right: auto;
- 
     
 }
 
@@ -35,7 +34,7 @@
 
 @media(max-width:768px){
     .signtureContract_detail{
-        width: 100%;
+        width: 90%;
     }
     .main_signtureContract{
         display: flex;
