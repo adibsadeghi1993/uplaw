@@ -167,6 +167,12 @@ margin-top: 25px;
     .myTeam{
         font-size: 0.85rem;
     }
+    .lastTeamName{
+        font-weight: 900;
+        font-size: 0.75rem;
+        margin-bottom: 0;
+      
+    }
 
 }
 @media(max-width:330px){

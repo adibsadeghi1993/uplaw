@@ -21,11 +21,17 @@
  
     
 }
+
 @media(max-width:1200px){
-   .signtureContract_detail{
-       width: 80%;
-   }
-}
+    .signtureContract_detail{
+        width: 80%;
+    }
+ }
+ @media(max-width:1000px){
+    .signtureContract_detail{
+        width: 90%;
+    }
+ }
 
 @media(max-width:768px){
     .signtureContract_detail{

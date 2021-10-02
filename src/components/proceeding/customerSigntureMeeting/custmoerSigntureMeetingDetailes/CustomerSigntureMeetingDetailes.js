@@ -14,7 +14,9 @@ const CustomerSigntureMeetingDetailes = () => {
     };
     return (
         <div>
-            <ProceedingHeader/>
+           <div className={styles.proceedingHeader_container}>
+           <ProceedingHeader/>
+           </div>
             <div className={styles.chooseProceeding}>
         <p
           onClick={createProceedingHandler}

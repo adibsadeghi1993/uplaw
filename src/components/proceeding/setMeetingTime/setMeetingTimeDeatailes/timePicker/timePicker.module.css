@@ -7,19 +7,10 @@
  outline: none;  
 }
 
-:global .ant-picker:focus{
- border: 1px solid rgba(0, 0, 0, 0.25) !important;
+:global p{
+ margin-bottom: 0;
+}
 
- outline: none;
-}
-:global .ant-picker:active{
-   border: 1px solid rgba(0, 0, 0, 0.25) !important;
-   outline: none;
-  }
-:global .ant-picker:hover {
-   border: 1px solid rgba(0, 0, 0, 0.25) !important;
-   outline: none; 
-}
 :global .ant-picker-footer button span{
     display: none;
 }
