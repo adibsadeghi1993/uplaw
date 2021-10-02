@@ -164,8 +164,10 @@
     margin-right: 25px;
     justify-content: space-between;
     flex: 1;
-    padding-bottom: 10px;
 
+}
+.get_contract_container p{
+    margin-bottom: 0;
 }
 .get_contract_btn{
     background: transparent;

@@ -4,9 +4,10 @@ import blueArrowImage from "../../../../../asstes/blue arrow.svg";
 import styles from "./digitalSignture.module.css";
 
 
-const DigitalSignture = () => {
+const DigitalSignture = ({setImageURL,setSigntureURL}) => {
   const [width, setWidth] = useState(window.innerWidth);
   const [signture, setSignture] = useState(null);
+ 
 
   const updateDimensions = () => {
     setWidth(window.innerWidth);
@@ -15,8 +16,16 @@ const DigitalSignture = () => {
     window.addEventListener("resize", updateDimensions);
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
-  const [imageURL, setImageURL] = useState(null);
-  const save = () => setImageURL(sigCanvas.current.toDataURL("image/png"));
+ 
+  const save = () => {
+    if(setImageURL){
+      setImageURL(sigCanvas.current.toDataURL("image/png"))
+    }
+    if(setSigntureURL){
+      setSigntureURL(sigCanvas.current.toDataURL("image/png"))
+    }
+
+  };
   const sigCanvas = useRef();
   const clear = () => sigCanvas.current.clear();
 

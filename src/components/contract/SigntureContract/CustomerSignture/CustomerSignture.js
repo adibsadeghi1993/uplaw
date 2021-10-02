@@ -13,6 +13,10 @@ const CustomerSignture = ({downloadTitle="دریافت قرارداد",checkboxT
     { item: 3, show: false },
   ]);
   const [showSignture, setShowSignture] = useState(false)
+  const [imageURL, setImageURL] = useState(null);
+  const [signtureURL, setSigntureURL] = useState(null);
+  console.log(imageURL)
+  console.log(signtureURL)
 
   const showHandler = (num) => {
     const oldShowQes = [...showQes];
@@ -81,7 +85,7 @@ const CustomerSignture = ({downloadTitle="دریافت قرارداد",checkboxT
                 <p>ترسیم امضا</p>
               </div>
               <div className={showQes[1].show?styles.show:styles.hide}>
-                 <DigitalSignture/>
+                 <DigitalSignture setImageURL={setImageURL}/>
                
               </div>
             </div>
@@ -105,11 +109,7 @@ const CustomerSignture = ({downloadTitle="دریافت قرارداد",checkboxT
                   <span>+ افزودن</span>
                 </button>
                </div>
-               {showSignture ?<DigitalSignture/>:null}
-             
-             
-            
-    
+               {showSignture ?<DigitalSignture setSigntureURL={setSigntureURL}/>:null}
               </div>
             </div>
           </article>
