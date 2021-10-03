@@ -5,7 +5,7 @@
 
 .profilesection{
     grid-column: 1/2;
-    background-color: #E5E5E5;
+    background-color: rgb(229, 229, 229,0.25);
     border-left: 0.35px solid #00000028;
 }
 .createteam_info{
