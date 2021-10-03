@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./PdfDoc.module.css";
-import blueArrowImage from "../../../../asstes/blue arrow.svg"
+import blueArrowImage from "../../../asstes/blue arrow.svg"
 
 const PdfDoc = ({checkboxTitle,downloadTitle}) => {
   return (

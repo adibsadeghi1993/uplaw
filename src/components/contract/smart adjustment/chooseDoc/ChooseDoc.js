@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styles from "./chooseDoc.module.css";
-import fingerImage from "../../../../asstes/finger.png";
 import ChooseContract from "./chooseContract/ChooseContract";
 import FingerImgae from "../../../common/fingerImgae/FingerImgae";
 

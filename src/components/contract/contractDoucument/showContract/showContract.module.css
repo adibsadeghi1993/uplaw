@@ -306,4 +306,9 @@ margin-top: 29px;
         padding: 10px 12px;
         font-size: 0.53rem;
     }
+    .contractPdf{
+        max-width: 250px;
+        height: 310px;
+       margin-right: 0;
+    }
  }

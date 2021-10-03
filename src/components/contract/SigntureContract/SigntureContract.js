@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./signtureContract.module.css";
-import ContractHeader from "../../userInfo/commonFiles/contractHeader/ContractHeader";
+
 import UserProfile from "../../userInfo/commonFiles/userProfile/UserProfile";
 import CustomerSignture from "./CustomerSignture/CustomerSignture";
 import { useSelector } from "react-redux";
+import Progress from "../../common/contractHeader/ContractHeader";
 
 const SigntureContract = () => {
   const { myTeam: team } = useSelector((state) => state.team);
@@ -15,12 +16,8 @@ const SigntureContract = () => {
       </section>
       <section className={styles.signtureContract_info}>
         <div className={styles.signtureContract_detail}>
-          <ContractHeader
-            opacity="1"
-            width="100%"
-            ContractName={choosedContract}
-          />
-          <CustomerSignture  />
+          <Progress opacityTow="1"  width="100%" ContractName={choosedContract} />
+          <CustomerSignture />
         </div>
       </section>
     </main>

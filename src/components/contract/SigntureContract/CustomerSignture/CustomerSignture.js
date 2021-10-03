@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import PdfDoc from "../../commonContractFiles/PdfDoc/PdfDoc";
+import PdfDoc from "../../../common/PdfDoc/PdfDoc";
 import styles from "./CustomerSignture.module.css";
 import blueArrowImage from "../../../../asstes/blue arrow.svg";
 import addImage from "../../../../asstes/add.svg";

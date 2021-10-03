@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import Progress from "../../../common/contractHeader/ContractHeader";
 import ProceedingHeader from "../../../common/proceedingHeader/ProceedingHeader";
 import ShowContract from "../../../contract/contractDoucument/showContract/ShowContract";
-import ContractHeader from "../../../common/contractHeader/ContractHeader";
+
 import styles from "./signtureMeetingDetailes.module.css";
 
 const SigntureMeetingDetailes = () => {
@@ -41,11 +42,11 @@ const SigntureMeetingDetailes = () => {
           صورت جلسه های قبلی
         </p>
       </div>
-      <ContractHeader
+      <Progress
         adjust="nonadjustent"
         mainContent="noneContent"
-        opacityTow="0.5"
-        opacityThree="0.5"
+        opacityTow="1"
+        opacityThree="1"
         stepOne="انتخاب تیم"
         stepTow="تاریخ و موضوع"
         noneBox="noneBox"

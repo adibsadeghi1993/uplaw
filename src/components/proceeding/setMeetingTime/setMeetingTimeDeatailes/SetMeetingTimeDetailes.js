@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ContractHeader from "../../../userInfo/commonFiles/contractHeader/ContractHeader";
+
 import MeetingDatePicker from "./meetingDatePicker/MeetingDatePicker";
 import styles from "./setMeetingTimeDetailes.module.css";
 import TimePickerComponent from "./timePicker/TimePicker";
@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 import { setMeetingDate, setMeetingSubject, setMeetingTime } from "../../../../redux/Actions/MeetingActions";
 import { useHistory } from "react-router";
 import ProceedingHeader from "../../../common/proceedingHeader/ProceedingHeader";
+import Progress from "../../../common/contractHeader/ContractHeader";
 
 
 const SetMeetingTimeDetailes = () => {
@@ -65,7 +66,7 @@ const SetMeetingTimeDetailes = () => {
           صورت جلسه های قبلی
         </p>
       </div>
-      <ContractHeader
+      <Progress
         adjust="nonadjustent"
         mainContent="noneContent"
         opacityTow="0.5"

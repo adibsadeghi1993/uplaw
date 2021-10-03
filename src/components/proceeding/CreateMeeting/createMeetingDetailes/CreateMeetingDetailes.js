@@ -3,10 +3,10 @@ import blueArrowImage from "../../../../asstes/blue arrow.svg";
 import { useDispatch, useSelector } from 'react-redux'
 import styles from "./createMeetingDetailes.module.css";
 
-import ContractHeader from "../../../userInfo/commonFiles/contractHeader/ContractHeader";
 import { choosedTeamForMeeting } from "../../../../redux/Actions/MeetingActions";
 import { useHistory } from "react-router";
 import ProceedingHeader from "../../../common/proceedingHeader/ProceedingHeader";
+import Progress from "../../../common/contractHeader/ContractHeader";
 
 
 
@@ -58,7 +58,7 @@ const CreateMeetingDetailes = () => {
         <p onClick={createProceedingHandler} className={proceedingStatus==="createProceeding"?styles.activeProceeding:null}>ایجاد صورت جلسه</p>
         <p onClick={previousProceedingHandler} className={proceedingStatus==="previousProceeding"?styles.activeProceeding:null}>صورت جلسه های قبلی</p>
       </div>
-      <ContractHeader adjust="nonadjustent" mainContent="noneContent" opacityTow="0.5" opacityThree="0.5" stepOne="انتخاب تیم" stepTow="تاریخ و موضوع" noneBox="noneBox" />
+      <Progress adjust="nonadjustent" mainContent="noneContent" opacityTow="0.5" opacityThree="0.5" stepOne="انتخاب تیم" stepTow="تاریخ و موضوع" noneBox="noneBox" />
         <p className={styles.guide_paragraf}>
           تیم مورد نظر خود را برای ساخت صورت جلسه انتخاب کنید.
         </p>

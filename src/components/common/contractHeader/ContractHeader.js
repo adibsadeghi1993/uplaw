@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from "./contractHeader.module.css"
-import basicContractInfoImage from "../../../../asstes/contracfirstinfo.svg"
-import spacialContractInfoImage from "../../../../asstes/specialinfocontract.svg"
-import confirmContractImage from "../../../../asstes/confirmcontract.svg"
+import basicContractInfoImage from "../../../asstes/contracfirstinfo.svg"
+import spacialContractInfoImage from "../../../asstes/specialinfocontract.svg"
+import confirmContractImage from "../../../asstes/confirmcontract.svg"
 
 
-const ContractHeader = ({noneBox,opacityTow="0.5",opacityThree=1,width="33.333%",ContractName,mainContent,stepOne="اطلاعات اولیه قرارداد",stepTow="مفاد تخصصی قرارداد"}) => {
+const Progress = ({noneBox,opacityTow="0.5",opacityThree=1,width="33.333%",ContractName,mainContent,stepOne="اطلاعات اولیه قرارداد",stepTow="مفاد تخصصی قرارداد"}) => {
     return (
         <section>
             <h1 className={`${styles.contractName} ${styles[mainContent]}`}>/تنظیم هوشمند/{ContractName}</h1>
@@ -35,4 +35,4 @@ const ContractHeader = ({noneBox,opacityTow="0.5",opacityThree=1,width="33.333%"
     )
 }
 
-export default ContractHeader
+export default Progress

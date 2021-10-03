@@ -1,9 +1,11 @@
 import React,{useContext,useState, useEffect} from 'react'
 import styles from "./adjustContract.module.css"
 import UserProfile from '../../userInfo/commonFiles/userProfile/UserProfile';
-import ContractHeader from '../../userInfo/commonFiles/contractHeader/ContractHeader';
+
 import ContractInfo from './contractInfo/ContractInfo';
 import { useSelector } from 'react-redux';
+import Progress from '../../common/contractHeader/ContractHeader';
+
 
 
 
@@ -25,7 +27,7 @@ const AdjustContract = (props) => {
             </section>
             <section className={styles.adjustContract_info}>
              <div className={styles.adjustContract_detail}>
-                <ContractHeader ContractName={ContractName} />
+                <Progress ContractName={ContractName} />
                 <ContractInfo/>
              </div>
             </section>
