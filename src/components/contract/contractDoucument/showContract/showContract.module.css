@@ -298,6 +298,9 @@ margin-top: 29px;
         align-items: center;
         justify-content: center;
     }
+    .suggest_contract p{
+        text-align: center;
+    }
    
  }
 
@@ -310,5 +313,8 @@ margin-top: 29px;
         max-width: 250px;
         height: 310px;
        margin-right: 0;
+    }
+    .suggest_contract p{
+        text-align: center;
     }
  }

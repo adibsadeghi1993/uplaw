@@ -21,7 +21,9 @@ export const signtureFunction = (width,sigCanvas,styles) => {
     if (width>=1000 && width<=1300) {
       return <SignatureCanvas
             ref={sigCanvas}
-            penColor="green"
+            penColor="blue"
+            maxWidth="1.5"
+            throttle="12"
             canvasProps={{
               height: 100,
               width: 180,
@@ -33,7 +35,9 @@ export const signtureFunction = (width,sigCanvas,styles) => {
     if (width<=1000 && width >= 850) {
       return <SignatureCanvas
             ref={sigCanvas}
-            penColor="green"
+            penColor="blue"
+            maxWidth="1.5"
+            throttle="12"
             canvasProps={{
               height: 100,
               width: 150,
@@ -56,7 +60,9 @@ export const signtureFunction = (width,sigCanvas,styles) => {
     if (width<=768 && width>=480) {
       return <SignatureCanvas
             ref={sigCanvas}
-            penColor="green"
+            penColor="blue"
+            maxWidth="1.5"
+            throttle="12"
             canvasProps={{
               height: 180,
               width: 200,
@@ -67,7 +73,9 @@ export const signtureFunction = (width,sigCanvas,styles) => {
     if (width<=480 && width>=380) {
       return <SignatureCanvas
             ref={sigCanvas}
-            penColor="green"
+            penColor="blue"
+            maxWidth="1.5"
+            throttle="12"
             canvasProps={{
               height: 150,
               width: 160,
@@ -78,8 +86,9 @@ export const signtureFunction = (width,sigCanvas,styles) => {
     if (width<380) {
       return <SignatureCanvas
             ref={sigCanvas}
-            penColor="green"
-            throttle={12}
+            penColor="blue"
+            maxWidth="1.5"
+            throttle="12"
             canvasProps={{
               height: 150,
               width: 150,
