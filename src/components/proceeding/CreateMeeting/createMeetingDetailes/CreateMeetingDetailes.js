@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import blueArrowImage from "../../../../asstes/blue arrow.svg";
 import { useDispatch, useSelector } from 'react-redux'
 import styles from "./createMeetingDetailes.module.css";
-import ProceedingHeader from "../../commonfiles/proceedingHeader/ProceedingHeader";
+
 import ContractHeader from "../../../userInfo/commonFiles/contractHeader/ContractHeader";
 import { choosedTeamForMeeting } from "../../../../redux/Actions/MeetingActions";
 import { useHistory } from "react-router";
+import ProceedingHeader from "../../../common/proceedingHeader/ProceedingHeader";
 
 
 
@@ -49,7 +50,10 @@ const CreateMeetingDetailes = () => {
   return (
     <main className={styles.proceeding_main}>
       <section className={styles.proceeding_main_section_one}>
-      <ProceedingHeader/>
+      <ProceedingHeader>
+      این صفحه برای ساختن هر نوع صورت جلسه ایه! تو میتونی برای هر صورت
+          جلسه اعضای مورد نظرت رو دعوت کنی و صورت جلسه رو درست کنی.
+      </ProceedingHeader>
       <div className={styles.chooseProceeding}>
         <p onClick={createProceedingHandler} className={proceedingStatus==="createProceeding"?styles.activeProceeding:null}>ایجاد صورت جلسه</p>
         <p onClick={previousProceedingHandler} className={proceedingStatus==="previousProceeding"?styles.activeProceeding:null}>صورت جلسه های قبلی</p>

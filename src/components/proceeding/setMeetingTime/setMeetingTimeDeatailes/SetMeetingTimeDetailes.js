@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ContractHeader from "../../../userInfo/commonFiles/contractHeader/ContractHeader";
-import ProceedingHeader from "../../commonfiles/proceedingHeader/ProceedingHeader";
 import MeetingDatePicker from "./meetingDatePicker/MeetingDatePicker";
 import styles from "./setMeetingTimeDetailes.module.css";
 import TimePickerComponent from "./timePicker/TimePicker";
@@ -9,6 +8,7 @@ import SelectComponent from "./selectComponent/SelectComponent";
 import { useDispatch } from "react-redux";
 import { setMeetingDate, setMeetingSubject, setMeetingTime } from "../../../../redux/Actions/MeetingActions";
 import { useHistory } from "react-router";
+import ProceedingHeader from "../../../common/proceedingHeader/ProceedingHeader";
 
 
 const SetMeetingTimeDetailes = () => {
@@ -39,7 +39,10 @@ const SetMeetingTimeDetailes = () => {
 
   return (
     <div>
-      <ProceedingHeader />
+      <ProceedingHeader>
+      این صفحه برای ساختن هر نوع صورت جلسه ایه! تو میتونی برای هر صورت
+          جلسه اعضای مورد نظرت رو دعوت کنی و صورت جلسه رو درست کنی.
+      </ProceedingHeader>
       <div className={styles.chooseProceeding}>
         <p
           onClick={createProceedingHandler}

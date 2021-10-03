@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import ProceedingHeader from "../../../common/proceedingHeader/ProceedingHeader";
 import ShowContract from "../../../contract/contractDoucument/showContract/ShowContract";
 import ContractHeader from "../../../userInfo/commonFiles/contractHeader/ContractHeader";
-import ProceedingHeader from "../../commonfiles/proceedingHeader/ProceedingHeader";
 import styles from "./signtureMeetingDetailes.module.css";
 
 const SigntureMeetingDetailes = () => {
@@ -15,7 +15,10 @@ const SigntureMeetingDetailes = () => {
   };
   return (
     <div>
-      <ProceedingHeader />
+      <ProceedingHeader>
+      این صفحه برای ساختن هر نوع صورت جلسه ایه! تو میتونی برای هر صورت
+          جلسه اعضای مورد نظرت رو دعوت کنی و صورت جلسه رو درست کنی.
+      </ProceedingHeader>
       <div className={styles.chooseProceeding}>
         <p
           onClick={createProceedingHandler}
