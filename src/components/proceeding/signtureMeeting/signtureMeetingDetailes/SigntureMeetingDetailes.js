@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProceedingHeader from "../../../common/proceedingHeader/ProceedingHeader";
 import ShowContract from "../../../contract/contractDoucument/showContract/ShowContract";
-import ContractHeader from "../../../userInfo/commonFiles/contractHeader/ContractHeader";
+import ContractHeader from "../../../common/contractHeader/ContractHeader";
 import styles from "./signtureMeetingDetailes.module.css";
 
 const SigntureMeetingDetailes = () => {
