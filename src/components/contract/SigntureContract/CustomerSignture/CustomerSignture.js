@@ -15,6 +15,8 @@ const CustomerSignture = ({downloadTitle="دریافت قرارداد",checkboxT
   const [showSignture, setShowSignture] = useState(false)
   const [imageURL, setImageURL] = useState(null);
   const [signtureURL, setSigntureURL] = useState(null);
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [confirmNumber, setConfirmNumber] = useState("");
   console.log(imageURL)
   console.log(signtureURL)
 
@@ -28,6 +30,12 @@ const CustomerSignture = ({downloadTitle="دریافت قرارداد",checkboxT
   };
   const signtureHandler=()=>{
     setShowSignture(true)
+  }
+  const phoneHandler=(e)=>{
+    setPhoneNumber(e.target.value)
+  }
+  const codeHandler=(e)=>{
+    setConfirmNumber(e.target.value)
   }
   return (
     <main className={styles.customerSignture}>
@@ -55,14 +63,14 @@ const CustomerSignture = ({downloadTitle="دریافت قرارداد",checkboxT
               </div>
               <div className={showQes[0].show?styles.show:styles.hide}>
                 <div className={styles.confirm_mobile}>
-                  <input className={styles.signture_input} type="text" placeholder="شماره تلفن خود را وارد کنید"/>
+                  <input className={styles.signture_input} onChange={phoneHandler} type="text" placeholder="شماره تلفن خود را وارد کنید"/>
                   <button>
                     <span>ارسال کد تایید</span>
                     <img src={blueArrowImage} alt="تایید" />
                   </button>
                 </div>
                 <div className={styles.confirm_code}>
-                  <input className={styles.signture_input} type="text" placeholder="کد ارسال شده را وارد کنید"/>
+                  <input className={styles.signture_input} onChange={codeHandler} type="text" placeholder="کد ارسال شده را وارد کنید"/>
                   <button>
                     <span>ثبت کد تایید</span>
                     <img src={blueArrowImage} alt="تایید" />
