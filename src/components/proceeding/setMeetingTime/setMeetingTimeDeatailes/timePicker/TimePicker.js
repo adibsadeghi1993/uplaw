@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import "antd/dist/antd.css";
+import React from "react";
+// import "antd/dist/antd.css";
+import 'antd/dist/antd.css';
 import moment from "moment";
 import { TimePicker } from "antd";
-import styles from "./timePicker.module.css"
+import  "./timePicke.css"
 
 const TimePickerComponent = ({setValue,value,setTime}) => {
 

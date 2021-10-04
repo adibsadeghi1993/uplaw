@@ -1,0 +1,43 @@
+.ant-picker-content{
+   flex-direction: row-reverse !important
+ }
+ .ant-picker{
+  border: 1px solid rgba(0, 0, 0, 0.25) !important;
+ 
+ outline: none;  
+ }
+ 
+ p{
+ margin-bottom: 0;
+ }
+ 
+ 
+ .ant-picker-footer button span{
+   display: none;
+ }
+ .ant-picker-footer button {
+  width: 100px;
+  background-color: #3770E2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .ant-picker-footer button:disabled{
+  background-color: #3770E2;
+  opacity: 0.5;
+ }
+ .ant-picker-footer{
+  position: relative;
+ }
+ .ant-picker-footer::before  {
+ content: "تنظیم ";
+ width: 25px;
+ height: 25px;
+ color: white;
+ position: absolute;
+ bottom: 13px;
+ right: 40px;
+ z-index: 2;
+ font-family: "anjoman";
+ font-weight: 800;
+ }
