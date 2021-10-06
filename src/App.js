@@ -14,6 +14,8 @@ import CustomerSigntureMeeting from "./components/proceeding/customerSigntureMee
 import CustomerSigntureMeetingDetailes from "./components/proceeding/customerSigntureMeeting/custmoerSigntureMeetingDetailes/CustomerSigntureMeetingDetailes";
 import SigntureContract from "./components/contract/SigntureContract/SigntureContract";
 import ContractDocument from "./components/contract/contractDoucument/ContractDocument";
+import CreateTeam from "./components/userInfo/createTeam/CreateTeam";
+import TeamInfo from "./components/userInfo/userTeams/teamsInfo/TeamInfo";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
         <Route path="/meeting/signtureMeeting" component={SigntureMeeting} />
         <Route path="/meeting/customerSigntureMeeting" component={CustomerSigntureMeeting} />
         <Route path="/meeting" component={CreateMeeting} />
+        <Route path="/createTeam" component={CreateTeam} />
+        <Route path="/teamInfo" component={TeamInfo} />
        
         <Route path="/team" component={Team} />
         <Route path="/" exact component={Home} />
