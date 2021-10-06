@@ -3,10 +3,10 @@ import Progress from '../../../common/contractHeader/ContractHeader';
 import ProceedingHeader from '../../../common/proceedingHeader/ProceedingHeader';
 import CustomerSignture from '../../../contract/SigntureContract/CustomerSignture/CustomerSignture';
 
-import styles from "./customerSigntureMeetingDetailes.module.css"
+import styles from "./customerSigntureDetailes.module.css"
 
 
-const CustomerSigntureMeetingDetailes = () => {
+const CustomerSigntureDetailes = () => {
     const [proceedingStatus, setProceedingStatus] = useState("createProceeding");
     const createProceedingHandler = () => {
       setProceedingStatus("createProceeding");
@@ -62,4 +62,4 @@ const CustomerSigntureMeetingDetailes = () => {
     )
 }
 
-export default CustomerSigntureMeetingDetailes
+export default CustomerSigntureDetailes

@@ -2,7 +2,7 @@ import React from 'react'
 import UserProfile from '../../userInfo/commonFiles/userProfile/UserProfile'
 import styles from "./customerSigntureMeeting.module.css"
 import { useSelector } from 'react-redux'
-import CustomerSigntureMeetingDetailes from './custmoerSigntureMeetingDetailes/CustomerSigntureMeetingDetailes'
+import CustomerSigntureDetailes from './custmoerSigntureDetailes/CustomerSigntureDetailes'
 
 const CustomerSigntureMeeting = () => {
     const { myTeam } = useSelector((state) => state.team);
@@ -15,7 +15,7 @@ const CustomerSigntureMeeting = () => {
           <div className={styles.signture_meeting_detail}>
             <h1 className={styles.main_title}>صورت جلسه/ </h1>
            
-            <CustomerSigntureMeetingDetailes/>
+          <CustomerSigntureDetailes/>
           </div>
         </section>
       </main>

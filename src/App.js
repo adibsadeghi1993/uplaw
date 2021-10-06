@@ -11,7 +11,7 @@ import CreateMeeting from "./components/proceeding/CreateMeeting/CreateMeeting";
 import SetMeetingTime from "./components/proceeding/setMeetingTime/SetMeetingTime";
 import SigntureMeeting from "./components/proceeding/signtureMeeting/SigntureMeeting";
 import CustomerSigntureMeeting from "./components/proceeding/customerSigntureMeeting/CustomerSigntureMeeting";
-import CustomerSigntureMeetingDetailes from "./components/proceeding/customerSigntureMeeting/custmoerSigntureMeetingDetailes/CustomerSigntureMeetingDetailes";
+import CustomerSigntureMeetingDetailes from "./components/proceeding/customerSigntureMeeting/custmoerSigntureDetailes/CustomerSigntureDetailes";
 import SigntureContract from "./components/contract/SigntureContract/SigntureContract";
 import ContractDocument from "./components/contract/contractDoucument/ContractDocument";
 import CreateTeam from "./components/userInfo/createTeam/CreateTeam";
