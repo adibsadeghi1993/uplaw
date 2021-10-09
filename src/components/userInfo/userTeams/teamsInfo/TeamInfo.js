@@ -3,13 +3,13 @@ import UserProfile from '../../commonFiles/userProfile/UserProfile'
 import UserTeams from '../userTeams/UserTeams'
 import TeamDocs from '../userTeamsDocs/TeamDocs'
 import styles from "./teamInfo.module.css"
-import uplawImage from "../../../../asstes/uplaw.png";
+import { useSelector } from 'react-redux'
 
 const TeamInfo = () => {
-  const initialState = [
-    { teamName: "آپلا", id: 1, memberShip: 8, src: uplawImage },
-  ];
-  const [team, setTeam] = useState(initialState);
+ 
+
+  const team = useSelector(state => state.team.myTeam)
+
 
     return (
         <main className={styles.teams}>
