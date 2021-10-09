@@ -204,6 +204,9 @@
   justify-content: center;
   align-items: center;
 }
+.pointerBtn{
+  cursor: pointer;
+}
 .adjustbtn img {
   margin-right: 5px;
 }
@@ -550,8 +553,7 @@ font-size: 14px;
   margin-top: 34px;
   flex-wrap: nowrap;
   overflow-x: scroll;
-  padding-left: 30px;
-  padding-right: 30px;
+ 
  }
  .completed_detailes_sectionFour{
    width: 80%;
@@ -566,6 +568,24 @@ font-size: 14px;
   left: -17%;
   bottom: -63%;
  }
+ .scroolSections{
+   width: 100%;
+ }
+ .scrool_sectionOne{
+ display: flex;
+ overflow-x: scroll;
+ padding-right: 30px;
+ padding-left: 30px;
+ justify-content: center;
+ }
+.scrool_sectionTow{
+  display: flex;
+  overflow-x: scroll;
+  padding-right: 30px;
+  padding-left: 30px;
+  justify-content: center;
+}
+ 
   
 }
 

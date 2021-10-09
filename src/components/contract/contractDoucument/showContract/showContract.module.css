@@ -1,0 +1,320 @@
+.main_showContract{
+    display: grid;
+    grid-template-columns: 57% 43%;
+    margin-top: 33px; 
+    margin-bottom: 50px;
+}
+.showContract_sectionRight{
+    grid-column: 1/2;
+}
+.showContract_sectionLeft{
+    grid-column: 2/3;  
+}
+.adjust_contract{
+    font-weight: 800;
+font-size: 0.875rem;
+line-height: 22px;
+}
+.contract_benifit{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%; 
+    margin-bottom: 68px;
+    align-items: center;
+    padding: 17px 0;
+    flex-wrap: wrap;
+    border-left:1px solid rgb(232, 232, 232,0.5);
+}
+.image_container{
+    height: 105px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgb(232, 232, 232,0.5);
+    border-radius: 27px;
+}
+
+.saveTime{
+    width: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 17px;
+}
+.saveTime p{
+    font-weight: 800;
+font-size: 0.81rem;
+margin-top: 13px;
+text-align: center;
+}
+.risk{
+    width: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 30px;
+}
+.risk p{
+    font-weight: 800;
+    font-size: 0.81rem;
+    margin-top: 13px;
+    text-align: center;
+}
+.wallet{
+    width: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+
+}
+.wallet p{
+    font-weight: 800;
+    font-size: 0.81rem;
+    margin-top: 13px;
+    text-align: center;
+}
+
+.contractPdf{
+    width: 95%;
+    height: 358px;
+    background-color: rgb(209, 29, 29);
+    margin-right: 15px;
+    box-shadow: 0px 104px 80px rgba(55, 112, 226, 0.07), 0px 43.4487px 33.4221px rgba(55, 112, 226, 0.0503198), 0px 23.2298px 17.869px rgba(55, 112, 226, 0.0417275), 0px 13.0224px 10.0172px rgba(55, 112, 226, 0.035), 0px 6.91611px 5.32008px rgba(55, 112, 226, 0.0282725), 0px 2.87795px 2.21381px rgba(55, 112, 226, 0.0196802);
+border-radius: 5px
+   
+}
+
+.suggest_contract p{
+font-weight: 800;
+font-size: 0.875rem;
+line-height: 22px;
+}
+.notExistedContracts{
+    display: none;
+}
+.contrac_btns{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contrac_btns button{
+    border: none;
+    background: #3770E2;
+border-radius: 27px;
+font-weight: 300;
+font-size: 10px;
+line-height: 16px;
+color: #FFFFFF;
+padding: 10px 17px;
+margin-top: 29px;
+}
+.contrac_btns button:last-child{
+    margin-right: 10px;
+}
+
+.important_point{
+    margin: 25px 15px 16px 0;
+    width: 95%;
+    background: rgb(232, 232, 232,0.5);
+    border-radius: 27px;
+    padding: 13px 23px 17px 15px;
+
+}
+.important_point p:first-child{
+    font-size: 0.5rem;
+    color: #3770E2;
+    font-weight: 500;
+}
+.important_point p:last-child{
+    font-size: 0.5rem;
+    margin-top: 10px;
+}
+.nextStep_download{
+    display: flex;
+    margin-right: 15px;
+    justify-content: space-between;
+}
+.signture_contract{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.signture_contract input{
+    width: 18px;
+    height: 18px;
+    border: 2px solid black;
+}
+.signture_contract label{
+    font-size: 00.875rem;
+    font-weight: 800;
+    margin-right: 9px;
+}
+.nextStep_download button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.nextStep_download button span{
+    font-weight: 800;
+    font-size: 00.875rem;
+    color: #3770E2;
+    margin-left: 12px;
+}
+.download_proceeding{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.download_proceeding div:first-child{
+    margin-bottom: 15px;
+}
+
+ @media(max-width:1250px){
+     .main_showContract{
+         display: grid;
+         grid-template-columns: 53% 47%;
+     }
+    .contract_benifit{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    .saveTime{
+        margin-bottom: 15px;
+    }
+    .risk{
+        margin-bottom: 15px;
+    }
+    
+} 
+
+
+@media(max-width:1150px){
+    .nextStep_download{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nextStep_download button{
+        margin-top: 20px;
+    }
+}
+@media(max-width:1000px){
+    .contractPdf{
+        height: 325px;
+    }
+ }
+
+@media(max-width:900px){
+   .contractPdf{
+       height: 300px;
+   }
+}
+
+@media(max-width:815px){
+    .image_container{
+        height: 95px;
+    }
+  .saveTime{
+     width: 90px;
+  }
+  .wallet{
+      width: 90px;
+  }
+  .risk{
+      width: 90px;
+  }
+}
+
+@media(max-width:768px){
+    .main_showContract{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       margin:auto;
+    }
+    .adjust_contract{
+        margin-top: 30px;
+        font-size: 0.8125rem;
+        text-align: center;
+    }
+    .contract_benifit{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-items: flex-start;
+        margin-top: 38px;
+        border: none;
+    }
+    .showContract_sectionLeft{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contractPdf{
+        max-width: 283px;
+        height: 358px;
+       margin-right: 0;
+    }
+    .important_point{
+        margin-right: 0; 
+    }
+    .image_container{
+        height: 94px;
+    }
+    .risk{
+        width: 87px;
+        margin-right: 20px;
+    }
+    .saveTime{
+        width: 87px;
+        margin-top: 0;
+    }
+    .wallet{
+        width: 87px;
+        margin-right: 10px;
+        margin-right: 20px;
+    }
+    .nextStep_download{
+        flex-direction: row;
+        width: 90%;
+        margin-bottom: 100px;
+    }
+    .nextStep_download button{
+        margin-top: 0;
+    }
+    .contrac_btns button{
+        padding: 10px 12px;
+    }
+    .download_proceeding{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .suggest_contract p{
+        text-align: center;
+    }
+   
+ }
+
+ @media(max-width:330px){
+    .contrac_btns button{
+        padding: 10px 12px;
+        font-size: 0.53rem;
+    }
+    .contractPdf{
+        max-width: 250px;
+        height: 310px;
+       margin-right: 0;
+    }
+    .suggest_contract p{
+        text-align: center;
+    }
+ }

@@ -1,0 +1,49 @@
+.main_proceeding{
+    grid-template-columns: 30% 70%;
+    display: grid;
+}
+
+.profilesection{
+    grid-column: 1/2;
+    background-color: rgb(229, 229, 229,0.25);
+    border-left: 0.35px solid #00000028;
+}
+.proceeding_info{
+    grid-column: 2/3;     
+}
+
+.proceeding_detail{
+    width: 74%;
+    margin: 90px auto 100px auto;  
+}
+.main_title{
+font-weight: 800;
+font-size: 20px;
+line-height: 31px;
+text-align: right;
+color: #000000;
+margin-bottom: 25px;
+}
+
+
+@media(max-width:1200px){
+    .proceeding_detail{
+        width: 80%;
+    }
+ }
+ 
+ @media(max-width:768px){
+     .proceeding_detail{
+         width: 90%;
+         margin-top: 50px;
+     }
+     .proceeding_detail h1{
+         text-align: center;
+     }
+     .main_proceeding{
+         display: flex;
+         flex-direction: column;
+    
+     }
+
+ }

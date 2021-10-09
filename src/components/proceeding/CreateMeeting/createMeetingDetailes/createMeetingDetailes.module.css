@@ -1,0 +1,194 @@
+.proceeding_main{
+    margin-top: 36px;
+}
+
+.chooseProceeding{
+    width: 100%;
+    margin: 35px 0;
+    display: flex;
+ 
+}
+.chooseProceeding p{
+    cursor: pointer;
+}
+
+.chooseProceeding p:last-child{
+    margin-right: 45px;
+}
+.activeProceeding{
+    font-weight: 900;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #3770E2;
+}
+
+
+ .guide_paragraf{
+font-weight: 600;
+font-size: 1.25rem;
+line-height: 31px;
+text-align: right;
+margin-top: 25px;
+ }
+ .user_teams{
+     margin-top: 20px;
+     background-color: rgb(232, 232, 232,0.25);
+     padding: 26px 0 17px 0;
+     border-radius: 26px;
+ }
+ .choose_team{
+     display: flex;
+     margin-bottom: 25px;
+     padding-right: 17px;
+ }
+ .activeTeam {
+     font-weight: 900;
+     padding-bottom: 12px;
+     border-bottom: 1px solid #3770E2;
+    
+ }
+ .myTeam{
+     cursor: pointer;
+ }
+ .teamIncludedMe{
+  
+     margin-right: 40px;
+     cursor: pointer;
+ }
+ 
+ .eachTeam{
+     display: flex;
+     padding: 0 17px 15px 40px;
+     margin-top: 14px;
+     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+     align-items:center;
+     cursor: pointer;
+     
+ }
+ .eachTeam button{
+     background: transparent;
+     border: none;
+     cursor: pointer;
+ }
+ .eachTeam button img{
+     margin-right: 30px;
+ }
+ .eachTeam button span{
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    color: #3770E2;
+ }
+ .team_and_image{
+     display: flex;
+     flex: 1;
+     align-items: center;
+ }
+ .team_and_image p{
+     margin-right: 10px;
+ }
+ .team_image{
+     height: 36px;
+     width: 36px;
+ }
+
+ .last{
+     border: none;
+ }
+ .lastTeamName{
+     font-weight: 900;
+   
+ }
+ .nextStep{
+     display: flex;
+     margin: 30px 0 123px 0;
+     justify-content: flex-end;
+ }
+ .nextStep button{
+     background: transparent;
+     border: none;
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+ }
+ .nextStep button span{
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    color: #3770E2;
+    margin-left: 8px;
+ }
+
+ .checkbox_round {
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid black;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox_round:checked {
+    background: #3770E2;
+    border: none;
+}
+
+ @media(max-width:768px){
+     .chooseProceeding{
+        display: flex;
+         justify-content: center;
+        
+     }
+    .guide_paragraf{
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    .teamIncludedMe{
+       
+        margin-right: 40px;
+    }
+
+}
+
+@media(max-width:480px){
+    .guide_paragraf{
+        font-size: 0.85rem;
+        text-align: center;
+    }
+    .chooseProceeding p{
+        font-size: 0.85rem;
+    }
+    .teamIncludedMe{
+        font-size: 0.85rem;
+        margin-right: 25px;
+    }
+    .myTeam{
+        font-size: 0.85rem;
+    }
+    .lastTeamName{
+        font-weight: 900;
+        font-size: 0.75rem;
+        margin-bottom: 0;
+      
+    }
+
+}
+@media(max-width:330px){
+    .guide_paragraf{
+        font-size: 0.85rem;
+        text-align: center;
+    }
+    .chooseProceeding p{
+        font-size: 0.85rem;
+    }
+    .teamIncludedMe{
+        font-size: 0.78rem;
+    }
+    .myTeam{
+        font-size: 0.78rem;
+    }
+
+}
+

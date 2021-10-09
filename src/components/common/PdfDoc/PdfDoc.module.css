@@ -1,0 +1,140 @@
+.contractPdf{
+    width: 250px;
+    height: 310px;
+    box-shadow: 0px 104px 80px rgba(55, 112, 226, 0.07), 0px 43.4487px 33.4221px rgba(55, 112, 226, 0.0503198), 0px 23.2298px 17.869px rgba(55, 112, 226, 0.0417275), 0px 13.0224px 10.0172px rgba(55, 112, 226, 0.035), 0px 6.91611px 5.32008px rgba(55, 112, 226, 0.0282725), 0px 2.87795px 2.21381px rgba(55, 112, 226, 0.0196802);
+border-radius: 5px;
+background-color: red;
+
+}
+
+.important_point{
+    margin: 25px 0 16px 0;
+    width: 100%;
+    background: rgb(232, 232, 232,0.5);
+    border-radius: 27px;
+    padding: 13px 23px 17px 15px;
+
+}
+.important_point p:first-child{
+    font-size: 0.5rem;
+    color: #3770E2;
+    font-weight: 500;
+}
+.important_point p:last-child{
+    font-size: 0.5rem;
+    margin-top: 10px;
+}
+.nextStep_download{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.signture_contract{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.signture_contract input{
+    width: 18px;
+    height: 18px;
+    border: 2px solid black;
+}
+.meeting_checkbox{
+    font-size: 00.875rem;
+    font-weight: 800;
+    margin-right: 9px;
+}
+.nextStep_download button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.column_direction_next_step{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.column_direction_next_step div:first-child{
+margin-bottom: 15px;
+}
+.contract_checkox{
+    font-size: 0.7rem;
+    font-weight: 800;
+    margin-right: 4px;
+}
+.contract_download{
+    font-size: 0.7rem;
+    font-weight: 800;
+    margin-right: 4px; 
+    color: #3770E2;
+}
+
+@media(min-width:481px){
+    .column_direction_next_step{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .column_direction_next_step div:first-child{
+     margin-bottom: 0;
+     }
+ }
+
+@media(min-width:768px){
+   .contractPdf{
+       width: 84%;
+       height: 250px;
+   }
+   .column_direction_next_step{
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+   }
+   .column_direction_next_step div:first-child{
+    margin-bottom: 0;
+    }
+    .column_direction_next_step button{
+        display: none;
+        }
+}
+
+@media(min-width:900px){
+    .contractPdf{
+        width: 84%;
+        height: 270px;
+    }
+    .contract_checkox{
+        font-size: 0.8rem;
+      
+    }
+    .contract_download{
+        font-size: 0.8rem;
+      
+    }
+ }
+ 
+@media(min-width:1000px){
+    .contractPdf{
+        width: 84%;
+        height: 290px;
+    }
+ }
+  
+@media(min-width:1100px){
+    .contractPdf{
+        width: 84%;
+        height: 310px;
+    }
+ }
+ @media(min-width:1200px){
+    .contractPdf{
+        width: 84%;
+        height: 325px;
+    }
+ }
+ @media(min-width:1300px){
+    .contractPdf{
+        width: 84%;
+        height: 358px;
+    }
+ }

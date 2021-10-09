@@ -1,13 +1,15 @@
 import React from "react";
 import UserImage from "./userImage/UserImage";
 import UserItems from "./userItems/UserItems";
-import  styles from "./userProfile.module.css";
+import styles from "./userProfile.module.css";
 
-const UserProfile = ({opacity,team}) => {
+const UserProfile = ({opacity,team,subject="adjust"}) => {
+ 
+
   return (
     <section className={styles.userProfile}>
       <UserImage team={team} />
-        <UserItems opacity={opacity}/>
+        <UserItems opacity={opacity} activeSubject={subject}/>
     </section>
   );
 };

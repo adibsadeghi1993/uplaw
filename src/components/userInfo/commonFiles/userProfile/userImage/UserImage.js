@@ -11,10 +11,18 @@ import TeamOption from "./TeamOption";
 import { useSelector } from "react-redux";
 import { UserInfoContext } from "../../../../common/contextInfo/ContextInfo";
 
-const UserImage = ({ team }) => {
+
+const UserImage = ({team}) => {
  
- const context = useContext(UserInfoContext)
- const {progress}=context
+  let progress=null
+  const context=useContext(UserInfoContext)
+ if (context){
+  progress=context.progress
+
+ }else{
+   progress="100"
+ }
+  
 
   const state = useSelector(state => state.userInfo.userInfo)
   console.log(state)

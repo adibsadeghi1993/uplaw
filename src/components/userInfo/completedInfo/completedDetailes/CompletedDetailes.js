@@ -1,7 +1,6 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import styles from "./completedDetailes.module.css";
 import completedImage from "../../../../asstes/completedpic.svg";
-
 import contractImage from "../../../../asstes/blueadjustcontract.svg";
 import signatureImage from "../../../../asstes/blue signature.svg";
 import adjustMeetingImage from "../../../../asstes/blueadjustmeeting.svg";
@@ -10,10 +9,40 @@ import rocketImage from "../../../../asstes/rocket3.svg";
 import teamImage from "../../../../asstes/team10.svg";
 import starImage from "../../../../asstes/starIcon.svg";
 import smileImage from "../../../../asstes/smiling face with sunglasses emoji 1 (1).svg";
-import { Docs } from "./Docs/Docs";
 import ProgressBar from "../../commonFiles/circleProgress/ProgressBar";
+import { useSelector } from "react-redux";
+import { useHistory } from "react-router";
 
 const CompletedDetailes = () => {
+   const state=useSelector(state=>state.contract)
+  const history= useHistory()
+   const {suggestedContracts}=state
+   const [width, setWidth] = useState(window.innerWidth);
+
+   const updateDimensions = () => {
+     setWidth(window.innerWidth);
+   };
+   useEffect(() => {
+     window.addEventListener("resize", updateDimensions);
+     return () => window.removeEventListener("resize", updateDimensions);
+   }, []);
+
+   let arrayOne=null
+   
+   let arrayTow=null
+
+   if (width<768) {
+     const middleLength=Math.ceil(suggestedContracts.length/2)
+     arrayOne=suggestedContracts.slice(0,middleLength)
+     arrayTow=suggestedContracts.slice(middleLength)
+     console.log(arrayOne,arrayTow) 
+   }
+
+   const adjustContractHandler=(adjustTiltle)=>{
+        history.push(`contract/${adjustTiltle}`)
+   }
+
+  
   
   return (
     <main className={styles.completed_detailes}>
@@ -51,9 +80,9 @@ const CompletedDetailes = () => {
         <p>اسناد پرطرفدار در آپلا</p>
       </div>
       <section className={styles.completed_detailes_sectionThree}>
-        {Docs.map((item) => {
+      {width>768 ?   suggestedContracts.map((item) => {
           return (
-            <div key={item.id} className={styles[item.className]}>
+            <div onClick={()=>adjustContractHandler(item.title)} key={item.id} className={`${styles[item.className]} ${styles.pointerBtn}`}>
               <div className={styles.eachDocs}>
                 <p>{item.title}</p>
               </div>
@@ -62,7 +91,43 @@ const CompletedDetailes = () => {
               </button>
             </div>
           );
+        }):
+      <section className={styles.scroolSections}>
+       <div className={styles.scrool_sectionOne}>
+       {arrayOne?.map((item)=>{
+          return <div key={item.id} onClick={()=>adjustContractHandler(item.title)}  className={`${styles[item.className]} ${styles.pointerBtn}`}>
+            <div className={styles.eachDocs}>
+              <p>{item.title}</p>
+            </div>
+            <button className={styles.adjustbtn}>
+              تنظیم هوشمند <img src={blueArrowImage}  alt="arrow" />
+            </button>
+          </div>
         })}
+       </div>
+       <div className={styles.scrool_sectionTow}>
+       {arrayTow?.map((item)=>{
+          return <div onClick={()=>adjustContractHandler(item.title)}  key={item.id} className={`${styles[item.className]} ${styles.pointerBtn}`}>
+            <div className={styles.eachDocs}>
+              <p>{item.title}</p>
+            </div>
+            <button className={styles.adjustbtn}>
+              تنظیم هوشمند <img src={blueArrowImage}  alt="arrow" />
+            </button>
+          </div>
+        })}
+       </div>
+        
+        
+        </section>
+       
+        
+        
+        
+        
+        
+        
+        }
       </section>
       <section className={styles.completed_detailes_sectionFour}>
         <p className={styles.raise_acount}>

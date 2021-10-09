@@ -1,0 +1,411 @@
+.customerSignture{
+   display: grid;
+   grid-template-columns: 1fr;
+   margin: auto;
+   margin-bottom: 100px;
+
+}
+.customerSignture_right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 47px;
+
+}
+.customerSignture_left{
+   margin:47px 0 100px 0;
+   display: flex;
+   position: relative;
+   width: 100%;
+   flex-direction: column;
+}
+.customerSignture_left div:last-child{
+    width: 100%;
+}
+.customer_input_label{
+   display: flex;
+   width: 100%;
+   flex-direction: row-reverse; 
+   margin-top: 18px;
+   justify-content: center;
+
+   
+}
+.customer_input_label input{
+    width: 18px;
+    height: 18px;
+}
+.customer_input_label label{
+ font-weight: 800;
+font-size: 0.75rem;
+line-height: 22px;
+margin-right: 5px;
+}
+.confirm_mobile_code{
+    display: flex;
+    width: 100%;
+    position: relative;
+   
+}
+.confirm_mobile_code::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(55, 112, 226, 0.3);
+    right: 22px;
+}
+.main_confirm{
+    flex: 2;
+    margin-right: 15px;
+    padding: 8px 15px 8px 15px;
+    background: rgb(232, 232, 232,0.5);
+    display: flex;
+    flex-direction: column;
+ border-radius: 27px;
+}
+.confirm_mobile{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(0, 0, 0,0.08);
+    margin-top: 15px;
+    align-items: center;
+}
+.confirm_mobile button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.confirm_mobile button span{
+    font-weight: 800;
+    font-size: 0.5rem;
+    margin-left: 6px;
+    color: #3770E2;
+}
+.confirm_mobile button img{
+    height: 6px;
+}
+.confirm_code{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(0, 0, 0,0.08);
+    margin-top: 15px;
+    align-items: center;
+}
+.confirm_code button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.confirm_code button span{
+    font-weight: 800;
+    font-size: 0.5rem;
+    margin-left: 6px;
+    color: #3770E2;
+}
+.confirm_code button img{
+    height: 6px;
+}
+
+.confirm_code p{
+    font-size: 00.5rem;
+    font-weight: 500;
+    line-height: 13px;
+    opacity: 0.5;
+}
+
+.confirm_person_paragraf p{
+    font-size: 00.5rem;
+    font-weight: 500;
+    line-height: 13px; 
+}
+.confirm_mobile p{
+    font-size: 00.5rem;
+    font-weight: 500;
+    line-height: 13px;
+    opacity: 0.5;
+}
+.draw_signture::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(55, 112, 226, 0.3);
+    right: 22px;
+    top: 0;
+}
+
+.request_signture::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 21px;
+    background-color: rgba(55, 112, 226, 0.3);
+    right: 22px;
+    top: 0;  
+}
+
+
+
+.draw_signture{
+    display: flex;
+    width: 100%;
+    position: relative;
+    padding-top: 20px;
+}
+.main_draw{
+    flex: 1;
+    margin-right: 15px;
+}
+.signture_paragraf{
+margin-bottom: 8px;
+}
+
+.signture_paragraf p{
+    font-size: 00.5rem;
+    font-weight: 500;
+}
+.emptySpace_signture{
+    width: 100%;
+    height: 48px;
+    border: 0.25px solid #000000;
+    opacity: 0.25;
+    margin-top: 14px;
+    margin-bottom: 6px;
+}
+.request_signture{
+    display: flex;
+    padding-top: 20px;
+    position: relative;
+}
+.main_request{
+    flex: 1;
+    margin-right: 15px;
+}
+
+.main_draw{
+    padding: 8px 20px;
+    background: rgb(232, 232, 232,0.5);
+    display: flex;
+    flex-direction: column;
+    border-radius: 27px;
+}
+
+.main_request{
+    padding: 15px 15px;
+    background: rgb(232, 232, 232,0.5);
+    display: flex;
+    flex-direction: column;
+    border-radius: 27px;
+}
+.main_request div:first-child p{
+    font-size: 00.5rem;
+    font-weight: 500;
+}
+
+.main_request div:last-child p{
+    font-size: 00.5rem;
+    font-weight: 500;
+}
+.main_request div:last-child button{
+    background: transparent;
+    font-size: 0.375rem;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;  
+}
+.first_image{
+    width: 45px;
+    height: 45px;
+    background: #3770E2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+.second_image{
+    width: 20px;
+    height: 20px;
+    background: #3770E2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-right: 13px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+.third_image{
+    width: 20px;
+    height: 20px;
+    background: #3770E2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    margin-right: 13px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+.hide{
+    display: none;
+    transition: 1s display ease-in;
+}
+.hide_confirm_mobile_code{
+    align-items: center;
+}
+.show{
+    transition: 1s display ease-in;
+}
+.hideThree{
+    display: none;
+    margin-top: 16px;
+}
+.showThree{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.add_signture{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.showThree div:first-child p{
+   font-size: 10px;
+   margin-bottom: 0;
+}
+.showThree div:first-child button span{
+ font-size: 10px;
+}
+
+
+.downloadbtn{
+    display: none;
+}
+.disapperbtn{
+    display: none;
+}
+.signture_input{
+    height: 25px;
+    width: 65%;
+    border: none;
+    background: transparent;
+}
+.signture_input::placeholder{
+    font-size: 0.625rem;
+}
+
+.placeholder{
+    width: 65%;
+    border: none;
+    background-color: transparent;
+    padding: 5px 5px 8px 0;
+    height: 25px;
+}
+.placeholder::placeholder{
+    font-size: 0.6rem;
+}
+
+@media(min-width:481px){
+    .customerSignture{
+        margin: 0 0 100px 0;
+        margin: auto;
+    }
+    .customer_input_label{
+        justify-content: flex-end;
+    }
+    .signture_input::placeholder{
+        font-size: 00.8rem;
+    }
+    .placeholder::placeholder{
+        font-size: 0.8rem;
+    }
+}
+
+@media(min-width:768px){
+    .customerSignture{
+        display: grid;
+        grid-template-columns: 46% 54%;
+         margin: auto;
+         margin-bottom: 100px;
+    }
+    .main_confirm{
+        margin-right: 15px;
+        padding-right: 20px;
+    }
+    .main_draw{
+        margin-right: 22px;
+        padding-right: 20px;
+    }
+    .main_request{
+        margin-right: 22px;
+        padding: 8px 20px 8px 15px;
+    }
+    .customer_input_label{
+        justify-content: flex-end;
+    }
+    .downloadbtn{
+       margin-top: 25px;
+       display: flex;
+       width: 180px;
+       text-align: end;
+       justify-content: flex-end;
+        
+    }
+    .downloadbtn button span{
+        margin-left: 8px;
+        color: #3770E2;
+       
+         
+     }
+    .downloadbtn button{
+        background: none;
+        border: none;
+    }
+    .confirm_mobile button span{
+        font-size: 0.45rem;
+        margin-left: 4px;
+    }
+    .signture_input::placeholder{
+        font-size: 9px;
+   
+    }
+    .placeholder::placeholder{
+        font-size: 0.5rem;
+    }
+}
+@media(min-width:900px){
+    .customer_input_label label{
+       font-size: 0.875rem;
+       }
+       .signture_input::placeholder{
+        font-size: 0.75rem;
+       
+    }
+    .confirm_mobile button span{
+        font-size: 0.5rem;
+        margin-left: 6px;
+    }
+    .placeholder::placeholder{
+        font-size: 0.6rem;
+    }
+       
+}
+
+@media(min-width:1150px){
+    
+    .placeholder::placeholder{
+        font-size: 0.75rem;
+    }
+       
+}

@@ -1,0 +1,57 @@
+.main_signture_meeting{
+    grid-template-columns: 30% 70%;
+    display: grid;
+}
+
+.profilesection{
+    grid-column: 1/2;
+    background-color: rgb(229, 229, 229,0.25);
+    border-left: 0.35px solid #00000028;
+}
+.signture_meeting_info{
+    grid-column: 2/3;     
+}
+
+.signture_meeting_detail{
+    width: 74%;
+   margin-top: 90px;
+   margin-left: auto;
+   margin-right: auto;     
+}
+.main_title{
+font-weight: 800;
+font-size: 20px;
+line-height: 31px;
+text-align: right;
+color: #000000;
+margin-bottom: 25px;
+}
+
+@media(max-width:1200px){
+    .signture_meeting_detail{
+        width: 85%;
+    }
+ }
+
+
+@media(max-width:1000px){
+    .signture_meeting_detail{
+        width: 90%;
+    }
+ }
+ 
+ @media(max-width:768px){
+     .signture_meeting_detail{
+         width: 87%;
+         margin-top: 50px;
+     }
+     .signture_meeting_detail h1{
+         text-align: center;
+     }
+     .main_signture_meeting{
+         display: flex;
+         flex-direction: column;
+    
+     }
+
+ }

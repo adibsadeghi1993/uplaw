@@ -75,6 +75,7 @@
       flex: 1;
       justify-content: start;
     align-items: center;
+    margin-right: 10px;
   }
   .selectJob_info_main button{
     
@@ -313,7 +314,7 @@
   @media(max-width:768px){
     .selectJob_info_main{
         overflow-x: scroll;
-        padding-left: 12px;
+       padding: 0 25px;
     } 
     .job_detaile{
         width: 100%;

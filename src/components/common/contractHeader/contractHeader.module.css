@@ -66,3 +66,77 @@ margin-bottom: 8px;
     height: 7px;
     border-radius: 26px;
 }
+
+.noneContent{
+    display: none;
+}
+.noneBox{
+    display: none;
+}
+
+@media(max-width:1250px){
+    .minute h3{
+        font-size: 0.9rem;
+    }
+    .minute p{
+        font-size: 0.9rem;
+    }
+}
+@media(max-width:1130px){
+    .minute h3{
+        font-size: 0.8rem;
+    }
+    .minute p{
+        font-size: 0.78rem;
+    }
+}
+
+@media(max-width:1000px){
+    .minute h3{
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+    .minute p{
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+}
+
+@media(max-width:915px){
+    .minute{
+        flex: 2;
+    }
+    .progress_contract{
+        flex: 6;
+    }
+    .minute h3{
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    .minute p{
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+}
+@media(max-width:768px){
+     .contractName{
+         display: none;
+     }
+   .minute{
+       display: none;
+   }
+   .contract_info{
+       display: none;
+   }
+}
+@media(max-width:481px){
+    .contractName{
+        display: none;
+    }
+  .minute{
+      display: none;
+  }
+  .contract_info{
+      display: none;
+  }
+}

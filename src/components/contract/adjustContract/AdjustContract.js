@@ -1,28 +1,34 @@
-import React,{useState} from 'react'
+import React,{useContext,useState, useEffect} from 'react'
 import styles from "./adjustContract.module.css"
-import uplawImage from "../../../asstes/uplaw.png"
 import UserProfile from '../../userInfo/commonFiles/userProfile/UserProfile';
-import ContractHeader from '../../userInfo/commonFiles/contractHeader/ContractHeader';
+
 import ContractInfo from './contractInfo/ContractInfo';
+import { useSelector } from 'react-redux';
+import Progress from '../../common/contractHeader/ContractHeader';
 
 
-const AdjustContract = () => {
-    const initialState = [
-        { teamName: "آپلا", id: 1, memberShip: 8, src: uplawImage },
-      ];
-      const [team, setTeam] = useState(initialState);
+
+
+const AdjustContract = (props) => {
+  const [ContractName, setCntractName] = useState("")
+  console.log(props)
+  console.log(props.match.params.id)
+  useEffect(() => {
+   setCntractName(props.match.params.id)
+  }, [props.match.params.id])
+
+  const team= useSelector(state=>state.team.myTeam)
+  console.log(team)
         return (
            
             <main className={styles.main_adjustContract}>
             <section className={styles.profilesection}>
-             <UserProfile opacity="opacity" team={team}/>
+             <UserProfile subject="adjust" opacity="opacity" team={team}/>
             </section>
             <section className={styles.adjustContract_info}>
              <div className={styles.adjustContract_detail}>
-                <ContractHeader/>
+                <Progress ContractName={ContractName} />
                 <ContractInfo/>
-              
-
              </div>
             </section>
           </main>

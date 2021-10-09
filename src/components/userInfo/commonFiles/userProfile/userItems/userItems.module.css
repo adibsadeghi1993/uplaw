@@ -92,6 +92,12 @@
   margin-bottom: 30px;
   margin-top: 37px;
 }
+.active{
+  background: linear-gradient(266.18deg, #3770e2 7.12%, #0938df 99.54%);
+}
+.inactive{
+  background-color: #ffffff;
+}
 .supportbtn {
   background-color: #ffffff;
   width: 100%;

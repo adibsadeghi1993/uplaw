@@ -5,9 +5,9 @@ import DashbordComponenst from "../components/userInfo/DashbordComponents";
 
 const Dashbord = () => {
   return (
-    // <ContextInfo>
+    <ContextInfo>
       <DashbordComponenst />
-    // </ContextInfo>
+    </ContextInfo>
   );
 };
 

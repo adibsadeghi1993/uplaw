@@ -14,7 +14,6 @@ const CreateTeam = () => {
          <div className={styles.teams_docs}>
          <TeamDocs/>
          <Meeting/>
-         
          </div>
         </section>
       </main>

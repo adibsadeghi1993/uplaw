@@ -1,14 +1,10 @@
 .about_contract {
   display: flex;
-  margin-top: 41px;
-  padding-right: 40px;
-  padding-bottom: 35px;
-  padding-top: 33px;
   background: rgb(229, 229, 229, 0.25);
-  padding-left: 37px;
+  padding: 33px 40px 35px 37px;
   border-radius: 27px;
   flex-direction: column;
-  margin-bottom: 50px;
+  margin: 41px 0px 100px 0px;
 }
 
 .contract_flex{
@@ -211,4 +207,14 @@ display: flex;
   .download_btn{
       opacity: 0;
   }
+}
+
+@media (max-width: 468px) {
+  .about_contract {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    padding:0 20px;
+  }
+
 }
