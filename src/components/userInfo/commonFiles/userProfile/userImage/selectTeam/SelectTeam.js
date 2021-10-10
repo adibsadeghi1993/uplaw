@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Select, { components } from "react-select";
-import uplawImage from "../../../../../../asstes/uplaw.png";
+
 import { useSelector } from "react-redux";
 import styles from "./selectTeam.module.css";
 
@@ -9,6 +9,7 @@ const SelectTeam = () => {
   console.log(userTeams);
 
   const [options, setOptions] = useState([]);
+ 
  
   useEffect(() => {
     const arrayTeam = userTeams.map((item) => {

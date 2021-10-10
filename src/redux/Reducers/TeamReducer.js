@@ -13,7 +13,8 @@ const initialState={
     { teamName: "حسینی فاینانس", id: 2, memberShip: 8, src: uplawImage },
     { teamName: "ساران فن آور گستران اطلس", id: 3, memberShip: 8, src: uplawImage },
 
-  ]
+  ],
+  selectedTeam:""
 
 
 }
