@@ -9,8 +9,8 @@ const TeamMember = () => {
   const teamMember = useSelector((state) => state.team.teamMember);
   const myContract = useSelector((state) => state.contract.myContract);
   return (
-    <section>
-      <div>
+    <section className={styles.main_section}>
+      <div className={styles.first_section}>
         <div className={styles.team_header}>
           <p>اعضای تیم</p>
           <img src={teamImage} alt="اعضای تیم" />
@@ -31,7 +31,7 @@ const TeamMember = () => {
             })}
         </div>
       </div>
-      <div>
+      <div className={styles.second_section}>
         <div className={styles.team_header}>
           <p>اخرین قراردادهای تنظیم شده با من</p>
           <img src={starImage} alt="اعضای تیم" />

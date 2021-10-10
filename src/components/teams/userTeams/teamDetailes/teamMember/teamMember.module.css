@@ -49,7 +49,7 @@
     display: flex;
     align-items: center;
     padding: 10px 15px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
 }
 .userImage{
@@ -79,7 +79,7 @@
     justify-content: space-between;
     align-items: center;
     padding:15px 15px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .my_cotracts div:last-child{
     border-bottom: none;
@@ -121,4 +121,19 @@ color: #3770E2;
 .adjust_new_contract button img{
     margin-right: 11px;
     height: 11px;
+}
+
+@media(min-width:900px){
+    .main_section{
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       grid-column-gap: 20px;
+    }
+    .first_section{
+        grid-column: 1/2;
+    }
+    .second_section{
+        grid-column: 2/3;
+    }
+   
 }

@@ -20,9 +20,13 @@ overflow-x: auto;
 }
 .specialTeam{
     margin-top: 27px;
+    padding-bottom: 11px;
 }
 .specialTeam p{
     color: #3770E2;
+}
+.finger{
+display: none;
 }
 @media(min-width:600px){
     .all_teams{
@@ -35,3 +39,33 @@ overflow-x: auto;
         margin-bottom: 5px;
     }
 }
+
+@media(min-width:768px){
+    .all_teams{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+    }
+    .specialTeam{
+        margin-top: 27px;
+       
+    }
+}
+
+@media(min-width:900px){
+    .finger{
+        display: block;
+    }
+    .all_teams{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 35px;
+    }
+    .specialTeam{
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+}
+
