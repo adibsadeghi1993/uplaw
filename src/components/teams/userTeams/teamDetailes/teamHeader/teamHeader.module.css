@@ -1,6 +1,7 @@
 .team{
     display: flex;
-overflow-x: scroll;
+overflow-x: auto;
+
 }
 .team p{
     flex-shrink: 0;
@@ -17,6 +18,20 @@ overflow-x: scroll;
     padding-bottom: 11px;
     border-bottom: 1px solid #3770E2;
 }
+.specialTeam{
+    margin-top: 27px;
+}
 .specialTeam p{
     color: #3770E2;
+}
+@media(min-width:600px){
+    .all_teams{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+    }
+    .specialTeam{
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
 }

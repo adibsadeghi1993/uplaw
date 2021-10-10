@@ -6,6 +6,7 @@ import TeamDetailes from './teamDetailes/TeamDetailes'
 
 const UserTeams = () => {
   const userTeams = useSelector(state => state.team.myTeam)
+  const adjustMeetings = useSelector(state => state.meeting.myAdjustMeeting)
     return (
         <main className={styles.createteam}>
         <section className={styles.profilesection}>
@@ -14,7 +15,7 @@ const UserTeams = () => {
         <section className={styles.createteam_info}>
          <div className={styles.teams_docs}>
        
-       <TeamDetailes/>
+       <TeamDetailes adjustMeetings={adjustMeetings}/>
          
          </div>
         </section>

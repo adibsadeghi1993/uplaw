@@ -7,9 +7,9 @@ const initialState = {
   teamForMeeting: {},
   meetingSubject: {},
   myAdjustMeeting:[
-    {id:1,adjustMeetingName:"صورت جلسه تغغیرات" ,adjustWith:"آپلا"},
-    {id:2,adjustMeetingName:"صورت جلسه تغغیرات" ,adjustWith:"آپلا"},
-    {id:3,adjustMeetingName:"صورت جلسه تغغیرات" ,adjustWith:"آپلا"},
+    {id:1,adjustMeetingName:"صورت جلسه تغییرات" ,adjustWith:"آپلا",date:"1400/25/8"},
+    {id:2,adjustMeetingName:"صورت جلسه تغییرات" ,adjustWith:"آپلا",date:"1400/25/8"},
+    {id:3,adjustMeetingName:"صورت جلسه تغییرات" ,adjustWith:"آپلا",date:"1400/25/8"},
   ]
 };
 export const meetingReducer = (state = initialState, { type, payload }) => {

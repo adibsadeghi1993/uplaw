@@ -7,7 +7,7 @@ const TeamHeader = () => {
   const [active, setActive] = useState("selected");
   return (
     <section>
-      <div>
+      <div className={styles.all_teams}>
         <div className={styles.team}>
           <p
             onClick={() => setActive("selected")}
