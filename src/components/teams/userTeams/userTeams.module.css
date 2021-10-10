@@ -6,7 +6,6 @@
 
 .teams_docs{
     width: 90%;
-    background-color: red;
     margin: auto;
     margin-top: 60px;
 }
@@ -21,7 +20,7 @@
     
     .profilesection{
         grid-column: 1/2;
-        background-color: #E5E5E5;
+        background: rgba(232, 232, 232,0.25);
         border-left: 0.35px solid #00000028;
     }
     .createteam_info{

@@ -22,10 +22,14 @@ const initialState={
   ],
   selectedTeam:"",
    teamMember:[
-     {id:1,name:"محسن خانی"},
-     {id:2,name:"سارا کریمی صفت"},
-     {id:3,name:"سامان یوسفی"},
-     {id:4,name:"رضا حسین زاده"},
+     {id:1,name:"محسن خانی",src:user1},
+     {id:2,name:"سارا کریمی صفت",src:user2},
+     {id:3,name:"سامان یوسفی",src:user3},
+     {id:4,name:"رضا حسین زاده",src:user4},
+     {id:5,name:"رضا حسین زاده",src:user4},
+     {id:6,name:"رضا حسین زاده",src:user4},
+     {id:7,name:"رضا حسین زاده",src:user4},
+     {id:8,name:"رضا حسین زاده",src:user4},
    ]
 
 
