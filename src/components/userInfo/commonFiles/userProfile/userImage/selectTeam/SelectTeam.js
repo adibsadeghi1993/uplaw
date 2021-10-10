@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Select, { components } from "react-select";
 
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import styles from "./selectTeam.module.css";
+import { selectedTeamAction } from "../../../../../../redux/Actions/TeamActions";
 
 const SelectTeam = () => {
   const userTeams = useSelector((state) => state.team.myTeam);
+  const dispatch = useDispatch()
   console.log(userTeams);
 
   const [options, setOptions] = useState([]);
@@ -23,6 +25,7 @@ const SelectTeam = () => {
     console.log(arrayTeam);
 
     setOptions(arrayTeam);
+    dispatch(selectedTeamAction(arrayTeam[0].value))
   }, [userTeams]);
 
   console.log(options);
@@ -40,8 +43,10 @@ const SelectTeam = () => {
       <span style={{ marginRight: "8px" }}> {props.data.label}</span>
     </Option>
   );
-  const onchange = (adib) => {
-    console.log(adib);
+  const onchange = (team) => {
+    console.log(team);
+    dispatch(selectedTeamAction(team.value))
+
   };
 
   const ValueOption = (props) => (

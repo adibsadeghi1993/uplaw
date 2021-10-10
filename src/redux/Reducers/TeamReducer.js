@@ -1,4 +1,6 @@
+
 import uplawImage from "../../asstes/uplaw.png"
+import { SELECTED_TEAM } from "../constants/TeamConstants"
 
 
 const initialState={
@@ -21,7 +23,18 @@ const initialState={
 
 
 
-export const teamReducer=(state=initialState,action)=>{
-   return state
+export const teamReducer=(state=initialState,{type,payload})=>{
+ 
+  switch (type) {
+    case SELECTED_TEAM:{
+      return {...state,selectedTeam:payload}
+    }
+      
+      
+  
+    default:
+      return state
+  }
+   
 
 }
