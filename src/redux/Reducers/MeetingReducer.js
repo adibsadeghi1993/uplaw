@@ -6,6 +6,11 @@ const initialState = {
   time: "",
   teamForMeeting: {},
   meetingSubject: {},
+  myAdjustMeeting:[
+    {id:1,adjustMeetingName:"صورت جلسه تغغیرات" ,adjustWith:"آپلا"},
+    {id:2,adjustMeetingName:"صورت جلسه تغغیرات" ,adjustWith:"آپلا"},
+    {id:3,adjustMeetingName:"صورت جلسه تغغیرات" ,adjustWith:"آپلا"},
+  ]
 };
 export const meetingReducer = (state = initialState, { type, payload }) => {
   switch (type) {

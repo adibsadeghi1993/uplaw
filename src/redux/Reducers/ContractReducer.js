@@ -35,6 +35,14 @@ const initialState={
       {name:"قرارداد استخدام کارشناس تولید محتوا" ,id:8,className:"contract"},
       {name:"همکاری با سئوکار",id:4, className:"contract"}
        
+  ],
+
+  myContract:[
+    {id:1,contractName:"تفاهمنامه سهامداران"},
+    {id:2,contractName:"قرارداد استخدام برنامه نویس"},
+    {id:3,contractName:"اساسنامه شرکت آپلا"},
+    {id:4,contractName:"اساسنامه شرکت آپلا"},
+  
   ]
 
 
