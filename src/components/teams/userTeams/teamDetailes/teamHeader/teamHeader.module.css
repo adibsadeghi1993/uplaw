@@ -1,0 +1,19 @@
+.team{
+    display: flex;
+overflow-x: scroll;
+}
+.team p{
+    flex-shrink: 0;
+    font-size: 1rem;
+}
+.myTeam{
+    margin-right: 40px; 
+}
+.serchTeam{
+    margin-right: 40px;
+}
+.active{
+    font-weight: 900;
+    padding-bottom: 11px;
+    border-bottom: 1px solid #3770E2;
+}

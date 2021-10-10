@@ -25,12 +25,3 @@
    margin: 0 auto;
  }
 }
-.MuiStepConnector-vertical{
- display: flex;
- flex-direction: row-reverse;
- 
-}
-.MuiStepConnector-line{
-  color: blue;
-  width: 3px;
-}

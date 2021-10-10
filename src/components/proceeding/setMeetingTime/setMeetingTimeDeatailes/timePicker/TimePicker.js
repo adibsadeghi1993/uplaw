@@ -1,8 +1,10 @@
 import React from "react";
-// import "antd/dist/antd.css";
-import 'antd/dist/antd.css';
+
 import moment from "moment";
 import { TimePicker } from "antd";
+import "antd/lib/time-picker/style"
+import 'antd/lib/date-picker/style/css'
+
 import  "./timePicke.css"
 
 const TimePickerComponent = ({setValue,value,setTime}) => {
