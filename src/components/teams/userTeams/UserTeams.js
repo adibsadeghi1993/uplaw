@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./userTeams.module.css"
 import { useSelector } from 'react-redux'
-import UserProfile from '../userInfo/commonFiles/userProfile/UserProfile'
+import UserProfile from '../../userInfo/commonFiles/userProfile/UserProfile'
 
 const UserTeams = () => {
   const userTeams = useSelector(state => state.team.myTeam)

@@ -1,5 +1,6 @@
 import React from 'react'
-import UserTeams from '../components/teams/UserTeams'
+import UserTeams from '../components/teams/userTeams/UserTeams'
+
 import CreateTeam from '../components/userInfo/createTeam/CreateTeam'
 // import TeamInfo from '../components/userInfo/userTeams/teamsInfo/TeamInfo'
 
