@@ -2,9 +2,10 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import UserProfile from '../../userInfo/commonFiles/userProfile/UserProfile';
 import styles from "./myTeam.module.css"
+import MyTeamDetailes from './teamDetailes/MyTeamDetailes';
 
 const MyTeam = () => {
-    const selectedTeam = useSelector((state) => state.team.selectedTeam);
+    
     const userTeams = useSelector(state => state.team.myTeam)
     return (
         <main className={styles.createteam}>
@@ -13,9 +14,9 @@ const MyTeam = () => {
         </section>
         <section className={styles.createteam_info}>
          <div className={styles.teams_docs}>
-           <h1>/{selectedTeam}</h1>
-       
-      
+         
+            <MyTeamDetailes teams={userTeams} />
+              
          
          </div>
         </section>

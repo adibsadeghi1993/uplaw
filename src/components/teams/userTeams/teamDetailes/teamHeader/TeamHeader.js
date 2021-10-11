@@ -8,6 +8,7 @@ const TeamHeader = () => {
   const [active, setActive] = useState("selected");
   return (
     <section>
+      <h1 className={styles.selectedTeam}>/{selectedTeam}</h1>
         <div className={styles.finger}>
         <FingerImgae>
          تواین صفحه میتونی تیم هایی که توش عضو هستی یا داری رو ببینی،میتونی اونهارو مدیریت کنی یا تیم جدید ایجاد کنی.

@@ -25,6 +25,9 @@ overflow-x: auto;
 .specialTeam p{
     color: #3770E2;
 }
+.selectedTeam{
+    display: none;
+}
 .finger{
 display: none;
 }
@@ -54,6 +57,9 @@ display: none;
 
 @media(min-width:900px){
     .finger{
+        display: block;
+    }
+    .selectedTeam {
         display: block;
     }
     .all_teams{
