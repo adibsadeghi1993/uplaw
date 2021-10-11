@@ -104,6 +104,7 @@ margin-right: 20px;
 .adjust_new_contract{
     display: flex;
     justify-content: flex-end;
+    cursor: pointer;
 }
 .adjust_new_contract button{
     background: transparent;
@@ -121,6 +122,16 @@ color: #3770E2;
 .adjust_new_contract button img{
     margin-right: 11px;
     height: 11px;
+}
+.edit_user{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+.edit_user img{
+width: 20px;
+height: 20px;
 }
 
 @media(min-width:900px){

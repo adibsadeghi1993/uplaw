@@ -62,6 +62,37 @@ color: #3770E2;
 .all_adjust_meeting article:last-child{
     border-bottom: none;
 }
+.sub_teams{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sub_teams_image img{
+width: 67px;
+}
+.create_sub_team{
+    margin-right: 15px;
+}
+.create_sub_team button{
+background: transparent;
+border: none;
+cursor: pointer;
+display: flex;
+align-items: center;
+margin: 6px;
+}
+.create_sub_team button span{
+    font-weight: 800;
+font-size: 0.5rem;
+line-height: 13px;
+color: #3770E2;
+}
+
+.create_sub_team button img{
+    width: 18px;
+    height: 10px;
+    margin-right: 10px;
+}
 
 @media(min-width:600px){
    .meeting_date{
@@ -70,6 +101,9 @@ color: #3770E2;
    .meeting_with{
        display: block;
    }
+   .sub_teams_image img{
+    width: 80px;
+    }
 }
 @media(min-width:768px){
     .meeting_date{
@@ -87,5 +121,8 @@ color: #3770E2;
     .meeting_with{
         display: block;
     }
+    .sub_teams_image img{
+        width: 100px;
+        }
  }
 
