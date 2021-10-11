@@ -8,6 +8,7 @@ const UserTeams = ({userType}) => {
   const userTeams = useSelector(state => state.team.myTeam)
   const adjustMeetings = useSelector(state => state.meeting.myAdjustMeeting)
   const teamMember = useSelector((state) => state.team.teamMember);
+  const selectedTeam = useSelector((state) => state.team.selectedTeam);
   const myContract = useSelector((state) => state.contract.myContract);
     return (
         <main className={styles.createteam}>
@@ -16,6 +17,7 @@ const UserTeams = ({userType}) => {
         </section>
         <section className={styles.createteam_info}>
          <div className={styles.teams_docs}>
+           <h1>/{selectedTeam}</h1>
        
        <TeamDetailes userType={userType} teamMember={teamMember} myContract={myContract}  adjustMeetings={adjustMeetings}/>
          

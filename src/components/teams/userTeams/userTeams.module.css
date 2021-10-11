@@ -2,6 +2,7 @@
 .createteam{
     display: flex;
     flex-direction: column;
+   
 }
 
 .teams_docs{
