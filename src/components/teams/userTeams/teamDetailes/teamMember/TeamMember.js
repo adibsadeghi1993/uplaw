@@ -5,9 +5,8 @@ import styles from "./teamMember.module.css";
 import starImage from "../../../../../asstes/starBlueIcon.svg";
 import blueArrow from "../../../../../asstes/blue arrow.svg";
 
-const TeamMember = () => {
-  const teamMember = useSelector((state) => state.team.teamMember);
-  const myContract = useSelector((state) => state.contract.myContract);
+const TeamMember = ({teamMember,myContract}) => {
+
   return (
     <section className={styles.main_section}>
       <div className={styles.first_section}>

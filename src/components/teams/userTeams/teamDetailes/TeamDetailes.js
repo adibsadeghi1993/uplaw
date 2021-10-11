@@ -4,14 +4,17 @@ import TeamHeader from "./teamHeader/TeamHeader";
 import TeamMember from "./teamMember/TeamMember";
 import meetingImage from "../../../../asstes/meeting.svg";
 import blueArrow from "../../../../asstes/blue arrow.svg";
-import { useSelector } from "react-redux";
 
 
-const TeamDetailes = ({ adjustMeetings }) => {
+
+const TeamDetailes = ({ adjustMeetings,myContract ,teamMember,userType}) => {
   return (
     <div>
       <TeamHeader />
-      <TeamMember />
+      <TeamMember myContract={myContract} teamMember={teamMember} />
+      {userType && <section>
+        
+        </section>}
 
       <section>
         <div className={styles.adjust_header}>
