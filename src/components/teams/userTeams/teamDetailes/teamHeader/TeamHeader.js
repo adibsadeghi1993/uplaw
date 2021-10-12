@@ -3,20 +3,23 @@ import { useSelector } from "react-redux";
 import FingerImgae from "../../../../common/fingerImgae/FingerImgae";
 import styles from "./teamHeader.module.css";
 
-const TeamHeader = () => {
+const TeamHeader = ({title}) => {
   const selectedTeam = useSelector((state) => state.team.selectedTeam);
   const [active, setActive] = useState("selected");
   return (
     <section>
-      <h1 className={styles.selectedTeam}>/{selectedTeam}</h1>
-        <div className={styles.finger}>
+      <h1 className={styles.selectedTeam}>
+       {title? title : `/${selectedTeam}`}
+        
+        </h1>
+      <div className={styles.finger}>
         <FingerImgae>
-         تواین صفحه میتونی تیم هایی که توش عضو هستی یا داری رو ببینی،میتونی اونهارو مدیریت کنی یا تیم جدید ایجاد کنی.
+          تواین صفحه میتونی تیم هایی که توش عضو هستی یا داری رو ببینی،میتونی
+          اونهارو مدیریت کنی یا تیم جدید ایجاد کنی.
         </FingerImgae>
-        </div>
+      </div>
 
       <div className={styles.all_teams}>
-
         <div className={styles.team}>
           <p
             onClick={() => setActive("selected")}
