@@ -70,3 +70,14 @@
     justify-content: start;
   }
 }
+
+@media (min-width: 768px) {
+    .all_teams {
+      justify-content: center;
+    }
+  }
+  @media (min-width: 900px) {
+    .all_teams {
+      justify-content: start;
+    }
+  }
