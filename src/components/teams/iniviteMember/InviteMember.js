@@ -4,7 +4,7 @@ import UserProfile from '../../userInfo/commonFiles/userProfile/UserProfile'
 import InviteDetailes from './inviteDetailes/InviteDetailes'
 import styles from "./inviteMember.module.css"
 
-const InviteMember = () => {
+const InviteMember = ({search}) => {
     const userTeams = useSelector(state => state.team.myTeam)
     return (
         <main className={styles.createteam}>
@@ -14,7 +14,7 @@ const InviteMember = () => {
         <section className={styles.createteam_info}>
          <div className={styles.teams_docs}>
          
-              <InviteDetailes/>
+              <InviteDetailes search={search}/>
          
          </div>
         </section>

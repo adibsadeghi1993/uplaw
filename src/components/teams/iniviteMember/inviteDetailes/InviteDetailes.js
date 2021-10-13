@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
 import NewTeamHeader from '../../createNewTeam/newTeam/newTeamHeader/NewTeamHeader'
 import TeamHeader from '../../userTeams/teamDetailes/teamHeader/TeamHeader'
+import blueArrow from "../../../../asstes/blue arrow.svg"
 import styles from "./inviteDetailes.module.css"
+import SearchTeam from './searchTeam/SearchTeam'
 
-const InviteDetailes = () => {
+
+const InviteDetailes = ({search=false}) => {
     const [members, setMembers] = useState([
         {value:""}
     ])
+    const [selectedOption, setSelectedOption] = useState("");
     const phoneHandler=(e,index)=>{
         const updatedMember=[...members]
         const newNumber={...updatedMember[index]}
@@ -37,6 +41,12 @@ const InviteDetailes = () => {
             <div className={styles.addMember_btn}>
                 <button onClick={addMemberHandler}> <span>+</span>افزودن فرد جدید</button>
             </div>
+            <div className={styles.nextStep_btn}>
+                <button><span>مرحله بعد</span><img src={blueArrow} alt="مرحله بعد"/></button>
+            </div>
+           {search &&  <div className={`${styles.search_team}`}>
+                <SearchTeam selectedOption={selectedOption} setSelectedOption={setSelectedOption}/>
+            </div>}
 
         </div>
     )

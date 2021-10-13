@@ -39,3 +39,27 @@
     font-weight: 800;
     margin-left: 8px;
 }
+
+.nextStep_btn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nextStep_btn button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.nextStep_btn button span{
+    font-size: 0.875rem;
+    font-weight: 800;
+    margin-left: 8px; 
+    color: #3770E2;
+}
+.search_team{
+    margin-top: 20px;
+}

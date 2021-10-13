@@ -1,0 +1,19 @@
+.react-select__input-container{
+    height: 49px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+}
+
+.react-select__placeholder{
+
+
+}
+
+@media(min-width:1200px){
+    .react-select__placeholder{
+font-size: 00.875rem !important;
+
+    }
+}
+
