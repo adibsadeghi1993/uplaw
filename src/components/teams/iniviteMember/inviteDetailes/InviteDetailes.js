@@ -6,11 +6,11 @@ import styles from "./inviteDetailes.module.css"
 import SearchTeam from './searchTeam/SearchTeam'
 
 
-const InviteDetailes = ({search=false}) => {
+const InviteDetailes = ({search=false,selectedOption,setSelectedOption}) => {
     const [members, setMembers] = useState([
         {value:""}
     ])
-    const [selectedOption, setSelectedOption] = useState("");
+ 
     const phoneHandler=(e,index)=>{
         const updatedMember=[...members]
         const newNumber={...updatedMember[index]}
@@ -44,9 +44,11 @@ const InviteDetailes = ({search=false}) => {
             <div className={styles.nextStep_btn}>
                 <button><span>مرحله بعد</span><img src={blueArrow} alt="مرحله بعد"/></button>
             </div>
-           {search &&  <div className={`${styles.search_team}`}>
+
+           {search&& <div className={styles.search_team}>
                 <SearchTeam selectedOption={selectedOption} setSelectedOption={setSelectedOption}/>
             </div>}
+          
 
         </div>
     )
