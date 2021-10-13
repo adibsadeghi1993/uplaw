@@ -2,6 +2,7 @@ import React from 'react'
 import CreateNewTeam from '../components/teams/createNewTeam/CreateNewTeam'
 import InviteMember from '../components/teams/iniviteMember/InviteMember'
 import MyTeam from '../components/teams/myTeam/MyTeam'
+import ProfileTeam from '../components/teams/profileTeam/ProfileTeam'
 import SearchSpecialTeam from '../components/teams/serchTeam/SearchSpecialTeam'
 import TeamAdmin from '../components/teams/teamAdmin/TeamAdmin'
 import UserTeams from '../components/teams/userTeams/UserTeams'
@@ -19,7 +20,8 @@ const Team = () => {
             {/* <MyTeam/> */}
             {/* <CreateNewTeam/> */}
             {/* <InviteMember/> */}
-            <SearchSpecialTeam/>
+            {/* <SearchSpecialTeam/> */}
+            <ProfileTeam/>
         </div>
     )
 }
