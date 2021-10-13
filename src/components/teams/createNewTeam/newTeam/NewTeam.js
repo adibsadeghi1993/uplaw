@@ -11,7 +11,15 @@ const NewTeam = () => {
   const [checkboxOptions, setCheckboxOptions] = useState([]);
   const [userProfile, setUserProfile] = useState("");
   const [uploadImage, setUpLoadedImage] = useState("");
-  const [selectedOption, setSelectedOption,] = useState("");
+  const [selectedOption, setSelectedOption] = useState("");
+  const [select, setSelect] = useState("startop");
+  const [investment, setInvestment] = useState(0);
+  const [teamProperties, setTeamProperties] = useState({
+      member:"",
+      serviceType:"",
+      teamName:""
+  });
+
 
   const subTeamHandler = () => {
     const oldCheckboxOptions = [...checkboxOptions];
@@ -50,6 +58,11 @@ const NewTeam = () => {
 
     setUpLoadedImage(e.target.files[0]);
   };
+  const changeHandler=(e)=>{
+      setTeamProperties({...teamProperties,[e.target.name]:e.target.value})
+
+  }
+ 
   return (
     <div>
       <TeamHeader title="تیم های من/ساخت تیم جدید" />
@@ -76,29 +89,38 @@ const NewTeam = () => {
       <section className={styles.container}>
 
       <div className={styles.team_name}>
-          <input type="text" placeholder="نام تیم را وارد کنید"/>
+          <input type="text" placeholder="نام تیم را وارد کنید" name="teamName" value={teamProperties.teamName} onChange={changeHandler}/>
       </div>
       <div className={styles.startop}>
-        <div><p>استارتاپ هستید یا شرکت ثبت شده؟</p></div>
-       <div>
-            <p>شرکت</p>
-        <p>استارتاپ</p>
+        <div className={styles.question}><p>استارتاپ هستید یا شرکت ثبت شده؟</p></div>
+       <div className={styles.check_uesrType}>
+            <p onClick={()=>setSelect("company")} className={select==="company"?styles.active:styles.inactive}>شرکت</p>
+        <p onClick={()=>setSelect("startop")} className={select==="startop"?styles.active:styles.inactive}>استارتاپ</p>
        </div>
       </div>
-
+      <div className={styles.team_member}>
+          <input type="text" placeholder="اعضای تیم شما جند نفر است" value={teamProperties.member} name="member"  onChange={changeHandler}/>
+      </div>
+      <div className={styles.company_services}>
+          <input type="text" value={teamProperties.serviceType} name="serviceType" placeholder="نوع خدمات شرکت شما چیست؟" onChange={changeHandler}/>
+      </div>
       <div className={styles.uploadImage}>
           {userProfile ? (
-            <img
+           <div className={styles.image_container}>
+                <img
               src={userProfile}
               alt="profileImage"
               className={styles.profileImage}
             />
+           </div>
           ) : (
-            <img
+            <div className={styles.image_container}>
+                <img
               src={image}
               alt="profileImage"
               className={styles.imageIcon}
             />
+            </div>
           )}
           <input
             type="file"
@@ -107,30 +129,31 @@ const NewTeam = () => {
             name="image-upload"
             onChange={imageHandler}
           />
-        </div>
-        <div className={styles.logo}>
+           <div className={`${styles.logo} ${styles.notdisplay}`}>
             <label htmlFor="image">بارگزاری لوگو</label>
         </div>
-        <div className={styles.team_member}>
-          <input type="text" placeholder="اعضای تیم شما جند نفر است"/>
-      </div>
-      <div className={styles.company_services}>
-          <input type="text" placeholder="نوع خدمات شرکت شما چیست؟"/>
-      </div>
+        </div>
+
+        <div className={`${styles.logo} ${styles.loaded_logo}`}>
+            <label htmlFor="image">بارگزاری لوگو</label>
+        </div>
+       
+  
       <div className={styles.invest}>
-          <div>آیا اقدام به جذب سرمایه کرده اید؟</div>
-          <div>
-              <p>بله</p>
-              <p>خیر</p>
+          <div className={styles.question}><p>آیا اقدام به جذب سرمایه کرده اید؟</p></div>
+          <div className={styles.check_invest}>
+              <p onClick={()=>setInvestment(1)} className={investment===1?styles.active:styles.inactive}>بله</p>
+              <p onClick={()=>setInvestment(0)} className={investment===0?styles.active:styles.inactive}>خیر</p>
           </div>
          
       </div>
-      <div className={styles.next}>
-         <button><span>مرحله بعد</span><img src={arrowImage} alt="مرحله بعد"/></button>
-      </div>
+     
 
       <div className={styles.city}>
-          <SelectCity/>
+          <SelectCity selectedOption={selectedOption} setSelectedOption={setSelectedOption}/>
+      </div>
+      <div className={styles.next}>
+         <button><span>مرحله بعد</span><img src={arrowImage} alt="مرحله بعد"/></button>
       </div>
      
 

@@ -19,6 +19,7 @@
   border-radius: 24px 0px 0px 25px;
 }
 
+
 .active {
   background: #3770e2;
 }
@@ -28,4 +29,11 @@
 
 .inActive {
   background: #e8e8e8;
+}
+
+@media (min-width: 900px) {
+   .new_team_header{
+       height: 77px;
+   }
+   
 }
