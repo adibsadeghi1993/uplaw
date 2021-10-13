@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 import styles from "./newTeamHeader.module.css"
 
-const NewTeamHeader = () => {
-const [active, setActive] = useState("basicInfo")
+const NewTeamHeader = ({subject="basicInfo"}) => {
+const [active, setActive] = useState(subject)
 
 const inviteHandler=()=>{
     setActive("invite")

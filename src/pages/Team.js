@@ -1,5 +1,6 @@
 import React from 'react'
 import CreateNewTeam from '../components/teams/createNewTeam/CreateNewTeam'
+import InviteMember from '../components/teams/iniviteMember/InviteMember'
 import MyTeam from '../components/teams/myTeam/MyTeam'
 import TeamAdmin from '../components/teams/teamAdmin/TeamAdmin'
 import UserTeams from '../components/teams/userTeams/UserTeams'
@@ -15,7 +16,8 @@ const Team = () => {
             {/* <UserTeams/> */}
             {/* <TeamAdmin/> */}
             {/* <MyTeam/> */}
-            <CreateNewTeam/>
+            {/* <CreateNewTeam/> */}
+            <InviteMember/>
         </div>
     )
 }

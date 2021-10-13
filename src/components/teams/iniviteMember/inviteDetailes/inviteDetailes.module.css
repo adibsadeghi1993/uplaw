@@ -1,0 +1,41 @@
+.invite{
+    display: flex;
+    margin-top: 30px;
+}
+
+.invite_input{
+    flex: 3;
+}
+.send_phone{
+    flex: 1;
+    margin-right: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.send_phone p{
+    font-size: 0.75rem;
+    padding: 10px 15px;
+    background: #3770E2;
+    color: #FFFFFF;
+    font-weight: 800;
+}
+.addMember_btn{
+    margin-top: 20px;
+}
+.addMember_btn button{
+ background: transparent;
+ font-size: 0.875rem;
+ font-weight: 800;
+ border: none;
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+}
+.addMember_btn button span{
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-left: 8px;
+}

@@ -1,5 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import UserProfile from '../../userInfo/commonFiles/userProfile/UserProfile'
+import InviteDetailes from './inviteDetailes/InviteDetailes'
+import styles from "./inviteMember.module.css"
 
 const InviteMember = () => {
     const userTeams = useSelector(state => state.team.myTeam)
@@ -11,11 +14,12 @@ const InviteMember = () => {
         <section className={styles.createteam_info}>
          <div className={styles.teams_docs}>
          
-              
+              <InviteDetailes/>
          
          </div>
         </section>
       </main>
+    )
 }
 
 export default InviteMember
