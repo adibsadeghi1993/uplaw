@@ -1,0 +1,19 @@
+.advise_header {
+  display: flex;
+  margin-top: 28px;
+  align-items: center;
+}
+
+.advise_header p:last-child {
+  margin-right: 37px;
+}
+.advise_header p{
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.active {
+  font-weight: 900;
+  line-height: 28px;
+  border-bottom: 1px solid #3770e2;
+  color: #000000;
+}
