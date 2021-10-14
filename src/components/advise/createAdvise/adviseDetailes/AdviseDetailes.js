@@ -12,7 +12,7 @@ const AdviseDetailes = () => {
     setActive("newAdvise");
   };
   return (
-    <div>
+    <div className={styles.main_advise}>
       <h3>/مشاوره</h3>
       <FingerImage>
         تو این صفحه میتونی تایم مشاوره رو با مشاورین آپلا ست بکنی و با خیال راحت
@@ -39,9 +39,14 @@ const AdviseDetailes = () => {
         opacityThree="0.5"
         adjust={false}
       />
-      <div>
-          
+      <div className={styles.advise_type}>
+        <p>تیم مورد نظر خود را برای انتخاب مشاوره انتخاب کنید</p>
+        <p>مشاوره تخصصی میخواهم</p>
       </div>
+
+      <section>
+          
+      </section>
     </div>
   );
 };

@@ -1,3 +1,7 @@
+.main_advise{
+    margin-bottom: 50px;
+}
+
 .advise_header {
   display: flex;
   margin-top: 28px;
@@ -16,4 +20,18 @@
   line-height: 28px;
   border-bottom: 1px solid #3770e2;
   color: #000000;
+}
+.advise_type{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.advise_type p:first-child{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.advise_type p:last-child{
+    margin-top: 11px;
+    color: #3770E2;
 }
