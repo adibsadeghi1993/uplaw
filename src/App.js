@@ -16,6 +16,7 @@ import SigntureContract from "./components/contract/SigntureContract/SigntureCon
 import ContractDocument from "./components/contract/contractDoucument/ContractDocument";
 import CreateTeam from "./components/userInfo/createTeam/CreateTeam";
 import TeamInfo from "./components/userInfo/userTeams/teamsInfo/TeamInfo";
+import CreateAdvise from "./components/advise/createAdvise/CreateAdvise";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/teamInfo" component={TeamInfo} />
        
         <Route path="/team" component={Team} />
+        <Route path="/advise" component={CreateAdvise} />
         <Route path="/" exact component={Home} />
       </Switch>
     </div>
