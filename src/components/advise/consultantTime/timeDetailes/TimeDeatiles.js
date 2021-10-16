@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 
 const TimeDeatiles = () => {
     const [value, setValue] = useState(momentJalaali())
+    const [formatedValue, setFormatedValue] = useState(null)
     const [time, setTime] = useState("30")
     const [timeInterval, setTimeInterval] = useState(null)
     const times = useSelector(state => state.advise.times)
@@ -25,7 +26,7 @@ const TimeDeatiles = () => {
             <CommonConsultan subject="زمان مشاوره را انتخاب کنید"/>
         <section className={styles.main_setTime}>
             <article className={styles.setDate}>
-            <Date value={value} setValue={setValue}/>
+            <Date value={value} setValue={setValue} setFormatedValue={setFormatedValue}/>
             </article>
             <article className={styles.setTime}>
                 <div className={styles.time_picker}>
