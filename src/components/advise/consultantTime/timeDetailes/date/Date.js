@@ -1,8 +1,8 @@
-import React,{useState} from 'react'
-import momentJalaali from 'moment-jalaali';
+import React from 'react'
+
 import { Calendar } from 'react-datepicker2';
-const Date = () => {
-    const [value, setValue] = useState(momentJalaali())
+const Date = ({value,setValue}) => {
+   
 
     const getCustomFormat=(inputValue)=> {
         if (!inputValue)

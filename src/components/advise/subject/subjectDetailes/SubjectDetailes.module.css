@@ -61,6 +61,7 @@
 .next_btn button span {
   color: var(--font-primary);
   margin-left: 8px;
+  font-weight: 800;
 }
 
 @media(min-width:600px){
