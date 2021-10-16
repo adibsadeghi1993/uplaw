@@ -3,7 +3,7 @@ import Progress from '../contractHeader/ContractHeader';
 import FingerImgae from '../fingerImgae/FingerImgae'
 import styles from "./commonConsultant.module.css"
 
-const CommonConsultan = () => {
+const CommonConsultan = ({subject="نوع مشاوره را انتخاب کنید."}) => {
     const [active, setActive] = useState("newAdvise");
 
     const prevAdviseHandler = () => {
@@ -45,7 +45,7 @@ const CommonConsultan = () => {
         />
       </div>
       <div className={styles.advise_type}>
-        <p>نوع مشاوره را انتخاب کنید.</p>
+        <p>{subject}</p>
         <p>مشاوره تخصصی میخواهم</p>
       </div>
             
