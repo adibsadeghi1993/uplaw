@@ -4,6 +4,7 @@ import Date from './date/Date'
 import momentJalaali from 'moment-jalaali';
 import styles from "./TimeDetailes.module.css"
 import { useSelector } from 'react-redux';
+import arrowImage from "../../../../asstes/blue arrow.svg"
 
 
 const TimeDeatiles = () => {
@@ -38,6 +39,9 @@ const TimeDeatiles = () => {
                     {times?.map((item)=>(
                         <p className={timeInterval?.id===item.id && styles.active} onClick={()=>intervalHandler(item)} key={item.id}>{item.time}</p>
                     ))}
+                </div>
+                <div className={styles.next_btn}>
+                    <button><span>مرحله بعد</span><img src={arrowImage} alt="مرحله بعد"/></button>
                 </div>
            
             </article>
