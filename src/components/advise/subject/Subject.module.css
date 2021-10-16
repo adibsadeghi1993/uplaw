@@ -23,6 +23,7 @@
     grid-column: 1/2;
     background:var(--primary-color);
     border-left: 0.35px solid #00000028;
+    min-height: 100vh;
   }
   .main_info {
     grid-column: 2/3;

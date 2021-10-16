@@ -1,4 +1,75 @@
-.input{
-    height: 44px;
-    margin-top: 36px;
+.input {
+  height: 44px;
+  margin-top: 36px;
+}
+
+.subject_upload {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.subject {
+  flex: 2;
+  /* margin-left: 40px; */
+}
+.subject textarea {
+  height: 170px;
+}
+.upload {
+  flex: 2;
+  margin-top: 40px;
+}
+.input_upload {
+  display: none;
+}
+.upload div:first-child {
+  height: 99px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.upload div:first-child label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.upload label span {
+  font-size: 000.875rem;
+  margin-right: 8px;
+}
+.upload label img {
+  width: 17px;
+  height: 20px;
+}
+
+.next_btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.next_btn button {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.next_btn button span {
+  color: var(--font-primary);
+  margin-left: 8px;
+}
+
+@media(min-width:600px){
+    .subject_upload{
+        flex-direction: row;
+    }
+    .subject{
+        margin-left: 40px;
+    }
+    .upload{
+        margin-top: 0;
+    }
 }

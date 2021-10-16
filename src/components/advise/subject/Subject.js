@@ -9,7 +9,7 @@ const Subject = () => {
     return (
         <main className={styles.main}>
         <section className={styles.profilesection}>
-          <UserProfile opacity="opacity" subject="uplaw" team={userTeams}/>
+          <UserProfile subject="advise" opacity="opacity" subject="uplaw" team={userTeams}/>
         </section>
         <section className={styles.main_info}>
          <div className={styles.main_detailes}>
