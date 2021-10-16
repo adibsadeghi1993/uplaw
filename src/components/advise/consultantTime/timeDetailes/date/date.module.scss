@@ -1,0 +1,29 @@
+@import 'node_modules/react-datepicker2/src/styles/style.scss';
+.calendarContainer{
+    width: 260px;
+}
+.picker{
+    width: 260px;
+    background: linear-gradient(
+        142.42deg,
+        rgba(254, 248, 255, 0.56) 1.79%,
+        rgba(254, 248, 255, 0.4) 100.42%
+      );
+}
+
+@media(min-width:400px){
+   .picker{
+       width: 320px;
+
+   }
+  }
+  @media(min-width:900px){
+    .picker{
+        width: 270px;
+    }
+   }
+   @media(min-width:1200px){
+    .picker{
+        width: 320px;
+    }
+   }

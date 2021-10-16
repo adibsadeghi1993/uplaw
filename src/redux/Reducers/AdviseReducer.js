@@ -4,7 +4,7 @@ const initialState={
     selectedAdviseTeam:{},
     times:[
       {id:1,time:"14:30 تا 15:00"},
-      {id:1,time:"15:00 تا 15:30"},
+      {id:2,time:"15:00 تا 15:30"},
       {id:3,time:"15:30 تا 16:00"},
       {id:4,time:"16:30 تا 17:00"},
       {id:5,time:"17:30 تا 18:00"},

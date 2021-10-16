@@ -47,6 +47,12 @@
 
 @media(min-width:1200px){
     .main_detailes{
+        width: 85%;
+    }
+ }
+
+ @media(min-width:1300px){
+    .main_detailes{
         width: 74%;
     }
  }
