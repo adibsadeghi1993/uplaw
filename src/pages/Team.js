@@ -1,4 +1,5 @@
 import React from 'react'
+import AdviseType from '../components/advise/adviseType/AdviseType'
 import CreateNewTeam from '../components/teams/createNewTeam/CreateNewTeam'
 import InviteMember from '../components/teams/iniviteMember/InviteMember'
 import MyTeam from '../components/teams/myTeam/MyTeam'
@@ -21,7 +22,8 @@ const Team = () => {
             {/* <CreateNewTeam/> */}
             {/* <InviteMember/> */}
             {/* <SearchSpecialTeam/> */}
-            <ProfileTeam/>
+            {/* <ProfileTeam/> */}
+            <AdviseType/>
         </div>
     )
 }

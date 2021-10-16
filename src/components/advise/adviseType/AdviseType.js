@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import UserProfile from '../../userInfo/commonFiles/userProfile/UserProfile'
 import styles from "./AdviseType.module.css"
+import TypeDetailes from './typeDetailes.js/TypeDetailes'
 
 const AdviseType = () => {
     const userTeams = useSelector(state => state.team.myTeam)
@@ -13,7 +14,7 @@ const AdviseType = () => {
         <section className={styles.main_info}>
          <div className={styles.main_detailes}>
          
-            
+            <TypeDetailes/>
        
          </div>
         </section>
