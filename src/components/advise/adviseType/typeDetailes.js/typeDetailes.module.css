@@ -104,6 +104,19 @@ main {
   }
 }
 
+@media (min-width: 450px) {
+  .law_container {
+    right: -15%;
+    width: 450px;
+    top: 11%;
+  }
+  .business_container {
+    right: -10%;
+    width: 450px;
+    top: 15%;
+  }
+}
+
 @media (min-width: 600px) {
   .law_container {
     right: 3%;
@@ -113,29 +126,6 @@ main {
   }
 }
 
-@media (min-width: 1200px) {
-  .law_container {
-    right: 3%;
-  }
-  .business_container {
-    right: 3%;
-  }
-}
-
-
-
-@media (min-width: 450px) {
-    .law_container {
-      right: -15%;
-      width: 450px;
-      top: 11%;
-    }
-    .business_container {
-      right: -10%;
-      width: 450px;
-      top: 15%;
-    }
-  }
 
   @media (min-width: 768px) {
    .header{
@@ -163,4 +153,15 @@ main {
        display: block;
    }
   }
+
+
+  @media (min-width: 1200px) {
+    .law_container {
+      right: 3%;
+    }
+    .business_container {
+      right: 3%;
+    }
+  }
+  
   

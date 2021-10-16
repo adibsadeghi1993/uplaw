@@ -4,6 +4,10 @@
     margin: 0 ;
 }
 
+:root{
+  --primary-color:rgba(232, 232, 232, 0.25);
+}
+
 
 
 @font-face {
