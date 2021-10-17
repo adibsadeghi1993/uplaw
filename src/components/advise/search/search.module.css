@@ -1,0 +1,58 @@
+
+.main{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.main_detailes{
+    width: 90%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.select_team{
+    display: none;
+}
+
+
+
+
+
+@media(min-width:768px){
+    .main{
+        grid-template-columns: 30% 70%;
+        display: grid;
+    }
+    
+    .profilesection{
+        grid-column: 1/2;
+        background: rgba(232, 232, 232,0.25);
+        border-left: 0.35px solid #00000028;
+    }
+    .main_info{
+        grid-column: 2/3; 
+        
+    }
+    
+    .main_detailes{
+        width: 90%;
+       margin-top: 85px;
+       margin-left: auto;
+       margin-right: auto;
+        
+    }
+   
+}
+
+@media(min-width:1200px){
+    .main_detailes{
+        width: 85%;
+    }
+ }
+
+ @media(min-width:1300px){
+    .main_detailes{
+        width: 74%;
+    }
+ }
