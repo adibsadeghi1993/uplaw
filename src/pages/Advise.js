@@ -1,4 +1,5 @@
 import React from 'react'
+import Confirm from '../components/advise/confirm/Confirm'
 import ConsultantTime from '../components/advise/consultantTime/ConsultantTime'
 import CreateAdvise from '../components/advise/createAdvise/CreateAdvise'
 import Subject from '../components/advise/subject/Subject'
@@ -8,7 +9,8 @@ const Advise = () => {
         <div>
             {/* <CreateAdvise/> */}
             {/* <Subject/> */}
-            <ConsultantTime/>
+            {/* <ConsultantTime/> */}
+            <Confirm/>
         </div>
     )
 }
