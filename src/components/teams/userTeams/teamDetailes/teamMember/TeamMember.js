@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import teamImage from "../../../../../asstes/team.svg";
 import styles from "./teamMember.module.css";
-import starImage from "../../../../../asstes/starBlueIcon.svg";
+import starImage from "../../../../../asstes/whitebluestar.svg";
 import blueArrow from "../../../../../asstes/blue arrow.svg";
 import adjustMember from "../../../../../asstes/memberAdjust.svg";
 

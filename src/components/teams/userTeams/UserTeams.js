@@ -13,7 +13,7 @@ const UserTeams = ({userType}) => {
     return (
         <main className={styles.createteam}>
         <section className={styles.profilesection}>
-          <UserProfile opacity="opacity"  subject="uplaw" team={userTeams}/>
+          <UserProfile opacity="opacity"  subject="myTeam" team={userTeams}/>
         </section>
         <section className={styles.createteam_info}>
          <div className={styles.teams_docs}>
