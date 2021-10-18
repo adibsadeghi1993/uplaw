@@ -7,12 +7,11 @@ import { selectedTeamAction } from "../../../../../../redux/Actions/TeamActions"
 
 const SelectTeam = () => {
   const userTeams = useSelector((state) => state.team.myTeam);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   console.log(userTeams);
 
   const [options, setOptions] = useState([]);
- 
- 
+
   useEffect(() => {
     const arrayTeam = userTeams.map((item) => {
       return {
@@ -25,7 +24,7 @@ const SelectTeam = () => {
     console.log(arrayTeam);
 
     setOptions(arrayTeam);
-    dispatch(selectedTeamAction(arrayTeam[0].value))
+    dispatch(selectedTeamAction(arrayTeam[0].value));
   }, [userTeams]);
 
   console.log(options);
@@ -45,8 +44,7 @@ const SelectTeam = () => {
   );
   const onchange = (team) => {
     console.log(team);
-    dispatch(selectedTeamAction(team.value))
-
+    dispatch(selectedTeamAction(team.value));
   };
 
   const ValueOption = (props) => (
@@ -72,35 +70,30 @@ const SelectTeam = () => {
       display: "none",
     }),
     option: (styles) => {
-     
       return {
         ...styles,
         display: "flex",
         alignItems: "center",
         height: "49px",
-
-        
-       
-      
       };
     },
   };
 
   return (
     <div style={{ width: "100%" }}>
-    {options.length &&   <Select
-        styles={customStyles}
-        defaultValue={options[0]}
-        singleValue
-        options={options}
-        components={{ Option: IconOption, SingleValue: ValueOption }}
-        isRtl={true}
-        onChange={onchange}
-        className="select-team"
-        classNamePrefix="select-team"
-      
-       
-      />}
+      {options.length && (
+        <Select
+          styles={customStyles}
+          defaultValue={options[0]}
+          singleValue
+          options={options}
+          components={{ Option: IconOption, SingleValue: ValueOption }}
+          isRtl={true}
+          onChange={onchange}
+          className="select-team"
+          classNamePrefix="select-team"
+        />
+      )}
     </div>
   );
 };
