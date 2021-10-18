@@ -116,11 +116,12 @@
 }
 
 @media (min-width: 600px) {
+
   .law_container {
-    right: 3%;
+    right: -11%;
   }
   .business_container {
-    right: 3%;
+    right: -8%;
   }
 }
 
@@ -150,15 +151,21 @@
    .advise_type p:last-child{
        display: block;
    }
+   .law_container {
+    right: -11%;
+  }
+  .business_container {
+    right: -8%;
+  }
   }
 
 
   @media (min-width: 1200px) {
     .law_container {
-      right: 3%;
+      right: -11%;
     }
     .business_container {
-      right: 3%;
+      right: -8%;
     }
   }
   
