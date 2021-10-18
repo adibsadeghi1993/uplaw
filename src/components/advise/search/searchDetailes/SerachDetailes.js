@@ -10,6 +10,7 @@ const SerachDetailes = () => {
 
 const [books, setBooks] = useState("");
 const [filteredBooks, setFilteredBooks] = useState([]);
+const [request, setRequest] = useState(null);
 
 const inputRef = useRef();
   const handleChange = (e) => {
@@ -55,7 +56,10 @@ const inputRef = useRef();
 
 
 
-
+const requestHandler=(item)=>{
+ setRequest(item)
+ console.log(item)
+}
 
 
 
@@ -96,8 +100,8 @@ const inputRef = useRef();
       <section className={styles.all_team}>
           {filteredBooks.map((item,index)=>{
               return <div key={index} className={styles.each_team}>
-                 <p>{item.volumeInfo.title}</p>
-                <button><span>درخواست عضویت</span><img src={arrowImage} alt="درخواست عضویت"/></button>
+                 <p className={request?.volumeInfo.title===item.volumeInfo.title?styles.activeRequest:null}>{item.volumeInfo.title}</p>
+                <button onClick={()=>requestHandler(item)}><span>درخواست عضویت</span><img src={arrowImage} alt="درخواست عضویت"/></button>
               </div>
 
           })}

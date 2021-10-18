@@ -65,6 +65,9 @@
 .finger{
     display: none;
 }
+.activeRequest{
+  font-weight: 700;
+}
 
 @media (min-width: 500px) {
   .teams p {
