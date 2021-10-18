@@ -132,10 +132,57 @@
   margin-bottom: 63px;
 }
 
+
+.meeting p{
+ margin-top: 7px;
+}
+.adjust p{
+  margin-top: 7px;
+}
+.consultant p{
+  margin-top: 7px;
+}
+.myteam p{
+  margin-top: 7px;
+}
+
 @media (max-width: 1100px) {
   .userItems{
     column-gap: 25px;
     margin-bottom: 85px;
+  }
+}
+
+@media (max-width: 1250px) {
+  
+  .userItems_item_container{
+    height: 110px;
+    width: 95%;
+  }
+}
+
+
+@media (max-width: 1150px) {
+  
+  .userItems_item_container{
+    height: 100px;
+    width: 97%;
+  }
+  .meeting p{
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .adjust p{
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .consultant p{
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .myteam p{
+    font-size: 0.8rem;
+    font-weight: 600;
   }
 }
 
@@ -151,8 +198,26 @@
     height: 85px;
     width: 80%;
   }
+
   .userItems_item p{
     font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .meeting p{
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  .adjust p{
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  .consultant p{
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  .myteam p{
+    font-size: 0.7rem;
+    font-weight: 600;
   }
 }
 

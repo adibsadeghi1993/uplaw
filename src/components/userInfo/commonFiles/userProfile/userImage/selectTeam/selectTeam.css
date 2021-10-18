@@ -1,0 +1,36 @@
+.select-team__input-container{
+    height: 49px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+}
+
+.select-team__control{
+    height: 49px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.select-team__single-value{
+    height: 49px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+.select-team__input{
+    height: 49px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.select-team__input-container{
+    height: 49px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+@media(min-width:1200px){
+    .select-team__placeholder{
+font-size: 00.875rem !important;
+
+    }
+}

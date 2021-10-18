@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Select, { components } from "react-select";
 
 import { useDispatch, useSelector } from "react-redux";
-import styles from "./selectTeam.module.css";
+import "./selectTeam.css";
 import { selectedTeamAction } from "../../../../../../redux/Actions/TeamActions";
 
 const SelectTeam = () => {
@@ -66,12 +66,24 @@ const SelectTeam = () => {
     control: () => ({
       display: "flex",
       alignItems: "center",
-      paddingBottom: "2px",
-      height: "50px",
+      height: "49px",
     }),
     indicatorSeparator: () => ({
       display: "none",
     }),
+    option: (styles) => {
+     
+      return {
+        ...styles,
+        display: "flex",
+        alignItems: "center",
+        height: "49px",
+
+        
+       
+      
+      };
+    },
   };
 
   return (
@@ -84,6 +96,9 @@ const SelectTeam = () => {
         components={{ Option: IconOption, SingleValue: ValueOption }}
         isRtl={true}
         onChange={onchange}
+        className="select-team"
+        classNamePrefix="select-team"
+      
        
       />}
     </div>
