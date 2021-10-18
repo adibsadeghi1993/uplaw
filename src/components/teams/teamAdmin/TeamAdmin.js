@@ -4,7 +4,7 @@ import UserTeams from '../userTeams/UserTeams'
 const TeamAdmin = () => {
     return (
         <>
-           <UserTeams userType="admin"/> 
+           <UserTeams userType="admin" subject="uplaw"/> 
         </>
     )
 }

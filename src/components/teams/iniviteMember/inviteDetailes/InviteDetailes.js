@@ -3,10 +3,10 @@ import NewTeamHeader from '../../createNewTeam/newTeam/newTeamHeader/NewTeamHead
 import TeamHeader from '../../userTeams/teamDetailes/teamHeader/TeamHeader'
 import blueArrow from "../../../../asstes/blue arrow.svg"
 import styles from "./inviteDetailes.module.css"
-import SearchTeam from './searchTeam/SearchTeam'
+import SearchSpecialTeam from '../../../common/searchSpecialTeam/SearchSpecialTeam'
 
 
-const InviteDetailes = ({search=false,selectedOption,setSelectedOption}) => {
+const InviteDetailes = ({search=false,request,setRequest}) => {
     const [members, setMembers] = useState([
         {value:""}
     ])
@@ -46,7 +46,7 @@ const InviteDetailes = ({search=false,selectedOption,setSelectedOption}) => {
             </div>
 
            {search&& <div className={styles.search_team}>
-                <SearchTeam selectedOption={selectedOption} setSelectedOption={setSelectedOption}/>
+               <SearchSpecialTeam request={request}  setRequest={setRequest}/>
             </div>}
           
 

@@ -4,7 +4,7 @@ import CreateNewTeam from '../components/teams/createNewTeam/CreateNewTeam'
 import InviteMember from '../components/teams/iniviteMember/InviteMember'
 import MyTeam from '../components/teams/myTeam/MyTeam'
 import ProfileTeam from '../components/teams/profileTeam/ProfileTeam'
-import SearchSpecialTeam from '../components/teams/serchTeam/SearchSpecialTeam'
+import SpecialTeam from '../components/teams/serchTeam/SpecialTeam'
 import TeamAdmin from '../components/teams/teamAdmin/TeamAdmin'
 import UserTeams from '../components/teams/userTeams/UserTeams'
 
@@ -16,12 +16,12 @@ const Team = () => {
         <div>
             {/* <CreateTeam/> */}
             {/* <TeamInfo/> */}
-            <UserTeams/>
+            {/* <UserTeams/> */}
             {/* <TeamAdmin/> */}
             {/* <MyTeam/> */}
             {/* <CreateNewTeam/> */}
             {/* <InviteMember/> */}
-            {/* <SearchSpecialTeam/> */}
+            <SpecialTeam/>
             {/* <ProfileTeam/> */}
             {/* <AdviseType/> */}
         </div>
