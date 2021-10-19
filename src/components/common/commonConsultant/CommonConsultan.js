@@ -2,9 +2,11 @@ import React,{useState} from 'react'
 import Progress from '../contractHeader/ContractHeader';
 import FingerImgae from '../fingerImgae/FingerImgae'
 import styles from "./commonConsultant.module.css"
+import { useHistory } from 'react-router';
 
 const CommonConsultan = ({subject="نوع مشاوره را انتخاب کنید.",width="33.33%"}) => {
     const [active, setActive] = useState("newAdvise");
+    const history=useHistory()
 
     const prevAdviseHandler = () => {
       setActive("prevAdvise");
@@ -12,6 +14,9 @@ const CommonConsultan = ({subject="نوع مشاوره را انتخاب کنی�
     const newAdviseHandler = () => {
       setActive("newAdvise");
     };
+    const specialAdviseHandler=()=>{
+      history.push("/searchConsultant")
+    }
     return (
         <>
          <h3 className={styles.header}>/مشاوره</h3>
@@ -47,7 +52,7 @@ const CommonConsultan = ({subject="نوع مشاوره را انتخاب کنی�
       </div>
       <div className={styles.advise_type}>
         <p>{subject}</p>
-        <p>مشاوره تخصصی میخواهم</p>
+        <p onClick={specialAdviseHandler}>مشاوره تخصصی میخواهم</p>
       </div>
             
         </>

@@ -27,6 +27,7 @@ import TeamAdmin from "./components/teams/teamAdmin/TeamAdmin";
 import AdviseType from "./components/advise/adviseType/AdviseType";
 import ConsultantTime from "./components/advise/consultantTime/ConsultantTime";
 import Confirm from "./components/advise/confirm/Confirm";
+import Search from "./components/advise/search/Search"
 
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
         <Route path="/advise" component={Advise} />
         <Route path="/setConsultantTime" component={ConsultantTime} />
         <Route path="/confirmConsultant" component={Confirm} />
+        <Route path="/searchConsultant" component={Search} />
         <Route path="/adviseType" component={AdviseType} />
       
         <Route path="/" exact component={Home} />

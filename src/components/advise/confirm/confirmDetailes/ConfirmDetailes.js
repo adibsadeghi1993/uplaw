@@ -4,8 +4,14 @@ import "./confirmDetailes.module.css";
 import heartFaceImage from "../../../../asstes/heart-eyes face emoji 1.png";
 import arrowImage from "../../../../asstes/blue arrow.svg";
 import styles from "./confirmDetailes.module.css";
+import { useHistory } from "react-router";
 
 const ConfirmDetailes = () => {
+  const history=useHistory()
+
+  const nextStepHandler=()=>{
+    
+  }
   return (
     <div>
       <CommonConsultan width="100%" subject="اطلاعات را تایید کنید." />
@@ -41,7 +47,7 @@ const ConfirmDetailes = () => {
         </article>
       </section>
       <div className={styles.next_step}>
-          <button><span>تایید نهایی و کسر از اعتبار</span><img src={arrowImage} alt="مرحله بعدی"/></button>
+          <button onClick={nextStepHandler}><span>تایید نهایی و کسر از اعتبار</span><img src={arrowImage} alt="مرحله بعدی"/></button>
 
       </div>
     </div>

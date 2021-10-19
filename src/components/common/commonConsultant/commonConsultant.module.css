@@ -37,6 +37,7 @@
   .advise_type p:last-child {
     color: #3770e2;
     display: none;
+    cursor: pointer;
   }
 
   .header{
