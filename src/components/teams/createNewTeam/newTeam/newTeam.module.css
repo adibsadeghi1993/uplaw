@@ -65,6 +65,11 @@ input[type="checkbox"] {
 .next {
   display: flex;
   justify-content: flex-end;
+  cursor: pointer;
+}
+.next button:disabled{
+  opacity: 0.5;
+  background: transparent;
 }
 
 .image_container {

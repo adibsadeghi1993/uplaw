@@ -2,13 +2,15 @@ import React,{useState} from 'react'
 import styles from "./newTeamHeader.module.css"
 import { useHistory } from 'react-router'
 
-const NewTeamHeader = ({subject="basicInfo"}) => {
+const NewTeamHeader = ({subject="basicInfo",disabledBtn}) => {
 const [active, setActive] = useState(subject)
  const history=useHistory()
 
 const inviteHandler=()=>{
+  if(!disabledBtn){
     setActive("invite")
     history.push("/inviteMember")
+  }
  
 
 }
@@ -22,7 +24,7 @@ const basicInfoHandler=()=>{
             <div  onClick={basicInfoHandler} className={active==="basicInfo"?styles.active:styles.inActive}>
                 <p>اطلاعات پایه</p>
             </div>
-            <div onClick={inviteHandler}  className={active==="invite"?styles.active:styles.inActive}>
+            <div  onClick={inviteHandler}  className={active==="invite"?styles.active:styles.inActive}>
                 <p>دعوت اعضا</p>
             </div>
             
