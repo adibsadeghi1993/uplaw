@@ -16,12 +16,12 @@ const Team = () => {
         <div>
             {/* <CreateTeam/> */}
             {/* <TeamInfo/> */}
-            {/* <UserTeams/> */}
+            <UserTeams/>
             {/* <TeamAdmin/> */}
             {/* <MyTeam/> */}
             {/* <CreateNewTeam/> */}
             {/* <InviteMember/> */}
-            <SpecialTeam/>
+            {/* <SpecialTeam/> */}
             {/* <ProfileTeam/> */}
             {/* <AdviseType/> */}
         </div>

@@ -18,6 +18,7 @@ import CreateTeam from "./components/userInfo/createTeam/CreateTeam";
 import TeamInfo from "./components/userInfo/userTeams/teamsInfo/TeamInfo";
 import CreateAdvise from "./components/advise/createAdvise/CreateAdvise";
 import Advise from "./pages/Advise";
+import MyTeam from "./components/teams/myTeam/MyTeam";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path="/teamInfo" component={TeamInfo} />
        
         <Route path="/team" component={Team} />
+        <Route path="/myTeam" component={MyTeam} />
         <Route path="/advise" component={Advise} />
         <Route path="/" exact component={Home} />
       </Switch>

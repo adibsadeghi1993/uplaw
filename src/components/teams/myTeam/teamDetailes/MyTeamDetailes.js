@@ -6,7 +6,7 @@ import blueArrow from "../../../../asstes/blue arrow.svg";
 const MyTeamDetailes = ({ teams }) => {
   return (
     <div>
-      <TeamHeader />
+      <TeamHeader active="myTeam" />
       <section className={styles.all_teams}>
         {teams.map((item) => {
           return (

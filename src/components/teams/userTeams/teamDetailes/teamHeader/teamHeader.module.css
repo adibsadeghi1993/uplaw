@@ -5,6 +5,7 @@
 .team p {
   flex-shrink: 0;
   font-size: 1rem;
+  cursor: pointer;
 }
 .myTeam {
   margin-right: 40px;
@@ -20,6 +21,7 @@
 .specialTeam {
   margin-top: 27px;
   padding-bottom: 11px;
+  cursor: pointer;
 }
 .specialTeam p {
   color: #3770e2;

@@ -2,10 +2,26 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import FingerImgae from "../../../../common/fingerImgae/FingerImgae";
 import styles from "./teamHeader.module.css";
+import { useHistory } from "react-router";
 
-const TeamHeader = ({title}) => {
+const TeamHeader = ({title,active="selectedTeam"}) => {
   const selectedTeam = useSelector((state) => state.team.selectedTeam);
-  const [active, setActive] = useState("selected");
+ 
+  const history=useHistory()
+
+  const myTeamHandler=()=>{
+    
+    history.push("./myTeam")
+  }
+  const selectedTeamHandler=()=>{
+   
+  }
+  const searchTeamHandler=()=>{
+  
+  }
+  const specialTeamHandler=()=>{
+
+  }
   return (
     <section>
       <h1 className={styles.selectedTeam}>
@@ -22,29 +38,29 @@ const TeamHeader = ({title}) => {
       <div className={styles.all_teams}>
         <div className={styles.team}>
           <p
-            onClick={() => setActive("selected")}
-            className={` ${active === "selected" ? styles.active : null}`}
+            onClick={selectedTeamHandler}
+            className={` ${active === "selectedTeam" ? styles.active : null}`}
           >
             {selectedTeam}
           </p>
           <p
-            onClick={() => setActive("myteam")}
+            onClick={myTeamHandler}
             className={`${styles.myTeam} ${
-              active === "myteam" ? styles.active : null
+              active === "myTeam" ? styles.active : null
             }`}
           >
             تیم های من
           </p>
           <p
-            onClick={() => setActive("searchteam")}
+            onClick={searchTeamHandler}
             className={`${styles.serchTeam} ${
-              active === "searchteam" ? styles.active : null
+              active === "searchTeam" ? styles.active : null
             }`}
           >
             ایجاد/جستجوی تیم جدید
           </p>
         </div>
-        <div className={styles.specialTeam}>
+        <div className={styles.specialTeam} onClick={specialTeamHandler}>
           <p> به دنبال تیم خاصی هستم</p>
         </div>
       </div>
