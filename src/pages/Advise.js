@@ -8,11 +8,11 @@ import Search from '../components/advise/search/Search'
 const Advise = () => {
     return (
         <div>
-            {/* <CreateAdvise/> */}
+            <CreateAdvise/>
             {/* <Subject/> */}
             {/* <ConsultantTime/> */}
             {/* <Confirm/> */}
-            <Search/>
+            {/* <Search/> */}
         </div>
     )
 }

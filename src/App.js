@@ -24,6 +24,9 @@ import SpecialTeam from "./components/teams/serchTeam/SpecialTeam";
 import InviteMember from "./components/teams/iniviteMember/InviteMember";
 import TeamProfile from "./components/teams/teamProfile/TeamProfile";
 import TeamAdmin from "./components/teams/teamAdmin/TeamAdmin";
+import AdviseType from "./components/advise/adviseType/AdviseType";
+import ConsultantTime from "./components/advise/consultantTime/ConsultantTime";
+import Confirm from "./components/advise/confirm/Confirm";
 
 
 function App() {
@@ -52,6 +55,10 @@ function App() {
         <Route path="/teamProfile" component={TeamProfile} />
         <Route path="/teamAdmin" component={TeamAdmin} />
         <Route path="/advise" component={Advise} />
+        <Route path="/setConsultantTime" component={ConsultantTime} />
+        <Route path="/confirmConsultant" component={Confirm} />
+        <Route path="/adviseType" component={AdviseType} />
+      
         <Route path="/" exact component={Home} />
       </Switch>
     </div>

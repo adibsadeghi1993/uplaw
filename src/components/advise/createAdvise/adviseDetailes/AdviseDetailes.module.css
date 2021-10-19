@@ -99,6 +99,27 @@
     display: none;
 }
 
+.next_step_btn{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 22px;
+}
+
+.next_step_btn button{
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.next_step_btn button span{
+  font-size: 000.875rem;
+  font-weight: 800;
+  margin-left: 8px;
+  color:var(--font-primary);
+}
+
 @media(min-width:500px){
     .each_team div:first-child p{
         font-size: 1rem;

@@ -5,6 +5,7 @@ import momentJalaali from 'moment-jalaali';
 import styles from "./TimeDetailes.module.css"
 import { useSelector } from 'react-redux';
 import arrowImage from "../../../../asstes/blue arrow.svg"
+import { useHistory } from 'react-router';
 
 
 const TimeDeatiles = () => {
@@ -12,6 +13,7 @@ const TimeDeatiles = () => {
     const [formatedValue, setFormatedValue] = useState(null)
     const [time, setTime] = useState("30")
     const [timeInterval, setTimeInterval] = useState(null)
+    const history=useHistory()
     const times = useSelector(state => state.advise.times)
 
     useEffect(() => {
@@ -22,9 +24,12 @@ const TimeDeatiles = () => {
     const intervalHandler=(time)=>{
         setTimeInterval(time)
     }
+    const nextStepHandler=()=>{
+history.push("/confirmConsultant")
+    }
     return (
         <div>
-            <CommonConsultan subject="زمان مشاوره را انتخاب کنید"/>
+            <CommonConsultan width="50%" subject="زمان مشاوره را انتخاب کنید"/>
         <section className={styles.main_setTime}>
             <article className={styles.setDate}>
             <Date value={value} setValue={setValue} setFormatedValue={setFormatedValue}/>
@@ -41,7 +46,7 @@ const TimeDeatiles = () => {
                     ))}
                 </div>
                 <div className={styles.next_btn}>
-                    <button><span>مرحله بعد</span><img src={arrowImage} alt="مرحله بعد"/></button>
+                    <button onClick={nextStepHandler}><span>مرحله بعد</span><img src={arrowImage} alt="مرحله بعد"/></button>
                 </div>
            
             </article>

@@ -92,6 +92,32 @@
     display: none;
 }
 
+.advise_container article{
+  cursor: pointer;
+}
+
+.next_step_btn{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 150px;
+  margin-bottom: 80px;
+}
+
+.next_step_btn button{
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.next_step_btn button span{
+  font-size: 000.875rem;
+  font-weight: 800;
+  margin-left: 8px;
+  color:var(--font-primary);
+}
+
 @media (min-width: 400px) {
   .law_container {
     right: 10%;

@@ -4,7 +4,8 @@ import FingerImage from "../../../common/fingerImgae/FingerImgae";
 import Progress from "../../../common/contractHeader/ContractHeader";
 import { useSelector, useDispatch } from "react-redux";
 import { setAdviseTeam } from "../../../../redux/Actions/AdviseActions";
-import { style } from "@mui/system";
+import arrowImage from "../../../../asstes/blue arrow.svg";
+import { useHistory } from "react-router";
 
 const AdviseDetailes = () => {
   const dispatch = useDispatch();
@@ -13,6 +14,7 @@ const AdviseDetailes = () => {
   const team = useSelector((state) => state.team.myTeam);
   const teamIncudedMe = useSelector((state) => state.team.teamIncudedMe);
   const selectedTeam = useSelector((state) => state.advise.selectedAdviseTeam);
+  const history = useHistory();
   const prevAdviseHandler = () => {
     setActive("prevAdvise");
   };
@@ -28,6 +30,9 @@ const AdviseDetailes = () => {
 
   const myTeamHandler = () => {
     setTeamType("myTeam");
+  };
+  const nextStepHandler = () => {
+    history.push("/adviseType");
   };
   return (
     <div className={styles.main_advise}>
@@ -120,6 +125,12 @@ const AdviseDetailes = () => {
               );
             })}
       </section>
+      <div className={styles.next_step_btn}>
+        <button onClick={nextStepHandler}>
+          <span>مرحله بعد</span>
+          <img src={arrowImage} alt="مرحله بعد" />
+        </button>
+      </div>
     </div>
   );
 };
