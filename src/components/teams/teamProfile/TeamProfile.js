@@ -4,7 +4,7 @@ import UserProfile from '../../userInfo/commonFiles/userProfile/UserProfile'
 import styles from "./profileTeam.module.css"
 import ProfileTeamDetailes from './profileTeamDetailes/ProfileTeamDetailes'
 
-const ProfileTeam = () => {
+const TeamProfile = () => {
      
     const userTeams = useSelector(state => state.team.myTeam)
     return (
@@ -23,4 +23,4 @@ const ProfileTeam = () => {
     )
 }
 
-export default ProfileTeam
+export default TeamProfile

@@ -4,9 +4,11 @@ import TeamHeader from "../../userTeams/teamDetailes/teamHeader/TeamHeader";
 import blueArrow from "../../../../asstes/blue arrow.svg";
 import styles from "./inviteDetailes.module.css";
 import SearchSpecialTeam from "../../../common/searchSpecialTeam/SearchSpecialTeam";
+import { useHistory } from "react-router";
 
 const InviteDetailes = ({ search = false, request, setRequest }) => {
   const [members, setMembers] = useState([{ value: "" }]);
+   const history=useHistory()
 
   const phoneHandler = (e, index) => {
     const updatedMember = [...members];
@@ -24,6 +26,9 @@ const InviteDetailes = ({ search = false, request, setRequest }) => {
     const updatedMembers = [...oldMemers, { value: "" }];
     setMembers(updatedMembers);
   };
+  const nextStepHandler=()=>{
+    history.push("/teamProfile")
+  }
   return (
     <div>
       <TeamHeader active="myTeam" title="/تیم های من/ساخت تیم جدید" />
@@ -62,7 +67,7 @@ const InviteDetailes = ({ search = false, request, setRequest }) => {
             </div>
 
       <div className={styles.nextStep_btn}>
-        <button>
+        <button onClick={nextStepHandler}>
           <span>مرحله بعد</span>
           <img src={blueArrow} alt="مرحله بعد" />
         </button>

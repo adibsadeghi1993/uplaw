@@ -22,6 +22,9 @@ import MyTeam from "./components/teams/myTeam/MyTeam";
 import CreateNewTeam from "./components/teams/createNewTeam/CreateNewTeam";
 import SpecialTeam from "./components/teams/serchTeam/SpecialTeam";
 import InviteMember from "./components/teams/iniviteMember/InviteMember";
+import TeamProfile from "./components/teams/teamProfile/TeamProfile";
+import TeamAdmin from "./components/teams/teamAdmin/TeamAdmin";
+
 
 function App() {
   return (
@@ -46,6 +49,8 @@ function App() {
         <Route path="/createNewTeam" component={CreateNewTeam} />
         <Route path="/specialTeam" component={SpecialTeam} />
         <Route path="/inviteMember" component={InviteMember} />
+        <Route path="/teamProfile" component={TeamProfile} />
+        <Route path="/teamAdmin" component={TeamAdmin} />
         <Route path="/advise" component={Advise} />
         <Route path="/" exact component={Home} />
       </Switch>
