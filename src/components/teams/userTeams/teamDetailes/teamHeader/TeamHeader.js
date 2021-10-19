@@ -17,9 +17,11 @@ const TeamHeader = ({title,active="selectedTeam"}) => {
    
   }
   const searchTeamHandler=()=>{
+    history.push("/createNewTeam")
   
   }
   const specialTeamHandler=()=>{
+    history.push("/specialTeam")
 
   }
   return (

@@ -26,7 +26,7 @@ const InviteDetailes = ({ search = false, request, setRequest }) => {
   };
   return (
     <div>
-      <TeamHeader title="/تیم های من/ساخت تیم جدید" />
+      <TeamHeader active="myTeam" title="/تیم های من/ساخت تیم جدید" />
       <NewTeamHeader subject="invite" />
       {members.map((item, index) => {
         return (

@@ -6,6 +6,7 @@ import styles from "./newTeam.module.css"
 import image from "../../../../asstes/upload.svg";
 import arrowImage from "../../../../asstes/blue arrow.svg";
 import SelectCity from "./selectCity/SelectCity";
+import { useHistory } from "react-router";
 
 const NewTeam = () => {
   const [checkboxOptions, setCheckboxOptions] = useState([]);
@@ -19,6 +20,8 @@ const NewTeam = () => {
       serviceType:"",
       teamName:""
   });
+
+  const history=useHistory()
 
 
   const subTeamHandler = () => {
@@ -62,10 +65,14 @@ const NewTeam = () => {
       setTeamProperties({...teamProperties,[e.target.name]:e.target.value})
 
   }
+
+  const nextStepHandler=()=>{
+   history.push("/inviteMember")
+  }
  
   return (
     <div>
-      <TeamHeader title="تیم های من/ساخت تیم جدید" />
+      <TeamHeader title="تیم های من/ساخت تیم جدید" active="searchTeam" />
       <NewTeamHeader />
       <section className={styles.checkbox_container}>
         <article>
@@ -153,7 +160,7 @@ const NewTeam = () => {
           <SelectCity selectedOption={selectedOption} setSelectedOption={setSelectedOption}/>
       </div>
       <div className={styles.next}>
-         <button><span>مرحله بعد</span><img src={arrowImage} alt="مرحله بعد"/></button>
+         <button onClick={nextStepHandler}><span>مرحله بعد</span><img src={arrowImage} alt="مرحله بعد"/></button>
       </div>
      
 

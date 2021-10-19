@@ -2,8 +2,14 @@ import React from "react";
 import TeamHeader from "../../userTeams/teamDetailes/teamHeader/TeamHeader";
 import styles from "./myTeamDetailes.module.css";
 import blueArrow from "../../../../asstes/blue arrow.svg";
+import { useHistory } from "react-router";
 
 const MyTeamDetailes = ({ teams }) => {
+  const history=useHistory()
+
+  const createNewTeamHandler=()=>{
+     history.push("/createNewTeam")
+  }
   return (
     <div>
       <TeamHeader active="myTeam" />
@@ -30,7 +36,7 @@ const MyTeamDetailes = ({ teams }) => {
           <div className={styles.team}>
               <h1 className={styles.add_team}>+</h1>
           </div>
-          <div className={styles.team_btn}>
+          <div className={styles.team_btn} onClick={createNewTeamHandler}>
           <button>
             <span>ایجاد تیم جدید</span>
             <img src={blueArrow} alt="ورد به تیم" />

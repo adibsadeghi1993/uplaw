@@ -19,6 +19,9 @@ import TeamInfo from "./components/userInfo/userTeams/teamsInfo/TeamInfo";
 import CreateAdvise from "./components/advise/createAdvise/CreateAdvise";
 import Advise from "./pages/Advise";
 import MyTeam from "./components/teams/myTeam/MyTeam";
+import CreateNewTeam from "./components/teams/createNewTeam/CreateNewTeam";
+import SpecialTeam from "./components/teams/serchTeam/SpecialTeam";
+import InviteMember from "./components/teams/iniviteMember/InviteMember";
 
 function App() {
   return (
@@ -40,6 +43,9 @@ function App() {
        
         <Route path="/team" component={Team} />
         <Route path="/myTeam" component={MyTeam} />
+        <Route path="/createNewTeam" component={CreateNewTeam} />
+        <Route path="/specialTeam" component={SpecialTeam} />
+        <Route path="/inviteMember" component={InviteMember} />
         <Route path="/advise" component={Advise} />
         <Route path="/" exact component={Home} />
       </Switch>

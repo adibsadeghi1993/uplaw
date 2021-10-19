@@ -1,15 +1,21 @@
 import React,{useState} from 'react'
 import styles from "./newTeamHeader.module.css"
+import { useHistory } from 'react-router'
 
 const NewTeamHeader = ({subject="basicInfo"}) => {
 const [active, setActive] = useState(subject)
+ const history=useHistory()
 
 const inviteHandler=()=>{
     setActive("invite")
+    history.push("/inviteMember")
+ 
+
 }
 
 const basicInfoHandler=()=>{
     setActive("basicInfo")
+    history.push("/createNewTeam")
 }
     return (
         <section className={styles.new_team_header}>

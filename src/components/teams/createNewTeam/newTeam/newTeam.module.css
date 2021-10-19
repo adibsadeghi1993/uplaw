@@ -36,6 +36,10 @@ input[type="checkbox"] {
   justify-content: center;
 }
 
+.check_uesrType p{
+  cursor: pointer;
+}
+
 .team_member {
   margin-top: 20px;
 }
@@ -54,6 +58,9 @@ input[type="checkbox"] {
   margin-top: 10px;
   display: flex;
   justify-content: center;
+}
+.check_invest p{
+  cursor: pointer;
 }
 .next {
   display: flex;
