@@ -247,6 +247,30 @@ height: 119px;
 .userguidance{
   display: none;
 }
+.userItems_item p{
+  font-size: 0.9rem;
+ 
+}
+.meeting p{
+  font-size: 1.25rem;
+  font-weight: 400;
+ 
+}
+.adjust p{
+  font-size: 1.25rem;
+  font-weight: 400;
+  
+}
+.consultant p{
+  font-size: 1.25rem;
+  font-weight: 400;
+
+}
+.myteam p{
+  font-size: 1.25rem;
+  font-weight: 400;
+ 
+}
 
 }
 
