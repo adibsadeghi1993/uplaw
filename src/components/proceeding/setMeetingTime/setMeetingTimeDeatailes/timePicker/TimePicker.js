@@ -3,7 +3,7 @@ import React from "react";
 import moment from "moment";
 import { TimePicker } from "antd";
 import "antd/lib/time-picker/style"
-// import 'antd/lib/time-picker/style/css'
+import 'antd/lib/time-picker/style/css'
 
 import "./timePicke.css"
 

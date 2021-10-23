@@ -5,6 +5,7 @@ import TeamMember from "./teamMember/TeamMember";
 import meetingImage from "../../../../asstes/meeting.svg";
 import blueArrow from "../../../../asstes/blue arrow.svg";
 import faceImage from "../../../../asstes/grimicing face emoji 1.svg";
+import { toArabicDigits } from "../../../utilities/ToFarsiDigit";
 
 const TeamDetailes = ({ adjustMeetings, myContract, teamMember, userType }) => {
 
@@ -51,7 +52,7 @@ const TeamDetailes = ({ adjustMeetings, myContract, teamMember, userType }) => {
             return (
               <article key={item.id} className={styles.each_meeting}>
                 <p>{item.adjustMeetingName}</p>
-                <p className={styles.meeting_date}>{item.date}</p>
+                <p className={styles.meeting_date}>{toArabicDigits(item.date)}</p>
                 <p className={styles.meeting_with}>{item.adjustWith}</p>
                 <div>
                   <button className={()=>showMeetingHandler(item)}>

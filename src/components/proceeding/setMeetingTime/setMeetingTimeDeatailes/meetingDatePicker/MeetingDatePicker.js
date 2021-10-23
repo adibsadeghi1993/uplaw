@@ -2,11 +2,12 @@ import React from 'react'
 import DatePicker from "react-datepicker2";
 import styles from "./meetingDatePicker.module.css"
 
-const MeetingDatePicker = ({setDate}) => {
+const MeetingDatePicker = ({setDate,date}) => {
     const handleChange = (value) => {
         console.log(value)
     
         const now =value
+        console.log(now)
         const formattedDate = now.format('jYYYY/jMM/jDD')
         console.log(formattedDate) 
         setDate(formattedDate)
@@ -21,7 +22,7 @@ const MeetingDatePicker = ({setDate}) => {
         id="datePicker"
         showTodayButton={false}
         isGregorian={false}
-        // value={value}
+        // value={date}
         onChange={(value) => handleChange(value)}
       />
         </div>

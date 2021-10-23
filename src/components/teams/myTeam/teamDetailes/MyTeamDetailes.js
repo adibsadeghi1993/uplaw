@@ -3,6 +3,7 @@ import TeamHeader from "../../userTeams/teamDetailes/teamHeader/TeamHeader";
 import styles from "./myTeamDetailes.module.css";
 import blueArrow from "../../../../asstes/blue arrow.svg";
 import { useHistory } from "react-router";
+import { toArabicDigits } from "../../../utilities/ToFarsiDigit";
 
 const MyTeamDetailes = ({ teams }) => {
   const history=useHistory()
@@ -20,7 +21,7 @@ const MyTeamDetailes = ({ teams }) => {
               <div className={styles.team}>
                 <img src={item.src} alt={item.teamName} />
                 <p>{item.teamName}</p>
-                <div className={styles.team_member}>{item.memberShip}نفر</div>
+                <div className={styles.team_member}>{toArabicDigits(item.memberShip)}نفر</div>
               </div>
               <div className={styles.team_btn}>
               <button >

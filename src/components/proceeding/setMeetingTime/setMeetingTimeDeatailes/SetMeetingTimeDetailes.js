@@ -17,7 +17,7 @@ const SetMeetingTimeDetailes = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [value, setValue] = useState(null);
   const [time, setTime] = useState(null);
-  const [date, setDate] = useState(null);
+  const [date, setDate] = useState("");
   const history=useHistory()
   const dispatch=useDispatch()
   const createProceedingHandler = () => {
@@ -83,7 +83,7 @@ const SetMeetingTimeDetailes = () => {
       </div>
    <section className={styles.date_and_time_picker}>
      <div className={styles.proceeding_date_picker}>
-       <MeetingDatePicker setDate={setDate}/>
+       <MeetingDatePicker date={date} setDate={setDate}/>
      </div>
      <div className={styles.proceeding_time_picker}><TimePickerComponent setTime={setTime} value={value} setValue={setValue}/></div>
    </section>
