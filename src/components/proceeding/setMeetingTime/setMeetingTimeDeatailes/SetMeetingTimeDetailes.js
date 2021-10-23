@@ -14,11 +14,12 @@ import {
 import { useHistory } from "react-router";
 import ProceedingHeader from "../../../common/proceedingHeader/ProceedingHeader";
 import Progress from "../../../common/contractHeader/ContractHeader";
+import moment from "moment";
 
 const SetMeetingTimeDetailes = () => {
   const [proceedingStatus, setProceedingStatus] = useState("createProceeding");
   const [selectedOption, setSelectedOption] = useState(null);
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState(moment());
   const [time, setTime] = useState(null);
   const [date, setDate] = useState("");
   const history = useHistory();

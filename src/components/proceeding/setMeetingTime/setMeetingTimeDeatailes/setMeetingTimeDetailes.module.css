@@ -50,6 +50,7 @@
 }
 .proceeding_time_picker {
   grid-column: 2/3;
+  height: 49px;
 }
 
 .nextStep {
