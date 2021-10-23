@@ -1,0 +1,245 @@
+.profile_team {
+  display: flex;
+  margin-top: 47px;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.header {
+  display: none;
+}
+.teamImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teamName_header {
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 11px 13px;
+  display: flex;
+  width: 100%;
+}
+
+.teamName_header span {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamName_header img {
+  height: 20px;
+  width: 20px;
+}
+
+.image_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 31px;
+  position: relative;
+  background: rgba(232, 232, 232, 0.25);
+  border-radius: 27px;
+  height: 250px;
+  width: 250px;
+}
+.image_container p {
+  margin-top: 5px;
+}
+
+.image_container div {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30%;
+  padding: 5px 10px;
+  background: #3770e2;
+  border-radius: 27px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image_container img {
+  width: 50%;
+}
+
+.team_info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.team_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 83px;
+}
+.team_name div {
+  width: 83px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(232, 232, 232, 0.5);
+  border-radius: 27px;
+}
+
+.team_name p {
+  font-weight: 800;
+  font-size: 0.8rem;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 5px;
+
+  color: #000000;
+}
+
+.team_location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 83px;
+}
+
+.team_location div {
+  width: 83px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(232, 232, 232, 0.5);
+  border-radius: 27px;
+}
+
+.team_location p {
+  font-weight: 800;
+  font-size: 0.8rem;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 5px;
+
+  color: #000000;
+}
+
+.team_invest {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 83px;
+}
+
+.team_invest div {
+  width: 83px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(232, 232, 232, 0.5);
+  border-radius: 27px;
+}
+
+.team_invest p {
+  font-weight: 800;
+  font-size: 0.8rem;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 5px;
+
+  color: #000000;
+}
+
+.send_btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 70px;
+}
+
+.send_btn button {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+}
+
+.send_btn button span {
+  font-weight: 800;
+  font-size: 0.875rem;
+  line-height: 22px;
+  color: #3770e2;
+  margin-left: 8px;
+}
+
+/* @media(min-width:380px){
+  .team_location{
+    margin-bottom: 0;
+  }
+} */
+@media (min-width: 500px) {
+  .team_info {
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 600px) {
+  .profile_team {
+    display: flex;
+    flex-direction: row;
+  }
+  .team_info_cotainer {
+    flex: 1;
+    padding-right: 15px;
+  }
+  .team_info {
+    justify-content: space-around;
+  }
+  .teamImage {
+    flex: 1;
+    padding-left: 15px;
+
+    border-left: 1px solid rgba(0, 0, 0, 0.25);
+  }
+  .send_btn {
+    margin-bottom: 0;
+    justify-content: flex-end;
+  }
+
+  .header {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .image_container {
+    width: 180px;
+    height: 180px;
+  }
+  .teamImage {
+    flex: 2;
+  }
+  .team_info_cotainer {
+    flex: 3;
+  }
+}
+
+@media (min-width: 1000px) {
+  .image_container {
+    height: 250px;
+    width: 250px;
+  }
+  .teamImage {
+    padding-left: 30px;
+  }
+  .team_info_cotainer {
+    padding-right: 30px;
+  }
+}

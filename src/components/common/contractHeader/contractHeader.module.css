@@ -73,6 +73,9 @@ margin-bottom: 8px;
 .noneBox{
     display: none;
 }
+.noneAdjust{
+    display: none;
+}
 
 @media(max-width:1250px){
     .minute h3{

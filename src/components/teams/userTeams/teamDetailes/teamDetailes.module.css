@@ -1,0 +1,128 @@
+.adjust_header{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    margin: 25px 0 35px 0;
+    padding: 10px;
+}
+.adjust_header p{
+    flex: 1;
+    text-align: center;
+}
+.adjust_header img{
+    width: 20px;
+    height: 20px;
+}
+.all_adjust_meeting{
+    margin-bottom: 35px;
+}
+.each_meeting{
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 28px;
+}
+.each_meeting p{
+    flex: 1;
+    text-align: center;
+}
+.each_meeting p:first-child{
+    text-align: start;
+}
+.each_meeting div{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.meeting_date{
+    display: none;
+}
+
+.meeting_with{
+    display: none;
+}
+.each_meeting div button{
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+.each_meeting div button span{
+    font-weight: 800;
+font-size: 14px;
+line-height: 22px;
+color: #3770E2;
+}
+.each_meeting div button img{
+    margin-right: 11px;
+}
+.all_adjust_meeting article:last-child{
+    border-bottom: none;
+}
+.sub_teams{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sub_teams_image img{
+width: 67px;
+}
+.create_sub_team{
+    margin-right: 15px;
+}
+.create_sub_team button{
+background: transparent;
+border: none;
+cursor: pointer;
+display: flex;
+align-items: center;
+margin: 6px;
+}
+.create_sub_team button span{
+    font-weight: 800;
+font-size: 0.5rem;
+line-height: 13px;
+color: #3770E2;
+}
+
+.create_sub_team button img{
+    width: 18px;
+    height: 10px;
+    margin-right: 10px;
+}
+
+@media(min-width:600px){
+   .meeting_date{
+       display: block;
+   }
+   .meeting_with{
+       display: block;
+   }
+   .sub_teams_image img{
+    width: 80px;
+    }
+}
+@media(min-width:768px){
+    .meeting_date{
+        display: none;
+    }
+    .meeting_with{
+        display: none;
+    }
+ }
+ 
+@media(min-width:900px){
+    .meeting_date{
+        display: block;
+    }
+    .meeting_with{
+        display: block;
+    }
+    .sub_teams_image img{
+        width: 100px;
+        }
+ }
+

@@ -1,0 +1,164 @@
+.main_advise {
+  margin-bottom: 70px;
+}
+
+.advise_header {
+  display: flex;
+  margin-top: 28px;
+  align-items: center;
+}
+
+.advise_header p:last-child {
+  margin-right: 37px;
+}
+.advise_header p {
+  padding-bottom: 10px;
+  cursor: pointer;
+  font-size: 00.875rem;
+}
+.active {
+  font-weight: 900;
+  line-height: 28px;
+  border-bottom: 1px solid #3770e2;
+  color: #000000;
+}
+.advise_type {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.advise_type p:first-child {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.advise_type p:last-child {
+  margin-top: 11px;
+  color: #3770e2;
+}
+
+.choosed_team {
+  margin-top: 25px;
+  background: rgba(232, 232, 232, 0.25);
+  padding: 20px 0;
+  border-radius: 27px;
+}
+.team_type {
+  display: flex;
+  margin-bottom: 10px;
+  padding-right: 17px;
+  align-items: center;
+}
+.team_type p {
+  padding-bottom: 8px;
+  cursor: pointer;
+  font-size: 00.875rem;
+}
+.team_type p:last-child {
+  margin-right: 20px;
+}
+
+.each_team {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 17px 17px 17px 30px;
+}
+
+.choosed_team label:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.each_team div:first-child {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+.each_team div:first-child img {
+  height: 35px;
+  width: 35px;
+  margin-left: 8px;
+}
+.each_team div:first-child p{
+    font-size: 00.875rem;
+}
+.each_team div:last-child input {
+  height: 25px;
+  width: 25px;
+}
+
+.header{
+    display: none;
+}
+.finger{
+    display: none;
+}
+.progress{
+    display: none;
+}
+
+.next_step_btn{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 22px;
+}
+
+.next_step_btn button{
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.next_step_btn button span{
+  font-size: 000.875rem;
+  font-weight: 800;
+  margin-left: 8px;
+  color:var(--font-primary);
+}
+
+@media(min-width:500px){
+    .each_team div:first-child p{
+        font-size: 1rem;
+    }
+    .team_type p {
+        font-size: 1rem;
+      } 
+      .advise_header p {
+        font-size: 1rem;
+      }
+}
+
+@media(min-width:768px){
+   
+.header{
+    display: block;
+}
+.finger{
+    display: block;
+}
+.progress{
+    display: block;
+}
+}
+
+
+
+@media(min-width:1200px){
+   .advise_type{
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+   }
+   .advise_type p:last-child{
+       flex: 1;
+       display: flex;
+       justify-content: flex-end;
+       margin-top: 0;
+   }
+}
+
+

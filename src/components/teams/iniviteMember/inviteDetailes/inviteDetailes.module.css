@@ -1,0 +1,117 @@
+.invite{
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+}
+
+.invite_input{
+ 
+    height: 49px;
+   
+}
+
+.add_invite{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.send_phone{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.send_phone p{
+    font-size: 0.75rem;
+    padding: 10px 15px;
+    background: #3770E2;
+    color: #FFFFFF;
+    font-weight: 800;
+}
+.addMember_btn{
+    flex: 1;
+}
+
+.addMember_btn button{
+ background: transparent;
+ font-size: 0.875rem;
+ font-weight: 800;
+ border: none;
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+}
+.addMember_btn button span{
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-left: 8px;
+}
+
+.nextStep_btn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nextStep_btn button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.nextStep_btn button span{
+    font-size: 0.875rem;
+    font-weight: 800;
+    margin-left: 8px; 
+    color: #3770E2;
+}
+.search_team{
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+.addMember_btn_display{
+display: none;
+}
+@media(min-width:600px){
+    .invite{
+        display: flex;
+        flex-direction: row;
+    }
+    .invite_input{
+    flex: 1;
+    }
+    .add_invite{
+      
+        margin-right: 20px;
+        margin-top: 0;
+        justify-content: flex-end;
+    }
+    .addMember_btn{
+        display: none;
+    }
+    .addMember_btn_display{
+        display: block;
+        margin-top: 18px;
+        }
+        .addMember_btn_display button{
+            background: transparent;
+            font-size: 0.875rem;
+            font-weight: 800;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .addMember_btn_display button span{
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-left: 8px;
+        }
+   
+}
+
+

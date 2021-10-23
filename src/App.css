@@ -4,6 +4,16 @@
     margin: 0 ;
 }
 
+:root{
+  --primary-color:rgba(232, 232, 232, 0.25);
+  --secondary-color:rgb(232, 232, 232,0.5);
+  --font-primary:#3770E2;
+  --image-background:#3770E2;
+  --font-secondary:#ffffff;
+}
+
+
+
 @font-face {
     font-family: "anjoman";
     src: url(./asstes/anjoman/Anjoman-Medium.ttf);
@@ -24,13 +34,4 @@
    max-width: 1440px;
    margin: 0 auto;
  }
-}
-.MuiStepConnector-vertical{
- display: flex;
- flex-direction: row-reverse;
- 
-}
-.MuiStepConnector-line{
-  color: blue;
-  width: 3px;
 }

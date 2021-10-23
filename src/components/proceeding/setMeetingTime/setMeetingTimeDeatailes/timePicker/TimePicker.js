@@ -1,9 +1,11 @@
 import React from "react";
-// import "antd/dist/antd.css";
-import 'antd/dist/antd.css';
+
 import moment from "moment";
 import { TimePicker } from "antd";
-import  "./timePicke.css"
+import "antd/lib/time-picker/style"
+import 'antd/lib/time-picker/style/css'
+
+import "./timePicke.css"
 
 const TimePickerComponent = ({setValue,value,setTime}) => {
 
@@ -27,6 +29,7 @@ const TimePickerComponent = ({setValue,value,setTime}) => {
         placeholder="ساعت تشکیل جلسه را انتخاب کنید."
         value={value}
         onChange={onChange}
+      
       />
     </>
   );

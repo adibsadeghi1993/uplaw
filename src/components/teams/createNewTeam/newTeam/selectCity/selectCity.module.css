@@ -1,0 +1,23 @@
+.react-select__control{
+    height: 49px;
+    background-color: brown;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+}
+.react-select__value-container{
+    height: 49px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    box-sizing: border-box;
+}
+.react-select__placeholder{
+      padding-bottom: 9px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    margin: 0;
+    opacity: 0.5;
+  
+}
+

@@ -5,10 +5,10 @@ import spacialContractInfoImage from "../../../asstes/specialinfocontract.svg"
 import confirmContractImage from "../../../asstes/confirmcontract.svg"
 
 
-const Progress = ({noneBox,opacityTow="0.5",opacityThree=1,width="33.333%",ContractName,mainContent,stepOne="اطلاعات اولیه قرارداد",stepTow="مفاد تخصصی قرارداد"}) => {
+const Progress = ({ adjust=true,noneBox,opacityTow="0.5",opacityThree=1,width="33.333%",ContractName,mainContent,stepOne="اطلاعات اولیه قرارداد",stepTow="مفاد تخصصی قرارداد"}) => {
     return (
         <section>
-            <h1 className={`${styles.contractName} ${styles[mainContent]}`}>/تنظیم هوشمند/{ContractName}</h1>
+            <h1 className={`${styles.contractName} ${adjust?null:styles.noneAdjust} ${styles[mainContent]}`}>/تنظیم هوشمند/{ContractName}</h1>
             <section className={styles.contractHeader}>
                 <div className={`${styles.minute} ${styles[noneBox]}`}>
                     <h3> فقط 3 دقیقه </h3>

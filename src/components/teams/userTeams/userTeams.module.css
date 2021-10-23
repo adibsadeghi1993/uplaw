@@ -1,0 +1,39 @@
+.createteam {
+  display: flex;
+  flex-direction: column;
+}
+
+.teams_docs {
+  width: 90%;
+  margin: auto;
+  margin-top: 60px;
+}
+
+@media (min-width: 768px) {
+  .createteam {
+    grid-template-columns: 30% 70%;
+    display: grid;
+  }
+
+  .profilesection {
+    grid-column: 1/2;
+    background: rgba(232, 232, 232, 0.25);
+    border-left: 0.35px solid #00000028;
+  }
+  .createteam_info {
+    grid-column: 2/3;
+  }
+
+  .teams_docs {
+    width: 90%;
+    margin-top: 85px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .teams_docs {
+    width: 74%;
+  }
+}

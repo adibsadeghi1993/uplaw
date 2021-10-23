@@ -1,0 +1,92 @@
+.team {
+  display: flex;
+  overflow-x: auto;
+}
+.team p {
+  flex-shrink: 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.myTeam {
+  margin-right: 40px;
+}
+.serchTeam {
+  margin-right: 40px;
+}
+.active {
+  font-weight: 900;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #3770e2;
+}
+.specialTeam {
+  margin-top: 27px;
+  padding-bottom: 11px;
+  cursor: pointer;
+}
+.specialTeam p {
+  color: #3770e2;
+}
+.selectedTeam {
+  display: none;
+}
+.finger {
+  display: none;
+}
+@media (min-width: 600px) {
+  .all_teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .specialTeam p {
+    padding-bottom: 11px;
+  }
+  .specialTeam {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .finger {
+    display: block;
+  }
+  .selectedTeam {
+    display: block;
+  }
+  .all_teams {
+    display: flex;
+    margin-top: 25px;
+    align-items: center;
+  }
+
+  .team p {
+    font-size: 0.875rem;
+  }
+  .specialTeam p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .team p {
+    font-size: 1rem;
+  }
+  .specialTeam p {
+    font-size: 1rem;
+  }
+  .selectedTeam {
+    display: block;
+  }
+  .all_teams {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+  }
+  .specialTeam {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,302 @@
+.checkbox_container {
+  margin: 25px 0 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.checkbox_container article {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.checkbox_container article:last-child {
+  margin-top: 15px;
+}
+.checkbox_container article label {
+  margin-right: 10px;
+  font-size: 0.875rem;
+}
+
+input[type="checkbox"] {
+  height: 18px;
+  width: 18px;
+  padding-right: 0;
+}
+
+.container {
+  margin-bottom: 60px;
+}
+
+.startop {
+  margin-top: 20px;
+}
+
+.check_uesrType {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.check_uesrType p{
+  cursor: pointer;
+}
+
+.team_member {
+  margin-top: 20px;
+}
+
+.company_services {
+  margin-top: 20px;
+}
+
+.uploadImage {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.check_invest {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.check_invest p{
+  cursor: pointer;
+}
+.next {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.next button:disabled{
+  opacity: 0.5;
+  background: transparent;
+}
+
+.image_container {
+  width: 138px;
+  height: 121px;
+  border: 0.3px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 30px;
+}
+
+.invest {
+  margin-top: 20px;
+}
+
+.loaded_logo {
+  display: none;
+}
+
+.logo label {
+  color: white;
+  background: #3770e2;
+  height: 42px;
+  width: 99px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next button {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.next button span {
+  font-weight: 800;
+  font-size: 0.875rem;
+  line-height: 22px;
+  color: #3770e2;
+}
+.next button img {
+  margin-right: 8px;
+}
+
+.invest div:last-child {
+  display: flex;
+}
+.invest div:last-child p:last-child {
+  margin-right: 10px;
+}
+.startop div:last-child {
+  display: flex;
+}
+.startop div:last-child p:last-child {
+  margin-right: 10px;
+}
+
+.inactive {
+  color: white;
+  background: #d8d8d8;
+  height: 42px;
+  width: 124px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  color: white;
+  background: #3770e2;
+  height: 42px;
+  width: 124px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.imageIcon {
+  width: 50%;
+  opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+
+    .checkbox_container{
+        display: flex;
+        flex-direction: row;
+    }
+    .checkbox_container article:first-child{
+        flex: 3;
+    }
+    .checkbox_container article:last-child{
+        margin-top: 0;
+        flex: 2;
+    }
+    .checkbox_container article label{
+        font-size: 000.75rem;
+    }
+  .check_invest {
+    margin-top: 0;
+  }
+  .check_uesrType {
+    margin-top: 0;
+  }
+  .uploadImage {
+    margin-top: 0;
+  }
+  .image_container {
+    width: 100%;
+    height: 100%;
+  }
+  .active {
+    width: 100px;
+  }
+  .inactive {
+    width: 100px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 37% 37% 20%;
+    grid-template-rows: repeat(5, 50px);
+    grid-gap: 15px;
+  }
+
+  .team_name {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  .startop {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    align-items: center;
+  }
+  .uploadImage {
+    grid-column: 3/4;
+    grid-row: 1/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .team_member {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin-top: 0;
+  }
+  .company_services {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-top: 0;
+  }
+  .logo {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-right: 0;
+  }
+  .city {
+    grid-column: 1/3;
+    grid-row: 5/6;
+    margin-top: 0;
+  }
+
+  .invest {
+    grid-column: 1/3;
+    grid-row: 4/5;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    align-items: center;
+  }
+  .next {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .notdisplay {
+    display: none;
+  }
+  .question p {
+    font-size: 00.8rem;
+  }
+  .company_services input::placeholder {
+    font-size: 00.8rem;
+  }
+  .team_member input::placeholder {
+    font-size: 00.8rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .question p {
+    font-size: 0.9rem;
+  }
+  .checkbox_container article label{
+    font-size: 0.9rem;
+}
+ 
+}
+
+@media (min-width: 1200px) {
+    .checkbox_container article:first-child{
+        flex: 1;
+    }
+    .checkbox_container article:last-child{
+      
+        flex: 1;
+    }
+   
+  }

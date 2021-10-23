@@ -1,0 +1,85 @@
+.search_special_team {
+  margin-bottom: 70px;
+}
+
+.teams {
+  display: flex;
+  margin-top: 36px;
+}
+.teams p {
+  font-size: 0.8rem;
+}
+.teams div:first-child {
+  display: flex;
+  flex: 1;
+}
+.myTeam {
+  margin-right: 40px;
+}
+.specialTeam {
+  color: var(--font-primary);
+}
+
+.search {
+  margin-top: 41px;
+  position: relative;
+}
+.search_icon {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.all_team {
+  margin-top: 21px;
+  border-radius: 27px;
+  background-color: var(--primary-color);
+  padding: 20px 0;
+}
+.each_team {
+  display: flex;
+  padding: 15px 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.all_team div:last-child {
+  border-bottom: none;
+}
+.each_team p {
+  flex: 1;
+  font-size: 0.8rem;
+}
+.each_team button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.each_team button span {
+  margin-left: 8px;
+  color: var(--font-primary);
+  font-size: 0.875rem;
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+.finger{
+    display: none;
+}
+.activeRequest{
+  font-weight: 700;
+}
+
+@media (min-width: 500px) {
+  .teams p {
+    font-size: 1rem;
+  }
+  .each_team p {
+    font-size: 1rem;
+  }
+  .each_team button span {
+    font-size: 1rem;
+  }.finger{
+    display: block;
+}
+
+}

@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Select, { components } from "react-select";
-import uplawImage from "../../../../../../asstes/uplaw.png";
-import { useSelector } from "react-redux";
-import styles from "./selectTeam.module.css";
+
+import { useDispatch, useSelector } from "react-redux";
+import "./selectTeam.css";
+import { selectedTeamAction } from "../../../../../../redux/Actions/TeamActions";
 
 const SelectTeam = () => {
   const userTeams = useSelector((state) => state.team.myTeam);
+  const dispatch = useDispatch();
   console.log(userTeams);
 
   const [options, setOptions] = useState([]);
- 
+
   useEffect(() => {
     const arrayTeam = userTeams.map((item) => {
       return {
@@ -22,6 +24,7 @@ const SelectTeam = () => {
     console.log(arrayTeam);
 
     setOptions(arrayTeam);
+    dispatch(selectedTeamAction(arrayTeam[0].value));
   }, [userTeams]);
 
   console.log(options);
@@ -39,8 +42,9 @@ const SelectTeam = () => {
       <span style={{ marginRight: "8px" }}> {props.data.label}</span>
     </Option>
   );
-  const onchange = (adib) => {
-    console.log(adib);
+  const onchange = (team) => {
+    console.log(team);
+    dispatch(selectedTeamAction(team.value));
   };
 
   const ValueOption = (props) => (
@@ -60,26 +64,36 @@ const SelectTeam = () => {
     control: () => ({
       display: "flex",
       alignItems: "center",
-      paddingBottom: "2px",
-      height: "50px",
+      height: "49px",
     }),
     indicatorSeparator: () => ({
       display: "none",
     }),
+    option: (styles) => {
+      return {
+        ...styles,
+        display: "flex",
+        alignItems: "center",
+        height: "49px",
+      };
+    },
   };
 
   return (
     <div style={{ width: "100%" }}>
-    {options.length &&   <Select
-        styles={customStyles}
-        defaultValue={options[0]}
-        singleValue
-        options={options}
-        components={{ Option: IconOption, SingleValue: ValueOption }}
-        isRtl={true}
-        onChange={onchange}
-       
-      />}
+      {options.length && (
+        <Select
+          styles={customStyles}
+          defaultValue={options[0]}
+          singleValue
+          options={options}
+          components={{ Option: IconOption, SingleValue: ValueOption }}
+          isRtl={true}
+          onChange={onchange}
+          className="select-team"
+          classNamePrefix="select-team"
+        />
+      )}
     </div>
   );
 };

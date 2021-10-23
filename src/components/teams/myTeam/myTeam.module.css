@@ -2,13 +2,20 @@
 .createteam{
     display: flex;
     flex-direction: column;
+   
 }
 
 .teams_docs{
     width: 90%;
-    background-color: red;
     margin: auto;
+    margin-top: 60px;
 }
+
+.select_team{
+    display: none;
+}
+
+
 
 
 
@@ -20,7 +27,7 @@
     
     .profilesection{
         grid-column: 1/2;
-        background-color: #E5E5E5;
+        background: rgba(232, 232, 232,0.25);
         border-left: 0.35px solid #00000028;
     }
     .createteam_info{
@@ -29,8 +36,8 @@
     }
     
     .teams_docs{
-        width: 85%;
-       margin-top: 80px;
+        width: 90%;
+       margin-top: 85px;
        margin-left: auto;
        margin-right: auto;
         
