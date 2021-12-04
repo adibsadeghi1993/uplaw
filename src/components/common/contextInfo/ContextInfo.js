@@ -5,7 +5,7 @@ import { initialValues } from "./AllInitialValues";
 import uplawImage from "../../../asstes/uplaw.png"
 export const UserInfoContext = React.createContext();
 const ContextInfo = ({ children }) => {
-  const [step, setStep] = useState(4);
+  const [step, setStep] = useState(1);
   const [progress, setProgress] = useState(0);
   const [upLoadedImage, setUpLoadedImage] = useState(null);
   const [upLoadedNationalCodeImage, setUpLoadedNationalCodeImage] =
