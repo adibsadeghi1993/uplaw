@@ -27,6 +27,7 @@ const AuthGoogle = (props) => {
     console.log(bodyCode);
   if (bodyCode.code) {
     dispatch(signUpGooleAction(bodyCode))
+   
   }
   }, [props.location.search]);
 
