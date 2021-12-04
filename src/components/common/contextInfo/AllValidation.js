@@ -13,7 +13,7 @@ export const validationSchema = Yup.object({
     phoneNumber: Yup.string()
       .matches(new RegExp("[0-9]{11}"),"لطفا شماره تلفن11 رقمی وارد کنید")
       .required("شماره تلفن الزامی است"),
-    email: Yup.string().email("email is invalid").required("ایمیل الزامی است"),
+    email: Yup.string().email("ایمیل صحیح نیست").required("ایمیل الزامی است"),
     password: Yup.string()
       .min(8, "حداقل 8 کارکتر")
       .required(" رمز عبور الزامی است"),

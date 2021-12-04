@@ -21,17 +21,19 @@ const AdjustContract = (props) => {
   console.log(team)
         return (
            
-            <main className={styles.main_adjustContract}>
-            <section className={styles.profilesection}>
-             <UserProfile subject="adjust" opacity="opacity" team={team}/>
-            </section>
-            <section className={styles.adjustContract_info}>
-             <div className={styles.adjustContract_detail}>
-                <Progress ContractName={ContractName} />
-                <ContractInfo/>
-             </div>
-            </section>
-          </main>
+          //    <main className={styles.main_adjustContract}>
+          //    <section className={styles.profilesection}>
+          //    <UserProfile subject="adjust" opacity="opacity" team={team}/>
+          //   </section> 
+          //    <section className={styles.adjustContract_info}>
+          //    <div className={styles.adjustContract_detail}>
+          //     <Progress ContractName={ContractName} />
+          //       <ContractInfo/>
+          //     </div>
+          //    </section> 
+           
+          //  </main>
+          <h3>این صفحه اماده نشده است</h3>
         )
 }
 
