@@ -44,7 +44,7 @@ const SearchSpecialTeam = ({request,setRequest}) => {
                 // filterHandler(books)
               });
           }
-        }, 400);
+        }, 500);
       }, [input, inputRef]);
     
       useEffect(() => {
