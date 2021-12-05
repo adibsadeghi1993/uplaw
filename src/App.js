@@ -27,8 +27,7 @@ import TeamAdmin from "./components/teams/teamAdmin/TeamAdmin";
 import AdviseType from "./components/advise/adviseType/AdviseType";
 import ConsultantTime from "./components/advise/consultantTime/ConsultantTime";
 import Confirm from "./components/advise/confirm/Confirm";
-import Search from "./components/advise/search/Search"
-
+import Search from "./components/advise/search/Search";
 
 function App() {
   return (
@@ -37,17 +36,23 @@ function App() {
         <Route path="/auth/google" component={SignUp} />
         <Route path="/dashbord" component={Dashbord} />
         <Route path="/contract/signtureContract" component={ContractDocument} />
-        <Route path="/contract/customerSigntureContract"  component={SigntureContract}/>
+        <Route
+          path="/contract/customerSigntureContract"
+          component={SigntureContract}
+        />
         <Route path="/contract/:id" component={AdjustContract} />
-       
+
         <Route path="/contract" component={Contract} />
         <Route path="/meeting/setMeetingTime" component={SetMeetingTime} />
         <Route path="/meeting/signtureMeeting" component={SigntureMeeting} />
-        <Route path="/meeting/customerSigntureMeeting" component={CustomerSigntureMeeting} />
+        <Route
+          path="/meeting/customerSigntureMeeting"
+          component={CustomerSigntureMeeting}
+        />
         <Route path="/meeting" component={CreateMeeting} />
         <Route path="/createTeam" component={CreateTeam} />
         <Route path="/teamInfo" component={TeamInfo} />
-       
+
         <Route path="/team" component={Team} />
         <Route path="/myTeam" component={MyTeam} />
         <Route path="/createNewTeam" component={CreateNewTeam} />
@@ -60,7 +65,7 @@ function App() {
         <Route path="/confirmConsultant" component={Confirm} />
         <Route path="/searchConsultant" component={Search} />
         <Route path="/adviseType" component={AdviseType} />
-      
+
         <Route path="/" exact component={Home} />
       </Switch>
     </div>
