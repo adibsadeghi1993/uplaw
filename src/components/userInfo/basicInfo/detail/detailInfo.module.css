@@ -240,7 +240,7 @@ cursor: pointer;
 }
 @media(max-width:1040px){
   .detail{
-    width: 88%;
+    width: 100%;
   }
 }
 

@@ -64,6 +64,8 @@ const AuthGoogle = (props) => {
 
   }
 
+
+
   return (
     <>
       <div className={styles.authsection_google} onClick={signUpGoogleHandler}>

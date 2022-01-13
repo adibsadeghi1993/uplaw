@@ -9,7 +9,6 @@ const Auth = (props) => {
  console.log(props.formik.errors)
 
  const {formik}=props
-
   return (
     <section className={styles.auth_section}>
       <div className={styles.sginup_description}>
